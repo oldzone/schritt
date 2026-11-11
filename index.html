@@ -16151,14 +16151,20 @@ async function packAll(){save();const o={v:1,langs:{},prefs:null};for(const c of
   if(window.CompressionStream){try{const cs=new Blob([raw]).stream().pipeThrough(new CompressionStream("gzip"));const buf=new Uint8Array(await new Response(cs).arrayBuffer());return "g"+b64u(buf);}catch(e){}}
   return "j"+b64u(raw);}
 async function unpack(t){const kind=t[0],u=ub64(t.slice(1));let txt;if(kind==="g"){const ds=new Blob([u]).stream().pipeThrough(new DecompressionStream("gzip"));txt=await new Response(ds).text();}else txt=new TextDecoder().decode(u);return JSON.parse(txt);}
+function importSheet(){sheet(`<div class="h2" style="font-size:24px;margin-bottom:6px">Yedekten geri yükle</div><div class="sub" style="margin-bottom:12px">Daha önce kopyaladığın yedek / taşıma bağlantısını aşağıya yapıştır.</div>
+   <textarea id="iml" placeholder="https://oldzone.github.io/schritt/#imp=…" style="width:100%;height:110px;font:13px ui-monospace,monospace;border-radius:12px;padding:10px;border:1px solid var(--sep,#ccc);background:var(--neubg);color:var(--label)"></textarea>
+   <div style="display:flex;gap:10px;margin-top:12px"><button class="btn sec" id="impa" style="flex:1">Panodan yapıştır</button><button class="btn" id="imgo" style="flex:1">Devam</button></div>`);
+  const ta=document.getElementById("iml");
+  document.getElementById("impa").onclick=async()=>{try{ta.value=await navigator.clipboard.readText();}catch(e){toast("Kutuya uzun basıp Yapıştır'ı seç");ta.focus();}};
+  document.getElementById("imgo").onclick=()=>{const v=(ta.value||"").trim();const m=v.match(/imp=([A-Za-z0-9_\-]+)/)||v.match(/^([gj][A-Za-z0-9_\-]{10,})$/);if(!m){toast("Geçerli bir yedek bağlantısı bulunamadı");return;}checkImport(m[1]);};}
 async function exportSheet(){const code=await packAll();const link=SITE+"#imp="+code;
   sheet(`<div class="h2" style="font-size:24px;margin-bottom:6px">İlerlemeyi taşı</div><div class="sub" style="margin-bottom:12px">Bu bağlantı tüm dillerdeki ilerlemeni, serini ve ayarlarını içerir. Başka bir cihazda veya tarayıcıda (ör. Safari) açınca ilerlemen oraya aktarılır.</div>
    <textarea id="exl" readonly style="width:100%;height:110px;font:13px ui-monospace,monospace;border-radius:12px;padding:10px;border:1px solid var(--sep,#ccc);background:var(--neubg);color:var(--label)">${esc(link)}</textarea>
    <div style="display:flex;gap:10px;margin-top:12px"><button class="btn" id="excp" style="flex:1">Bağlantıyı kopyala</button><a class="btn sec" href="${esc(link)}" target="_blank" rel="noopener" style="flex:1;text-align:center;text-decoration:none">Aç</a></div>
    <div class="sub" style="margin-top:10px;font-size:13px">Yedek olarak saklamak için kopyalayıp Notlar'a yapıştır. Kopyalama çalışmazsa kutudaki metne uzun basıp tümünü seçerek kopyala. Bağlantıyı başkasıyla paylaşma; içinde senin ilerlemen var.</div>`);
   const ta=document.getElementById("exl");document.getElementById("excp").onclick=async()=>{let ok=false;try{await navigator.clipboard.writeText(link);ok=true;}catch(e){}if(!ok){try{ta.focus();ta.select();ok=document.execCommand("copy");}catch(e){}}if(ok){try{localStorage.setItem("schritt-bk",Date.now());}catch(e){}}toast(ok?"Yedek bağlantısı kopyalandı. Notlar'a yapıştırıp sakla.":"Kutudaki metni seçip kopyala");};}
-async function checkImport(){const m=location.hash.match(/#imp=([A-Za-z0-9_\-]+)/);if(!m)return;let o=null;try{o=await unpack(m[1]);}catch(e){}
-  try{history.replaceState(null,"",location.pathname+location.search);}catch(e){}
+async function checkImport(given){let code=given;if(!code){const m=location.hash.match(/#imp=([A-Za-z0-9_\-]+)/);if(!m)return;code=m[1];try{history.replaceState(null,"",location.pathname+location.search);}catch(e){}}
+  let o=null;try{o=await unpack(code);}catch(e){}
   if(!o||!o.langs){toast("Aktarma bağlantısı okunamadı");return;}
   const sum=Object.entries(o.langs).map(([c,v])=>`${LANGS[c]?LANGS[c].flag+" "+LANGS[c].name:c}: ${Object.keys(v.pass||{}).length} ders, ${v.xp||0} XP`).join("<br>");
   sheet(`<div class="h2" style="font-size:24px;margin-bottom:6px">İlerlemeyi aktar</div><div class="sub" style="margin-bottom:12px">Bu cihazdaki ilerleme, bağlantıdaki ilerlemeyle değiştirilecek:</div><div class="card" style="margin-bottom:14px">${sum}</div><button class="btn" id="imok" style="width:100%">Aktar</button>`);
@@ -16590,8 +16596,8 @@ function me(){
   <div class="sec-h">Görünüm</div><div class="group"><div class="throw">${THEMES.map(([k,n,g])=>`<button class="thsw" data-th="${k}" aria-pressed="${(S.theme||"okyanus")===k}"><i style="background:${g}"></i>${n}</button>`).join("")}</div>
   <button class="cell plain" id="sfxb"><span class="tx t1">Ses efektleri</span><span class="sw ${S.sfx===false?"":"on"}" id="sfxs"></span></button></div>
   <div class="sec-f">Tema anında uygulanır. Telefonun karanlık moddaysa renkli temalar otomatik koyulaşır. "Gece" hep koyu, "Beyaz" hep açıktır.</div>
-  <div class="sec-h">Veri</div><div class="group"><button class="cell plain" id="exb"><span class="tx t1" style="color:var(--blue)">İlerlemeyi başka cihaza / Safari'ye taşı</span></button><button class="cell plain" id="rs"><span class="tx t1" style="color:var(--red)" id="rst">İlerlemeyi sıfırla</span></button></div></div>`;
-  $("#exb").onclick=exportSheet;$("#meh").onclick=avatarSheet;bindLang(root());bindVoice();
+  <div class="sec-h">Veri</div><div class="group"><button class="cell plain" id="exb"><span class="tx t1" style="color:var(--blue)">İlerlemeyi yedekle / başka yere taşı</span></button><button class="cell plain" id="imb"><span class="tx t1" style="color:var(--blue)">Yedekten geri yükle (içe aktar)</span></button><button class="cell plain" id="rs"><span class="tx t1" style="color:var(--red)" id="rst">İlerlemeyi sıfırla</span></button></div></div>`;
+  $("#exb").onclick=exportSheet;$("#imb").onclick=importSheet;$("#meh").onclick=avatarSheet;bindLang(root());bindVoice();
   root().querySelectorAll("[data-goal]").forEach(b=>b.onclick=()=>{S.goal=+b.dataset.goal;save();sfx("tap");me();});
   root().querySelectorAll("[data-th]").forEach(b=>b.onclick=()=>{S.theme=b.dataset.th;applyTheme();save();root().querySelectorAll("[data-th]").forEach(x=>x.setAttribute("aria-pressed",x===b));sfx("tap");shell(true);});
   $("#sfxb").onclick=()=>{S.sfx=S.sfx===false;$("#sfxs").classList.toggle("on",S.sfx!==false);try{if(navigator.audioSession)navigator.audioSession.type=S.sfx===false?"auto":"playback";}catch(e){}save();sfxUnlock();sfx("ok");};

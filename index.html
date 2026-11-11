@@ -16155,8 +16155,8 @@ async function exportSheet(){const code=await packAll();const link=SITE+"#imp="+
   sheet(`<div class="h2" style="font-size:24px;margin-bottom:6px">İlerlemeyi taşı</div><div class="sub" style="margin-bottom:12px">Bu bağlantı tüm dillerdeki ilerlemeni, serini ve ayarlarını içerir. Başka bir cihazda veya tarayıcıda (ör. Safari) açınca ilerlemen oraya aktarılır.</div>
    <textarea id="exl" readonly style="width:100%;height:110px;font:13px ui-monospace,monospace;border-radius:12px;padding:10px;border:1px solid var(--sep,#ccc);background:var(--neubg);color:var(--label)">${esc(link)}</textarea>
    <div style="display:flex;gap:10px;margin-top:12px"><button class="btn" id="excp" style="flex:1">Bağlantıyı kopyala</button><a class="btn sec" href="${esc(link)}" target="_blank" rel="noopener" style="flex:1;text-align:center;text-decoration:none">Aç</a></div>
-   <div class="sub" style="margin-top:10px;font-size:13px">Kopyalama çalışmazsa kutudaki metne uzun basıp tümünü seçerek kopyala. Bağlantıyı başkasıyla paylaşma; içinde senin ilerlemen var.</div>`);
-  const ta=document.getElementById("exl");document.getElementById("excp").onclick=async()=>{let ok=false;try{await navigator.clipboard.writeText(link);ok=true;}catch(e){}if(!ok){try{ta.focus();ta.select();ok=document.execCommand("copy");}catch(e){}}toast(ok?"Bağlantı kopyalandı":"Kutudaki metni seçip kopyala");};}
+   <div class="sub" style="margin-top:10px;font-size:13px">Yedek olarak saklamak için kopyalayıp Notlar'a yapıştır. Kopyalama çalışmazsa kutudaki metne uzun basıp tümünü seçerek kopyala. Bağlantıyı başkasıyla paylaşma; içinde senin ilerlemen var.</div>`);
+  const ta=document.getElementById("exl");document.getElementById("excp").onclick=async()=>{let ok=false;try{await navigator.clipboard.writeText(link);ok=true;}catch(e){}if(!ok){try{ta.focus();ta.select();ok=document.execCommand("copy");}catch(e){}}if(ok){try{localStorage.setItem("schritt-bk",Date.now());}catch(e){}}toast(ok?"Yedek bağlantısı kopyalandı. Notlar'a yapıştırıp sakla.":"Kutudaki metni seçip kopyala");};}
 async function checkImport(){const m=location.hash.match(/#imp=([A-Za-z0-9_\-]+)/);if(!m)return;let o=null;try{o=await unpack(m[1]);}catch(e){}
   try{history.replaceState(null,"",location.pathname+location.search);}catch(e){}
   if(!o||!o.langs){toast("Aktarma bağlantısı okunamadı");return;}
@@ -16165,6 +16165,9 @@ async function checkImport(){const m=location.hash.match(/#imp=([A-Za-z0-9_\-]+)
   document.getElementById("imok").onclick=()=>{for(const [c,v] of Object.entries(o.langs)){if(!LANGS[c])continue;v.ts=Date.now();try{localStorage.setItem(c==="de"?"schritt-v1":"schritt-v1-"+c,JSON.stringify(v));}catch(e){}}
     if(o.prefs){o.prefs.ts=Date.now();try{localStorage.setItem(PKEY,JSON.stringify(o.prefs));}catch(e){}}
     window.__IMP=true;try{localStorage.setItem("schritt-lang",LANG.code);}catch(e){}location.reload();};}
+function bkNote(){if(NATIVE||SYNC==="ok"||SYNC==="wait")return"";if(!(S.xp>0||Object.keys(S.pass||{}).length))return"";
+  let last=0;try{last=+localStorage.getItem("schritt-bk")||0;}catch(e){}if(Date.now()-last<7*864e5)return"";
+  return `<button class="ocard" id="bkst" style="width:100%;text-align:left;border:1.5px solid var(--green)"><div class="och"><div><div class="ock">Haftalık yedek</div><div class="oct">💾 İlerlemeni yedekle</div><div class="ocs">${last?"Son yedek "+Math.floor((Date.now()-last)/864e5)+" gün önce.":"Henüz yedek almadın."} Tek dokunuşla yedek bağlantını kopyala, Notlar'a kaydet.</div></div><span class="ostat info">Yedekle</span></div></button>`;}
 function learn(){
   const lv=S.lv,units=UNITS.filter(u=>u.lv===lv),passed=units.filter(u=>S.pass[u.key]).length;
   const cu=units.find(u=>!S.pass[u.key]);
@@ -16191,7 +16194,7 @@ function learn(){
       <div class="segbar">${P.map((sg,i)=>`<i class="${i<done?"d":i===done?"c":""}" title="${segName(sg)}"></i>`).join("")}</div>
       <div class="ocf"><span>${done?"Bölüm "+(done+1)+" / "+P.length+" · "+segName(P[done]):P.length+" bölüm · "+target.w.length+" kelime · "+target.sents.length+" cümle"}</span><button class="fbtn emph" id="go">${done?"Devam et":"Başla"}</button></div></div>`;
   }
-  h+=syncNote();
+  h+=syncNote()+bkNote();
   h+=S.placed?"":`<button class="ocard plcard" id="plst"><div class="och"><div><div class="ock">Yeni misin, yoksa biraz biliyor musun?</div><div class="oct">🎯 Seviye belirleme testi</div><div class="ocs">5–10 dakikalık test seviyeni bulur ve seni doğru dersten başlatır.</div></div><span class="ostat info">Başla</span></div></button>`;
   h+=`<div class="itb" role="tablist">${LV.map(l=>{const us=UNITS.filter(u=>u.lv===l.id),d=us.filter(u=>S.pass[u.key]).length;return `<button role="tab" data-lv="${l.id}" aria-selected="${l.id===lv}"><b>${l.id}</b><span>${d}/${us.length}</span></button>`;}).join("")}</div>
   <div class="ftable"><div class="fth"><span>${esc(L.id)} · ${esc(L.name)} — Dersler (${units.length})</span><span>${passed}/${units.length}</span></div>`;
@@ -16209,6 +16212,7 @@ function learn(){
   animRings();
   root().querySelectorAll("[data-lv]").forEach(b=>b.onclick=()=>{S.lv=b.dataset.lv;save();learn();});
   const g=$("#go");if(g)g.onclick=()=>lesson(target.gi);
+  const bk=$("#bkst");if(bk)bk.onclick=exportSheet;
   const p1=$("#plst");if(p1)p1.onclick=placement;const p2=$("#plst2");if(p2)p2.onclick=placement;
   root().querySelectorAll("[data-u]").forEach(b=>b.onclick=()=>lesson(+b.dataset.u));
 }

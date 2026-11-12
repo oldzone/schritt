@@ -65,3 +65,4 @@ Her adımdan sonra: build → test (playwright) → yayınla (mümkünse) → Ma
   - A2 batch b (Istanbul, Preise) tamam → A2 4/10. Kullanıcı: roman tarzı, betimlemeli, iç dünya; B1+ bölümlü uzun hikâyeler.
   - A2 batch c (Wahl, Handy) tamam → A2 6/10. Sırada A2 d: Arzt/Gesundheit(bilim), Klimatag; A2 e: Tourismus-Job, E-Auto.
 - A2: 10 kitap/dil tamam (a2d doktor+iklim, a2e otel+e-araba). Sıradaki: B1 roman tarzı 8 kitap/dil
+- Konuşma pratiği eklendi (Oyunlar kartı: Sohbet[AI, sadece Claude app sample], Tekrar et, Çevir&söyle; ders arası mola her 2. w/s bölümünde; ders sonu 'Bu konuyla konuş'). Test: tests/tspeak.py

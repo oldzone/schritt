@@ -12,6 +12,10 @@ with sync_playwright() as p:
     pg.click("#nx");pg.wait_for_timeout(200);pg.screenshot(path="/tmp/l2.png",full_page=True)
     shots=0;types={};wrong=1
     for step in range(400):
+        if pg.query_selector("#spi"):
+            snk=globals().get("snk",0)+1;globals()["snk"]=snk
+            if snk==1: pg.screenshot(path="/tmp/snack.png")
+            pg.click("#skip");pg.wait_for_timeout(60);continue
         if pg.query_selector("#nx") and not pg.query_selector(".opt") and not pg.query_selector("#bank"):
             pg.click("#nx");pg.wait_for_timeout(30);continue
         if pg.query_selector(".mt2"):

@@ -1,4 +1,25 @@
-<!doctype html><html lang="de"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html lang="de"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}.sptag{font-size:13px;font-weight:700;color:var(--label2);text-transform:uppercase;letter-spacing:.04em;margin:8px 0 12px}
+.spsent{font-size:24px;font-weight:600;line-height:1.35;margin-bottom:6px}
+.sptr{color:var(--label2);font-size:16px;margin-bottom:12px}
+.spin{display:flex;gap:10px;align-items:center;margin-top:18px}.spin .inp{flex:1;min-width:0;font-size:18px}
+.mic{width:52px;height:52px;border-radius:50%;flex:none;font-size:22px;background:var(--grad);color:#fff;display:grid;place-items:center;box-shadow:0 4px 12px color-mix(in srgb,var(--blue) 35%,transparent)}
+.mic.send{font-size:20px}.mic.on{background:var(--red);background-image:none;animation:sppulse 1s infinite}
+@keyframes sppulse{50%{transform:scale(1.1)}}
+.spres{margin-top:16px;font-size:21px;line-height:1.55}.pw{padding:0 2px;border-radius:5px}.pw.ok{color:var(--green)}.pw.no{color:var(--red);text-decoration:underline wavy;text-underline-offset:4px}
+.spsc{font-weight:800;font-size:15px;margin-top:8px}
+.splink{display:block;margin:22px auto 0;color:var(--label2);font-size:14px;text-decoration:underline}
+.spcard{border-radius:22px;padding:16px;margin-bottom:14px;color:#fff;background:linear-gradient(135deg,#ff375f,#bf5af2 55%,#5e5ce6);box-shadow:0 8px 22px rgba(0,0,0,.14)}
+.spct{font:700 20px var(--sfd)}.spcs{font-size:13px;opacity:.92;margin-top:2px}
+.spbtns{display:flex;gap:8px;margin-top:12px}.spbtns button{flex:1;background:rgba(255,255,255,.22);color:#fff;border-radius:14px;padding:10px 4px;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;gap:3px}.spbtns span{font-size:22px}
+.cbx{display:flex;flex-direction:column;gap:10px;padding-bottom:170px}
+.cb{max-width:88%;padding:10px 14px;border-radius:18px;font-size:17px;line-height:1.42}
+.cb.ai{background:var(--card);align-self:flex-start;border-bottom-left-radius:6px;box-shadow:var(--shadow)}
+.cb.me{background:var(--blue);background-image:var(--grad);color:#fff;align-self:flex-end;border-bottom-right-radius:6px}
+.cbf{font-size:14px;margin-top:6px;padding-top:6px;border-top:1px solid rgba(255,255,255,.35)}
+.cbtools{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}.cbtools button{font-size:13px;padding:5px 10px;border-radius:99px;background:var(--fill);color:var(--label2);font-weight:600}
+.cbtr{font-size:14px;color:var(--label2);margin-top:6px}
+.typing span{display:inline-block;margin:0 2px;animation:pulse 1.2s infinite}.typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}
+</style></head><body>
 <title>Schritt für Schritt</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -19657,7 +19678,7 @@ const LVCOLOR={A1:"var(--green)",A2:"var(--blue)",B1:"var(--indigo)",B2:"var(--o
 /* ===== State ===== */
 const KEY=LANG.code==="de"?"schritt-v1":"schritt-v1-"+LANG.code;
 const PKEY="schritt-prefs";
-const PREF_F=["theme","name","avatar","sfx","remind","vg","goal","onb"];
+const PREF_F=["theme","name","avatar","sfx","remind","vg","goal","onb","nosnk"];
 const blank=()=>({pass:{},best:{},items:{},xp:0,streak:0,last:-1,lv:"A1"});
 let S=blank();
 try{const r=localStorage.getItem(KEY);if(r)S=Object.assign(blank(),JSON.parse(r));}catch(e){}
@@ -20162,6 +20183,7 @@ function games(){
   const L=league(),q=dq(),done=questsDone();S.games=S.games||{};
   let h=`<div class="page wide fade"><div class="dph"><div class="dpt">Oyunlar</div><div class="dps">Oyna, puan topla, kelimeleri pekiştir</div></div>
   <div class="lgcard" style="background:${L.cur[3]}"><span class="lgem">${L.cur[2]}</span><div class="lgtx"><b>${L.cur[1]} Lig</b><span>${S.xp||0} XP${L.nx?` · ${L.nx[1]} için ${L.nx[0]-(S.xp||0)} XP`:" · En üst lig!"}</span><div class="lgbar"><i style="width:${Math.round(L.p*100)}%"></i></div></div></div>
+  ${speakCard()}
   <div class="fcard qcard"><div class="fch">Günlük görevler <span class="qc">${done}/3</span></div>
   ${QUESTS.slice(0,4).map(([k,t,n,ic])=>{const v=Math.min(n,q[k]||0);return `<div class="qrow ${v>=n?"ok":""}"><span class="qic">${v>=n?"✓":ic}</span><div class="qtx"><b>${t}</b><div class="qbar"><i style="width:${v/n*100}%"></i></div></div><span class="qv">${v}/${n}</span></div>`;}).join("")}
   <button class="chest ${done>=3&&!q.chest?"ready":""}" id="chest" ${done>=3&&!q.chest?"":"disabled"}><span class="chem">${q.chest?"📭":"🎁"}</span><span>${q.chest?"Bugünün hazinesi açıldı":done>=3?"Hazine sandığını aç!":"3 görevi bitir, hazineyi aç"}</span></button>
@@ -20169,11 +20191,196 @@ function games(){
   <div class="ggrid stagger">${GAMES.filter(g=>g[1]).map(g=>`<button class="gcard" data-g="${g[0]}" style="background:${g[4]}"><span class="gem">${g[2]}</span><b>${g[1]}</b><span>${g[3]}</span><small>${S.games[g[0]]?"Rekor: "+S.games[g[0]]:"Henüz oynanmadı"}</small></button>`).join("")}</div>
   <div class="fcard" style="margin-top:14px"><div class="fch">Rozetler <span class="qc">${(S.badges||[]).length}/${BADGES.length}</span></div><div class="bdgrid">${BADGES.map(b=>{const on=(S.badges||[]).includes(b[0]);return `<div class="bdg ${on?"on":""}"><span>${b[2]}</span><b>${b[1]}</b><small>${b[3]}</small></div>`;}).join("")}</div></div></div>`;
   root().innerHTML=h;
-  root().querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>startGame(b.dataset.g));
+  root().querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>startGame(b.dataset.g));bindSpeakCard(root());
   const c=$("#chest");if(c)c.onclick=openChest;
 }
 function openChest(){const q=dq();if(q.chest||questsDone()<3)return;q.chest=1;const xp=20+Math.floor(Math.random()*5)*10;S.xp+=xp;S.chests=(S.chests||0)+1;let fr=false;if(Math.random()<.5||!(S.freeze)){S.freeze=Math.min(3,(S.freeze||0)+1);fr=true;}touch();save();checkBadges();confetti();sfx("win");
   sheet(`<div class="center"><div style="font-size:84px;animation:pop .6s var(--spring)">🎁</div><div class="h2" style="font-size:26px">Hazine açıldı!</div><div class="sub" style="margin:6px 0 4px">+${xp} XP${fr?" · ❄️ +1 seri koruması":""}</div><div class="sec-f">Yarın yeni görevler seni bekliyor.</div></div>`);games();}
+
+/* ===== KONUŞMA PRATİĞİ ===== */
+const SRC=window.SpeechRecognition||window.webkitSpeechRecognition||null;
+const ENNAME={de:"German",en:"English",fr:"French",it:"Italian"}[LANG.code]||"German";
+const CAPS={dict:null,sample:null,ready:false};
+const REC={p:null,f:null,s:null,sr:null,on:false};
+async function capsInit(){if(CAPS.ready)return;CAPS.ready=true;
+  for(let i=0;i<30&&!(window.claude&&window.claude.use);i++)await new Promise(r=>setTimeout(r,200));
+  if(!(window.claude&&window.claude.use))return;
+  try{CAPS.sample=await window.claude.use("sample");}catch(e){}
+  try{const d=await window.claude.use("dictation");if(d){d.onPartial(x=>REC.p&&REC.p(x.text||""));d.onFinal(x=>REC.f&&REC.f(x.text||""));d.onState(x=>REC.s&&REC.s(x.state));CAPS.dict=d;}}catch(e){CAPS.dict=null;}
+}
+capsInit();
+const canMic=()=>!!(SRC||CAPS.dict);
+function recStop(){try{if(REC.sr){REC.sr.stop();return;}}catch(e){}try{if(CAPS.dict&&REC.on)CAPS.dict.stop().catch(()=>{});}catch(e){}}
+function recStart(onText,onEnd){
+  stopSpeak();REC.on=true;
+  if(SRC){let r;try{r=new SRC();}catch(e){REC.on=false;onEnd&&onEnd();return;}
+    REC.sr=r;r.lang=LANG.loc;r.interimResults=true;r.continuous=false;r.maxAlternatives=1;
+    r.onresult=e=>{let t="",fin=false;for(let i=0;i<e.results.length;i++){t+=e.results[i][0].transcript;if(e.results[i].isFinal)fin=true;}onText(t.trim(),fin);};
+    r.onerror=e=>{if(e.error==="not-allowed"||e.error==="service-not-allowed")toast("Mikrofon izni yok. Klavyedeki 🎤 ile söyleyebilirsin.");};
+    r.onend=()=>{REC.on=false;REC.sr=null;onEnd&&onEnd();};
+    try{r.start();}catch(e){REC.on=false;REC.sr=null;onEnd&&onEnd();}
+    return;}
+  if(CAPS.dict){let acc="";
+    REC.p=t=>onText((acc+" "+t).trim(),false);
+    REC.f=t=>{acc=(acc+" "+t).trim();onText(acc,true);};
+    REC.s=st=>{if(st==="idle"){REC.on=false;REC.p=REC.f=REC.s=null;onEnd&&onEnd();}};
+    CAPS.dict.start().catch(()=>{REC.on=false;REC.p=REC.f=REC.s=null;onEnd&&onEnd();});return;}
+  REC.on=false;onEnd&&onEnd();
+}
+function bindMic(btn,inp,after){if(!btn)return;
+  btn.onclick=()=>{if(REC.on){recStop();return;}
+    btn.classList.add("on");inp.value="";
+    recStart((t)=>{inp.value=t;},()=>{btn.classList.remove("on");if(after&&inp.value.trim())after();});};
+}
+const micHint=()=>canMic()?"🎤'ye dokun ve söyle. Mikrofon çalışmazsa klavyedeki 🎤 (dikte) ile de söyleyebilirsin.":"Klavyedeki 🎤 (dikte) tuşuyla söyle ya da yaz, sonra Kontrol et.";
+
+const wtok=s=>(String(s).match(/[\p{L}\p{N}]+(?:['’][\p{L}]+)*/gu)||[]);
+const wn=w=>norm(w).replace(/['’]/g,"");
+function wcompare(target,heard){
+  const T=wtok(target),Tn=T.map(wn),H=wtok(heard).map(wn),n=Tn.length,m=H.length;
+  const L=Array.from({length:n+1},()=>new Array(m+1).fill(0));
+  for(let i=n-1;i>=0;i--)for(let j=m-1;j>=0;j--)L[i][j]=Tn[i]===H[j]?L[i+1][j+1]+1:Math.max(L[i+1][j],L[i][j+1]);
+  const ok=new Array(n).fill(false);let i=0,j=0;
+  while(i<n&&j<m){if(Tn[i]===H[j]){ok[i]=true;i++;j++;}else if(L[i+1][j]>=L[i][j+1])i++;else j++;}
+  return{T,ok,sc:n?ok.filter(Boolean).length/n:0};
+}
+function spItems(u,n){
+  let src=u?[u]:UNITS.filter(x=>S.pass[x.key]||(S.lp&&S.lp[x.key]));
+  if(!src.length)src=UNITS.filter(x=>x.lv===(S.lv||"A1")).slice(0,3);
+  const seen=new Set();
+  const all=src.flatMap(x=>[...(x.sents||[]),...x.w.filter(w=>w[3]).map(w=>[w[3],w[4]])]).filter(s=>{if(!s||!s[0]||!s[1]||seen.has(s[0]))return false;seen.add(s[0]);const k=wtok(s[0]).length;return k>=2&&k<=12;});
+  return shuffle(all).slice(0,n);
+}
+
+/* Telaffuz / çevir-söyle alıştırması */
+function speakDrill(items,o){
+  o=o||{};stopGame();tabs(false);IN_LESSON=true;
+  if(!items.length){toast("Önce birkaç ders bitir.");if(o.onDone)o.onDone();return;}
+  let k=0,good=0,xp=0;
+  const back=()=>{recStop();stopSpeak();if(o.onBack)o.onBack();else if(o.onDone)o.onDone();else{IN_LESSON=false;tab="games";render();}};
+  function show(){
+    const it=items[k],mode=o.mode==="mix"||!o.mode?(k%2?"say":"rep"):o.mode,tgt=it[0];let tries=0,done=false;
+    window.scrollTo(0,0);
+    root().innerHTML=`<div class="nav"><div class="in"><button class="back" id="sx"><span style="width:22px;height:22px;display:grid;place-items:center">${I.x}</span></button><div class="nt">${esc(o.title||"Konuşma pratiği")}</div><div class="cnt">${k+1}/${items.length}</div></div><div class="prog"><i style="width:${k/items.length*100}%"></i></div></div>
+    <div class="page push" style="padding-bottom:200px">
+      <div class="sptag">${mode==="rep"?"🔁 Dinle ve tekrar et":"🗣️ "+LANG.sini+" söyle"}</div>
+      ${mode==="rep"?`<div class="spsent">${tapS(tgt)}</div><div class="sptr">${esc(it[1])}</div><div style="display:flex;gap:8px">${spk(tgt)}</div>`
+        :`<div class="spsent">${esc(it[1])}</div><div class="sptr">Bu cümleyi ${LANG.name} söyle.</div>`}
+      <div id="res" class="spres"></div>
+      <div class="spin"><input class="inp" id="spi" placeholder="Söyle ya da yaz…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" lang="${LANG.loc}">${canMic()?`<button class="mic" id="mic" aria-label="Konuş">🎤</button>`:""}</div>
+      <div class="sec-f" style="margin-top:10px">${micHint()}</div>
+      ${o.snack?`<button class="splink" id="nosn">Konuşma molalarını kapat</button>`:""}
+    </div>
+    <div class="actbar"><div class="in"><button class="btn sec" id="skip">Atla</button><button class="btn" id="chk">Kontrol et</button></div></div>`;
+    bindSay(root());bindTap(root());
+    if(mode==="rep")setTimeout(()=>say(tgt),350);
+    const inp=$("#spi"),res=$("#res"),chk=$("#chk");
+    $("#sx").onclick=back;
+    const ns=$("#nosn");if(ns)ns.onclick=()=>{S.nosnk=1;save();toast("Molalar kapatıldı. Oyunlar sekmesinden yine pratik yapabilirsin.");next();};
+    $("#skip").onclick=()=>{recStop();next();};
+    inp.onkeydown=e=>{if(e.key==="Enter"){e.preventDefault();check();}};
+    function check(){
+      if(done){next();return;}
+      const v=inp.value.trim();if(!v){toast("Önce söyle ya da yaz");return;}
+      const r=wcompare(tgt,v);tries++;
+      res.innerHTML=(mode==="say"?`<div class="sptr" style="margin-bottom:4px">Doğrusu:</div>`:"")+r.T.map((w,i)=>`<span class="pw ${r.ok[i]?"ok":"no"}">${esc(w)}</span>`).join(" ")+
+        `<div class="spsc" style="color:${r.sc>=.8?"var(--green)":r.sc>=.5?"var(--orange)":"var(--red)"}">%${Math.round(r.sc*100)} ${r.sc>=.95?"Mükemmel!":r.sc>=.8?"Çok iyi!":r.sc>=.5?"Fena değil, tekrar dene":"Bir daha dene"}</div>`+
+        (mode==="say"?`<div style="margin-top:8px">${spk(tgt,true)}</div>`:"");
+      bindSay(res);
+      if(r.sc>=.8){done=true;good++;xp+=3;sfx("ok");dqInc("ok");chk.textContent="Devam";}
+      else{sfx("bad");if(tries>=2){done=true;chk.textContent="Devam";}else{chk.textContent="Kontrol et";inp.select&&inp.select();}}
+      if(mode==="say"&&!done)setTimeout(()=>say(tgt),300);
+    }
+    chk.onclick=check;
+    bindMic($("#mic"),inp,check);
+  }
+  function next(){recStop();stopSpeak();k++;if(k<items.length)return show();end();}
+  function end(){
+    S.xp=(S.xp||0)+xp;touch();save();
+    if(o.snack){toast(`🗣️ ${good}/${items.length} · +${xp} XP`);if(o.onDone)o.onDone();return;}
+    window.scrollTo(0,0);if(good)setTimeout(()=>{sfx("win");},120);
+    root().innerHTML=`<div class="page fade center" style="padding-top:40px;padding-bottom:160px"><div style="font-size:72px">🗣️</div><div class="h2" style="font-size:26px;margin-top:8px">${good}/${items.length} doğru</div><div class="sub">+${xp} XP · Telaffuz düzenli tekrarla gelişir.</div></div>
+    <div class="actbar"><div class="in"><button class="btn sec" id="h">Bitir</button><button class="btn" id="again">Yeniden</button></div></div>`;
+    $("#h").onclick=back;$("#again").onclick=()=>speakDrill(spItems(o.u||null,items.length),o);
+  }
+  show();
+}
+
+/* ders arası konuşma molası */
+function snackDue(u,prevT){if(S.nosnk||(prevT!=="w"&&prevT!=="s"))return false;S.snc=(S.snc||0)+1;return S.snc%2===0;}
+function snack(u,cont){speakDrill(spItems(u,2),{title:"🗣️ Konuşma molası",snack:true,u,mode:"mix",onDone:cont,onBack:cont});}
+
+/* yapay zekâ ile sohbet */
+let CH=null;
+function chatInfo(){sheet(`<div class="h2" style="font-size:24px;margin-bottom:8px">💬 Yapay zekâ sohbeti</div><div class="sub" style="margin-bottom:10px">Sohbet, Claude uygulamasındaki sürümde çalışır (bu sayfada yapay zekâ bağlantısı yok).</div><div class="sec-f">Burada <b>Dinle ve tekrar et</b> ile <b>Çevir ve söyle</b> alıştırmalarını kullanabilirsin; ikisi de konuşmanı kontrol eder.</div>`);}
+function chat(u,onBack){
+  if(!CAPS.sample){chatInfo();return;}
+  stopGame();tabs(false);IN_LESSON=true;recStop();
+  if(!u){const us=UNITS.filter(x=>S.pass[x.key]||(S.lp&&S.lp[x.key]));u=us.length?us[us.length-1]:UNITS.find(x=>x.lv===(S.lv||"A1"));}
+  CH={u,lv:u?u.lv:(S.lv||"A1"),msgs:[],bub:[],n:0,max:6,busy:false,ended:false,back:onBack||(()=>{IN_LESSON=false;tab="games";render();})};
+  window.scrollTo(0,0);
+  root().innerHTML=`<div class="nav"><div class="in"><button class="back" id="cx"><span style="width:22px;height:22px;display:grid;place-items:center">${I.x}</span></button><div class="nt">💬 ${esc(u?u.t:"Sohbet")}</div><div class="cnt" id="cnum">0/${CH.max}</div></div></div>
+  <div class="page push"><div class="cbx" id="cbx"></div></div>
+  <div class="actbar"><div class="in"><div class="spin" style="margin:0;width:100%"><input class="inp" id="ci" placeholder="Cevabını söyle ya da yaz…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" lang="${LANG.loc}" style="font-size:17px;padding:12px 14px">${canMic()?`<button class="mic" id="cmic" aria-label="Konuş">🎤</button>`:""}<button class="mic send" id="csend" aria-label="Gönder">➤</button></div></div></div>`;
+  $("#cx").onclick=()=>{recStop();stopSpeak();const b=CH.back;CH=null;b();};
+  const ci=$("#ci");
+  $("#csend").onclick=send;ci.onkeydown=e=>{if(e.key==="Enter"){e.preventDefault();send();}};
+  bindMic($("#cmic"),ci,send);
+  aiTurn();
+}
+function chatPrompt(){
+  const u=CH.u,lv=CH.lv,words=u?u.w.slice(0,20).map(w=>w[0]).join(", "):"";
+  const lvl={A1:"very short, very simple sentences, present tense, the most common words",A2:"short simple sentences, everyday vocabulary, simple past allowed",B1:"clear everyday language, some subordinate clauses",B2:"natural fluent language, varied structures",C1:"rich, idiomatic, natural language"}[lv]||"simple sentences";
+  return `You are a warm, patient conversation partner inside a language-learning app (like a video-call speaking practice). The learner is a Turkish speaker practising spoken ${ENNAME} at CEFR level ${lv}.
+Rules:
+- Speak ONLY ${ENNAME}, using ${lvl}. Topic of the current lesson: "${u?u.t+" — "+u.s:"everyday life"}". Where natural, use some of these lesson words: ${words}.
+- Each turn: react briefly and personally to what the learner said (one short sentence), then ask exactly ONE new, easy-to-answer question about the learner's own life related to the topic. Keep "say" under ${lv==="A1"?15:lv==="A2"?22:35} words.
+- Check the learner's last message. Their text comes from speech-to-text, so ignore missing punctuation, capital letters and obvious transcription slips. If there is a real grammar or word mistake, put the corrected sentence in "fix" and a very short explanation in Turkish in "tip". Otherwise leave both "".
+- If the learner answers in Turkish, says they don't understand, or is stuck: rephrase more simply and put a Turkish hint in "tip".
+- "hint": one short example answer in ${ENNAME} the learner could give to your new question (level ${lv}).
+- Answer ONLY with a JSON object, no other text: {"say":"...","tr":"Turkish translation of say","fix":"","tip":"","hint":"..."}
+- When you receive the learner's ${CH.max}th answer, give feedback on it as usual, then in "say" thank them and say goodbye warmly (no question), and add "end":true and "sum":"2-3 sentences of encouraging feedback in Turkish: what went well and one thing to practise".
+Start now: greet the learner briefly and ask your first question.`;
+}
+function parseAI(t){t=String(t||"");const a=t.indexOf("{"),b=t.lastIndexOf("}");if(a>=0&&b>a){try{return JSON.parse(t.slice(a,b+1));}catch(e){}}return{say:t.trim(),tr:"",fix:"",tip:"",hint:""};}
+function drawChat(typing){const bx=$("#cbx");if(!bx||!CH)return;
+  bx.innerHTML=CH.bub.map((b,i)=>b.me?`<div class="cb me">${esc(b.t)}${b.fix?`<div class="cbf">✔ ${esc(b.fix)}${b.tip?`<br><span style="opacity:.85">${esc(b.tip)}</span>`:""}</div>`:b.ok?`<div class="cbf">👍</div>`:""}</div>`
+    :`<div class="cb ai"><div>${tapS(b.t)}</div>${b.tipOnly?`<div class="cbtr">💡 ${esc(b.tipOnly)}</div>`:""}<div class="cbtools"><button data-say="${esc(b.t)}">🔊 Dinle</button>${b.tr?`<button data-tr="${i}">Türkçesi</button>`:""}${b.hint&&i===CH.bub.length-1&&!CH.ended?`<button data-hint="${i}">💡 Örnek cevap</button>`:""}</div><div class="cbtr" id="tr${i}" hidden>${esc(b.tr||"")}</div><div class="cbtr" id="hn${i}" hidden>${b.hint?esc(b.hint):""}</div></div>`).join("")+
+    (typing?`<div class="cb ai typing"><span>●</span><span>●</span><span>●</span></div>`:"")+
+    (CH.ended&&CH.sum?`<div class="fcard" style="margin-top:6px"><div class="fch">Değerlendirme</div><div class="sub" style="text-align:left">${esc(CH.sum)}</div><button class="btn" id="cdone" style="margin-top:12px">Bitir · +${CH.n*3+10} XP</button></div>`:"");
+  bx.querySelectorAll("[data-say]").forEach(b=>b.onclick=e=>{e.stopPropagation();say(b.dataset.say);});
+  bx.querySelectorAll("[data-tr]").forEach(b=>b.onclick=()=>{const e=$("#tr"+b.dataset.tr);e.hidden=!e.hidden;});
+  bx.querySelectorAll("[data-hint]").forEach(b=>b.onclick=()=>{const e=$("#hn"+b.dataset.hint);e.hidden=!e.hidden;if(!e.hidden)say(e.textContent);});
+  bindTap(bx);
+  const cd=$("#cdone");if(cd)cd.onclick=()=>{S.xp=(S.xp||0)+CH.n*3+10;touch();save();checkBadges&&checkBadges();sfx("win");confetti();const b=CH.back;CH=null;b();};
+  const cn=$("#cnum");if(cn)cn.textContent=CH.n+"/"+CH.max;
+  window.scrollTo(0,document.body.scrollHeight);
+}
+async function aiTurn(){
+  if(!CH||CH.busy)return;CH.busy=true;drawChat(true);
+  const msgs=[{role:"user",content:chatPrompt()},...CH.msgs];
+  try{
+    const r=await CAPS.sample(msgs,{cache:false});if(!CH)return;
+    const j=parseAI(r&&r.text);CH.msgs.push({role:"assistant",content:JSON.stringify(j)});
+    const last=CH.bub.length?CH.bub[CH.bub.length-1]:null;
+    let tipOnly="";
+    if(last&&last.me){if(j.fix&&wn(j.fix)!==wn(last.t)){last.fix=j.fix;last.tip=j.tip||"";sfx("bad");}else{last.ok=true;if(j.tip)tipOnly=j.tip;sfx("ok");}}
+    else if(j.tip)tipOnly=j.tip;
+    CH.bub.push({me:false,t:j.say||"…",tr:j.tr||"",hint:j.hint||"",tipOnly});
+    if(j.end||CH.n>=CH.max){CH.ended=true;CH.sum=j.sum||"Harika bir sohbetti! Düzenli konuşmaya devam et.";const ab=document.querySelector(".actbar");if(ab)ab.remove();}
+    CH.busy=false;drawChat(false);say(j.say||"");
+  }catch(e){if(!CH)return;CH.busy=false;drawChat(false);
+    const c=e&&e.code;toast(c==="rate_limited"?"Biraz bekle, sonra tekrar dene.":c==="not_granted"?"Yapay zekâ izni verilmedi.":"Bağlantı sorunu, tekrar dene.");
+    if(c==="not_granted"){CAPS.sample=null;}
+    if(CH.msgs.length&&CH.msgs[CH.msgs.length-1].role==="user"){CH.msgs.pop();CH.n=Math.max(0,CH.n-1);const b=CH.bub.pop();const ci=$("#ci");if(ci&&b)ci.value=b.t;drawChat(false);}
+  }
+}
+function send(){if(!CH||CH.busy||CH.ended)return;recStop();const ci=$("#ci");const v=(ci.value||"").trim();if(!v)return;ci.value="";
+  CH.n++;CH.bub.push({me:true,t:v});CH.msgs.push({role:"user",content:v});aiTurn();}
+
+function speakCard(){return `<div class="spcard"><div class="spct">🗣️ Konuşma pratiği</div><div class="spcs">Kısa sohbetler ve telaffuz — derslerinle ilgili</div>
+  <div class="spbtns"><button data-sp="chat"><span>💬</span>Sohbet</button><button data-sp="rep"><span>🔁</span>Tekrar et</button><button data-sp="say"><span>🗣️</span>Çevir & söyle</button></div></div>`;}
+function bindSpeakCard(r){r.querySelectorAll("[data-sp]").forEach(b=>b.onclick=()=>{const m=b.dataset.sp;if(m==="chat")return chat(null);speakDrill(spItems(null,6),{mode:m,title:m==="rep"?"Dinle ve tekrar et":"Çevir ve söyle"});});}
 
 /* ortak oyun çerçevesi */
 let GM=null;
@@ -20602,7 +20809,7 @@ function lesson(gi,restart){
     bindSay(root());bindTap(root());
   }
   const segTitle=()=>`${u.lv} ${u.n} · ${segName(P[si])} ${si+1}/${P.length}`;
-  function nextSeg(){si++;dqInc("seg");S.lp[u.key]=si;touch();save();if(si>=P.length)return finish();runSeg();}
+  function nextSeg(){si++;dqInc("seg");S.lp[u.key]=si;touch();save();if(si>=P.length)return finish();if(snackDue(u,P[si-1].t))return snack(u,runSeg);runSeg();}
   function runSeg(){
     const sg=P[si];
     if(sg.t==="g")return grammar();
@@ -20728,10 +20935,11 @@ function lesson(gi,restart){
       <div class="h2" style="font-size:28px;margin-top:12px">Geschafft!</div>
       <div class="sub">${esc(u.t)} tamamlandı. ${u.w.length} kelime ve ${u.sents.length} cümleyle çalıştın.</div>
       <div class="mt"><span class="pill blue">+${gain} puan</span></div>
-      <div class="sec-f" style="margin-top:14px">Zorlandığın kelimeler Tekrar sekmesinde daha sık karşına çıkacak.</div></div>
+      <div class="sec-f" style="margin-top:14px">Zorlandığın kelimeler Tekrar sekmesinde daha sık karşına çıkacak.</div><button class="btn sec" id="spk2" style="margin-top:18px">🗣️ Bu konuyla konuş</button></div>
       <div class="actbar"><div class="in"><button class="btn sec" id="h">Öğren</button>${nx?`<button class="btn" id="n">Sonraki ders</button>`:""}</div></div>`;
     $("#h").onclick=()=>{tab="learn";if(nx&&nx.lv!==u.lv)S.lv=nx.lv;save();render();};
     const nb=$("#n");if(nb)nb.onclick=()=>{S.lv=nx.lv;save();lesson(gi+1,true);};
+    $("#spk2").onclick=()=>{const back=()=>{IN_LESSON=false;tab="learn";render();};if(CAPS.sample)chat(u,back);else speakDrill(spItems(u,6),{u,mode:"mix",title:"🗣️ "+u.t,onDone:back});};
   }
   runSeg();
 }

@@ -67,3 +67,4 @@ Her adımdan sonra: build → test (playwright) → yayınla (mümkünse) → Ma
 - A2: 10 kitap/dil tamam (a2d doktor+iklim, a2e otel+e-araba). Sıradaki: B1 roman tarzı 8 kitap/dil
 - Konuşma pratiği eklendi (Oyunlar kartı: Sohbet[AI, sadece Claude app sample], Tekrar et, Çevir&söyle; ders arası mola her 2. w/s bölümünde; ders sonu 'Bu konuyla konuş'). Test: tests/tspeak.py
 - B1: 10 kitap/dil tamam (b1b uzaktan çalışma+girişim, b1c dükkân/enflasyon+yerel seçim, b1d yapay zekâ+gözlemevi, b1e kalp/tıp+sıcak yaz/iklim). Sıradaki: B2 8 kitap/dil (books_b2b..e).
+- Artifact (3bb52656) 12 Kas'tan beri güncellenmiyor: Artifact aracı yayından önce canlı sürümün tamamının okunmasını istiyor (2 MB, bağlama sığmıyor). Kullanıcı: şimdilik kalsın; GitHub index.html güncel. Yayın adımını atla, özette belirt.

@@ -15520,7 +15520,7 @@ let SPK_ID=0;
 function speakText(t,rate,cb){
   if(NSPEAK){const id=cb?++SPK_ID:0;if(cb)NCB[id]=cb;nCall("speak",{t:String(t),l:LANG.tts,r:rate,v:voice?voice.id:"",g:(S.voice&&S.voice.g)||"f",cb:id});return;}
   try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang=LANG.tts;if(voice&&voice._v)u.voice=voice._v;u.rate=rate;
-    if(cb){u.onend=cb;u.onerror=cb;}speechSynthesis.speak(u);}catch(e){if(cb)setTimeout(cb,300);}
+    const fix=()=>{try{if(SFX.ctx&&SFX.ctx.state!=="running")SFX.ctx.resume().catch(()=>{});}catch(e){}};u.onend=()=>{fix();cb&&cb();};u.onerror=()=>{fix();cb&&cb();};speechSynthesis.speak(u);}catch(e){if(cb)setTimeout(cb,300);}
 }
 function stopSpeak(){if(NSPEAK){for(const k in NCB)delete NCB[k];nCall("stop",{});}try{speechSynthesis.cancel();}catch(e){}}
 const QN=["Robotik","Standart","Doğal","Çok doğal"];
@@ -15614,10 +15614,16 @@ function sfxCtx(){
 }
 /* iOS: ilk dokunuşta ses motorunu aç (sessiz bir tampon çalmak gerekir) */
 function sfxUnlock(){
-  const c=sfxCtx();if(!c||SFX.unlocked)return;
-  try{const b=c.createBuffer(1,1,22050),s=c.createBufferSource();s.buffer=b;s.connect(c.destination);s.start(0);if(c.state==="suspended")c.resume();SFX.unlocked=true;sfxRender();}catch(e){}
+  if(S.sfx===false)return;let c=sfxCtx();if(!c)return;
+  if(c.state==="closed"||c.state==="interrupted"){sfxReset();c=sfxCtx();if(!c)return;}
+  if(SFX.unlocked&&c.state==="running")return;
+  try{const b=c.createBuffer(1,1,22050),s=c.createBufferSource();s.buffer=b;s.connect(c.destination);s.start(0);
+    const p=c.resume&&c.resume();if(p&&p.then)p.then(()=>{SFX.unlocked=c.state==="running";}).catch(()=>{});else SFX.unlocked=c.state==="running";
+    sfxRender();}catch(e){}
 }
-["pointerdown","touchend","keydown"].forEach(t=>document.addEventListener(t,sfxUnlock,{passive:true,capture:true}));
+/* iOS konuşma motoru veya arama sonrası ses bağlamı "interrupted" kalabilir: yeniden oluştur */
+function sfxReset(){try{if(SFX.ctx&&SFX.ctx.state!=="closed"){const q=SFX.ctx.close();q&&q.catch&&q.catch(()=>{});}}catch(e){}SFX.ctx=null;SFX.master=null;SFX.unlocked=false;}
+["pointerdown","pointerup","touchend","click","keydown"].forEach(t=>document.addEventListener(t,sfxUnlock,{passive:true,capture:true}));
 document.addEventListener("visibilitychange",()=>{if(!document.hidden&&SFX.ctx&&SFX.ctx.state!=="running")SFX.ctx.resume().catch(()=>{});});
 
 function impulse(c,sec,decay){const n=Math.floor(c.sampleRate*sec),b=c.createBuffer(2,n,c.sampleRate);for(let ch=0;ch<2;ch++){const d=b.getChannelData(ch);for(let i=0;i<n;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/n,decay);}return b;}
@@ -15668,12 +15674,17 @@ async function sfxRender(){
 }
 function sfx(kind){
   if(S.sfx===false)return;
-  const c=sfxCtx();if(!c)return;
-  try{if(c.state==="suspended")c.resume();
-    const b=SFX.bufs[kind];
-    if(b){const s=c.createBufferSource();s.buffer=b;s.connect(SFX.master);s.start(c.currentTime+.005);return;}
-    sfxRender();
-  }catch(e){}
+  let c=sfxCtx();if(!c)return;
+  if(c.state==="closed"||c.state==="interrupted"){sfxReset();c=sfxCtx();if(!c)return;}
+  const play=()=>{try{const b=SFX.bufs[kind];
+      if(b){const s=c.createBufferSource();s.buffer=b;s.connect(SFX.master);s.start(c.currentTime+.005);return;}
+      sfxRender();
+      /* hazır değilse basit bir yedek ses */
+      const o=c.createOscillator(),g=c.createGain(),t=c.currentTime;o.type="sine";o.frequency.value=kind==="bad"?220:kind==="tap"?1800:880;
+      g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(kind==="tap"?.05:.15,t+.005);g.gain.exponentialRampToValueAtTime(.0001,t+(kind==="tap"?.04:.25));o.connect(g).connect(SFX.master);o.start(t);o.stop(t+.3);
+    }catch(e){}};
+  if(c.state==="running")return play();
+  try{const p=c.resume();if(p&&p.then)p.then(()=>{if(c.state==="running")play();else{sfxReset();const c2=sfxCtx();if(c2){c=c2;c2.resume().then(play).catch(()=>{});}}}).catch(()=>{});else play();}catch(e){}
 }
 /* telaffuz, efekt sesini kesmesin diye biraz sonra başlar */
 function sayAfter(t,ms){setTimeout(()=>say(t),ms==null?420:ms);}

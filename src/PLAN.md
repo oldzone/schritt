@@ -71,3 +71,4 @@ Her adımdan sonra: build → test (playwright) → yayınla (mümkünse) → Ma
 - 13 Kas: Yazım toleransı (nearEq/wclose: 4+ harfli kelimede 1 harf, 10+ harfte 2 harf hata doğru sayılır; artikel tam olmalı). Konuşma kartı: 📞 Ara (serbest sesli arama, callStart; SR otomatik dinler, yoksa klavye dikte), 🎯 Kelime soru-cevap (chat mode words, gWords'tan 8 kelime). AI özellikleri sadece Claude app (sample). Test: tests/tcall.py
 - 13 Kas: GitHub sürümünde AI: Profil→Yapay zekâ→Claude API anahtarı (localStorage schritt-aikey, doğrudan api.anthropic.com, claude-haiku-5-5). Claude app'te sample öncelikli.
 - Kullanıcı ücretli API istemiyor: anahtar arayüzü kaldırıldı (kod pasif duruyor). AI özellikleri sadece Claude app.
+- 13 Kas: Safari (GitHub, top-level iOS) için efekt sesleri <audio> havuzu ile (SFX_EL/elBuild/elUnlock/elPlay); WebAudio yedek.

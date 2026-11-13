@@ -934,8 +934,21 @@ function sfxCtx(){
   SFX.ctx=c;SFX.master=g;return c;
 }
 /* iOS: ilk dokunuşta ses motorunu aç (sessiz bir tampon çalmak gerekir) */
+/* Safari (GitHub sürümü): Web Audio sessiz modda/ilk dokunuşta susabiliyor → hazır sesleri <audio> ile çal */
+const SFX_EL=(()=>{try{return window.self===window.top&&(/iP(hone|ad|od)/.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1));}catch(e){return false;}})();
+const ELP={};let elUnlocked=false;
+function wavURL(buf){const n=buf.length,sr=buf.sampleRate,a=buf.getChannelData(0),b=buf.numberOfChannels>1?buf.getChannelData(1):a;
+  const ab=new ArrayBuffer(44+n*2),v=new DataView(ab),w=(o,t)=>{for(let i=0;i<t.length;i++)v.setUint8(o+i,t.charCodeAt(i));};
+  w(0,"RIFF");v.setUint32(4,36+n*2,true);w(8,"WAVE");w(12,"fmt ");v.setUint32(16,16,true);v.setUint16(20,1,true);v.setUint16(22,1,true);v.setUint32(24,sr,true);v.setUint32(28,sr*2,true);v.setUint16(32,2,true);v.setUint16(34,16,true);w(36,"data");v.setUint32(40,n*2,true);
+  for(let i=0;i<n;i++){let x=(a[i]+b[i])*.45;x=x>1?1:x<-1?-1:x;v.setInt16(44+i*2,x*32767,true);}
+  return URL.createObjectURL(new Blob([ab],{type:"audio/wav"}));}
+function elBuild(){if(!SFX_EL)return;for(const k in SFX.bufs){if(ELP[k])continue;try{const u=wavURL(SFX.bufs[k]);ELP[k]={i:0,a:[0,1,2].map(()=>{const e=new Audio(u);e.preload="auto";e.setAttribute("playsinline","");return e;})};}catch(e){}}}
+function elUnlock(){if(!SFX_EL||elUnlocked||!Object.keys(ELP).length)return;elUnlocked=true;
+  for(const k in ELP)ELP[k].a.forEach(e=>{try{e.muted=true;const p=e.play();const done=()=>{try{e.pause();e.currentTime=0;}catch(x){}e.muted=false;};if(p&&p.then)p.then(done).catch(()=>{e.muted=false;elUnlocked=false;});else done();}catch(x){e.muted=false;}});}
+function elPlay(kind){const P=ELP[kind];if(!P||!elUnlocked)return false;try{if(kind==="tap"&&window.speechSynthesis&&speechSynthesis.speaking)return false;}catch(e){}
+  const e=P.a[P.i++%P.a.length];try{e.currentTime=0;const p=e.play();if(p&&p.catch)p.catch(()=>{});return true;}catch(x){return false;}}
 function sfxUnlock(){
-  if(S.sfx===false)return;let c=sfxCtx();if(!c)return;
+  if(S.sfx===false)return;elUnlock();let c=sfxCtx();if(!c)return;
   if(c.state==="closed"||c.state==="interrupted"){sfxReset();c=sfxCtx();if(!c)return;}
   if(SFX.unlocked&&c.state==="running")return;
   try{const b=c.createBuffer(1,1,22050),s=c.createBufferSource();s.buffer=b;s.connect(c.destination);s.start(0);
@@ -991,10 +1004,11 @@ async function sfxRender(){
       const cv=oc.createConvolver();cv.buffer=impulse(oc,1.1,3.2);const wg=oc.createGain();wg.gain.value=.55;const wet=oc.createGain();wet.connect(cv).connect(wg).connect(oc.destination);
       fn(oc,dry,wet);SFX.bufs[k]=await oc.startRendering();}catch(e){}
   }
-  SFX.ready=true;SFX.rendering=false;
+  SFX.ready=true;SFX.rendering=false;elBuild();
 }
 function sfx(kind){
   if(S.sfx===false)return;
+  if(SFX_EL&&elPlay(kind))return;
   let c=sfxCtx();if(!c)return;
   if(c.state==="closed"||c.state==="interrupted"){sfxReset();c=sfxCtx();if(!c)return;}
   const play=()=>{try{const b=SFX.bufs[kind];

@@ -25376,7 +25376,7 @@ function snack(u,cont){speakDrill(spItems(u,2),{title:"🗣️ Konuşma molası"
 
 /* yapay zekâ ile sohbet */
 let CH=null;
-function chatInfo(){sheet(`<div class="h2" style="font-size:24px;margin-bottom:8px">🤖 Yapay zekâ özellikleri</div><div class="sub" style="margin-bottom:12px">Arama, kelime soru-cevap ve ders sohbeti için yapay zekâ bağlantısı gerekiyor. Bu sayfada kendi Claude API anahtarını ekleyerek açabilirsin.</div><button class="btn" id="aigo">Anahtar ekle</button><div class="sec-f" style="margin:12px 0 0">Anahtar olmadan da <b>Tekrar et</b> ve <b>Çevir ve söyle</b> çalışır.</div>`);document.getElementById("aigo").onclick=()=>{document.querySelectorAll(".sheetbg").forEach(x=>x.remove());aiKeySheet();};}
+function chatInfo(){sheet(`<div class="h2" style="font-size:24px;margin-bottom:8px">🤖 Yapay zekâ özellikleri</div><div class="sub" style="margin-bottom:10px">Arama, kelime soru-cevap ve ders sohbeti Claude uygulamasındaki sürümde ücretsiz çalışır.</div><div class="sec-f" style="margin:0">Bu sayfada <b>Tekrar et</b> ve <b>Çevir ve söyle</b> alıştırmalarını kullanabilirsin.</div>`);}
 function chat(u,onBack,mode){
   if(!CAPS.sample){chatInfo();return;}
   stopGame();tabs(false);IN_LESSON=true;recStop();
@@ -26208,9 +26208,8 @@ function me(){
   <div class="sec-h">Görünüm</div><div class="group"><div class="throw">${THEMES.map(([k,n,g])=>`<button class="thsw" data-th="${k}" aria-pressed="${(S.theme||"okyanus")===k}"><i style="background:${g}"></i>${n}</button>`).join("")}</div>
   <button class="cell plain" id="sfxb"><span class="tx t1">Ses efektleri</span><span class="sw ${S.sfx===false?"":"on"}" id="sfxs"></span></button></div>
   <div class="sec-f">Tema anında uygulanır. Telefonun karanlık moddaysa renkli temalar otomatik koyulaşır. "Gece" hep koyu, "Beyaz" hep açıktır.</div>
-  <div class="sec-h">Yapay zekâ</div><div class="group"><button class="cell plain" id="aib"><span class="tx t1" style="color:var(--blue)">🤖 Claude API anahtarı</span><span class="val">${aiKey()?"Ekli":(CAPS.sample?"Claude uygulaması":"Yok")}</span></button></div><div class="sec-f">Arama ve yapay zekâ sohbetleri için.</div>
   <div class="sec-h">Veri</div><div class="group"><button class="cell plain" id="exb"><span class="tx t1" style="color:var(--blue)">İlerlemeyi yedekle / başka yere taşı</span></button><button class="cell plain" id="imb"><span class="tx t1" style="color:var(--blue)">Yedekten geri yükle (içe aktar)</span></button><button class="cell plain" id="rs"><span class="tx t1" style="color:var(--red)" id="rst">İlerlemeyi sıfırla</span></button></div></div>`;
-  $("#aib").onclick=aiKeySheet;$("#exb").onclick=exportSheet;$("#imb").onclick=importSheet;$("#meh").onclick=avatarSheet;bindLang(root());bindVoice();
+  $("#exb").onclick=exportSheet;$("#imb").onclick=importSheet;$("#meh").onclick=avatarSheet;bindLang(root());bindVoice();
   root().querySelectorAll("[data-goal]").forEach(b=>b.onclick=()=>{S.goal=+b.dataset.goal;save();sfx("tap");me();});
   root().querySelectorAll("[data-th]").forEach(b=>b.onclick=()=>{S.theme=b.dataset.th;applyTheme();save();root().querySelectorAll("[data-th]").forEach(x=>x.setAttribute("aria-pressed",x===b));sfx("tap");shell(true);});
   $("#sfxb").onclick=()=>{S.sfx=S.sfx===false;$("#sfxs").classList.toggle("on",S.sfx!==false);try{if(navigator.audioSession)navigator.audioSession.type=S.sfx===false?"auto":"playback";}catch(e){}save();sfxUnlock();sfx("ok");};

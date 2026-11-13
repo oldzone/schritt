@@ -70,3 +70,4 @@ Her adımdan sonra: build → test (playwright) → yayınla (mümkünse) → Ma
 - Artifact (3bb52656) 12 Kas'tan beri güncellenmiyor: Artifact aracı yayından önce canlı sürümün tamamının okunmasını istiyor (2 MB, bağlama sığmıyor). Kullanıcı: şimdilik kalsın; GitHub index.html güncel. Yayın adımını atla, özette belirt.
 - 13 Kas: Yazım toleransı (nearEq/wclose: 4+ harfli kelimede 1 harf, 10+ harfte 2 harf hata doğru sayılır; artikel tam olmalı). Konuşma kartı: 📞 Ara (serbest sesli arama, callStart; SR otomatik dinler, yoksa klavye dikte), 🎯 Kelime soru-cevap (chat mode words, gWords'tan 8 kelime). AI özellikleri sadece Claude app (sample). Test: tests/tcall.py
 - 13 Kas: GitHub sürümünde AI: Profil→Yapay zekâ→Claude API anahtarı (localStorage schritt-aikey, doğrudan api.anthropic.com, claude-haiku-5-5). Claude app'te sample öncelikli.
+- Kullanıcı ücretli API istemiyor: anahtar arayüzü kaldırıldı (kod pasif duruyor). AI özellikleri sadece Claude app.

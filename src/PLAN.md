@@ -72,3 +72,4 @@ Her adımdan sonra: build → test (playwright) → yayınla (mümkünse) → Ma
 - 13 Kas: GitHub sürümünde AI: Profil→Yapay zekâ→Claude API anahtarı (localStorage schritt-aikey, doğrudan api.anthropic.com, claude-haiku-5-5). Claude app'te sample öncelikli.
 - Kullanıcı ücretli API istemiyor: anahtar arayüzü kaldırıldı (kod pasif duruyor). AI özellikleri sadece Claude app.
 - 13 Kas: Safari (GitHub, top-level iOS) için efekt sesleri <audio> havuzu ile (SFX_EL/elBuild/elUnlock/elPlay); WebAudio yedek.
+- Sesler gecikiyordu: tekrar WebAudio (hızlı) + iOS sessiz modu için döngülü sessiz <audio> (silKeep); <audio> efekt sadece ctx çalışmazsa yedek.

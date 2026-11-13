@@ -25245,8 +25245,32 @@ const REC={p:null,f:null,s:null,sr:null,on:false};
 async function capsInit(){if(CAPS.ready)return;CAPS.ready=true;
   for(let i=0;i<30&&!(window.claude&&window.claude.use);i++)await new Promise(r=>setTimeout(r,200));
   if(!(window.claude&&window.claude.use))return;
-  try{CAPS.sample=await window.claude.use("sample");}catch(e){}
+  try{const sm=await window.claude.use("sample");if(sm)CAPS.sample=sm;}catch(e){}
   try{const d=await window.claude.use("dictation");if(d){d.onPartial(x=>REC.p&&REC.p(x.text||""));d.onFinal(x=>REC.f&&REC.f(x.text||""));d.onState(x=>REC.s&&REC.s(x.state));CAPS.dict=d;}}catch(e){CAPS.dict=null;}
+}
+/* kendi API anahtarıyla yapay zekâ (GitHub sürümü) */
+const AIK="schritt-aikey";
+const aiKey=()=>{try{return localStorage.getItem(AIK)||"";}catch(e){return "";}};
+async function apiSample(input,o){o=o||{};
+  const msgs=typeof input==="string"?[{role:"user",content:input}]:input;
+  let r;try{r=await fetch("https://api.anthropic.com/v1/messages",{method:"POST",headers:{"content-type":"application/json","x-api-key":aiKey(),"anthropic-version":"2023-06-01","anthropic-dangerous-direct-browser-access":"true"},body:JSON.stringify({model:"claude-haiku-5-5",max_tokens:700,messages:msgs})});}
+  catch(e){throw{code:"network",message:String(e)};}
+  if(!r.ok){let m="";try{m=(await r.json()).error.message;}catch(e){}throw{code:r.status===401||r.status===403?"bad_key":r.status===429||r.status===529?"rate_limited":"api",message:m};}
+  const j=await r.json();return{text:(j.content||[]).filter(c=>c.type==="text").map(c=>c.text).join(""),truncated:j.stop_reason==="max_tokens"};}
+if(aiKey())CAPS.sample=apiSample;
+function aiKeySheet(){const k=aiKey();
+  sheet(`<div class="h2" style="font-size:24px;margin-bottom:8px">🤖 Yapay zekâ anahtarı</div>
+  <div class="sub" style="margin-bottom:12px">Arama, kelime soru-cevap ve ders sohbeti bu sayfada kendi <b>Claude API anahtarınla</b> çalışır. Anahtar sadece bu cihazda saklanır, yedeğe ve GitHub'a gitmez.</div>
+  <input class="inp" id="aik" type="password" placeholder="sk-ant-…" autocomplete="off" autocapitalize="off" spellcheck="false" style="font-size:16px" value="${esc(k)}">
+  <div style="display:flex;gap:10px;margin-top:12px"><button class="btn" id="aiks">Kaydet ve dene</button>${k?`<button class="btn sec" id="aikd">Sil</button>`:""}</div>
+  <div class="sub" id="aikr" style="margin-top:10px"></div>
+  <div class="sec-f" style="margin:14px 0 0">Anahtarı console.anthropic.com → API Keys bölümünden alabilirsin (Claude aboneliğinden ayrı, kullandıkça ücretlendirilir; küçük ve hızlı model kullanılır, bir sohbet genelde birkaç kuruş tutar). Konsolda harcama limiti koymanı öneririm.</div>`);
+  const inp=document.getElementById("aik"),out=document.getElementById("aikr");
+  document.getElementById("aiks").onclick=async()=>{const v=inp.value.trim();if(!v){out.textContent="Anahtarı yapıştır.";return;}
+    try{localStorage.setItem(AIK,v);}catch(e){}CAPS.sample=apiSample;out.textContent="Deneniyor…";
+    try{const r=await apiSample([{role:"user",content:"Reply with just: OK"}]);out.innerHTML=r.text?"✅ Çalışıyor! Oyunlar → Konuşma pratiği'nden başlayabilirsin.":"Cevap boş geldi.";sfx("ok");}
+    catch(e){out.textContent=e.code==="bad_key"?"❌ Anahtar geçersiz.":e.code==="network"?"❌ Bağlantı kurulamadı.":"❌ Hata: "+(e.message||e.code);sfx("bad");}};
+  const d=document.getElementById("aikd");if(d)d.onclick=()=>{try{localStorage.removeItem(AIK);}catch(e){}if(CAPS.sample===apiSample)CAPS.sample=null;out.textContent="Silindi.";};
 }
 capsInit();
 const canMic=()=>!!(SRC||CAPS.dict);
@@ -25352,7 +25376,7 @@ function snack(u,cont){speakDrill(spItems(u,2),{title:"🗣️ Konuşma molası"
 
 /* yapay zekâ ile sohbet */
 let CH=null;
-function chatInfo(){sheet(`<div class="h2" style="font-size:24px;margin-bottom:8px">🤖 Yapay zekâ özellikleri</div><div class="sub" style="margin-bottom:10px">Arama, kelime soru-cevap ve ders sohbeti Claude uygulamasındaki sürümde çalışır (bu sayfada yapay zekâ bağlantısı yok).</div><div class="sec-f">Burada <b>Dinle ve tekrar et</b> ile <b>Çevir ve söyle</b> alıştırmalarını kullanabilirsin; ikisi de konuşmanı kontrol eder.</div>`);}
+function chatInfo(){sheet(`<div class="h2" style="font-size:24px;margin-bottom:8px">🤖 Yapay zekâ özellikleri</div><div class="sub" style="margin-bottom:12px">Arama, kelime soru-cevap ve ders sohbeti için yapay zekâ bağlantısı gerekiyor. Bu sayfada kendi Claude API anahtarını ekleyerek açabilirsin.</div><button class="btn" id="aigo">Anahtar ekle</button><div class="sec-f" style="margin:12px 0 0">Anahtar olmadan da <b>Tekrar et</b> ve <b>Çevir ve söyle</b> çalışır.</div>`);document.getElementById("aigo").onclick=()=>{document.querySelectorAll(".sheetbg").forEach(x=>x.remove());aiKeySheet();};}
 function chat(u,onBack,mode){
   if(!CAPS.sample){chatInfo();return;}
   stopGame();tabs(false);IN_LESSON=true;recStop();
@@ -26184,8 +26208,9 @@ function me(){
   <div class="sec-h">Görünüm</div><div class="group"><div class="throw">${THEMES.map(([k,n,g])=>`<button class="thsw" data-th="${k}" aria-pressed="${(S.theme||"okyanus")===k}"><i style="background:${g}"></i>${n}</button>`).join("")}</div>
   <button class="cell plain" id="sfxb"><span class="tx t1">Ses efektleri</span><span class="sw ${S.sfx===false?"":"on"}" id="sfxs"></span></button></div>
   <div class="sec-f">Tema anında uygulanır. Telefonun karanlık moddaysa renkli temalar otomatik koyulaşır. "Gece" hep koyu, "Beyaz" hep açıktır.</div>
+  <div class="sec-h">Yapay zekâ</div><div class="group"><button class="cell plain" id="aib"><span class="tx t1" style="color:var(--blue)">🤖 Claude API anahtarı</span><span class="val">${aiKey()?"Ekli":(CAPS.sample?"Claude uygulaması":"Yok")}</span></button></div><div class="sec-f">Arama ve yapay zekâ sohbetleri için.</div>
   <div class="sec-h">Veri</div><div class="group"><button class="cell plain" id="exb"><span class="tx t1" style="color:var(--blue)">İlerlemeyi yedekle / başka yere taşı</span></button><button class="cell plain" id="imb"><span class="tx t1" style="color:var(--blue)">Yedekten geri yükle (içe aktar)</span></button><button class="cell plain" id="rs"><span class="tx t1" style="color:var(--red)" id="rst">İlerlemeyi sıfırla</span></button></div></div>`;
-  $("#exb").onclick=exportSheet;$("#imb").onclick=importSheet;$("#meh").onclick=avatarSheet;bindLang(root());bindVoice();
+  $("#aib").onclick=aiKeySheet;$("#exb").onclick=exportSheet;$("#imb").onclick=importSheet;$("#meh").onclick=avatarSheet;bindLang(root());bindVoice();
   root().querySelectorAll("[data-goal]").forEach(b=>b.onclick=()=>{S.goal=+b.dataset.goal;save();sfx("tap");me();});
   root().querySelectorAll("[data-th]").forEach(b=>b.onclick=()=>{S.theme=b.dataset.th;applyTheme();save();root().querySelectorAll("[data-th]").forEach(x=>x.setAttribute("aria-pressed",x===b));sfx("tap");shell(true);});
   $("#sfxb").onclick=()=>{S.sfx=S.sfx===false;$("#sfxs").classList.toggle("on",S.sfx!==false);try{if(navigator.audioSession)navigator.audioSession.type=S.sfx===false?"auto":"playback";}catch(e){}save();sfxUnlock();sfx("ok");};

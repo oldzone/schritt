@@ -5,7 +5,7 @@
 .mic{width:52px;height:52px;border-radius:50%;flex:none;font-size:22px;background:var(--grad);color:#fff;display:grid;place-items:center;box-shadow:0 4px 12px color-mix(in srgb,var(--blue) 35%,transparent)}
 .mic.send{font-size:20px}.mic.on{background:var(--red);background-image:none;animation:sppulse 1s infinite}
 @keyframes sppulse{50%{transform:scale(1.1)}}
-.spres{margin-top:16px;font-size:21px;line-height:1.55}.pw{padding:0 2px;border-radius:5px}.pw.ok{color:var(--green)}.pw.no{color:var(--red);text-decoration:underline wavy;text-underline-offset:4px}
+.spres{margin-top:16px;font-size:21px;line-height:1.55}.pw{padding:0 2px;border-radius:5px}.pw.ok{color:var(--green)}.pw.cl{color:var(--orange)}.pw.no{color:var(--red);text-decoration:underline wavy;text-underline-offset:4px}
 .spsc{font-weight:800;font-size:15px;margin-top:8px}
 .splink{display:block;margin:22px auto 0;color:var(--label2);font-size:14px;text-decoration:underline}
 .spcard{border-radius:22px;padding:16px;margin-bottom:14px;color:#fff;background:linear-gradient(135deg,#ff375f,#bf5af2 55%,#5e5ce6);box-shadow:0 8px 22px rgba(0,0,0,.14)}
@@ -18,6 +18,23 @@
 .cbf{font-size:14px;margin-top:6px;padding-top:6px;border-top:1px solid rgba(255,255,255,.35)}
 .cbtools{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}.cbtools button{font-size:13px;padding:5px 10px;border-radius:99px;background:var(--fill);color:var(--label2);font-weight:600}
 .cbtr{font-size:14px;color:var(--label2);margin-top:6px}
+.spbtns{flex-wrap:wrap}.spbtns button{flex:1 1 calc(50% - 8px)}
+.spcall{display:flex;align-items:center;gap:12px;width:100%;margin-top:12px;background:rgba(255,255,255,.95);color:#1c1c1e;border-radius:18px;padding:12px 14px;text-align:left}
+.spca{font-size:34px;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#34c759,#30b0c7);display:grid;place-items:center;flex:none}
+.spct2 b{display:block;font-size:17px;color:#1c1c1e}.spct2 small{font-size:13px;color:#636366}
+.cbw{font-size:13px;font-weight:700;color:var(--blue);margin-bottom:4px}.cbw span{font-weight:500;color:var(--label2)}
+.call{position:fixed;inset:0;z-index:30;display:flex;flex-direction:column;background:linear-gradient(180deg,#1c2b4a 0%,#0b0f1a 100%);color:#fff;padding:calc(30px + env(safe-area-inset-top,0px)) 20px calc(24px + env(safe-area-inset-bottom,0px))}
+.clhead{text-align:center}.clav{font-size:62px;width:110px;height:110px;border-radius:50%;margin:0 auto 10px;display:grid;place-items:center;background:linear-gradient(135deg,#34c759,#30b0c7);transition:box-shadow .3s}
+.clav.talk{box-shadow:0 0 0 0 rgba(52,199,89,.6);animation:ring2 1.2s infinite}@keyframes ring2{0%{box-shadow:0 0 0 0 rgba(52,199,89,.55)}100%{box-shadow:0 0 0 22px rgba(52,199,89,0)}}
+.clnm{font:700 26px var(--sfd)}.clt{font-variant-numeric:tabular-nums;opacity:.7;margin-top:2px}.clst{font-size:14px;margin-top:6px;opacity:.8;min-height:20px}.clst.listen{color:#30d158;opacity:1}
+.clbody{flex:1;overflow:auto;margin:18px auto 10px;max-width:520px;width:100%;display:flex;flex-direction:column;justify-content:flex-end;gap:8px}
+.clcap{font-size:22px;font-weight:600;line-height:1.35}.clcap .tw{border-bottom-color:rgba(255,255,255,.35)}.cltr{font-size:15px;opacity:.65}
+.clme{font-size:17px;color:#64d2ff;min-height:22px}.clfix{font-size:15px;color:#ffd60a}.clfix span{color:rgba(255,255,255,.75)}
+.clin{display:flex;gap:8px}.clin .inp{flex:1;min-width:0;font-size:17px;padding:12px;background:rgba(255,255,255,.12);border-color:transparent;color:#fff}
+.clbtns{display:flex;justify-content:space-around;align-items:flex-end;max-width:420px;margin:0 auto;width:100%}
+.clb{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:12px;color:#fff}.clb span{width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,.16);display:grid;place-items:center;font-size:24px}
+.clb.big span{width:76px;height:76px;font-size:30px;background:#0a84ff}.clb.on span{background:#30d158;animation:sppulse 1s infinite}.clb.off span{opacity:.4}
+.clb.hang span{background:#ff3b30;transform:rotate(135deg)}
 .typing span{display:inline-block;margin:0 2px;animation:pulse 1.2s infinite}.typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}
 </style></head><body>
 <title>Schritt für Schritt</title>
@@ -25262,10 +25279,10 @@ const wn=w=>norm(w).replace(/['’]/g,"");
 function wcompare(target,heard){
   const T=wtok(target),Tn=T.map(wn),H=wtok(heard).map(wn),n=Tn.length,m=H.length;
   const L=Array.from({length:n+1},()=>new Array(m+1).fill(0));
-  for(let i=n-1;i>=0;i--)for(let j=m-1;j>=0;j--)L[i][j]=Tn[i]===H[j]?L[i+1][j+1]+1:Math.max(L[i+1][j],L[i][j+1]);
+  for(let i=n-1;i>=0;i--)for(let j=m-1;j>=0;j--)L[i][j]=wclose(Tn[i],H[j])?L[i+1][j+1]+1:Math.max(L[i+1][j],L[i][j+1]);
   const ok=new Array(n).fill(false);let i=0,j=0;
-  while(i<n&&j<m){if(Tn[i]===H[j]){ok[i]=true;i++;j++;}else if(L[i+1][j]>=L[i][j+1])i++;else j++;}
-  return{T,ok,sc:n?ok.filter(Boolean).length/n:0};
+  const cl=new Array(n).fill(false);while(i<n&&j<m){if(wclose(Tn[i],H[j])){ok[i]=true;cl[i]=Tn[i]!==H[j];i++;j++;}else if(L[i+1][j]>=L[i][j+1])i++;else j++;}
+  return{T,ok,cl,sc:n?ok.filter(Boolean).length/n:0};
 }
 function spItems(u,n){
   let src=u?[u]:UNITS.filter(x=>S.pass[x.key]||(S.lp&&S.lp[x.key]));
@@ -25306,7 +25323,7 @@ function speakDrill(items,o){
       if(done){next();return;}
       const v=inp.value.trim();if(!v){toast("Önce söyle ya da yaz");return;}
       const r=wcompare(tgt,v);tries++;
-      res.innerHTML=(mode==="say"?`<div class="sptr" style="margin-bottom:4px">Doğrusu:</div>`:"")+r.T.map((w,i)=>`<span class="pw ${r.ok[i]?"ok":"no"}">${esc(w)}</span>`).join(" ")+
+      res.innerHTML=(mode==="say"?`<div class="sptr" style="margin-bottom:4px">Doğrusu:</div>`:"")+r.T.map((w,i)=>`<span class="pw ${r.ok[i]?(r.cl[i]?"cl":"ok"):"no"}">${esc(w)}</span>`).join(" ")+
         `<div class="spsc" style="color:${r.sc>=.8?"var(--green)":r.sc>=.5?"var(--orange)":"var(--red)"}">%${Math.round(r.sc*100)} ${r.sc>=.95?"Mükemmel!":r.sc>=.8?"Çok iyi!":r.sc>=.5?"Fena değil, tekrar dene":"Bir daha dene"}</div>`+
         (mode==="say"?`<div style="margin-top:8px">${spk(tgt,true)}</div>`:"");
       bindSay(res);
@@ -25335,14 +25352,15 @@ function snack(u,cont){speakDrill(spItems(u,2),{title:"🗣️ Konuşma molası"
 
 /* yapay zekâ ile sohbet */
 let CH=null;
-function chatInfo(){sheet(`<div class="h2" style="font-size:24px;margin-bottom:8px">💬 Yapay zekâ sohbeti</div><div class="sub" style="margin-bottom:10px">Sohbet, Claude uygulamasındaki sürümde çalışır (bu sayfada yapay zekâ bağlantısı yok).</div><div class="sec-f">Burada <b>Dinle ve tekrar et</b> ile <b>Çevir ve söyle</b> alıştırmalarını kullanabilirsin; ikisi de konuşmanı kontrol eder.</div>`);}
-function chat(u,onBack){
+function chatInfo(){sheet(`<div class="h2" style="font-size:24px;margin-bottom:8px">🤖 Yapay zekâ özellikleri</div><div class="sub" style="margin-bottom:10px">Arama, kelime soru-cevap ve ders sohbeti Claude uygulamasındaki sürümde çalışır (bu sayfada yapay zekâ bağlantısı yok).</div><div class="sec-f">Burada <b>Dinle ve tekrar et</b> ile <b>Çevir ve söyle</b> alıştırmalarını kullanabilirsin; ikisi de konuşmanı kontrol eder.</div>`);}
+function chat(u,onBack,mode){
   if(!CAPS.sample){chatInfo();return;}
   stopGame();tabs(false);IN_LESSON=true;recStop();
   if(!u){const us=UNITS.filter(x=>S.pass[x.key]||(S.lp&&S.lp[x.key]));u=us.length?us[us.length-1]:UNITS.find(x=>x.lv===(S.lv||"A1"));}
-  CH={u,lv:u?u.lv:(S.lv||"A1"),msgs:[],bub:[],n:0,max:6,busy:false,ended:false,back:onBack||(()=>{IN_LESSON=false;tab="games";render();})};
+  const WL=mode==="words"?shuffle(gWords()).slice(0,8):null;if(mode==="words"&&WL.length<3){toast("Önce birkaç ders bitir.");IN_LESSON=false;tab="games";render();return;}
+  CH={u,mode,wl:WL,good:0,lv:u?u.lv:(S.lv||"A1"),msgs:[],bub:[],n:0,max:mode==="words"?WL.length:6,busy:false,ended:false,back:onBack||(()=>{IN_LESSON=false;tab="games";render();})};
   window.scrollTo(0,0);
-  root().innerHTML=`<div class="nav"><div class="in"><button class="back" id="cx"><span style="width:22px;height:22px;display:grid;place-items:center">${I.x}</span></button><div class="nt">💬 ${esc(u?u.t:"Sohbet")}</div><div class="cnt" id="cnum">0/${CH.max}</div></div></div>
+  root().innerHTML=`<div class="nav"><div class="in"><button class="back" id="cx"><span style="width:22px;height:22px;display:grid;place-items:center">${I.x}</span></button><div class="nt">${mode==="words"?"🎯 Kelime soru-cevap":"💬 "+esc(u?u.t:"Sohbet")}</div><div class="cnt" id="cnum">0/${CH.max}</div></div></div>
   <div class="page push"><div class="cbx" id="cbx"></div></div>
   <div class="actbar"><div class="in"><div class="spin" style="margin:0;width:100%"><input class="inp" id="ci" placeholder="Cevabını söyle ya da yaz…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" lang="${LANG.loc}" style="font-size:17px;padding:12px 14px">${canMic()?`<button class="mic" id="cmic" aria-label="Konuş">🎤</button>`:""}<button class="mic send" id="csend" aria-label="Gönder">➤</button></div></div></div>`;
   $("#cx").onclick=()=>{recStop();stopSpeak();const b=CH.back;CH=null;b();};
@@ -25352,6 +25370,17 @@ function chat(u,onBack){
   aiTurn();
 }
 function chatPrompt(){
+  if(CH.mode==="words")return `You are a friendly tutor in a language-learning app running a spoken vocabulary drill. The learner is a Turkish speaker learning ${ENNAME} at CEFR level ${CH.lv}.
+Target words (word = Turkish meaning), in this order: ${CH.wl.map(w=>w[0]+" = "+w[1]).join("; ")}.
+Rules:
+- Each turn, take the NEXT target word from the list and ask ONE short, personal question in ${ENNAME} (level ${CH.lv}) that the learner can naturally answer using that word. Don't put the word itself in the question if you can avoid it; it's fine if it's needed for clarity. Put the target word in "word" and its Turkish meaning in "wtr".
+- Then check the learner's answer to the PREVIOUS question: "used": true if they used the previous target word (any correct form) in a sensible answer, false otherwise. Their text comes from speech-to-text: ignore punctuation, capitals and tiny spelling slips (one wrong letter counts as correct). If there is a real grammar/word mistake, give the corrected sentence in "fix" and a very short Turkish explanation in "tip"; otherwise "".
+- Before the new question, react in one short sentence (e.g. praise, or show how the word could be used).
+- "hint": a short example answer using the target word.
+- Answer ONLY with JSON: {"say":"reaction + question","tr":"Turkish translation of say","word":"","wtr":"","used":null,"fix":"","tip":"","hint":""}
+- When you receive the answer to the LAST word, evaluate it, then say a warm goodbye (no question) and add "end":true and "sum":"2-3 sentences of Turkish feedback: which words went well and which to review".
+Start now with a one-sentence greeting and the question for the first word ("used": null).`;
+
   const u=CH.u,lv=CH.lv,words=u?u.w.slice(0,20).map(w=>w[0]).join(", "):"";
   const lvl={A1:"very short, very simple sentences, present tense, the most common words",A2:"short simple sentences, everyday vocabulary, simple past allowed",B1:"clear everyday language, some subordinate clauses",B2:"natural fluent language, varied structures",C1:"rich, idiomatic, natural language"}[lv]||"simple sentences";
   return `You are a warm, patient conversation partner inside a language-learning app (like a video-call speaking practice). The learner is a Turkish speaker practising spoken ${ENNAME} at CEFR level ${lv}.
@@ -25367,10 +25396,10 @@ Start now: greet the learner briefly and ask your first question.`;
 }
 function parseAI(t){t=String(t||"");const a=t.indexOf("{"),b=t.lastIndexOf("}");if(a>=0&&b>a){try{return JSON.parse(t.slice(a,b+1));}catch(e){}}return{say:t.trim(),tr:"",fix:"",tip:"",hint:""};}
 function drawChat(typing){const bx=$("#cbx");if(!bx||!CH)return;
-  bx.innerHTML=CH.bub.map((b,i)=>b.me?`<div class="cb me">${esc(b.t)}${b.fix?`<div class="cbf">✔ ${esc(b.fix)}${b.tip?`<br><span style="opacity:.85">${esc(b.tip)}</span>`:""}</div>`:b.ok?`<div class="cbf">👍</div>`:""}</div>`
-    :`<div class="cb ai"><div>${tapS(b.t)}</div>${b.tipOnly?`<div class="cbtr">💡 ${esc(b.tipOnly)}</div>`:""}<div class="cbtools"><button data-say="${esc(b.t)}">🔊 Dinle</button>${b.tr?`<button data-tr="${i}">Türkçesi</button>`:""}${b.hint&&i===CH.bub.length-1&&!CH.ended?`<button data-hint="${i}">💡 Örnek cevap</button>`:""}</div><div class="cbtr" id="tr${i}" hidden>${esc(b.tr||"")}</div><div class="cbtr" id="hn${i}" hidden>${b.hint?esc(b.hint):""}</div></div>`).join("")+
+  bx.innerHTML=CH.bub.map((b,i)=>b.me?`<div class="cb me">${esc(b.t)}${b.used!=null?`<div class="cbf">${b.used?"🎯 Kelimeyi doğru kullandın":"🎯 Hedef kelimeyi kullanmadın"}</div>`:""}${b.fix?`<div class="cbf">✔ ${esc(b.fix)}${b.tip?`<br><span style="opacity:.85">${esc(b.tip)}</span>`:""}</div>`:b.ok?`<div class="cbf">👍</div>`:""}</div>`
+    :`<div class="cb ai">${b.word?`<div class="cbw">🎯 ${esc(b.word)}${b.wtr?` <span>· ${esc(b.wtr)}</span>`:""}</div>`:""}<div>${tapS(b.t)}</div>${b.tipOnly?`<div class="cbtr">💡 ${esc(b.tipOnly)}</div>`:""}<div class="cbtools"><button data-say="${esc(b.t)}">🔊 Dinle</button>${b.tr?`<button data-tr="${i}">Türkçesi</button>`:""}${b.hint&&i===CH.bub.length-1&&!CH.ended?`<button data-hint="${i}">💡 Örnek cevap</button>`:""}</div><div class="cbtr" id="tr${i}" hidden>${esc(b.tr||"")}</div><div class="cbtr" id="hn${i}" hidden>${b.hint?esc(b.hint):""}</div></div>`).join("")+
     (typing?`<div class="cb ai typing"><span>●</span><span>●</span><span>●</span></div>`:"")+
-    (CH.ended&&CH.sum?`<div class="fcard" style="margin-top:6px"><div class="fch">Değerlendirme</div><div class="sub" style="text-align:left">${esc(CH.sum)}</div><button class="btn" id="cdone" style="margin-top:12px">Bitir · +${CH.n*3+10} XP</button></div>`:"");
+    (CH.ended&&CH.sum?`<div class="fcard" style="margin-top:6px"><div class="fch">Değerlendirme${CH.mode==="words"?` <span class="qc">🎯 ${CH.good}/${CH.max}</span>`:""}</div><div class="sub" style="text-align:left">${esc(CH.sum)}</div><button class="btn" id="cdone" style="margin-top:12px">Bitir · +${CH.n*3+10} XP</button></div>`:"");
   bx.querySelectorAll("[data-say]").forEach(b=>b.onclick=e=>{e.stopPropagation();say(b.dataset.say);});
   bx.querySelectorAll("[data-tr]").forEach(b=>b.onclick=()=>{const e=$("#tr"+b.dataset.tr);e.hidden=!e.hidden;});
   bx.querySelectorAll("[data-hint]").forEach(b=>b.onclick=()=>{const e=$("#hn"+b.dataset.hint);e.hidden=!e.hidden;if(!e.hidden)say(e.textContent);});
@@ -25387,9 +25416,10 @@ async function aiTurn(){
     const j=parseAI(r&&r.text);CH.msgs.push({role:"assistant",content:JSON.stringify(j)});
     const last=CH.bub.length?CH.bub[CH.bub.length-1]:null;
     let tipOnly="";
-    if(last&&last.me){if(j.fix&&wn(j.fix)!==wn(last.t)){last.fix=j.fix;last.tip=j.tip||"";sfx("bad");}else{last.ok=true;if(j.tip)tipOnly=j.tip;sfx("ok");}}
+    if(last&&last.me&&CH.mode==="words"&&j.used!=null){last.used=!!j.used;if(j.used)CH.good++;}
+    if(last&&last.me){if(j.fix&&!nearEq(j.fix,last.t)&&wn(j.fix)!==wn(last.t)){last.fix=j.fix;last.tip=j.tip||"";sfx("bad");}else{last.ok=true;if(j.tip)tipOnly=j.tip;sfx("ok");}}
     else if(j.tip)tipOnly=j.tip;
-    CH.bub.push({me:false,t:j.say||"…",tr:j.tr||"",hint:j.hint||"",tipOnly});
+    CH.bub.push({me:false,t:j.say||"…",tr:j.tr||"",hint:j.hint||"",tipOnly,word:j.end?"":(j.word||""),wtr:j.wtr||""});
     if(j.end||CH.n>=CH.max){CH.ended=true;CH.sum=j.sum||"Harika bir sohbetti! Düzenli konuşmaya devam et.";const ab=document.querySelector(".actbar");if(ab)ab.remove();}
     CH.busy=false;drawChat(false);say(j.say||"");
   }catch(e){if(!CH)return;CH.busy=false;drawChat(false);
@@ -25401,9 +25431,69 @@ async function aiTurn(){
 function send(){if(!CH||CH.busy||CH.ended)return;recStop();const ci=$("#ci");const v=(ci.value||"").trim();if(!v)return;ci.value="";
   CH.n++;CH.bub.push({me:true,t:v});CH.msgs.push({role:"user",content:v});aiTurn();}
 
-function speakCard(){return `<div class="spcard"><div class="spct">🗣️ Konuşma pratiği</div><div class="spcs">Kısa sohbetler ve telaffuz — derslerinle ilgili</div>
-  <div class="spbtns"><button data-sp="chat"><span>💬</span>Sohbet</button><button data-sp="rep"><span>🔁</span>Tekrar et</button><button data-sp="say"><span>🗣️</span>Çevir & söyle</button></div></div>`;}
-function bindSpeakCard(r){r.querySelectorAll("[data-sp]").forEach(b=>b.onclick=()=>{const m=b.dataset.sp;if(m==="chat")return chat(null);speakDrill(spItems(null,6),{mode:m,title:m==="rep"?"Dinle ve tekrar et":"Çevir ve söyle"});});}
+/* yapay zekâ ile sesli arama */
+let CL=null;
+const PERSONA={de:["Lena","👩🏼"],en:["Emma","👩🏻"],fr:["Camille","👩🏽"],it:["Giulia","👩🏾"]}[LANG.code]||["Lena","👩🏼"];
+function callPrompt(){const lv=S.lv||"A1";const n=lv==="A1"?14:lv==="A2"?20:lv==="B1"?30:40;
+  return `You are ${PERSONA[0]}, a warm, curious native ${ENNAME} speaker on a casual phone call with a friend from Turkey who is learning ${ENNAME} (CEFR level ${lv}). This is free conversation, like a real call with a friend: their day, work, family, hobbies, food, travel, plans, the city they live in, films, news, anything. Follow their lead; share small things about yourself too, then ask something back.
+Rules:
+- Speak ONLY ${ENNAME}, at level ${lv}. This is spoken: 1-2 short sentences per turn, at most ${n} words, usually ending with one question. No lists, no emojis, no stage directions.
+- The learner's words come from speech recognition: ignore punctuation, capitals and small transcription slips. If they make a real grammar or word mistake, put the corrected sentence in "fix" and a very short Turkish explanation in "tip", but do NOT mention the mistake in "say" — keep the conversation flowing naturally. Otherwise leave them "".
+- If they answer in Turkish or seem lost, say it more simply and slowly; you may add a Turkish hint in "tip".
+- Answer ONLY with JSON: {"say":"...","tr":"Turkish translation of say","fix":"","tip":""}
+Start: answer the call like a friend ("Hallo?" style in ${ENNAME}), greet them warmly and ask how they are.`;}
+function callStart(){
+  if(!CAPS.sample){chatInfo();return;}
+  stopGame();tabs(false);IN_LESSON=true;recStop();stopSpeak();
+  CL={msgs:[],t0:Date.now(),n:0,busy:false,muted:false,subs:true,ended:false,tok:0,timer:0};
+  window.scrollTo(0,0);
+  root().innerHTML=`<div class="call"><div class="clhead"><div class="clav" id="clav">${PERSONA[1]}</div><div class="clnm">${PERSONA[0]}</div><div class="clt" id="clt">00:00</div><div class="clst" id="clst">Aranıyor…</div></div>
+  <div class="clbody"><div class="clcap" id="clcap"></div><div class="cltr" id="cltr"></div><div class="clme" id="clme"></div><div class="clfix" id="clfix"></div>
+  <div class="clin" id="clin" hidden><input class="inp" id="cli" placeholder="Söyle ya da yaz…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" lang="${LANG.loc}"><button class="mic send" id="clsend">➤</button></div></div>
+  <div class="clbtns"><button class="clb" id="clsub"><span>💬</span>Altyazı</button><button class="clb big" id="clmic"><span>🎤</span>Konuş</button><button class="clb" id="clrep"><span>🔁</span>Tekrar</button><button class="clb hang" id="clend"><span>📞</span>Kapat</button></div></div>`;
+  CL.timer=setInterval(()=>{if(!CL)return;const s=Math.floor((Date.now()-CL.t0)/1000);const e=$("#clt");if(e)e.textContent=String(s/60|0).padStart(2,"0")+":"+String(s%60).padStart(2,"0");},1000);
+  $("#clend").onclick=callEnd;
+  $("#clsub").onclick=()=>{CL.subs=!CL.subs;$("#clsub").classList.toggle("off",!CL.subs);$("#clcap").hidden=$("#cltr").hidden=!CL.subs;};
+  $("#clrep").onclick=()=>{if(CL.last){recStop();callSay(CL.last.say);}};
+  $("#clmic").onclick=()=>{if(!CL||CL.busy)return;if(REC.on){recStop();return;}callListen(true);};
+  const ci=$("#cli");$("#clsend").onclick=()=>{const v=ci.value.trim();if(v){ci.value="";callSend(v);}};ci.onkeydown=e=>{if(e.key==="Enter"){e.preventDefault();$("#clsend").click();}};
+  sfx("tap");callAI();
+}
+function clSt(t,cls){const e=$("#clst");if(e){e.textContent=t;e.className="clst "+(cls||"");}const a=$("#clav");if(a)a.classList.toggle("talk",cls==="talk");const m=$("#clmic");if(m)m.classList.toggle("on",cls==="listen");}
+function callSay(t){if(!CL)return;const tok=++CL.tok;clSt("Konuşuyor…","talk");let done=false;
+  const go=()=>{if(done||!CL||CL.ended||tok!==CL.tok)return;done=true;callListen(false);};
+  speakText(t,vRate()*(["A1","A2"].includes(S.lv||"A1")?.9:1),go);
+  setTimeout(go,Math.max(2500,wtok(t).length*520+1800));}
+function callListen(user){if(!CL||CL.ended||CL.busy)return;
+  if(!canMic()){clSt("Sıra sende — klavyedeki 🎤 ile söyle","listen");$("#clin").hidden=false;if(user)try{$("#cli").focus();}catch(e){}return;}
+  clSt("Dinliyorum…","listen");const me=$("#clme");let heard="";
+  recStart(t=>{heard=t;if(me)me.textContent=t;},()=>{if(!CL||CL.ended)return;
+    if(heard.trim())callSend(heard.trim());else{clSt("Duyamadım — 🎤'ye dokunup konuş","");$("#clin").hidden=false;}});}
+function callSend(v){if(!CL||CL.busy||CL.ended)return;recStop();CL.n++;CL.msgs.push({role:"user",content:v});const me=$("#clme");if(me)me.textContent="“"+v+"”";callAI();}
+async function callAI(){if(!CL)return;CL.busy=true;clSt(CL.n?"Düşünüyor…":"Aranıyor…","");
+  const msgs=[{role:"user",content:callPrompt()},...CL.msgs.slice(-24)];
+  try{const r=await CAPS.sample(msgs,{cache:false,modelTier:"quick"});if(!CL||CL.ended)return;
+    const j=parseAI(r&&r.text);CL.msgs.push({role:"assistant",content:JSON.stringify(j)});CL.last=j;CL.busy=false;
+    $("#clcap").innerHTML=tapS(j.say||"");bindTap($("#clcap"));$("#cltr").textContent=j.tr||"";
+    const fx=$("#clfix");fx.innerHTML=j.fix&&CL.n?`✔ <b>${esc(j.fix)}</b>${j.tip?`<br><span>${esc(j.tip)}</span>`:""}`:j.tip?`💡 ${esc(j.tip)}`:"";
+    callSay(j.say||"");
+  }catch(e){if(!CL)return;CL.busy=false;const c=e&&e.code;
+    clSt(c==="rate_limited"?"Hat meşgul, biraz bekle…":c==="not_granted"?"Yapay zekâ izni verilmedi":"Bağlantı koptu — tekrar dene","");
+    if(c==="not_granted")CAPS.sample=null;
+    if(CL.msgs.length&&CL.msgs[CL.msgs.length-1].role==="user"){const v=CL.msgs.pop().content;CL.n=Math.max(0,CL.n-1);$("#clin").hidden=false;$("#cli").value=v;}}}
+async function callEnd(){if(!CL)return;const C=CL;C.ended=true;clearInterval(C.timer);recStop();stopSpeak();sfx("tap");
+  const sec=Math.floor((Date.now()-C.t0)/1000),xp=C.n*3+(C.n?5:0);
+  if(xp){S.xp=(S.xp||0)+xp;dqInc("ok",C.n);touch();save();checkBadges();}
+  CL=null;IN_LESSON=false;tab="games";render();
+  if(C.n<2)return;
+  sheet(`<div class="center"><div style="font-size:56px">📞</div><div class="h2" style="font-size:24px">${PERSONA[0]} ile ${sec/60|0} dk ${sec%60} sn konuştun</div><div class="sub">${C.n} cevap · +${xp} XP</div><div class="sub" id="clsum" style="margin-top:12px;text-align:left">Değerlendirme hazırlanıyor…</div></div>`);
+  try{const r=await CAPS.sample([{role:"user",content:callPrompt()},...C.msgs.slice(-24),{role:"user",content:"(The learner has hung up. Do not continue the call. Reply ONLY with JSON {\"sum\":\"2-3 sentences of warm, specific feedback in Turkish: what went well, and 1-2 concrete mistakes or phrases to practise\"})"}],{cache:false});
+    const j=parseAI(r&&r.text);const e=$("#clsum");if(e)e.textContent=j.sum||j.say||"";}catch(e){const el=$("#clsum");if(el)el.textContent="";}}
+
+function speakCard(){return `<div class="spcard"><div class="spct">🗣️ Konuşma pratiği</div><div class="spcs">Yapay zekâyla konuş, kelimelerini kullan, telaffuzunu dene</div>
+  <button class="spcall" data-sp="call"><span class="spca">${PERSONA[1]}</span><span class="spct2"><b>📞 ${PERSONA[0]}'yı ara</b><small>Serbest sesli sohbet · ${LANG.name}</small></span></button>
+  <div class="spbtns"><button data-sp="words"><span>🎯</span>Kelime soru-cevap</button><button data-sp="chat"><span>💬</span>Ders sohbeti</button><button data-sp="rep"><span>🔁</span>Tekrar et</button><button data-sp="say"><span>🗣️</span>Çevir & söyle</button></div></div>`;}
+function bindSpeakCard(r){r.querySelectorAll("[data-sp]").forEach(b=>b.onclick=()=>{const m=b.dataset.sp;if(m==="call")return callStart();if(m==="chat")return chat(null);if(m==="words")return CAPS.sample?chat(null,null,"words"):chatInfo();speakDrill(spItems(null,6),{mode:m,title:m==="rep"?"Dinle ve tekrar et":"Çevir ve söyle"});});}
 
 /* ortak oyun çerçevesi */
 let GM=null;
@@ -25888,7 +25978,7 @@ function lesson(gi,restart){
         bank.querySelectorAll("[data-j]").forEach(b=>b.onclick=()=>{const rr=b.getBoundingClientRect();seq.push(+b.dataset.j);b.classList.add("used");upd();flyIn(rr,ans.lastElementChild);sfx("tap");});
         chk.onclick=()=>{const got=seq.map(j=>Q.tokens[j]).join(" ");const ok=norm(got)===norm(Q.ans);root().querySelectorAll(".tile").forEach(t=>t.disabled=true);fin(ok,ok&&got!==Q.ans?"Büyük harf / noktalamaya dikkat. ":"");};}
       else if(Q.t==="type"){const inp=$("#inp");setTimeout(()=>{try{inp.focus();}catch(e){}},60);
-        const check=()=>{const v=inp.value.trim();if(!v)return;const a=Q.ans;const exact=v.toLowerCase()===a.toLowerCase()||v.toLowerCase()===noArt(a).toLowerCase()&&!/^(der|die|das) /.test(a);const loose=norm(v)===norm(a)||(!/^(der|die|das) /.test(a)&&norm(v)===norm(noArt(a)));inp.disabled=true;inp.classList.add(loose?"ok":"bad");fin(loose,loose&&!exact?"Umlaut / ß yazımına dikkat. ":"");};
+        const check=()=>{const v=inp.value.trim();if(!v)return;const a=Q.ans;const exact=v.toLowerCase()===a.toLowerCase()||v.toLowerCase()===noArt(a).toLowerCase()&&!/^(der|die|das) /.test(a);const loose=norm(v)===norm(a)||(!/^(der|die|das) /.test(a)&&norm(v)===norm(noArt(a)));const typo=!loose&&(nearEq(v,a)||(!/^(der|die|das) /.test(a)&&nearEq(v,noArt(a))));const okk=loose||typo;inp.disabled=true;inp.classList.add(okk?"ok":"bad");fin(okk,typo?TYPO(a):loose&&!exact?"Umlaut / ß yazımına dikkat. ":"");};
         $("#chk").onclick=check;inp.onkeydown=e=>{if(e.key==="Enter")check();};$("#skip").onclick=()=>{inp.disabled=true;inp.classList.add("bad");fin(false,"");};}
       else root().querySelectorAll(".opt").forEach(b=>b.onclick=()=>{root().querySelectorAll(".opt").forEach(x=>{x.disabled=true;if(x.dataset.o===Q.ans)x.classList.add("ok");});const ok=b.dataset.o===Q.ans;if(!ok)b.classList.add("bad");fin(ok,"");});
     }
@@ -26117,6 +26207,11 @@ function bankNew(){const b=bday(),left=Math.max(0,daily()+b.extra-b.n),out=[];if
 const STC=["var(--label3)","var(--orange)","var(--green)"],STN=["Yeni","Öğreniliyor","Öğrenildi"];
 const norm=s=>s.toLowerCase().replace(/ß/g,"ss").normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[’‘]/g,"'").replace(/[.!?]/g,"").replace(/\s+/g," ").trim();
 const noArt=s=>String(s).replace(LANG.artRe,"");
+function lev(a,b){if(a===b)return 0;const m=a.length,n=b.length;if(!m)return n;if(!n)return m;let pr=Array.from({length:n+1},(_,j)=>j);for(let i=1;i<=m;i++){const c=[i];for(let j=1;j<=n;j++)c[j]=Math.min(pr[j]+1,c[j-1]+1,pr[j-1]+(a[i-1]===b[j-1]?0:1));pr=c;}return pr[n];}
+const wclose=(a,b)=>a===b||(a.length>=4&&lev(a,b)<=(a.length>=10?2:1));
+function nearEq(v,a){const A=norm(a).split(" "),V=norm(v).split(" ");if(A.length!==V.length)return false;let e=0;for(let i=0;i<A.length;i++){if(A[i]===V[i])continue;if(!wclose(A[i],V[i]))return false;e+=lev(A[i],V[i]);}return e>0&&e<=2;}
+const TYPO=a=>`Küçük bir yazım hatası var, doğru sayıldı. Doğrusu: <b>${esc(a)}</b>. `;
+
 
 function bank(){
   const [nN,nL,nD]=counts(BW),due=bankDue(),nw=bankNew();
@@ -26183,7 +26278,7 @@ function bankSession(){
     frame(body,Q.t==="type"?`<button class="btn sec" id="skip">Bilmiyorum</button><button class="btn" id="chk">Kontrol et</button>`:"",p,c);
     if(Q.t==="listen"){say(w.fr);$("#ls").onclick=()=>say(w.fr);$("#lss").onclick=()=>say(w.fr,true);}
     if(Q.t==="type"){const inp=$("#inp");setTimeout(()=>{try{inp.focus();}catch(e){}},50);
-      const check=()=>{const v=inp.value;if(!v.trim())return;const exact=v.trim().toLowerCase()===w.fr.toLowerCase()||v.trim().toLowerCase()===noArt(w.fr).toLowerCase();const loose=norm(v)===norm(w.fr)||norm(v)===norm(noArt(w.fr));inp.disabled=true;inp.classList.add(loose?"ok":"bad");done(w,loose,loose&&!exact?"Umlaut ve ß'ye dikkat: ":"");};
+      const check=()=>{const v=inp.value;if(!v.trim())return;const exact=v.trim().toLowerCase()===w.fr.toLowerCase()||v.trim().toLowerCase()===noArt(w.fr).toLowerCase();const loose=norm(v)===norm(w.fr)||norm(v)===norm(noArt(w.fr));const typo=!loose&&(nearEq(v,w.fr)||nearEq(v,noArt(w.fr)));const okk=loose||typo;inp.disabled=true;inp.classList.add(okk?"ok":"bad");done(w,okk,typo?"Küçük yazım hatası, doğru sayıldı: ":loose&&!exact?"Umlaut ve ß'ye dikkat: ":"");};
       $("#chk").onclick=check;inp.onkeydown=e=>{if(e.key==="Enter")check();};$("#skip").onclick=()=>{inp.disabled=true;inp.classList.add("bad");done(w,false,"");};}
     else root().querySelectorAll(".opt").forEach(bt=>bt.onclick=()=>{root().querySelectorAll(".opt").forEach(x=>{x.disabled=true;if(x.dataset.o===Q.ans)x.classList.add("ok");});const ok=bt.dataset.o===Q.ans;if(!ok)bt.classList.add("bad");done(w,ok,"");});
   }

@@ -73,3 +73,4 @@ Her adımdan sonra: build → test (playwright) → yayınla (mümkünse) → Ma
 - Kullanıcı ücretli API istemiyor: anahtar arayüzü kaldırıldı (kod pasif duruyor). AI özellikleri sadece Claude app.
 - 13 Kas: Safari (GitHub, top-level iOS) için efekt sesleri <audio> havuzu ile (SFX_EL/elBuild/elUnlock/elPlay); WebAudio yedek.
 - Sesler gecikiyordu: tekrar WebAudio (hızlı) + iOS sessiz modu için döngülü sessiz <audio> (silKeep); <audio> efekt sadece ctx çalışmazsa yedek.
+- B2: 10 kitap/dil tamam (13 Kas: b2b konut krizi+otomasyon, b2c yerel gazetecilik/dezenformasyon+belediye meclisi oylaması, b2d aşırı turizm+gen tedavisi, b2e rüzgâr enerjisi kooperatifi+uzay çöpü; sözlükler bgl_b2b..e / lexb_b2b..e). Artifact yayını yine atlandı. Sıradaki: C1 8 kitap/dil (books_c1b..e).

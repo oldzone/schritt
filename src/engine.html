@@ -316,12 +316,12 @@ body{font-family:var(--sf);font-size:17px;letter-spacing:-.01em;background:linea
 .fbtn.emph{background:#fff;color:var(--blue)}
 .fbtn.is-down{transform:translateY(2px)!important;box-shadow:0 1px 0 rgba(0,0,0,.15)}
 /* ---------- giriş animasyonları ---------- */
-.fade{animation:rise .45s var(--ease) both}
-@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-.stagger>*{animation:rise .5s var(--ease) both}
-.stagger>*:nth-child(2){animation-delay:.04s}.stagger>*:nth-child(3){animation-delay:.08s}.stagger>*:nth-child(4){animation-delay:.12s}.stagger>*:nth-child(5){animation-delay:.16s}.stagger>*:nth-child(6){animation-delay:.2s}
-.push{animation:push .38s var(--ease) both}
-@keyframes push{from{opacity:0;transform:translateX(28px)}to{opacity:1;transform:none}}
+.fade{animation:rise .24s var(--ease) both}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.stagger>*{animation:rise .28s var(--ease) both}
+.stagger>*:nth-child(2){animation-delay:.02s}.stagger>*:nth-child(3){animation-delay:.04s}.stagger>*:nth-child(4){animation-delay:.06s}.stagger>*:nth-child(5){animation-delay:.08s}.stagger>*:nth-child(6){animation-delay:.1s}
+.push{animation:push .22s var(--ease) both}
+@keyframes push{from{opacity:0;transform:translateX(16px)}to{opacity:1;transform:none}}
 /* ---------- kabuk ---------- */
 #shell{position:sticky;top:0;z-index:25;background:var(--bar);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);box-shadow:0 .5px 0 var(--sep);padding-top:env(safe-area-inset-top,0px)}
 .sbin{display:flex;align-items:center;gap:10px;height:54px;padding:0 max(16px,env(safe-area-inset-right,0px)) 0 max(16px,env(safe-area-inset-left,0px))}
@@ -937,7 +937,8 @@ applyTheme();
 /* ===== Dokunsal geri bildirim (titreşim) ===== */
 const HAPP={tap:[8],sel:[8],pop:[10],unpop:[6],nav:[8],match:[12],ok:[12,70,18],ok3:[12,60,12,60,22],bad:[28,50,28],win:[14,70,14,70,30]};
 let HAPT=0;
-function iosTick(){try{const l=document.createElement("label");l.setAttribute("aria-hidden","true");l.style.display="none";const i=document.createElement("input");i.type="checkbox";i.setAttribute("switch","");l.appendChild(i);l.addEventListener("click",e=>e.stopPropagation());document.head.appendChild(l);l.click();document.head.removeChild(l);}catch(e){}}
+let HLAB=null;
+function iosTick(){try{if(!HLAB){const l=document.createElement("label");l.setAttribute("aria-hidden","true");l.style.display="none";const i=document.createElement("input");i.type="checkbox";i.setAttribute("switch","");i.tabIndex=-1;l.appendChild(i);l.addEventListener("click",e=>e.stopPropagation());document.head.appendChild(l);HLAB=l;}HLAB.click();}catch(e){}}
 function hap(kind){if(S.hap===false)return;const now=Date.now();if(now-HAPT<40)return;HAPT=now;const pt=HAPP[kind]||HAPP.tap;
   try{if(nCall("haptic",{k:kind}))return;}catch(e){}
   try{if(navigator.vibrate){navigator.vibrate(pt);return;}}catch(e){}
@@ -990,9 +991,12 @@ function elUnlock(){if(!SFX_EL||elUnlocked||!Object.keys(ELP).length)return;elUn
   for(const k in ELP)ELP[k].a.forEach(e=>{try{e.muted=true;const p=e.play();const done=()=>{try{e.pause();e.currentTime=0;}catch(x){}e.muted=false;};if(p&&p.then)p.then(done).catch(()=>{e.muted=false;elUnlocked=false;});else done();}catch(x){e.muted=false;}});}
 function elPlay(kind){const P=ELP[ELK[kind]||kind];if(!P||!elUnlocked)return false;try{if(kind==="tap"&&window.speechSynthesis&&speechSynthesis.speaking)return false;}catch(e){}
   const e=P.a[P.i++%P.a.length];try{e.currentTime=0;const p=e.play();if(p&&p.catch)p.catch(()=>{});return true;}catch(x){return false;}}
+let UNLT=0,RSTT=0;
+function sfxCanReset(){const n=Date.now();if(n-RSTT<4000)return false;RSTT=n;return true;}
 function sfxUnlock(){
-  if(S.sfx===false)return;silKeep();elUnlock();let c=sfxCtx();if(!c)return;
-  if(c.state==="closed"||c.state==="interrupted"){sfxReset();c=sfxCtx();if(!c)return;}
+  if(S.sfx===false)return;const n=Date.now();if(SFX.unlocked&&SFX.ctx&&SFX.ctx.state==="running"&&n-UNLT<1500)return;if(n-UNLT<250)return;UNLT=n;
+  silKeep();elUnlock();let c=sfxCtx();if(!c)return;
+  if(c.state==="closed"||c.state==="interrupted"){if(!sfxCanReset())return;sfxReset();c=sfxCtx();if(!c)return;}
   if(SFX.unlocked&&c.state==="running")return;
   try{const b=c.createBuffer(1,1,22050),s=c.createBufferSource();s.buffer=b;s.connect(c.destination);s.start(0);
     const p=c.resume&&c.resume();if(p&&p.then)p.then(()=>{SFX.unlocked=c.state==="running";}).catch(()=>{});else SFX.unlocked=c.state==="running";
@@ -1067,7 +1071,7 @@ function sfx(kind){
   SFX.lastT=now;hap(kind);
   if(S.sfx===false)return;
   let c=sfxCtx();if(!c)return;
-  if(c.state==="closed"||c.state==="interrupted"){sfxReset();c=sfxCtx();if(!c)return;}
+  if(c.state==="closed"||c.state==="interrupted"){if(SFX_EL&&elPlay(kind))return;if(!sfxCanReset())return;sfxReset();c=sfxCtx();if(!c)return;}
   const play=()=>{try{const b=SFX.bufs[kind];
       if(b){const s=c.createBufferSource();s.buffer=b;s.connect(SFX.master);s.start(c.currentTime+.005);return;}
       sfxRender();
@@ -1077,7 +1081,7 @@ function sfx(kind){
     }catch(e){}};
   if(c.state==="running")return play();
   if(SFX_EL&&elPlay(kind)){c.resume&&c.resume().catch(()=>{});return;}
-  try{const p=c.resume();if(p&&p.then)p.then(()=>{if(c.state==="running")play();else{sfxReset();const c2=sfxCtx();if(c2){c=c2;c2.resume().then(play).catch(()=>{});}}}).catch(()=>{});else play();}catch(e){}
+  try{const p=c.resume();if(p&&p.then)p.then(()=>{if(c.state==="running"){if(!/^(tap|sel|nav|pop|unpop)$/.test(kind)||Date.now()-now<120)play();}else if(sfxCanReset()){sfxReset();const c2=sfxCtx();if(c2){c=c2;c2.resume().then(play).catch(()=>{});}}}).catch(()=>{});else play();}catch(e){}
 }
 /* telaffuz, efekt sesini kesmesin diye biraz sonra başlar */
 function sayAfter(t,ms){setTimeout(()=>say(t),ms==null?420:ms);}

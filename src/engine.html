@@ -1300,18 +1300,25 @@ const canMic=()=>!!(SRC||CAPS.dict);
 function recStop(){try{if(REC.sr){REC.sr.stop();return;}}catch(e){}try{if(CAPS.dict&&REC.on)CAPS.dict.stop().catch(()=>{});}catch(e){}}
 function recStart(onText,onEnd){
   stopSpeak();REC.on=true;
-  if(SRC){let r;try{r=new SRC();}catch(e){REC.on=false;onEnd&&onEnd();return;}
+  const srGo=()=>{let r;try{r=new SRC();}catch(e){REC.on=false;onEnd&&onEnd();return;}
     REC.sr=r;r.lang=LANG.loc;r.interimResults=true;r.continuous=false;r.maxAlternatives=1;
     r.onresult=e=>{let t="",fin=false;for(let i=0;i<e.results.length;i++){t+=e.results[i][0].transcript;if(e.results[i].isFinal)fin=true;}onText(t.trim(),fin);};
-    r.onerror=e=>{if(e.error==="not-allowed"||e.error==="service-not-allowed")toast("Mikrofon izni yok. Klavyedeki 🎤 ile söyleyebilirsin.");};
+    r.onerror=e=>{if(e.error==="not-allowed"||e.error==="service-not-allowed")toast("Mikrofon izni yok. Tarayıcı/uygulama ayarlarından mikrofona izin ver ya da klavyedeki 🎤 ile söyle.");};
     r.onend=()=>{REC.on=false;REC.sr=null;onEnd&&onEnd();};
-    try{r.start();}catch(e){REC.on=false;REC.sr=null;onEnd&&onEnd();}
-    return;}
-  if(CAPS.dict){let acc="";
+    try{r.start();}catch(e){REC.on=false;REC.sr=null;onEnd&&onEnd();}};
+  /* Claude içinde: önce Claude dikte (iframe'de tarayıcı mikrofonu engelli olabilir) */
+  if(CAPS.dict){let acc="",done=false;
+    const fin=()=>{if(done)return;done=true;REC.on=false;REC.p=REC.f=REC.s=null;onEnd&&onEnd();};
     REC.p=t=>onText((acc+" "+t).trim(),false);
-    REC.f=t=>{acc=(acc+" "+t).trim();onText(acc,true);};
-    REC.s=st=>{if(st==="idle"){REC.on=false;REC.p=REC.f=REC.s=null;onEnd&&onEnd();}};
-    CAPS.dict.start().catch(()=>{REC.on=false;REC.p=REC.f=REC.s=null;onEnd&&onEnd();});return;}
+    REC.f=t=>{acc=(acc+" "+t).trim();onText(acc,true);try{CAPS.dict.stop().catch(()=>{});}catch(e){}};
+    REC.s=st=>{if(st==="idle")fin();};
+    let pr;try{pr=CAPS.dict.start();}catch(e){pr=Promise.reject(e);}
+    pr.catch(e=>{const c=e&&e.code;REC.p=REC.f=REC.s=null;
+      if(c==="not_granted"){CAPS.dict=null;toast("Mikrofon izni verilmedi. Sayfanın İzinler menüsünden açabilir ya da klavyedeki 🎤 ile söyleyebilirsin.");done=true;REC.on=false;onEnd&&onEnd();return;}
+      if(SRC&&!done){srGo();return;}
+      fin();});
+    return;}
+  if(SRC){srGo();return;}
   REC.on=false;onEnd&&onEnd();
 }
 function bindMic(btn,inp,after){if(!btn)return;

@@ -36,6 +36,17 @@
 .clb.big span{width:76px;height:76px;font-size:30px;background:#0a84ff}.clb.on span{background:#30d158;animation:sppulse 1s infinite}.clb.off span{opacity:.4}
 .clb.hang span{background:#ff3b30;transform:rotate(135deg)}
 .typing span{display:inline-block;margin:0 2px;animation:pulse 1.2s infinite}.typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}
+
+.ybtn{display:inline-flex;align-items:center;gap:4px;margin-top:6px;font-size:13px;font-weight:700;padding:5px 11px;border-radius:99px;background:color-mix(in srgb,var(--blue) 12%,transparent);color:var(--blue)}
+.ybig{font-family:var(--sfd);font-size:22px;font-weight:700;line-height:1.35;margin:6px 0 4px;display:flex;gap:8px;align-items:flex-start;justify-content:space-between}
+.yparts{display:flex;flex-wrap:wrap;gap:10px 8px;margin:16px 0 10px}
+.ypart{position:relative;border-radius:14px;padding:8px 10px;background:color-mix(in srgb,var(--yc) 12%,var(--card));border:2px solid color-mix(in srgb,var(--yc) 55%,transparent);display:flex;flex-direction:column;min-width:64px;max-width:100%}
+.ypart b{font-size:18px;color:var(--yc)}.ypart .yrl{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.03em;color:var(--yc);opacity:.9}.ypart small{font-size:13px;color:var(--label2);margin-top:2px;line-height:1.3}
+.ypn{position:absolute;top:-8px;left:-6px;width:20px;height:20px;border-radius:50%;background:var(--yc);color:#fff;font-size:11px;font-weight:800;display:grid;place-items:center}
+.yform{background:var(--card);border-radius:14px;padding:10px 12px;font-weight:700;font-size:15px;box-shadow:var(--shadow)}
+.ywhy{padding-left:18px;margin:0}.ywhy li{margin-bottom:8px;font-size:15px;line-height:1.45}
+.yaw{color:var(--orange);font-size:13px;margin-top:4px}
+.ycard .spbtns button{background:var(--fill);color:var(--label)}
 </style></head><body>
 <title>Schritt für Schritt</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -1246,7 +1257,7 @@ function games(){
   const L=league(),q=dq(),done=questsDone();S.games=S.games||{};
   let h=`<div class="page wide fade"><div class="dph"><div class="dpt">Oyunlar</div><div class="dps">Oyna, puan topla, kelimeleri pekiştir</div></div>
   <div class="lgcard" style="background:${L.cur[3]}"><span class="lgem">${L.cur[2]}</span><div class="lgtx"><b>${L.cur[1]} Lig</b><span>${S.xp||0} XP${L.nx?` · ${L.nx[1]} için ${L.nx[0]-(S.xp||0)} XP`:" · En üst lig!"}</span><div class="lgbar"><i style="width:${Math.round(L.p*100)}%"></i></div></div></div>
-  ${speakCard()}
+  ${speakCard()}${yapiCard()}
   <div class="fcard qcard"><div class="fch">Günlük görevler <span class="qc">${done}/3</span></div>
   ${QUESTS.slice(0,4).map(([k,t,n,ic])=>{const v=Math.min(n,q[k]||0);return `<div class="qrow ${v>=n?"ok":""}"><span class="qic">${v>=n?"✓":ic}</span><div class="qtx"><b>${t}</b><div class="qbar"><i style="width:${v/n*100}%"></i></div></div><span class="qv">${v}/${n}</span></div>`;}).join("")}
   <button class="chest ${done>=3&&!q.chest?"ready":""}" id="chest" ${done>=3&&!q.chest?"":"disabled"}><span class="chem">${q.chest?"📭":"🎁"}</span><span>${q.chest?"Bugünün hazinesi açıldı":done>=3?"Hazine sandığını aç!":"3 görevi bitir, hazineyi aç"}</span></button>
@@ -1254,7 +1265,7 @@ function games(){
   <div class="ggrid stagger">${GAMES.filter(g=>g[1]).map(g=>`<button class="gcard" data-g="${g[0]}" style="background:${g[4]}"><span class="gem">${g[2]}</span><b>${g[1]}</b><span>${g[3]}</span><small>${S.games[g[0]]?"Rekor: "+S.games[g[0]]:"Henüz oynanmadı"}</small></button>`).join("")}</div>
   <div class="fcard" style="margin-top:14px"><div class="fch">Rozetler <span class="qc">${(S.badges||[]).length}/${BADGES.length}</span></div><div class="bdgrid">${BADGES.map(b=>{const on=(S.badges||[]).includes(b[0]);return `<div class="bdg ${on?"on":""}"><span>${b[2]}</span><b>${b[1]}</b><small>${b[3]}</small></div>`;}).join("")}</div></div></div>`;
   root().innerHTML=h;
-  root().querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>startGame(b.dataset.g));bindSpeakCard(root());
+  root().querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>startGame(b.dataset.g));bindSpeakCard(root());bindYapiCard(root());
   const c=$("#chest");if(c)c.onclick=openChest;
 }
 function openChest(){const q=dq();if(q.chest||questsDone()<3)return;q.chest=1;const xp=20+Math.floor(Math.random()*5)*10;S.xp+=xp;S.chests=(S.chests||0)+1;let fr=false;if(Math.random()<.5||!(S.freeze)){S.freeze=Math.min(3,(S.freeze||0)+1);fr=true;}touch();save();checkBadges();confetti();sfx("win");
@@ -2003,7 +2014,8 @@ function lesson(gi,restart){
       <div class="card stack"><div class="wordline"><div style="flex:1;min-width:0"><div class="word">${fmt(w[0])}</div><div class="pron">/${esc(w[2])}/</div></div>${spk(w[0])}</div>
       <div class="mean">${esc(w[1])}</div></div>
       <div class="sec-h" style="margin-left:4px">Örnekler (${ex.length})</div>
-      <div class="card stack">${ex.map((e,i)=>`${i?'<div class="hr"></div>':""}<div class="wordline ex"><div style="flex:1;min-width:0"><div class="fr">${tapS(e[0])}</div><div class="tr">${esc(e[1])}</div></div>${spk(e[0],1)}</div>`).join("")}</div>
+      <div class="card stack">${ex.map((e,i)=>`${i?'<div class="hr"></div>':""}<div class="wordline ex"><div style="flex:1;min-width:0"><div class="fr">${tapS(e[0])}</div><div class="tr">${esc(e[1])}</div>${ybtn(e[0],e[1])}</div>${spk(e[0],1)}</div>`).join("")}</div>
+      ${artWhy(w[0])?`<div class="sec-f yaw" style="margin:0 4px">${esc(artWhy(w[0]))}</div>`:""}
       <div class="sec-f" style="margin:0 4px">Örnekleri sesli oku. Birazdan bu kelimeyi farklı şekillerde soracağım.</div></div>`,
       `<button class="btn" id="nx">Anladım</button>`,(si+k/(n+1)*0.5)/P.length,"");
     say(w[0]);$("#nx").onclick=go;
@@ -2497,9 +2509,121 @@ function gloss(sent,wi,el){
   const e=best&&best.r.e;
   const base=e&&lk(noArt(e.fr))!==lk(shown)&&lk(e.fr)!==lk(shown)?`<div class="gl">sözlük biçimi: ${fmt(e.fr)}</div>`:"";
   let g=$("#gloss");if(!g){g=document.createElement("div");g.id="gloss";g.className="gloss";document.body.appendChild(g);}
-  g.innerHTML=`<div class="in" role="dialog" aria-label="Kelime anlamı"><div style="flex:1;min-width:0"><div class="gw">${esc(shown)}</div>${base}<div class="gt">${e?esc(e.tr):"Bu biçim sözlükte yok, cümlenin çevirisine bak. (Büyük harfle başlıyorsa isim ya da özel ad olabilir.)"}</div>${(e&&e.pr)||g2p(shown)?`<div class="gl">/${esc((e&&e.pr)||shown.split(/\s+/).map(g2p).join(" "))}/</div>`:""}</div><button class="sbtn sm" data-say="${esc(shown)}" aria-label="Dinle">${I.spk}</button><button class="gx" id="gx" aria-label="Kapat">${I.x}</button></div>`;
+  g.innerHTML=`<div class="in" role="dialog" aria-label="Kelime anlamı"><div style="flex:1;min-width:0"><div class="gw">${esc(shown)}</div>${base}<div class="gt">${e?esc(e.tr):"Bu biçim sözlükte yok, cümlenin çevirisine bak. (Büyük harfle başlıyorsa isim ya da özel ad olabilir.)"}</div>${e&&artWhy(e.fr)?`<div class="gl yaw">${esc(artWhy(e.fr))}</div>`:""}<button class="ybtn" data-yapi="${esc(sentOf(sent,wi))}" style="margin-top:6px">🧩 Cümle yapısı</button>${(e&&e.pr)||g2p(shown)?`<div class="gl">/${esc((e&&e.pr)||shown.split(/\s+/).map(g2p).join(" "))}/</div>`:""}</div><button class="sbtn sm" data-say="${esc(shown)}" aria-label="Dinle">${I.spk}</button><button class="gx" id="gx" aria-label="Kapat">${I.x}</button></div>`;
   bindSay(g);$("#gx").onclick=closeGloss;say(shown);
 }
+/* ===== CÜMLE YAPISI + ARTİKEL KURALLARI ===== */
+const ART_RULES={
+ de:[
+  ["die",/(ung|heit|keit|schaft)$/,"-ung, -heit, -keit, -schaft ile bitenler hep die",1],
+  ["die",/(tion|sion|tät|ität)$/,"-tion, -sion, -tät ile bitenler hep die",1],
+  ["die",/(ik|ur|enz|anz|ei|ie)$/,"-ik, -ur, -enz, -anz, -ei, -ie ile bitenler neredeyse hep die",0],
+  ["die",/erin$|(ärzt|kolleg|freund|nachbar|köch|chef|kund|türk|französ|griech|polit|schweiz|amerikan|italien|spanier)in$/,"kadın meslek/kişi -in eki alır ve die olur (Lehrerin)",0],
+  ["das",/(chen|lein)$/,"küçültme eki -chen/-lein: hep das (Mädchen bile!)",1],
+  ["das",/(ment|[^a]um)$/,"-ment, -um ile bitenler das",0],
+  ["das",/ma$/,"-ma ile biten yabancı kelimeler das (Thema, Klima)",0],
+  ["das",/^ge(?!.*e$).{3,}$/,"Ge- ile başlayan isimler çoğunlukla das (Gemüse, Gebäude)",0],
+  ["das",/nis$/,"-nis ile bitenler çoğunlukla das",0],
+  ["der",/(ling|ismus|ist|or|ig|ich|ant|ent|ast)$/,"-ling, -ismus, -ist, -or, -ig, -ich, -ant ile bitenler der",0],
+  ["der",/(montag|dienstag|mittwoch|donnerstag|freitag|samstag|sonntag|januar|februar|märz|april|mai|juni|juli|august|september|oktober|november|dezember|sommer|winter|herbst|frühling)$/,"günler, aylar ve mevsimler hep der",1],
+  ["die",/e$/,"-e ile biten isimlerin yaklaşık %90'ı die (Lampe, Straße)",0],
+  ["der",/er$/,"-er ile biten kişi ve aletler çoğunlukla der (Lehrer, Computer)",0]],
+ fr:[
+  ["f",/(tion|sion|té|ette|ure|ance|ence|ise|ude|esse|elle)$/,"-tion, -sion, -té, -ette, -ure, -ance/-ence ile bitenler dişil (la)",0],
+  ["m",/(ment|age|isme|eau|oir|ier|et|al|ail|at)$/,"-ment, -age, -isme, -eau, -oir, -ier, -et ile bitenler eril (le)",0],
+  ["f",/e$/,"-e ile bitenler sıklıkla dişil (la) ama çok istisna var",0]],
+ it:[
+  ["f",/(zione|sione|tà|tù|ione|ice|udine)$/,"-zione, -sione, -tà, -tù, -ice ile bitenler dişil (la)",1],
+  ["m",/(ore|ema|gramma|ima|rama|dramma)$/,"-ore ile bitenler ve -ma ile biten Yunanca kökenliler eril (il problema)",0],
+  ["m",/o$/,"-o ile bitenler eril (il), az istisna: la mano, la foto, la radio",0],
+  ["f",/a$/,"-a ile bitenler dişil (la), istisna: il problema, il sistema",0]]};
+const ART_OF={der:"der",die:"die",das:"das",le:"m",la:"f",il:"m",lo:"m","un":"m","une":"f","una":"f","uno":"m"};
+function artWhy(fr){if(!ART_RULES[LANG.code])return "";const m=String(fr).trim().match(/^(der|die|das|le|la|il|lo|un|une|una|uno)\s+(.+)$/i);if(!m)return "";
+  const art=ART_OF[m[1].toLowerCase()],n=m[2].toLowerCase().split(/\s+/).pop();
+  if(LANG.code==="de"&&/^(die)$/.test(m[1].toLowerCase())&&LANG.plurRe&&LANG.plurRe.test(fr))return "";
+  for(const r of ART_RULES[LANG.code]){if(r[1].test(n)){
+    if(r[0]===art)return `💡 ${r[2]}`;
+    return `⚠️ İstisna: kural "${r[2]}" der ama bu kelime ${m[1]}. Bunu ayrıca ezberle.`;}}
+  return LANG.code==="de"?"🧠 Bu kelime için kesin kural yok: artikeliyle birlikte, rengine bakarak ezberle.":"";}
+function artSheet(){
+  const de=LANG.code==="de";
+  const rows=(ART_RULES[LANG.code]||[]).map(r=>`<li><b class="${{der:"m",die:"f",das:"nt",m:"m",f:"f"}[r[0]]}">${({m:LANG.code==="fr"?"le":"il",f:"la"})[r[0]]||r[0]}</b> · ${esc(r[2])}${r[3]?" <span class='pill' style='padding:1px 7px'>kesin</span>":""}</li>`).join("");
+  if(LANG.code==="en")return sheet(`<div class="h2" style="font-size:24px">Artikel</div><div class="sub">İngilizcede isimlerin cinsiyeti yok: hepsi <b>the</b>. Ezberlenecek bir şey yok 🎉</div>`);
+  sheet(`<div class="h2" style="font-size:24px;margin-bottom:6px">${de?"der · die · das":"Cinsiyet"} kuralları</div>
+  <div class="sub" style="margin-bottom:10px">Hepsini tek tek ezberlemek zorunda değilsin. Kelimelerin büyük kısmı <b>sonundaki ekten</b> tahmin edilebilir:</div>
+  <div class="gram"><ul style="padding-left:18px;margin:0 0 10px">${rows}</ul>
+  ${de?`<div class="n"><b>Akıllı yöntemler</b><br>• <b>Bileşik kelimede son kelime</b> artikeli belirler: das Haus + die Tür = <b class="f">die</b> Haustür.<br>• <b>Çoğul hep die</b>: die Häuser, die Kinder.<br>• Erkek kişiler/hayvanlar der, kadınlar die (Mann, Frau). Mastardan isim: <b class="nt">das</b> Essen, das Lernen.<br>• Kelimeyi <b>hep artikeliyle ve rengiyle</b> öğren: mavi der, pembe die, yeşil das. Uygulamadaki renkler bunun için.<br>• Kuralı olmayanlar (der Tisch, das Bett…) için: sık kullandıklarını cümle içinde duy; artikel ses gibi aklında kalır.<br>• Konuşurken emin değilsen durma: artikel hatası anlaşılmanı engellemez. Akıcılık önce gelir.</div>`
+  :`<div class="n">• Kelimeyi hep artikeliyle öğren (${LANG.code==="fr"?"un/une":"un/una"} da ipucu verir).<br>• Kişiler doğal cinsiyetini alır.<br>• Kuralı olmayanları cümle içinde duyarak öğren; hata anlaşılmayı engellemez.</div>`}</div>`);}
+/* cümlenin kendisini (paragraf içindeyse) ayıkla */
+function sentOf(text,wi){const ts=toks(text);let w=-1,st=0,en=ts.length;
+  for(let i=0;i<ts.length;i++){if(isW(ts[i]))w++;if(!isW(ts[i])&&/[.!?…]/.test(ts[i])){if(w<wi)st=i+1;else{en=i+1;break;}}}
+  return ts.slice(st,en).join("").replace(/^[\s"“„«»]+/,"").trim();}
+const YROLE={S:["Özne","#0a84ff"],V:["Fiil","#ff375f"],V2:["Fiilin 2. parçası","#ff375f"],O:["Nesne","#30b158"],D:["Dolaylı nesne","#0fb5ae"],T:["Zaman","#ff9500"],P:["Yer/Yön","#ff9500"],M:["Nasıl/Durum","#ff9500"],C:["Bağlaç","#af52de"],N:["Olumsuzluk","#8e8e93"],Q:["Soru kelimesi","#af52de"],A:["Sıfat/Tamamlayıcı","#30b158"],X:["Diğer","#8e8e93"]};
+const YCACHE="schritt-yapi-"+LANG.code;
+function yGet(s){try{return (JSON.parse(localStorage.getItem(YCACHE)||"{}"))[s]||null;}catch(e){return null;}}
+function yPut(s,v){try{const o=JSON.parse(localStorage.getItem(YCACHE)||"{}");o[s]=v;const k=Object.keys(o);if(k.length>300)delete o[k[0]];localStorage.setItem(YCACHE,JSON.stringify(o));}catch(e){}}
+function yPrompt(s,tr){return `You are a friendly ${ENNAME} teacher for a Turkish speaker (level ${S.lv||"A1"}) who does not understand sentence structure. Analyse this ${ENNAME} sentence: "${s}"${tr?` (Turkish: "${tr}")`:""}.
+Reply ONLY with JSON (all explanations in simple, natural Turkish, no grammar jargon without a short explanation):
+{"tr":"Turkish translation",
+"parts":[{"t":"exact chunk from the sentence, in order, covering the whole sentence","r":"one of S,V,V2,O,D,T,P,M,C,N,Q,A,X (S subject, V conjugated verb, V2 second verb part: infinitive/participle/separable prefix, O direct object, D indirect/dative object, T time, P place/direction, M manner, C conjunction, N negation, Q question word, A adjective/complement, X other)","n":"very short Turkish note: meaning + form, e.g. 'ben — özne' or 'gittim → gehen fiilinin Perfekt hali'"}],
+"formula":"pattern with Turkish role names and positions, e.g. 'Özne + Fiil (2. sıra) + Zaman + Yer + Fiil sonu'",
+"why":["2-5 short bullet explanations of WHY the sentence is built this way: verb position, word order rules, case/article/ending changes, verb conjugation; compare with Turkish word order when helpful"],
+"words":["optional: for each noun with gender, 'artikel + noun: why this article/ending (rule or must-memorize)'; for changed articles/endings explain the case. Max 4."],
+"try":{"s":"one new similar ${ENNAME} sentence using the same structure with different words","tr":"its Turkish"}}`;}
+function yOffline(s){const ws=toks(s).filter(isW),lw=ws.map(w=>w.toLowerCase()),L=LANG.code,why=[];
+  const has=a=>lw.some(w=>a.includes(w)),q=/\?\s*$/.test(s);
+  if(L==="de"){
+    if(has(["dass","weil","wenn","ob","obwohl","damit","bevor","nachdem","während","falls","bis","als","sodass"]))why.push("Yan cümle var (dass, weil, wenn…): yan cümlede çekimli fiil <b>en sona</b> gider. Türkçeye benzer!");
+    if(q&&/^(was|wer|wie|wo|wann|warum|wohin|woher|welche[rsnm]?|wieviel)/i.test(ws[0]||""))why.push("W-sorusu: <b>soru kelimesi + fiil + özne</b> (Wo wohnst du?).");
+    else if(q)why.push("Evet/hayır sorusu: <b>fiil başa</b> gelir (Kommst du?).");
+    else why.push("Ana cümlede çekimli fiil hep <b>2. sırada</b> durur. Başa zaman/yer gelirse özne fiilden sonraya geçer (Heute gehe ich…).");
+    if(has(["kann","kannst","können","könnt","muss","musst","müssen","müsst","will","willst","wollen","möchte","möchtest","möchten","soll","sollst","sollen","darf","darfst","dürfen"]))why.push("Modal fiil (können, müssen, wollen…) 2. sırada; asıl fiil <b>mastar halinde en sonda</b>.");
+    if(has(["habe","hast","hat","haben","habt","bin","bist","ist","sind","seid"])&&/^(ge.+(t|en)|.+(iert))$/i.test(ws[ws.length-1]||""))why.push("Perfekt (geçmiş): haben/sein 2. sırada, <b>ge-…-t / ge-…-en</b> hali en sonda.");
+    if(/^(an|auf|aus|ein|mit|zu|ab|vor|zurück|weg|los|nach|fern|her|hin|um|fest)$/i.test(ws[ws.length-1]||""))why.push("Ayrılabilen fiil: ön ek (an, auf, mit…) koparak <b>cümlenin sonuna</b> gider (anrufen → Ich rufe dich an).");
+    if(has(["nicht","kein","keine","keinen","keinem"]))why.push("<b>kein</b> isimleri, <b>nicht</b> fiil/sıfat/geri kalanı olumsuz yapar.");
+    if(has(["den","einen","meinen","deinen"]))why.push("<b>den/einen</b>: eril isim nesne olunca (Akkusativ) der → den, ein → einen olur.");
+    if(has(["dem","einem","meinem","der"])&&has(["mit","bei","von","zu","aus","nach","seit","in","an","auf"]))why.push("mit, bei, von, zu, aus… sonrası <b>Dativ</b>: der/das → dem, die → der.");}
+  else if(L==="en"){why.push("İngilizce sırası: <b>Özne + Fiil + Nesne + Yer + Zaman</b>.");
+    if(q)why.push("Soru: yardımcı fiil (do/does/did/is/can…) özneden <b>önce</b> gelir.");
+    if(has(["have","has"])&&ws.some(w=>/(ed|en|wn)$/.test(w)))why.push("Present perfect: have/has + fiilin 3. hali.");
+    if(ws.some(w=>/ing$/.test(w))&&has(["am","is","are","was","were"]))why.push("Şimdiki/sürekli zaman: be + fiil-ing.");
+    if(has(["not","don't","doesn't","didn't","never"]))why.push("Olumsuz: do/does/did + not + fiil.");}
+  else if(L==="fr"){why.push("Fransızca sırası: <b>Özne + Fiil + Nesne</b>; zamir nesneler (le, la, lui…) fiilden <b>önce</b> gelir.");
+    if(has(["ne","n"])&&has(["pas","jamais","plus","rien"]))why.push("Olumsuz: <b>ne + fiil + pas</b> fiili sarar.");
+    if(q)why.push("Soru: 'est-ce que' + normal cümle ya da fiil-özne yer değiştirir.");
+    if(has(["ai","as","a","avons","avez","ont","suis","es","est","sommes","êtes","sont"]))why.push("Passé composé: avoir/être + participe (parlé, allé). Hareket fiilleri être alır.");}
+  else if(L==="it"){why.push("İtalyancada sıra: <b>Özne + Fiil + Nesne</b>; özne çoğu zaman <b>düşer</b> çünkü fiilin eki kimin yaptığını söyler (parlo = ben konuşurum).");
+    if(has(["non"]))why.push("Olumsuz: fiilden önce <b>non</b>.");
+    if(has(["ho","hai","ha","abbiamo","avete","hanno","sono","sei","è","siamo","siete"]))why.push("Passato prossimo: avere/essere + participio (parlato, andato).");
+    if(has(["del","della","nel","nella","al","alla","dal","sul"]))why.push("Edat + artikel birleşir: di+il = del, in+la = nella.");}
+  return {parts:ws.map(w=>{const r=findLex(w);return {t:w,r:"X",n:r?r.e.tr:""};}),why,off:true};}
+function yRender(s,j){const parts=(j.parts||[]).filter(p=>p&&p.t);
+  const leg=[...new Set(parts.map(p=>p.r))].filter(r=>YROLE[r]&&r!=="X");
+  return `<div class="h2" style="font-size:22px;margin-bottom:4px">🧩 Cümle yapısı</div>
+  <div class="ybig">${tapS(s)} <button class="sbtn sm" data-say="${esc(s)}" aria-label="Dinle">${I.spk}</button></div>${j.tr?`<div class="sub">${esc(j.tr)}</div>`:""}
+  <div class="yparts">${parts.map((p,i)=>{const R=YROLE[p.r]||YROLE.X;return `<div class="ypart" style="--yc:${R[1]}"><div class="ypn">${i+1}</div><b>${esc(p.t)}</b><span class="yrl">${j.off?"":esc(R[0])}</span>${p.n?`<small>${esc(p.n)}</small>`:""}</div>`;}).join("")}</div>
+  ${j.formula?`<div class="yform">${esc(j.formula)}</div>`:""}
+  ${(j.why||[]).length?`<div class="sec-h" style="margin-left:2px">Neden böyle?</div><div class="gram"><ul class="ywhy">${j.why.map(w=>`<li>${j.off?w:esc(w)}</li>`).join("")}</ul></div>`:""}
+  ${(j.words||[]).length?`<div class="sec-h" style="margin-left:2px">Kelimeler ve artikeller</div><div class="gram"><ul class="ywhy">${j.words.map(w=>`<li>${esc(w)}</li>`).join("")}</ul></div>`:""}
+  ${j.try&&j.try.s?`<div class="sec-h" style="margin-left:2px">Aynı kalıpla yeni cümle</div><div class="card" style="padding:14px"><div class="wordline"><div style="flex:1"><div class="fr" style="font-weight:600">${tapS(j.try.s)}</div><div class="sub">${esc(j.try.tr||"")}</div></div><button class="sbtn sm" data-say="${esc(j.try.s)}">${I.spk}</button></div></div>`:""}
+  ${j.off?`<div class="sec-f" style="margin:12px 2px 0">Kelimelere dokunarak anlamlarını gör. Ayrıntılı, parça parça anlatım Claude uygulamasındaki sürümde yapay zekâ ile yapılır.</div>`:""}
+  ${ART_RULES[LANG.code]?`<button class="btn sec" id="yart" style="margin-top:14px">${LANG.code==="de"?"der/die/das":"Cinsiyet"} kurallarını gör</button>`:""}`;}
+async function structSheet(s,tr){s=String(s||"").trim();if(!s)return;closeGloss();
+  sheet(`<div id="ybox"><div class="h2" style="font-size:22px">🧩 Cümle yapısı</div><div class="ybig">${esc(s)}</div><div class="sub" style="margin-top:10px">Cümle parçalara ayrılıyor…</div><div class="typing"><span>●</span><span>●</span><span>●</span></div></div>`);
+  const box=$("#ybox"),show=j=>{const b=$("#ybox");if(!b)return;b.innerHTML=yRender(s,j);bindTap(b);bindSay(b);const a=$("#yart");if(a)a.onclick=()=>{a.closest(".sheetbg").remove();artSheet();};};
+  const c=yGet(s);if(c)return show(c);
+  if(!CAPS.sample)return show(yOffline(s));
+  try{const r=await CAPS.sample(yPrompt(s,tr),{modelTier:"default"});const j=parseAI(r&&r.text);
+    if(!j||!Array.isArray(j.parts)||!j.parts.length)throw{code:"bad"};yPut(s,j);show(j);}
+  catch(e){const j=yOffline(s);if(e&&e.code==="not_granted")CAPS.sample=null;show(j);}}
+const ybtn=(s,tr)=>`<button class="ybtn" data-yapi="${esc(s)}" data-ytr="${esc(tr||"")}">🧩 Nasıl kuruldu?</button>`;
+document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-yapi]");if(b){e.stopPropagation();structSheet(b.dataset.yapi,b.dataset.ytr);}},true);
+function yapiCard(){return `<div class="fcard ycard"><div class="fch">🧩 Yapı atölyesi</div><div class="fcx">Bir cümlenin nasıl kurulduğunu, kelimelerin neden öyle değiştiğini parça parça gör. Ders ve kitaplarda herhangi bir kelimeye dokun → <b>🧩 Cümle yapısı</b>.</div>
+  <div class="spbtns" style="margin-top:12px"><button class="ybtn2" data-yy="ex"><span>🧩</span>Örnek cümle çöz</button>${ART_RULES[LANG.code]||LANG.code==="en"?`<button class="ybtn2" data-yy="art"><span>${LANG.code==="de"?"🎨":"⚖️"}</span>${LANG.code==="de"?"der/die/das kuralları":"Cinsiyet kuralları"}</button>`:""}</div></div>`;}
+function bindYapiCard(r){r.querySelectorAll("[data-yy]").forEach(b=>b.onclick=()=>{if(b.dataset.yy==="art")return artSheet();
+  const pool=[];const lv=S.lv||"A1";Object.keys(X).forEach(k=>{if(k.startsWith(lv))X[k].forEach(x=>pool.push(x));});
+  if(!pool.length)Object.values(X).forEach(a=>a.forEach(x=>pool.push(x)));const x=pick(pool);if(x)structSheet(x[0],x[1]);});}
+
 function closeGloss(){const g=$("#gloss");if(g)g.remove();document.querySelectorAll(".tw.on").forEach(x=>x.classList.remove("on"));}
 function bindTap(r){closeGloss();r.querySelectorAll(".tw").forEach(t=>{const go=e=>{e.stopPropagation();gloss(t.closest(".tsent").dataset.sent,+t.dataset.wi,t);};t.onclick=go;t.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go(e);}};});}
 document.addEventListener("click",e=>{if(!e.target.closest(".gloss")&&!e.target.closest(".tw"))closeGloss();});

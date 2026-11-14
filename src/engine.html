@@ -1264,7 +1264,7 @@ function openChest(){const q=dq();if(q.chest||questsDone()<3)return;q.chest=1;co
 const SRC=window.SpeechRecognition||window.webkitSpeechRecognition||null;
 const ENNAME={de:"German",en:"English",fr:"French",it:"Italian"}[LANG.code]||"German";
 const CAPS={dict:null,sample:null,ready:false};
-const REC={p:null,f:null,s:null,sr:null,on:false};
+const REC={p:null,f:null,s:null,sr:null,on:false,bad:false};
 async function capsInit(){if(CAPS.ready)return;CAPS.ready=true;
   for(let i=0;i<30&&!(window.claude&&window.claude.use);i++)await new Promise(r=>setTimeout(r,200));
   if(!(window.claude&&window.claude.use))return;
@@ -1296,16 +1296,20 @@ function aiKeySheet(){const k=aiKey();
   const d=document.getElementById("aikd");if(d)d.onclick=()=>{try{localStorage.removeItem(AIK);}catch(e){}if(CAPS.sample===apiSample)CAPS.sample=null;out.textContent="Silindi.";};
 }
 capsInit();
-const canMic=()=>!!(SRC||CAPS.dict);
+const canMic=()=>!!((SRC&&!REC.bad)||CAPS.dict);
 function recStop(){try{if(REC.sr){REC.sr.stop();return;}}catch(e){}try{if(CAPS.dict&&REC.on)CAPS.dict.stop().catch(()=>{});}catch(e){}}
 function recStart(onText,onEnd){
   stopSpeak();REC.on=true;
   const srGo=()=>{let r;try{r=new SRC();}catch(e){REC.on=false;onEnd&&onEnd();return;}
     REC.sr=r;r.lang=LANG.loc;r.interimResults=true;r.continuous=false;r.maxAlternatives=1;
     r.onresult=e=>{let t="",fin=false;for(let i=0;i<e.results.length;i++){t+=e.results[i][0].transcript;if(e.results[i].isFinal)fin=true;}onText(t.trim(),fin);};
-    r.onerror=e=>{if(e.error==="not-allowed"||e.error==="service-not-allowed")toast("Mikrofon izni yok. Tarayıcı/uygulama ayarlarından mikrofona izin ver ya da klavyedeki 🎤 ile söyle.");};
-    r.onend=()=>{REC.on=false;REC.sr=null;onEnd&&onEnd();};
-    try{r.start();}catch(e){REC.on=false;REC.sr=null;onEnd&&onEnd();}};
+    let live=false,ended=false;const bad=()=>{if(REC.bad)return;REC.bad=true;toast("Bu ekranda mikrofon kullanılamıyor. Yazı kutusuna dokunup klavyedeki 🎤 ile söyleyebilirsin.");};
+    r.onaudiostart=r.onsoundstart=r.onspeechstart=()=>{live=true;};
+    r.onerror=e=>{if(["not-allowed","service-not-allowed","audio-capture"].includes(e.error))bad();};
+    r.onend=()=>{if(ended)return;ended=true;REC.on=false;REC.sr=null;onEnd&&onEnd();};
+    /* bazı ortamlarda (ör. iPhone Claude uygulaması) tanıma hiç başlamıyor: 5 sn'de ses yoksa bırak */
+    setTimeout(()=>{if(!live&&!ended&&REC.sr===r){bad();try{r.abort();}catch(e){}setTimeout(()=>{if(!ended){ended=true;REC.on=false;REC.sr=null;onEnd&&onEnd();}},300);}},5000);
+    try{r.start();}catch(e){bad();ended=true;REC.on=false;REC.sr=null;onEnd&&onEnd();}};
   /* Claude içinde: önce Claude dikte (iframe'de tarayıcı mikrofonu engelli olabilir) */
   if(CAPS.dict){let acc="",done=false;
     const fin=()=>{if(done)return;done=true;REC.on=false;REC.p=REC.f=REC.s=null;onEnd&&onEnd();};
@@ -1315,14 +1319,15 @@ function recStart(onText,onEnd){
     let pr;try{pr=CAPS.dict.start();}catch(e){pr=Promise.reject(e);}
     pr.catch(e=>{const c=e&&e.code;REC.p=REC.f=REC.s=null;
       if(c==="not_granted"){CAPS.dict=null;toast("Mikrofon izni verilmedi. Sayfanın İzinler menüsünden açabilir ya da klavyedeki 🎤 ile söyleyebilirsin.");done=true;REC.on=false;onEnd&&onEnd();return;}
-      if(SRC&&!done){srGo();return;}
+      if(SRC&&!REC.bad&&!done){srGo();return;}
       fin();});
     return;}
-  if(SRC){srGo();return;}
+  if(SRC&&!REC.bad){srGo();return;}
   REC.on=false;onEnd&&onEnd();
 }
 function bindMic(btn,inp,after){if(!btn)return;
   btn.onclick=()=>{if(REC.on){recStop();return;}
+    if(!canMic()){try{inp.focus();}catch(e){}toast("Klavyedeki 🎤 tuşuyla söyle ya da yaz.");return;}
     btn.classList.add("on");inp.value="";
     recStart((t)=>{inp.value=t;},()=>{btn.classList.remove("on");if(after&&inp.value.trim())after();});};
 }
@@ -1503,7 +1508,7 @@ function callStart(){
   window.scrollTo(0,0);
   root().innerHTML=`<div class="call"><div class="clhead"><div class="clav" id="clav">${PERSONA[1]}</div><div class="clnm">${PERSONA[0]}</div><div class="clt" id="clt">00:00</div><div class="clst" id="clst">Aranıyor…</div></div>
   <div class="clbody"><div class="clcap" id="clcap"></div><div class="cltr" id="cltr"></div><div class="clme" id="clme"></div><div class="clfix" id="clfix"></div>
-  <div class="clin" id="clin" hidden><input class="inp" id="cli" placeholder="Söyle ya da yaz…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" lang="${LANG.loc}"><button class="mic send" id="clsend">➤</button></div></div>
+  <div class="clin" id="clin"><input class="inp" id="cli" placeholder="Söyle ya da yaz…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" lang="${LANG.loc}"><button class="mic send" id="clsend">➤</button></div></div>
   <div class="clbtns"><button class="clb" id="clsub"><span>💬</span>Altyazı</button><button class="clb big" id="clmic"><span>🎤</span>Konuş</button><button class="clb" id="clrep"><span>🔁</span>Tekrar</button><button class="clb hang" id="clend"><span>📞</span>Kapat</button></div></div>`;
   CL.timer=setInterval(()=>{if(!CL)return;const s=Math.floor((Date.now()-CL.t0)/1000);const e=$("#clt");if(e)e.textContent=String(s/60|0).padStart(2,"0")+":"+String(s%60).padStart(2,"0");},1000);
   $("#clend").onclick=callEnd;
@@ -1522,7 +1527,7 @@ function callListen(user){if(!CL||CL.ended||CL.busy)return;
   if(!canMic()){clSt("Sıra sende — klavyedeki 🎤 ile söyle","listen");$("#clin").hidden=false;if(user)try{$("#cli").focus();}catch(e){}return;}
   clSt("Dinliyorum…","listen");const me=$("#clme");let heard="";
   recStart(t=>{heard=t;if(me)me.textContent=t;},()=>{if(!CL||CL.ended)return;
-    if(heard.trim())callSend(heard.trim());else{clSt("Duyamadım — 🎤'ye dokunup konuş","");$("#clin").hidden=false;}});}
+    if(heard.trim())callSend(heard.trim());else clSt(canMic()?"Duyamadım — 🎤'ye dokunup konuş":"Sıra sende — yazı kutusuna dokunup klavyedeki 🎤 ile söyle","");});}
 function callSend(v){if(!CL||CL.busy||CL.ended)return;recStop();CL.n++;CL.msgs.push({role:"user",content:v});const me=$("#clme");if(me)me.textContent="“"+v+"”";callAI();}
 async function callAI(){if(!CL)return;CL.busy=true;clSt(CL.n?"Düşünüyor…":"Aranıyor…","");
   const msgs=[{role:"user",content:callPrompt()},...CL.msgs.slice(-24)];

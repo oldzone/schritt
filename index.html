@@ -35,7 +35,7 @@
 .clb{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:12px;color:#fff}.clb span{width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,.16);display:grid;place-items:center;font-size:24px}
 .clb.big span{width:76px;height:76px;font-size:30px;background:#0a84ff}.clb.on span{background:#30d158;animation:sppulse 1s infinite}.clb.off span{opacity:.4}
 .clb.hang span{background:#ff3b30;transform:rotate(135deg)}
-.typing span{display:inline-block;margin:0 2px;animation:pulse 1.2s infinite}.typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}
+.hbk{font-size:15px;font-weight:600;color:var(--blue);padding:6px 8px;border-radius:10px;white-space:nowrap;flex:none}.typing span{display:inline-block;margin:0 2px;animation:pulse 1.2s infinite}.typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}
 
 .ybtn{display:inline-flex;align-items:center;gap:4px;margin-top:6px;font-size:13px;font-weight:700;padding:5px 11px;border-radius:99px;background:color-mix(in srgb,var(--blue) 12%,transparent);color:var(--blue)}
 .ybig{font-family:var(--sfd);font-size:22px;font-weight:700;line-height:1.35;margin:6px 0 4px;display:flex;gap:8px;align-items:flex-start;justify-content:space-between}
@@ -41262,12 +41262,19 @@ function lesson(gi,restart){
   if(S.pass[u.key]&&!restart&&!S.lp[u.key])si=0;
   if(si>0)toast("Kaldığın yerden devam: "+(si+1)+". bölüm");
   const stat={first:0,ok:0};
+  /* geri dönüş geçmişi: önceki ekranlar puanı etkilemeden tekrar edilebilir */
+  const H=[];let hp=-1;
+  const inReplay=()=>hp<H.length-1;
+  function hpush(e){H.splice(hp+1);H.push(e);if(H.length>40)H.shift();hp=H.length-1;}
+  function hback(){if(hp<=0)return;try{recStop();}catch(e){}stopSpeak();hp--;H[hp].replay();}
+  function hfwd(){if(hp<H.length-1)hp++;const e=H[hp];if(hp<H.length-1)return e.replay();if(e.answered&&e.cont){const c=e.cont;e.cont=null;return c();}e.live();}
   function shell(title,body,act,prog,cnt){
     window.scrollTo(0,0);
-    root().innerHTML=`<div class="nav"><div class="in"><button class="back" id="nb"><span style="width:22px;height:22px;display:grid;place-items:center">${I.x}</span></button><div class="nt">${esc(title)}</div><button class="cnt rulebtn" id="rb">Kural</button></div><div class="prog"><i style="width:${prog*100}%"></i></div></div>`+
+    root().innerHTML=`<div class="nav"><div class="in"><button class="back" id="nb"><span style="width:22px;height:22px;display:grid;place-items:center">${I.x}</span></button>${hp>0?`<button class="hbk" id="hb" aria-label="Önceki">‹ Önceki</button>`:""}<div class="nt">${inReplay()?"↩ ":""}${esc(title)}</div><button class="cnt rulebtn" id="rb">Kural</button></div><div class="prog"><i style="width:${prog*100}%"></i></div></div>`+
       `<div class="page push" style="padding-bottom:230px">${body}</div><div class="actbar" id="ab"><div class="in" id="abi">${act}</div></div>`;
     $("#nb").onclick=()=>{S.lp[u.key]=si;save();IN_LESSON=false;tab="learn";render();};
     $("#rb").onclick=()=>sheet(`<div class="h2" style="font-size:24px;margin-bottom:10px">${esc(u.t)}</div><div class="gram">${u.g}</div>`);
+    const hb=$("#hb");if(hb)hb.onclick=hback;
     bindSay(root());bindTap(root());
   }
   const segTitle=()=>`${u.lv} ${u.n} · ${segName(P[si])} ${si+1}/${P.length}`;
@@ -41279,15 +41286,17 @@ function lesson(gi,restart){
     if(sg.t==="s")return sents(sg.ss,false);
     return finalRev();
   }
-  function grammar(){
+  function grammar(rp){
+    if(!rp)hpush({replay:()=>grammar(1),live:()=>grammar(1)});
     const xs=u.x.slice(0,4);
     shell(segTitle(),`<div class="stack fade"><div><span class="pill orange">Yeni konu</span></div><div class="h2" style="font-size:28px">${esc(u.t)}</div><div class="card gram">${u.g}</div>
       ${xs.length?`<div class="sec-h" style="margin-left:4px">Bu konuyla örnekler</div><div class="card stack">${xs.map((s,i)=>`${i?'<div class="hr"></div>':""}<div class="wordline ex"><div style="flex:1;min-width:0"><div class="fr">${tapS(s[0])}</div><div class="tr">${esc(s[1])}</div></div>${spk(s[0],1)}</div>`).join("")}</div>`:""}
       <div class="sec-f" style="margin:0 4px">Kelimeye dokununca anlamını görürsün. Kurala ders boyunca sağ üstteki <b>Kural</b> düğmesiyle dönebilirsin.</div></div>`,
       `<button class="btn" id="nx">Kelimelere geç</button>`,si/P.length,"");
-    $("#nx").onclick=nextSeg;
+    $("#nx").onclick=()=>inReplay()?hfwd():nextSeg();
   }
-  function intro(w,k,n,go){
+  function intro(w,k,n,go,rp){
+    if(!rp)hpush({replay:()=>intro(w,k,n,go,1),live:()=>intro(w,k,n,go,1)});
     const ex=examplesFor(w,u);
     shell(segTitle(),`<div class="stack fade"><div><span class="pill blue">Yeni kelime ${k}/${n}</span></div>
       <div class="card stack"><div class="wordline"><div style="flex:1;min-width:0"><div class="word">${fmt(w[0])}</div><div class="pron">/${esc(w[2])}/</div></div>${spk(w[0])}</div>
@@ -41297,7 +41306,7 @@ function lesson(gi,restart){
       ${artWhy(w[0])?`<div class="sec-f yaw" style="margin:0 4px">${esc(artWhy(w[0]))}</div>`:""}
       <div class="sec-f" style="margin:0 4px">Örnekleri sesli oku. Birazdan bu kelimeyi farklı şekillerde soracağım.</div></div>`,
       `<button class="btn" id="nx">Anladım</button>`,(si+k/(n+1)*0.5)/P.length,"");
-    say(w[0]);$("#nx").onclick=go;
+    say(w[0]);$("#nx").onclick=()=>inReplay()?hfwd():go();
   }
   /* ortak soru döngüsü: items = [{kind,obj,need,stage,last}], doğru yapana kadar tekrar */
   function drill(items,mk,onDone,label){
@@ -41305,8 +41314,9 @@ function lesson(gi,restart){
     const total=items.reduce((n,it)=>n+it.need,0);let done=0;
     const firstSeen=new Set();
     function step(){if(!q.length)return onDone();const it=q.shift();ask(it);}
-    function ask(it){
-      const Q=mk(it);it.last=Q.t;window.__q=Q;
+    function ask(it,Q0,rp){
+      const Q=Q0||mk(it);if(!Q0)it.last=Q.t;window.__q=Q;
+      if(!rp)hpush({replay:()=>ask(it,Q,1),live:()=>ask(it,Q,1),answered:false,cont:null});
       const prog=(si+ (done/Math.max(total,1)))/P.length;
       let body;
       if(Q.t==="build"||Q.t==="listen"&&Q.tokens){
@@ -41321,7 +41331,7 @@ function lesson(gi,restart){
       shell(segTitle(),body,Q.t==="build"||Q.t==="listen"&&Q.tokens?`<button class="btn" id="chk" disabled>Kontrol et</button>`:Q.t==="type"?`<button class="btn sec" id="skip">Bilmiyorum</button><button class="btn" id="chk">Kontrol et</button>`:"",prog,"");
       if(Q.auto||Q.t==="listen")setTimeout(()=>say(Q.say),150);
       const ls=$("#ls");if(ls){ls.onclick=()=>say(Q.say);$("#lss").onclick=()=>say(Q.say,true);}
-      const fin=(ok,note)=>result(it,Q,ok,note);
+      const fin=(ok,note)=>{if(inReplay())return replayFb(it,Q,ok,note);const E=H[hp];if(E){E.answered=true;E.cont=step;}result(it,Q,ok,note);};
       if(Q.tokens){const ans=$("#ans"),bank=$("#bank"),chk=$("#chk"),seq=[];
         const upd=()=>{ans.innerHTML=seq.map((j,n)=>`<button class="tile" data-n="${n}">${esc(Q.tokens[j])}</button>`).join("");chk.disabled=!seq.length;
           ans.querySelectorAll("[data-n]").forEach(b=>b.onclick=()=>{const rr=b.getBoundingClientRect();const j=seq.splice(+b.dataset.n,1)[0];const bt=bank.querySelector(`[data-j="${j}"]`);bt.classList.remove("used");upd();flyIn(rr,bt);sfx("unpop");});};
@@ -41348,7 +41358,13 @@ function lesson(gi,restart){
         ${shown&&it.kind==="w"?`<div class="fbx">${esc(shown[0])}<br><span class="sub">${esc(shown[1])}</span></div>`:""}
         ${ok?"":`<div class="sub" style="font-size:13px;margin-top:4px">Bunu birazdan tekrar soracağım.</div>`}</div>
         <button class="btn ${ok?"green":"red"}" id="go">Devam</button></div>`;
-      $("#go").onclick=step;$("#go").focus();
+      $("#go").onclick=()=>{const E=H[hp];if(E)E.cont=null;step();};$("#go").focus();
+    }
+    function replayFb(it,Q,ok,note){
+      sfx(ok?"ok":"bad");sayAfter(Q.say);
+      const ab=$("#ab");ab.className="actbar "+(ok?"ok":"bad");
+      ab.innerHTML=`<div class="in" style="display:block"><div class="fbt">${ok?"Doğru!":"Doğru cevap:"}</div><div class="fbs">${note?`<span class="sub">${esc(note)}</span>`:""}<b>${it.kind==="w"?fmt(it.obj[0]):esc(it.obj[0])}</b> · ${esc(it.obj[1])}<div class="sub" style="font-size:13px;margin-top:4px">Tekrar — puanını etkilemez.</div></div><button class="btn ${ok?"green":"red"}" id="go">İleri ›</button></div>`;
+      $("#go").onclick=hfwd;
     }
     step();
   }

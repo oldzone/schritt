@@ -323,8 +323,9 @@ body{font-family:var(--sf);font-size:17px;letter-spacing:-.01em;background:linea
 .push{animation:push .22s var(--ease) both}
 @keyframes push{from{opacity:0;transform:translateX(16px)}to{opacity:1;transform:none}}
 /* ---------- kabuk ---------- */
-#shell{position:sticky;top:0;z-index:25;background:var(--bar);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);box-shadow:0 .5px 0 var(--sep);padding-top:env(safe-area-inset-top,0px)}
-.sbin{display:flex;align-items:center;gap:10px;height:54px;padding:0 max(16px,env(safe-area-inset-right,0px)) 0 max(16px,env(safe-area-inset-left,0px))}
+html::after{content:"";position:fixed;left:0;right:0;top:0;height:env(safe-area-inset-top,0px);background:var(--bar);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);z-index:40;pointer-events:none}
+#shell{position:relative;top:0;z-index:25;background:var(--bar);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);box-shadow:0 .5px 0 var(--sep);padding-top:env(safe-area-inset-top,0px)}
+.sbin{display:flex;align-items:center;gap:10px;height:46px;padding:0 max(16px,env(safe-area-inset-right,0px)) 0 max(16px,env(safe-area-inset-left,0px))}
 .sblogo{width:34px;height:34px;border-radius:9px;background:var(--grad);color:#fff;font-weight:800;display:grid;place-items:center;font-size:18px;flex:none;font-family:var(--sfr);box-shadow:0 3px 8px color-mix(in srgb,var(--blue) 35%,transparent)}
 .sbt{display:flex;flex-direction:column;line-height:1.1;min-width:0}.sbt b{font-size:17px;font-weight:700}.sbt span{font-size:12px;color:var(--label2)}
 .sbr{margin-left:auto;display:flex;align-items:center;gap:10px}

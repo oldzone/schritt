@@ -40463,7 +40463,7 @@ function turn(d){
   const wasPlaying=RD.playing;stopRead(true);RD.p=np;RD.si=0;S.bk[b.id].p=np;touch();S.xp=(S.xp||0)+1;save();sfx("tap");drawPage();
   if(wasPlaying){RD.playing=true;updPlay();setTimeout(()=>readFrom(0),350);}
 }
-function hl(i){root().querySelectorAll(".rs").forEach(el=>el.classList.toggle("reading",+el.dataset.si===i));const el=root().querySelector(`.rs[data-si="${i}"]`);if(el){const r=el.getBoundingClientRect();if(r.bottom>innerHeight-130||r.top<90)window.scrollBy({top:r.top-innerHeight/3,behavior:"smooth"});}}
+function hl(i){root().querySelectorAll(".rs").forEach(el=>el.classList.toggle("reading",+el.dataset.si===i));const el=root().querySelector(`.rs[data-si="${i}"]`);if(el){const nv=document.querySelector(".nav"),top=(nv?nv.getBoundingClientRect().bottom:90)+12,r=el.getBoundingClientRect();if(i===0&&window.scrollY<400)window.scrollTo({top:0,behavior:"smooth"});else if(r.bottom>innerHeight-130||r.top<top)window.scrollBy({top:r.top-Math.max(top,innerHeight/3),behavior:"smooth"});}}
 function readFrom(i){
   if(!RD||!RD.playing)return;
   const tok=++RD.tok;

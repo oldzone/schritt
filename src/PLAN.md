@@ -94,3 +94,4 @@ Her adımdan sonra: build → test (playwright) → yayınla (mümkünse) → Ma
 - 15 Kas: Üst Dilbaz çubuğu (#shell) artık sabit değil, sayfayla kayıyor; yükseklik 46px; status bar arkası html::after ile kapatılıyor. iOS: Voice keep-alive (sessiz AVAudioSourceNode, AirPods uyumasın), didCancel atlatmıyor, oturum .mixWithOthers.
 - 15 Kas: iOS üst boşluk (çift safe-area: webview statü çubuğu altında + CSS env) → ContentView .ignoresSafeArea(.container, edges: .bottom); webview statü çubuğunun altından başlıyor, üst arka plan #f9f9f9 / koyu.
 - 15 Kas: Dokunma sesleri yumuşatıldı (gürültü yok, düşük frekans, 9ms atak, 1.8k lowpass).
+- 15 Kas: Yedek: JSON dosyası (dilbaz-yedek-YYYY-MM-DD.json). Dışa: iOS app → 'share' köprüsü (UIActivityViewController), Claude widget → downloads capability, Safari → navigator.share(files) yoksa indirme. İçe: dosya seçici (#imf), metin kodu/eski bağlantı da kabul. GitHub linki artık gösterilmiyor. Test: tests/tbackup.py

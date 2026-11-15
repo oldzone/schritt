@@ -1840,28 +1840,42 @@ function syncNote(){if(NATIVE||SYNC==="ok"||SYNC==="wait"||!CTRY)return"";const 
 const SITE="https://oldzone.github.io/schritt/";
 const b64u=u8=>{let s="";for(let i=0;i<u8.length;i+=8192)s+=String.fromCharCode.apply(null,u8.subarray(i,i+8192));return btoa(s).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"");};
 const ub64=t=>{t=t.replace(/-/g,"+").replace(/_/g,"/");const b=atob(t);const u=new Uint8Array(b.length);for(let i=0;i<b.length;i++)u[i]=b.charCodeAt(i);return u;};
-async function packAll(){save();const o={v:1,langs:{},prefs:null};for(const c of Object.keys(LANGS)){const k=c==="de"?"schritt-v1":"schritt-v1-"+c;let v=c===LANG.code?S:null;if(!v)try{v=JSON.parse(localStorage.getItem(k)||"null");}catch(e){}if(v)o.langs[c]=v;}
-  o.prefs=prefsObj();const raw=new TextEncoder().encode(JSON.stringify(o));
+function backupObj(){save();const o={app:"Dilbaz",v:1,date:new Date().toISOString(),langs:{},prefs:null};for(const c of Object.keys(LANGS)){const k=c==="de"?"schritt-v1":"schritt-v1-"+c;let v=c===LANG.code?S:null;if(!v)try{v=JSON.parse(localStorage.getItem(k)||"null");}catch(e){}if(v)o.langs[c]=v;}o.prefs=prefsObj();return o;}
+let DLCAP=null;(async()=>{try{for(let i=0;i<30&&!(window.claude&&window.claude.use);i++)await new Promise(r=>setTimeout(r,200));if(window.claude&&window.claude.use)DLCAP=await window.claude.use("downloads");}catch(e){}})();
+window.__shared=ok=>{if(ok){try{localStorage.setItem("schritt-bk",Date.now());}catch(e){}toast("Yedek kaydedildi");}};
+async function saveBackupFile(){const o=backupObj();const txt=JSON.stringify(o,null,1);const d=new Date();const name=`dilbaz-yedek-${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}.json`;
+  const done=()=>{try{localStorage.setItem("schritt-bk",Date.now());}catch(e){}};
+  if(nCall("share",{name,text:txt}))return;
+  if(DLCAP){try{await DLCAP.save({filename:name,data:new Blob([txt],{type:"application/json"})});done();toast("Yedek dosyası kaydedildi");return;}catch(e){if(e&&/declin|cancel|abort/i.test(String(e.code||e.message||e)))return;}}
+  try{const f=new File([txt],name,{type:"application/json"});if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f],title:name});done();return;}}catch(e){if(e&&e.name==="AbortError")return;}
+  try{const u=URL.createObjectURL(new Blob([txt],{type:"application/json"}));const a=document.createElement("a");a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),4000);done();toast("Yedek dosyası indirildi");}catch(e){toast("Dosya kaydedilemedi — kodu kopyala");}}
+async function packAll(){const o=backupObj();const raw=new TextEncoder().encode(JSON.stringify(o));
   if(window.CompressionStream){try{const cs=new Blob([raw]).stream().pipeThrough(new CompressionStream("gzip"));const buf=new Uint8Array(await new Response(cs).arrayBuffer());return "g"+b64u(buf);}catch(e){}}
   return "j"+b64u(raw);}
 async function unpack(t){const kind=t[0],u=ub64(t.slice(1));let txt;if(kind==="g"){const ds=new Blob([u]).stream().pipeThrough(new DecompressionStream("gzip"));txt=await new Response(ds).text();}else txt=new TextDecoder().decode(u);return JSON.parse(txt);}
-function importSheet(){sheet(`<div class="h2" style="font-size:24px;margin-bottom:6px">Yedekten geri yükle</div><div class="sub" style="margin-bottom:12px">Daha önce kopyaladığın yedek / taşıma bağlantısını aşağıya yapıştır.</div>
-   <textarea id="iml" placeholder="https://oldzone.github.io/schritt/#imp=…" style="width:100%;height:110px;font:13px ui-monospace,monospace;border-radius:12px;padding:10px;border:1px solid var(--sep,#ccc);background:var(--neubg);color:var(--label)"></textarea>
-   <div style="display:flex;gap:10px;margin-top:12px"><button class="btn sec" id="impa" style="flex:1">Panodan yapıştır</button><button class="btn" id="imgo" style="flex:1">Devam</button></div>`);
+function importSheet(){sheet(`<div class="h2" style="font-size:24px;margin-bottom:6px">Yedekten geri yükle</div><div class="sub" style="margin-bottom:14px">Daha önce kaydettiğin <b>dilbaz-yedek….json</b> dosyasını seç.</div>
+   <label class="btn" style="width:100%;display:block;text-align:center;cursor:pointer">📂 Yedek dosyası seç<input type="file" id="imf" accept=".json,application/json,text/plain" style="display:none"></label>
+   <details style="margin-top:14px"><summary class="sub" style="cursor:pointer">Metin kodu ya da eski bağlantı ile yükle</summary>
+   <textarea id="iml" placeholder="Kodu buraya yapıştır" style="width:100%;height:96px;margin-top:8px;font:12px ui-monospace,monospace;border-radius:12px;padding:10px;border:1px solid var(--sep,#ccc);background:var(--neubg);color:var(--label)"></textarea>
+   <div style="display:flex;gap:10px;margin-top:8px"><button class="btn sec" id="impa" style="flex:1">Panodan yapıştır</button><button class="btn" id="imgo" style="flex:1">Devam</button></div></details>`);
+  document.getElementById("imf").onchange=async e=>{const f=e.target.files&&e.target.files[0];if(!f)return;let o=null;try{o=JSON.parse(await f.text());}catch(x){}if(!o||!o.langs){toast("Bu dosya bir Dilbaz yedeği değil");return;}document.querySelectorAll(".sheetbg").forEach(x=>x.remove());checkImport(null,o);};
   const ta=document.getElementById("iml");
   document.getElementById("impa").onclick=async()=>{try{ta.value=await navigator.clipboard.readText();}catch(e){toast("Kutuya uzun basıp Yapıştır'ı seç");ta.focus();}};
-  document.getElementById("imgo").onclick=()=>{const v=(ta.value||"").trim();const m=v.match(/imp=([A-Za-z0-9_\-]+)/)||v.match(/^([gj][A-Za-z0-9_\-]{10,})$/);if(!m){toast("Geçerli bir yedek bağlantısı bulunamadı");return;}checkImport(m[1]);};}
-async function exportSheet(){const code=await packAll();const link=SITE+"#imp="+code;
-  sheet(`<div class="h2" style="font-size:24px;margin-bottom:6px">İlerlemeyi taşı</div><div class="sub" style="margin-bottom:12px">Bu bağlantı tüm dillerdeki ilerlemeni, serini ve ayarlarını içerir. Başka bir cihazda veya tarayıcıda (ör. Safari) açınca ilerlemen oraya aktarılır.</div>
-   <textarea id="exl" readonly style="width:100%;height:110px;font:13px ui-monospace,monospace;border-radius:12px;padding:10px;border:1px solid var(--sep,#ccc);background:var(--neubg);color:var(--label)">${esc(link)}</textarea>
-   <div style="display:flex;gap:10px;margin-top:12px"><button class="btn" id="excp" style="flex:1">Bağlantıyı kopyala</button><a class="btn sec" href="${esc(link)}" target="_blank" rel="noopener" style="flex:1;text-align:center;text-decoration:none">Aç</a></div>
-   <div class="sub" style="margin-top:10px;font-size:13px">Yedek olarak saklamak için kopyalayıp Notlar'a yapıştır. Kopyalama çalışmazsa kutudaki metne uzun basıp tümünü seçerek kopyala. Bağlantıyı başkasıyla paylaşma; içinde senin ilerlemen var.</div>`);
-  const ta=document.getElementById("exl");document.getElementById("excp").onclick=async()=>{let ok=false;try{await navigator.clipboard.writeText(link);ok=true;}catch(e){}if(!ok){try{ta.focus();ta.select();ok=document.execCommand("copy");}catch(e){}}if(ok){try{localStorage.setItem("schritt-bk",Date.now());}catch(e){}}toast(ok?"Yedek bağlantısı kopyalandı. Notlar'a yapıştırıp sakla.":"Kutudaki metni seçip kopyala");};}
-async function checkImport(given){let code=given;if(!code){const m=location.hash.match(/#imp=([A-Za-z0-9_\-]+)/);if(!m)return;code=m[1];try{history.replaceState(null,"",location.pathname+location.search);}catch(e){}}
-  let o=null;try{o=await unpack(code);}catch(e){}
+  document.getElementById("imgo").onclick=()=>{const v=(ta.value||"").trim();if(v.startsWith("{")){let o=null;try{o=JSON.parse(v);}catch(e){}if(o&&o.langs){document.querySelectorAll(".sheetbg").forEach(x=>x.remove());return checkImport(null,o);}}const m=v.match(/imp=([A-Za-z0-9_\-]+)/)||v.match(/^([gj][A-Za-z0-9_\-]{10,})$/);if(!m){toast("Geçerli bir yedek bulunamadı");return;}checkImport(m[1]);};}
+async function exportSheet(){const code=await packAll();
+  sheet(`<div class="h2" style="font-size:24px;margin-bottom:6px">İlerlemeyi yedekle</div><div class="sub" style="margin-bottom:14px">Tüm dillerdeki ilerlemen, serin ve ayarların tek bir dosyada. Dosyayı Dosyalar'a, iCloud Drive'a, WhatsApp'a ya da e-postaya kaydedebilirsin; başka cihazda <b>Yedekten geri yükle</b> ile açarsın.</div>
+   <button class="btn" id="exf" style="width:100%">📄 Yedek dosyası kaydet (.json)</button>
+   <details style="margin-top:14px"><summary class="sub" style="cursor:pointer">Dosya yerine metin kodu kullan</summary>
+   <textarea id="exl" readonly style="width:100%;height:96px;margin-top:8px;font:12px ui-monospace,monospace;border-radius:12px;padding:10px;border:1px solid var(--sep,#ccc);background:var(--neubg);color:var(--label)">${esc(code)}</textarea>
+   <button class="btn sec" id="excp" style="width:100%;margin-top:8px">Kodu kopyala</button></details>
+   <div class="sub" style="margin-top:10px;font-size:13px">Yedeği başkasıyla paylaşma; içinde senin ilerlemen var.</div>`);
+  document.getElementById("exf").onclick=saveBackupFile;
+  const ta=document.getElementById("exl");document.getElementById("excp").onclick=async()=>{let ok=false;try{await navigator.clipboard.writeText(code);ok=true;}catch(e){}if(!ok){try{ta.focus();ta.select();ok=document.execCommand("copy");}catch(e){}}if(ok){try{localStorage.setItem("schritt-bk",Date.now());}catch(e){}}toast(ok?"Kod kopyalandı. Notlar'a yapıştırıp sakla.":"Kutudaki metni seçip kopyala");};}
+async function checkImport(given,obj){let code=given;if(!code&&!obj){const m=location.hash.match(/#imp=([A-Za-z0-9_\-]+)/);if(!m)return;code=m[1];try{history.replaceState(null,"",location.pathname+location.search);}catch(e){}}
+  let o=obj||null;if(!o)try{o=await unpack(code);}catch(e){}
   if(!o||!o.langs){toast("Aktarma bağlantısı okunamadı");return;}
   const sum=Object.entries(o.langs).map(([c,v])=>`${LANGS[c]?LANGS[c].flag+" "+LANGS[c].name:c}: ${Object.keys(v.pass||{}).length} ders, ${v.xp||0} XP`).join("<br>");
-  sheet(`<div class="h2" style="font-size:24px;margin-bottom:6px">İlerlemeyi aktar</div><div class="sub" style="margin-bottom:12px">Bu cihazdaki ilerleme, bağlantıdaki ilerlemeyle değiştirilecek:</div><div class="card" style="margin-bottom:14px">${sum}</div><button class="btn" id="imok" style="width:100%">Aktar</button>`);
+  sheet(`<div class="h2" style="font-size:24px;margin-bottom:6px">İlerlemeyi aktar</div><div class="sub" style="margin-bottom:12px">Bu cihazdaki ilerleme, yedekteki ilerlemeyle değiştirilecek:</div><div class="card" style="margin-bottom:14px">${sum}</div><button class="btn" id="imok" style="width:100%">Aktar</button>`);
   document.getElementById("imok").onclick=()=>{for(const [c,v] of Object.entries(o.langs)){if(!LANGS[c])continue;v.ts=Date.now();try{localStorage.setItem(c==="de"?"schritt-v1":"schritt-v1-"+c,JSON.stringify(v));}catch(e){}}
     if(o.prefs){o.prefs.ts=Date.now();try{localStorage.setItem(PKEY,JSON.stringify(o.prefs));}catch(e){}}
     window.__IMP=true;try{localStorage.setItem("schritt-lang",LANG.code);}catch(e){}location.reload();};}

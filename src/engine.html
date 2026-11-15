@@ -1325,7 +1325,7 @@ const REC={p:null,f:null,s:null,sr:null,on:false,bad:false};
 async function capsInit(){if(CAPS.ready)return;CAPS.ready=true;
   for(let i=0;i<30&&!(window.claude&&window.claude.use);i++)await new Promise(r=>setTimeout(r,200));
   if(!(window.claude&&window.claude.use))return;
-  try{const sm=await window.claude.use("sample");if(sm)CAPS.sample=sm;}catch(e){}
+  try{const sm=await window.claude.use("sample");if(sm)CAPS.sample=sm;}catch(e){}if(CAPS.sample)try{if(typeof tab!=="undefined"&&tab==="games"&&!IN_LESSON)render();}catch(e){}
   try{const d=await window.claude.use("dictation");if(d){d.onPartial(x=>REC.p&&REC.p(x.text||""));d.onFinal(x=>REC.f&&REC.f(x.text||""));d.onState(x=>REC.s&&REC.s(x.state));CAPS.dict=d;}}catch(e){CAPS.dict=null;}
 }
 capsInit();
@@ -1583,7 +1583,7 @@ async function callEnd(){if(!CL)return;const C=CL;C.ended=true;clearInterval(C.t
   try{const r=await CAPS.sample([{role:"user",content:callPrompt()},...C.msgs.slice(-24),{role:"user",content:"(The learner has hung up. Do not continue the call. Reply ONLY with JSON {\"sum\":\"2-3 sentences of warm, specific feedback in Turkish: what went well, and 1-2 concrete mistakes or phrases to practise\"})"}],{cache:false});
     const j=parseAI(r&&r.text);const e=$("#clsum");if(e)e.textContent=j.sum||j.say||"";}catch(e){const el=$("#clsum");if(el)el.textContent="";}}
 
-const AI_OK=()=>!(NB.ios||NB.and);
+const AI_OK=()=>!(NB.ios||NB.and)&&!!CAPS.sample;
 function speakCard(){if(!AI_OK())return `<div class="spcard"><div class="spct">🗣️ Konuşma pratiği</div><div class="spcs">Dinle, tekrar et, telaffuzunu dene</div><div class="spbtns"><button data-sp="rep"><span>🔁</span>Tekrar et</button><button data-sp="say"><span>🗣️</span>Çevir & söyle</button></div></div>`;return `<div class="spcard"><div class="spct">🗣️ Konuşma pratiği</div><div class="spcs">Yapay zekâyla konuş, kelimelerini kullan, telaffuzunu dene</div>
   <button class="spcall" data-sp="call"><span class="spca">${PERSONA[1]}</span><span class="spct2"><b>📞 ${PERSONA[0]}'yı ara</b><small>Serbest sesli sohbet · ${LANG.name}</small></span></button>
   <div class="spbtns"><button data-sp="words"><span>🎯</span>Kelime soru-cevap</button><button data-sp="chat"><span>💬</span>Ders sohbeti</button><button data-sp="rep"><span>🔁</span>Tekrar et</button><button data-sp="say"><span>🗣️</span>Çevir & söyle</button></div></div>`;}

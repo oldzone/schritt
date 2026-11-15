@@ -40560,11 +40560,23 @@ async function capsInit(){if(CAPS.ready)return;CAPS.ready=true;
   try{const sm=await window.claude.use("sample");if(sm)CAPS.sample=sm;}catch(e){}if(CAPS.sample)try{if(typeof tab!=="undefined"&&tab==="games"&&!IN_LESSON)render();}catch(e){}
   try{const d=await window.claude.use("dictation");if(d){d.onPartial(x=>REC.p&&REC.p(x.text||""));d.onFinal(x=>REC.f&&REC.f(x.text||""));d.onState(x=>REC.s&&REC.s(x.state));CAPS.dict=d;}}catch(e){CAPS.dict=null;}
 }
+/* iPhone uygulaması: cihaz içi yapay zekâ (Apple Intelligence) ve konuşma tanıma */
+const NAI={id:0,cb:{}};
+window.__aiDone=(id,t,e)=>{const c=NAI.cb[id];delete NAI.cb[id];if(c)c(t,e);};
+function nativeSample(input,o){const msgs=typeof input==="string"?[{role:"user",content:input}]:input;
+  const m=msgs.length>9?[msgs[0],...msgs.slice(-8)]:msgs;
+  return new Promise((res,rej)=>{const id=++NAI.id;NAI.cb[id]=(t,e)=>e?rej({code:"api",message:e}):res({text:t||""});if(!nCall("ai",{id,msgs:m})){delete NAI.cb[id];rej({code:"api"});}});}
+const NATIVE_AI=!!(NB.ios&&window.__NATIVE_AI&&window.__NATIVE_AI.ok);
+if(NATIVE_AI)CAPS.sample=nativeSample;
+const NREC=!!(NB.ios&&window.__NATIVE_REC);
+window.__recPartial=t=>{if(REC.nat)REC.nat.onText(t,false);};
+window.__recEnd=(t,e)=>{const n=REC.nat;REC.nat=null;REC.on=false;if(e==="denied"||e==="mic")toast("Mikrofon / konuşma tanıma izni kapalı. Ayarlar › Dilbaz'dan aç.");if(n){if(t)n.onText(t,true);if(n.onEnd)n.onEnd();}};
 capsInit();
-const canMic=()=>!!((SRC&&!REC.bad)||CAPS.dict);
-function recStop(){try{if(REC.sr){REC.sr.stop();return;}}catch(e){}try{if(CAPS.dict&&REC.on)CAPS.dict.stop().catch(()=>{});}catch(e){}}
+const canMic=()=>!!(NREC||(SRC&&!REC.bad)||CAPS.dict);
+function recStop(){if(REC.nat){nCall("unlisten",{});return;}try{if(REC.sr){REC.sr.stop();return;}}catch(e){}try{if(CAPS.dict&&REC.on)CAPS.dict.stop().catch(()=>{});}catch(e){}}
 function recStart(onText,onEnd){
   stopSpeak();REC.on=true;
+  if(NREC){REC.nat={onText,onEnd};if(!nCall("listen",{l:LANG.loc})){REC.nat=null;REC.on=false;onEnd&&onEnd();}return;}
   const srGo=()=>{let r;try{r=new SRC();}catch(e){REC.on=false;onEnd&&onEnd();return;}
     REC.sr=r;r.lang=LANG.loc;r.interimResults=true;r.continuous=false;r.maxAlternatives=1;
     r.onresult=e=>{let t="",fin=false;for(let i=0;i<e.results.length;i++){t+=e.results[i][0].transcript;if(e.results[i].isFinal)fin=true;}onText(t.trim(),fin);};
@@ -40815,8 +40827,8 @@ async function callEnd(){if(!CL)return;const C=CL;C.ended=true;clearInterval(C.t
   try{const r=await CAPS.sample([{role:"user",content:callPrompt()},...C.msgs.slice(-24),{role:"user",content:"(The learner has hung up. Do not continue the call. Reply ONLY with JSON {\"sum\":\"2-3 sentences of warm, specific feedback in Turkish: what went well, and 1-2 concrete mistakes or phrases to practise\"})"}],{cache:false});
     const j=parseAI(r&&r.text);const e=$("#clsum");if(e)e.textContent=j.sum||j.say||"";}catch(e){const el=$("#clsum");if(el)el.textContent="";}}
 
-const AI_OK=()=>!(NB.ios||NB.and)&&!!CAPS.sample;
-function speakCard(){if(!AI_OK())return `<div class="spcard"><div class="spct">🗣️ Konuşma pratiği</div><div class="spcs">Dinle, tekrar et, telaffuzunu dene</div><div class="spbtns"><button data-sp="rep"><span>🔁</span>Tekrar et</button><button data-sp="say"><span>🗣️</span>Çevir & söyle</button></div></div>`;return `<div class="spcard"><div class="spct">🗣️ Konuşma pratiği</div><div class="spcs">Yapay zekâyla konuş, kelimelerini kullan, telaffuzunu dene</div>
+const AI_OK=()=>!!CAPS.sample;
+function speakCard(){if(!AI_OK())return `<div class="spcard"><div class="spct">🗣️ Konuşma pratiği</div><div class="spcs">Dinle, tekrar et, telaffuzunu dene</div>${NB.ios&&!NATIVE_AI?`<div class="spcs" style="margin-top:6px;opacity:.85">📞 Lena ile sesli sohbet için Apple Intelligence gerekir (iPhone 15 Pro ve sonrası · Ayarlar › Apple Intelligence ve Siri).</div>`:""}<div class="spbtns"><button data-sp="rep"><span>🔁</span>Tekrar et</button><button data-sp="say"><span>🗣️</span>Çevir & söyle</button></div></div>`;return `<div class="spcard"><div class="spct">🗣️ Konuşma pratiği</div><div class="spcs">Yapay zekâyla konuş, kelimelerini kullan, telaffuzunu dene</div>
   <button class="spcall" data-sp="call"><span class="spca">${PERSONA[1]}</span><span class="spct2"><b>📞 ${PERSONA[0]}'yı ara</b><small>Serbest sesli sohbet · ${LANG.name}</small></span></button>
   <div class="spbtns"><button data-sp="words"><span>🎯</span>Kelime soru-cevap</button><button data-sp="chat"><span>💬</span>Ders sohbeti</button><button data-sp="rep"><span>🔁</span>Tekrar et</button><button data-sp="say"><span>🗣️</span>Çevir & söyle</button></div></div>`;}
 function bindSpeakCard(r){r.querySelectorAll("[data-sp]").forEach(b=>b.onclick=()=>{const m=b.dataset.sp;if(m==="call")return callStart();if(m==="chat")return chat(null);if(m==="words")return CAPS.sample?chat(null,null,"words"):chatInfo();speakDrill(spItems(null,6),{mode:m,title:m==="rep"?"Dinle ve tekrar et":"Çevir ve söyle"});});}

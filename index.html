@@ -40155,11 +40155,11 @@ let tab=S.tab||"learn";
 function tabs(show){const t=$("#tabs");shell(show);if(!show){t.innerHTML="";return;}
   const due=dueItems().length;
   const bdue=bankDue().length+bankNew().length;
-  const T=[["learn","Öğren",I.learn],["books","Kitaplar",I.book],["conj","Bağlaçlar",I.conj],["bank","Hazine",I.bank],["review","Tekrar",I.review],["dict","Sözlük",I.dict]];
+  const T=[["learn","Öğren",I.learn],["books","Kitaplar",I.book],["bank","Hazine",I.bank],["review","Tekrar",I.review],["dict","Sözlük",I.dict]];
   const bd=k=>{const n=k==="review"?due:k==="bank"?bdue:0;return n?`<span class="badge">${n>99?"99+":n}</span>`:"";};
   t.innerHTML=`<nav class="tabbar"><div class="in">${T.map(([k,n,ic])=>`<button data-tab="${k}" ${tab===k?'aria-current="page"':""}>${ic}${n}${bd(k)}</button>`).join("")}</div></nav>`;
   t.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>{tab=b.dataset.tab;render();});}
-function render(){try{closeGloss();}catch(e){}IN_LESSON=false;if(S.tab!==tab){S.tab=tab;try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}window.scrollTo(0,0);tabs(true);({learn,bank,review,dict,me,conj,books,games})[tab]();}
+function render(){try{closeGloss();}catch(e){}IN_LESSON=false;if(tab==="conj")tab="learn";if(S.tab!==tab){S.tab=tab;try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}window.scrollTo(0,0);tabs(true);({learn,bank,review,dict,me,conj,books,games})[tab]();}
 const root=()=>$("#root");
 
 /* ===== Tema, dokunma, ses, konfeti ===== */
@@ -41198,15 +41198,19 @@ function examplesFor(w,u){
 }
 
 /* ===== Ders planı (bölümler) ===== */
+/* bağlaçlar: her seviyenin bağlaçları o seviyenin derslerine sırayla dağıtılır */
+let CJMAP=null;
+function conjFor(u){if(!CJMAP){CJMAP={};LV.forEach(l=>{const us=UNITS.filter(x=>x.lv===l.id),cs=CONJ.filter(c=>c[2]===l.id);if(!us.length)return;cs.forEach((c,j)=>{const k=us[Math.floor(j*us.length/cs.length)].key;(CJMAP[k]=CJMAP[k]||[]).push(c);});});}return CJMAP[u.key]||[];}
 function plan(u){
   const segs=[{t:"g"}];
   for(let i=0;i<u.w.length;i+=3)segs.push({t:"w",ws:u.w.slice(i,i+3),from:i});
   const s=u.sents,h=Math.ceil(s.length/2);
   segs.push({t:"s",ss:s.slice(0,h)});segs.push({t:"s",ss:s.slice(h)});
+  const cs=conjFor(u);if(cs.length)segs.push({t:"c",cs});
   segs.push({t:"f"});
   return segs;
 }
-const segName=sg=>sg.t==="g"?"Kural":sg.t==="w"?"Kelimeler":sg.t==="s"?"Cümleler":"Genel tekrar";
+const segName=sg=>sg.t==="c"?"Bağlaçlar":sg.t==="g"?"Kural":sg.t==="w"?"Kelimeler":sg.t==="s"?"Cümleler":"Genel tekrar";
 
 /* ===== Alıştırma üreticileri ===== */
 const isNoun=w=>isNounStr(w[0]);
@@ -41273,7 +41277,7 @@ function lesson(gi,restart){
     root().innerHTML=`<div class="nav"><div class="in"><button class="back" id="nb"><span style="width:22px;height:22px;display:grid;place-items:center">${I.x}</span></button>${hp>0?`<button class="hbk" id="hb" aria-label="Önceki">‹ Önceki</button>`:""}<div class="nt">${inReplay()?"↩ ":""}${esc(title)}</div><button class="cnt rulebtn" id="rb">Kural</button></div><div class="prog"><i style="width:${prog*100}%"></i></div></div>`+
       `<div class="page push" style="padding-bottom:230px">${body}</div><div class="actbar" id="ab"><div class="in" id="abi">${act}</div></div>`;
     $("#nb").onclick=()=>{S.lp[u.key]=si;save();IN_LESSON=false;tab="learn";render();};
-    $("#rb").onclick=()=>sheet(`<div class="h2" style="font-size:24px;margin-bottom:10px">${esc(u.t)}</div><div class="gram">${u.g}</div>`);
+    $("#rb").onclick=()=>sheet(`<div class="h2" style="font-size:24px;margin-bottom:10px">${esc(u.t)}</div><div class="gram">${u.g}</div>${conjFor(u).length&&CONJ_THEORY.length?conjTheory():""}`);
     const hb=$("#hb");if(hb)hb.onclick=hback;
     bindSay(root());bindTap(root());
   }
@@ -41284,6 +41288,7 @@ function lesson(gi,restart){
     if(sg.t==="g")return grammar();
     if(sg.t==="w")return words(sg);
     if(sg.t==="s")return sents(sg.ss,false);
+    if(sg.t==="c")return conjSeg(sg.cs);
     return finalRev();
   }
   function grammar(rp){
@@ -41350,7 +41355,7 @@ function lesson(gi,restart){
       else{q.splice(Math.min(q.length,2),0,it);}
       S.xp+=ok?2:0;save();
       if(!Q.auto||Q.t==="tr")sayAfter(Q.say);
-      const de=it.kind==="w"?it.obj[0]:it.obj[0],tr=it.obj[1];
+      const de=it.obj[0],tr=it.kind==="c"?it.obj[3]:it.obj[1];
       const shown=Q.show||(it.kind==="w"?[it.obj[3],it.obj[4]]:null);
       const ab=$("#ab");ab.className="actbar "+(ok?"ok":"bad");
       ab.innerHTML=`<div class="in" style="display:block"><div class="fbt">${ok?pick(["Sehr gut!","Richtig!","Super!","Genau!","Toll!"]):"Doğru cevap:"}</div>
@@ -41363,7 +41368,7 @@ function lesson(gi,restart){
     function replayFb(it,Q,ok,note){
       sfx(ok?"ok":"bad");sayAfter(Q.say);
       const ab=$("#ab");ab.className="actbar "+(ok?"ok":"bad");
-      ab.innerHTML=`<div class="in" style="display:block"><div class="fbt">${ok?"Doğru!":"Doğru cevap:"}</div><div class="fbs">${note?`<span class="sub">${esc(note)}</span>`:""}<b>${it.kind==="w"?fmt(it.obj[0]):esc(it.obj[0])}</b> · ${esc(it.obj[1])}<div class="sub" style="font-size:13px;margin-top:4px">Tekrar — puanını etkilemez.</div></div><button class="btn ${ok?"green":"red"}" id="go">İleri ›</button></div>`;
+      ab.innerHTML=`<div class="in" style="display:block"><div class="fbt">${ok?"Doğru!":"Doğru cevap:"}</div><div class="fbs">${note?`<span class="sub">${esc(note)}</span>`:""}<b>${it.kind==="w"?fmt(it.obj[0]):esc(it.obj[0])}</b> · ${esc(it.kind==="c"?it.obj[3]:it.obj[1])}<div class="sub" style="font-size:13px;margin-top:4px">Tekrar — puanını etkilemez.</div></div><button class="btn ${ok?"green":"red"}" id="go">İleri ›</button></div>`;
       $("#go").onclick=hfwd;
     }
     step();
@@ -41381,6 +41386,16 @@ function lesson(gi,restart){
   function sents(ss,isFinal){
     const items=ss.map(s=>({kind:"s",obj:s,need:1,stage:0}));
     drill(shuffle(items),it=>exSent(it.obj,u,it.last),nextSeg,"Cümle");
+  }
+  function conjSeg(cs,rp){
+    if(!rp)hpush({replay:()=>conjSeg(cs,1),live:()=>conjSeg(cs,1)});
+    shell(segTitle(),`<div class="stack fade"><div><span class="pill green">Bağlaçlar</span></div>
+      <div class="sub" style="margin:0 4px">Cümleleri birbirine bağlayan ${cs.length>1?"bu "+cs.length+" kelimeyi":"bu kelimeyi"} öğren. Örneği dinle, sonra alıştırma yapacağız.</div>
+      ${cs.map(c=>`<div class="card stack"><div class="wordline"><div style="flex:1;min-width:0"><div class="word">${esc(c[0])}</div><div class="pron">${esc(c[1])}${c[6]?" · "+esc(c[6]):""}</div></div>${spk(c[0])}</div>
+        <div class="mean">${esc(c[3])}</div><div class="hr"></div><div class="wordline ex"><div style="flex:1;min-width:0"><div class="fr">${md(c[4])}</div></div>${spk(c[4].replace(/\*\*/g,""),1)}</div>${c[5]?`<div class="sec-f yaw" style="margin:0">${esc(c[5])}</div>`:""}</div>`).join("")}
+      <div class="sec-f" style="margin:0 4px">Bağlaç kurallarının tamamı sağ üstteki <b>Kural</b> düğmesinde.</div></div>`,
+      `<button class="btn" id="nx">Alıştırmaya geç</button>`,si/P.length,"");
+    $("#nx").onclick=()=>{if(inReplay())return hfwd();const items=cs.filter(c=>c[7]&&c[8]).map(c=>({kind:"c",obj:c,need:1,stage:0}));if(!items.length)return nextSeg();drill(shuffle(items),it=>conjQ(it.obj),nextSeg,"Bağlaç");};
   }
   function finalRev(){
     const items=[...shuffle(u.w).slice(0,6).map(w=>({kind:"w",obj:w,need:1,stage:1})),...shuffle(u.sents).slice(0,4).map(s=>({kind:"s",obj:s,need:1,stage:0}))];
@@ -41696,6 +41711,11 @@ function conjFiltered(){const q=CF.q.trim().toLowerCase();return CONJ.filter(c=>
 function drawConj(){const a=conjFiltered();
   $("#clist").innerHTML=a.length?`<div class="sec-f" style="margin:0 4px 8px">${a.length} sonuç</div>`+a.map(c=>`<button class="cj" data-say="${esc(c[4].replace(/\*\*/g,""))}"><div class="w">${esc(c[0])}<span class="cspk">${I.spk}</span></div><div class="tags"><span class="tag" style="background:${LVCOLOR[c[2]]};color:#fff">${c[2]}</span><span class="tag">${esc(c[1])}</span>${c[6]?`<span class="tag">${esc(c[6])}</span>`:""}</div><div class="m">${esc(c[3])}</div><div class="e">${md(c[4])}</div>${c[5]?`<div class="cn">${md(c[5])}</div>`:""}</button>`).join(""):`<div class="sec-f" style="text-align:center;margin-top:20px">Sonuç yok.</div>`;
   bindSay($("#clist"));}
+function conjQ(c){
+  const others=shuffle(CONJ.filter(x=>x[1]!==c[1]&&x[7]&&x[7].toLowerCase()!==c[7].toLowerCase()).map(x=>x[7]));const opts=[c[7]];for(const x of others){if(opts.length>=4)break;if(!opts.some(o=>o.toLowerCase()===x.toLowerCase()))opts.push(x);}
+  const qt=c[8],cap=/^___/.test(qt),fix=o=>cap?o.charAt(0).toUpperCase()+o.slice(1):o.charAt(0).toLowerCase()+o.slice(1);
+  return{t:"cj",plain:true,prompt:esc(qt).replace("___",'<span class="blank">&nbsp;</span>'),sub:"Boşluğa uygun bağlacı seç",ans:fix(c[7]),opts:shuffle(opts.map(fix)),say:c[4].replace(/\*\*/g,"")};}
+const conjTheory=()=>`<details class="card cth" style="margin-top:14px"><summary>📚 Bağlaç rehberi ${I.chev}</summary>${CONJ_THEORY.map(b=>{let x=`<div class="blk"><div class="bh">${b.h}</div>`;if(b.p)x+=`<p>${b.p}</p>`;if(b.t)x+=`<div class="tw"><table>${b.t.map((r,i)=>`<tr>${r.map(c=>i?`<td>${c}</td>`:`<th>${c}</th>`).join("")}</tr>`).join("")}</table></div>`;if(b.list)x+=`<ul>${b.list.map(l=>`<li>${l}</li>`).join("")}</ul>`;if(b.tip)x+=`<span class="n">${b.tip}</span>`;return x+"</div>";}).join("")}</details>`;
 function conjQuiz(){
   const pool=CONJ.filter(c=>(CF.lv==="all"||c[2]===CF.lv)&&c[7]);
   if(pool.length<4){toast("Bu seviyede yeterli soru yok");return;}

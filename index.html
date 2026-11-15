@@ -40255,7 +40255,7 @@ function pluck(c,out,f,t,dur,vol){
   const g2=c.createGain();g2.gain.value=.3;o.connect(lp);o2.connect(g2).connect(lp);lp.connect(g).connect(out);o.start(t);o2.start(t);o.stop(t+dur+.05);o2.stop(t+dur+.05);
 }
 function blip(c,out,f1,f2,t,dur,vol){const o=c.createOscillator(),g=c.createGain();o.type="sine";o.frequency.setValueAtTime(f1,t);o.frequency.exponentialRampToValueAtTime(f2,t+dur);
-  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(vol,t+.004);g.gain.exponentialRampToValueAtTime(.0001,t+dur);o.connect(g).connect(out);o.start(t);o.stop(t+dur+.02);}
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(vol,t+.009);g.gain.exponentialRampToValueAtTime(.0001,t+dur);const lp=c.createBiquadFilter();lp.type="lowpass";lp.frequency.value=1800;lp.Q.value=.5;o.connect(lp).connect(g).connect(out);o.start(t);o.stop(t+dur+.02);}
 function noiseHit(c,out,t,dur,freq,q,vol){
   const n=c.createBuffer(1,Math.ceil(c.sampleRate*dur),c.sampleRate),d=n.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=Math.random()*2-1;
   const s=c.createBufferSource(),bp=c.createBiquadFilter(),g=c.createGain();s.buffer=n;bp.type="bandpass";bp.frequency.value=freq;bp.Q.value=q;
@@ -40269,14 +40269,14 @@ const RECIPES={
       g.gain.setValueAtTime(0,0);g.gain.linearRampToValueAtTime(.32,.01);g.gain.exponentialRampToValueAtTime(.0001,.34);o.connect(lp).connect(g).connect(dry);o.start(0);o.stop(.4);
       pluck(c,dry,233.1,.11,.32,.16);noiseHit(c,dry,0,.05,700,1.2,.05);}],
   /* dokunma: iOS klavye tıkı gibi kısa, yumuşak */
-  tap:[.07,(c,dry)=>{blip(c,dry,760,520,0,.05,.26);noiseHit(c,dry,0,.012,3200,.8,.1);}],
+  tap:[.09,(c,dry)=>{blip(c,dry,520,430,0,.07,.13);}],
   /* seçim: ince, tahta gibi tık */
-  sel:[.07,(c,dry)=>{blip(c,dry,1250,980,0,.04,.2);noiseHit(c,dry,0,.01,4200,.9,.07);}],
+  sel:[.09,(c,dry)=>{blip(c,dry,640,540,0,.06,.11);}],
   /* gezinme: alçak, yumuşak "tup" */
-  nav:[.09,(c,dry)=>{blip(c,dry,300,210,0,.07,.3);noiseHit(c,dry,0,.015,1500,.7,.05);}],
+  nav:[.1,(c,dry)=>{blip(c,dry,360,300,0,.08,.14);}],
   /* kutucuk yerleşti: yukarı doğru baloncuk */
-  pop:[.1,(c,dry)=>{blip(c,dry,480,930,0,.075,.3);}],
-  unpop:[.1,(c,dry)=>{blip(c,dry,700,400,0,.07,.2);}],
+  pop:[.11,(c,dry)=>{blip(c,dry,430,600,0,.08,.15);}],
+  unpop:[.11,(c,dry)=>{blip(c,dry,560,400,0,.08,.11);}],
   /* seri doğru: üç notalı, daha parlak */
   ok3:[1.3,(c,dry,wet)=>{bell(c,dry,1046.5,0,.8,.2);bell(c,dry,1318.5,.075,.9,.19);bell(c,dry,2093,.15,1.2,.19);bell(c,wet,2093,.15,1.2,.08);}],
   /* eşleşme: tek, kısa ve hafif çan */

@@ -93,3 +93,4 @@ Her adımdan sonra: build → test (playwright) → yayınla (mümkünse) → Ma
 - 15 Kas: Kitap okuyucu: hl() üst çubuğun altına kaydırıyor (ilk cümle başlık altında kalmıyordu). iOS Speech.swift: Bluetooth çıkışta 2.5 sn sessizlikten sonra preUtteranceDelay 0.45 (AirPods ilk heceyi yutmasın).
 - 15 Kas: Üst Dilbaz çubuğu (#shell) artık sabit değil, sayfayla kayıyor; yükseklik 46px; status bar arkası html::after ile kapatılıyor. iOS: Voice keep-alive (sessiz AVAudioSourceNode, AirPods uyumasın), didCancel atlatmıyor, oturum .mixWithOthers.
 - 15 Kas: iOS üst boşluk (çift safe-area: webview statü çubuğu altında + CSS env) → ContentView .ignoresSafeArea(.container, edges: .bottom); webview statü çubuğunun altından başlıyor, üst arka plan #f9f9f9 / koyu.
+- 15 Kas: Dokunma sesleri yumuşatıldı (gürültü yok, düşük frekans, 9ms atak, 1.8k lowpass).

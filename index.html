@@ -41465,17 +41465,17 @@ function lesson(gi,restart){
       const shown=Q.show||(it.kind==="w"?[it.obj[3],it.obj[4]]:null);
       const ab=$("#ab");ab.className="actbar "+(ok?"ok":"bad");
       ab.innerHTML=`<div class="in" style="display:block"><div class="fbt">${ok?pick(["Sehr gut!","Richtig!","Super!","Genau!","Toll!"]):"Doğru cevap:"}</div>
-        <div class="fbs">${note?`<span class="sub">${esc(note)}</span>`:""}<b>${it.kind==="w"?fmt(de):esc(de)}</b>${it.kind==="w"?" /"+esc(it.obj[2])+"/":""} · ${esc(tr)}
-        ${shown&&it.kind==="w"?`<div class="fbx">${esc(shown[0])}<br><span class="sub">${esc(shown[1])}</span></div>`:""}
+        <div class="fbs">${note?`<span class="sub">${esc(note)}</span>`:""}<b>${it.kind==="w"?fmt(de):tapS(de)}</b>${it.kind==="w"?" /"+esc(it.obj[2])+"/":""} · ${esc(tr)}${it.kind!=="w"?"<div>"+ybtn(de,tr)+"</div>":""}
+        ${shown&&it.kind==="w"?`<div class="fbx">${tapS(shown[0])}<br><span class="sub">${esc(shown[1])}</span><div>${ybtn(shown[0],shown[1])}</div></div>`:""}
         ${ok?"":`<div class="sub" style="font-size:13px;margin-top:4px">Bunu birazdan tekrar soracağım.</div>`}</div>
         <button class="btn ${ok?"green":"red"}" id="go">Devam</button></div>`;
-      $("#go").onclick=()=>{const E=H[hp];if(E)E.cont=null;step();};$("#go").focus();
+      bindTap(ab);$("#go").onclick=()=>{const E=H[hp];if(E)E.cont=null;step();};$("#go").focus();
     }
     function replayFb(it,Q,ok,note){
       sfx(ok?"ok":"bad");sayAfter(Q.say);
       const ab=$("#ab");ab.className="actbar "+(ok?"ok":"bad");
-      ab.innerHTML=`<div class="in" style="display:block"><div class="fbt">${ok?"Doğru!":"Doğru cevap:"}</div><div class="fbs">${note?`<span class="sub">${esc(note)}</span>`:""}<b>${it.kind==="w"?fmt(it.obj[0]):esc(it.obj[0])}</b> · ${esc(it.kind==="c"?it.obj[3]:it.obj[1])}<div class="sub" style="font-size:13px;margin-top:4px">Tekrar — puanını etkilemez.</div></div><button class="btn ${ok?"green":"red"}" id="go">İleri ›</button></div>`;
-      $("#go").onclick=hfwd;
+      ab.innerHTML=`<div class="in" style="display:block"><div class="fbt">${ok?"Doğru!":"Doğru cevap:"}</div><div class="fbs">${note?`<span class="sub">${esc(note)}</span>`:""}<b>${it.kind==="w"?fmt(it.obj[0]):tapS(it.obj[0])}</b> · ${esc(it.kind==="c"?it.obj[3]:it.obj[1])}<div class="sub" style="font-size:13px;margin-top:4px">Tekrar — puanını etkilemez.</div></div><button class="btn ${ok?"green":"red"}" id="go">İleri ›</button></div>`;
+      bindTap(ab);$("#go").onclick=hfwd;
     }
     step();
   }
@@ -41591,8 +41591,8 @@ function runQuiz(qs,title,backLabel,onEnd){
     const q=qs[i];sfx(ok?"ok":"bad");grade(q.key,ok);if(ok)score++;else missed.push(q);
     sayAfter(q.say);
     const ab=$("#ab");ab.className="actbar "+(ok?"ok":"bad");
-    const detail=q.det?q.det:q.t==="build"?esc(q.p[0]):q.w?esc(q.w[0])+" /"+esc(q.w[2])+"/ · "+esc(q.w[1]):"";
-    ab.innerHTML=`<div class="in" style="display:block"><div class="fbt">${ok?"Sehr gut!":"Doğru cevap"}</div><div class="fbs">${detail}</div><button class="btn ${ok?"green":"red"}" id="go">${i===qs.length-1?"Sonucu gör":"Devam"}</button></div>`;
+    const detail=q.det?q.det:q.t==="build"?tapS(q.p[0])+" · "+esc(q.p[1]||"")+"<div>"+ybtn(q.p[0],q.p[1])+"</div>":q.w?esc(q.w[0])+" /"+esc(q.w[2])+"/ · "+esc(q.w[1]):"";
+    ab.innerHTML=`<div class="in" style="display:block"><div class="fbt">${ok?"Sehr gut!":"Doğru cevap"}</div><div class="fbs">${detail}</div><button class="btn ${ok?"green":"red"}" id="go">${i===qs.length-1?"Sonucu gör":"Devam"}</button></div>`;bindTap(ab);
     root().querySelectorAll(".tile").forEach(t=>t.disabled=true);
     $("#go").onclick=()=>{i++;if(i<qs.length)draw();else{save();onEnd(score,missed);}};
     $("#go").focus();
@@ -41868,12 +41868,12 @@ function freeReview(limit){
     sfx(ok?"ok":"bad");if(ok){nOk++;S.xp=(S.xp||0)+2;dqInc("ok");}else{nBad++;const it=S.items[Q.key];if(it)it.x=(it.x||0)+1;missed.set(Q.key,Q);again.push({q:Q,wait:3+(Math.random()*3|0)});}
     touch();save();sayAfter(Q.say);
     const isSent=Q.t==="sent"||Q.t==="dict";
-    const ansHtml=Q.t==="blank"?esc(Q.full).replace(new RegExp("("+Q.ans.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+")"),"<b>$1</b>"):isSent?esc(Q.ans):fmt(Q.w.fr);
+    const ansHtml=Q.t==="blank"?tapS(Q.full):isSent?tapS(Q.ans):fmt(Q.w.fr);
     const trH=Q.w?esc(Q.w.tr):esc(Q.s.tr);
     const ab=$("#ab");ab.className="actbar "+(ok?"ok":"bad");
-    ab.innerHTML=`<div class="in" style="display:block"><div class="fbt">${ok?"Doğru!":"Doğru cevap"}</div><div class="fbs">${isSent&&note?`<div class="spres" style="font-size:16px;margin:0 0 6px">${note}</div>`:note}${ansHtml} · ${trH}${ok?"":`<br><span class="sub" style="font-size:13px">Birazdan tekrar sorulacak.</span>`}</div>
+    ab.innerHTML=`<div class="in" style="display:block"><div class="fbt">${ok?"Doğru!":"Doğru cevap"}</div><div class="fbs">${isSent&&note?`<div class="spres" style="font-size:16px;margin:0 0 6px">${note}</div>`:note}${ansHtml} · ${trH}${isSent||Q.t==="blank"?"<div>"+ybtn(Q.t==="blank"?Q.full:Q.ans,Q.s?Q.s.tr:"")+"</div>":""}${ok?"":`<br><span class="sub" style="font-size:13px">Birazdan tekrar sorulacak.</span>`}</div>
       <div style="display:flex;gap:10px;margin-top:10px"><button class="btn sec" id="fin" style="flex:0 0 auto;padding:0 18px">Bitir</button><button class="btn ${ok?"green":"red"}" id="nx" style="flex:1">${limit&&nOk+nBad>=limit?"Sonuçları gör":"Devam"}</button></div></div>`;
-    bindSay(ab);$("#nx").onclick=next;$("#fin").onclick=finish;try{$("#nx").focus();}catch(e){}
+    bindTap(ab);bindSay(ab);$("#nx").onclick=next;$("#fin").onclick=finish;try{$("#nx").focus();}catch(e){}
   }
   function finish(){
     save();checkBadges();IN_LESSON=false;window.scrollTo(0,0);const tot=nOk+nBad;
@@ -42030,7 +42030,9 @@ function gloss(sent,wi,el){
   let g=$("#gloss");if(!g){g=document.createElement("div");g.id="gloss";g.className="gloss";document.body.appendChild(g);}
   g.innerHTML=`<div class="in" role="dialog" aria-label="Kelime anlamı"><div style="flex:1;min-width:0"><div class="gw">${esc(shown)}</div>${base}<div class="gt">${e?esc(e.tr):"Bu biçim sözlükte yok, cümlenin çevirisine bak. (Büyük harfle başlıyorsa isim ya da özel ad olabilir.)"}</div>${e&&artWhy(e.fr)?`<div class="gl yaw">${esc(artWhy(e.fr))}</div>`:""}<button class="ybtn" data-yapi="${esc(sentOf(sent,wi))}" style="margin-top:6px">🧩 Cümle yapısı</button>${(e&&e.pr)||g2p(shown)?`<div class="gl">/${esc((e&&e.pr)||shown.split(/\s+/).map(g2p).join(" "))}/</div>`:""}</div><button class="sbtn sm" data-say="${esc(shown)}" aria-label="Dinle">${I.spk}</button><button class="gx" id="gx" aria-label="Kapat">${I.x}</button></div>`;
   bindSay(g);$("#gx").onclick=closeGloss;say(shown);
+  const bar=el.closest(".actbar");g.style.bottom=bar?(innerHeight-bar.getBoundingClientRect().top+8)+"px":"";
 }
+document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest(".actbar .btn");if(b&&$("#gloss"))closeGloss();},true);
 /* ===== CÜMLE YAPISI + ARTİKEL KURALLARI ===== */
 const ART_RULES={
  de:[

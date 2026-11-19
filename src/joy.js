@@ -45,22 +45,35 @@ function pathHTML(units,lv){const col=LVCOLOR[lv]||"var(--blue)";const cur=units
   let h=`<div class="lvban" style="--lc:${col}"><div><small>${esc(lv)} · ${done}/${units.length} ders · ${items.length} adım</small><b>${esc(L.name)}</b></div>${mascot(done===units.length?"wow":"happy",58)}</div><div class="path" style="--lc:${col}">`;
   items.forEach((it,i)=>{const x=Math.round(Math.sin(i*.75)*70);
     if(it.k==="u"){const u=it.u,ok=!!S.pass[u.key],lp=S.lp&&S.lp[u.key]||0,isC=u===cur,n=plan(u).length;const best=S.best[u.key]||0,stars=ok?(best>=90?3:best>=70?2:1):0;
-      h+=`<div class="pstep" style="--x:${x}px">${isC?`<div class="pbub">${lp?"Devam · "+lp+"/"+n:it.i?"Sıradaki":"Başla"}</div>`:""}
+      h+=`<div class="pstep" style="--x:${x}px">${isC?`<div class="pbub">${lp?"Devam":"Başla"}</div>`:""}
        <div class="pwrap ${isC?"big":""}">${isC||lp?segRing(n,lp,col,isC?116:104,8):""}<button class="pnode ${ok?"done":isC?"cur":"todo"}" data-u="${u.gi}" aria-label="${esc(u.t)}">${ok?PIC.check:isC?PIC.star:PIC.book}</button></div>
-       ${ok?`<div class="pstars">${"★".repeat(stars)}<i>${"★".repeat(3-stars)}</i></div>`:""}<div class="plab">${esc(u.t)}</div></div>`;return;}
+       </div>`;return;}
     const d=!!pn[it.key]||(it.k==="story"&&S.bk&&S.bk[it.b.id]&&S.bk[it.b.id].done);
     const ic={prac:PIC.dumb,speak:PIC.mic,story:PIC.book,chest:d?"📭":"🎁",trophy:PIC.trophy}[it.k];
     const lab=it.k==="story"?it.b.t:it.k==="prac"?"Tekrar: "+it.us.map(u=>u.n+". ders").join(" + "):it.k==="speak"?"Konuş: "+it.u.t:it.t;
-    h+=`<div class="pstep" style="--x:${x}px">${it.k==="chest"?`<button class="pchestb ${d?"pd":""}" data-pk="${i}" aria-label="${esc(lab)}">${ic}</button>`:`<button class="pnode sp ${it.k} ${d?"pd":""}" data-pk="${i}" aria-label="${esc(lab)}">${ic}${d?`<em>✓</em>`:""}</button>`}<div class="plab">${esc(lab)}</div></div>`;});
+    h+=`<div class="pstep" style="--x:${x}px">${it.k==="chest"?`<button class="pchestb ${d?"pd":""}" data-pk="${i}" aria-label="${esc(lab)}">${ic}</button>`:`<button class="pnode sp ${it.k} ${d?"pd":""}" data-pk="${i}" aria-label="${esc(lab)}">${ic}${d?`<em>✓</em>`:""}</button>`}</div>`;});
   return h+`</div>`;}
-function bindPath(units,lv){const items=pathItems(units,lv);const back=()=>{IN_LESSON=false;tab="learn";render();};
-  root().querySelectorAll("[data-pk]").forEach(b=>b.onclick=()=>{const it=items[+b.dataset.pk];S.pn=S.pn||{};
+function pathPop(btn,html,col,act){document.querySelectorAll(".ppop").forEach(x=>{const p=x.closest(".pstep");if(p)p.style.zIndex="";x.remove();});const st=btn.closest(".pstep");st.style.zIndex=30;const d=document.createElement("div");d.className="ppop";d.style.setProperty("--pc",col);
+  d.innerHTML=html;st.appendChild(d);const x=parseFloat(getComputedStyle(st).getPropertyValue("--x"))||0;d.style.setProperty("--ax",(-x)+"px");
+  d.querySelector(".ppbtn").onclick=e=>{e.stopPropagation();d.remove();act();};sfx("tap");
+  setTimeout(()=>{const off=e=>{if(!d.contains(e.target)){d.remove();st.style.zIndex="";document.removeEventListener("click",off,true);}};document.addEventListener("click",off,true);},0);
+  const r=d.getBoundingClientRect();if(r.bottom>innerHeight-90)window.scrollBy({top:r.bottom-innerHeight+110,behavior:"smooth"});}
+function bindPath(units,lv){const items=pathItems(units,lv);const back=()=>{IN_LESSON=false;tab="learn";render();};const col=LVCOLOR[lv]||"var(--blue)";
+  root().querySelectorAll("[data-u]").forEach(b=>b.onclick=e=>{e.stopPropagation();const u=UNITS[+b.dataset.u],ok=!!S.pass[u.key],lp=S.lp&&S.lp[u.key]||0,n=plan(u).length;
+    pathPop(b,`<b>${esc(u.t)}</b><span>${esc(u.s||"")}</span><small>${ok?"Tamamlandı · %"+(S.best[u.key]||0)+" · tekrar oynayabilirsin":lp?lp+"/"+n+" bölüm tamam":u.lv+" · "+u.n+". ders · "+n+" bölüm"}</small><button class="ppbtn">${ok?"Tekrar oyna +20 XP":lp?"Devam et":"Başla +70 XP"}</button>`,ok?"#ffc800":b.classList.contains("todo")?"#9aa3b0":col,()=>lesson(u.gi));});
+  root().querySelectorAll("[data-pk]").forEach(b=>b.onclick=e=>{e.stopPropagation();const it=items[+b.dataset.pk];
+    const lab=it.k==="story"?"📖 "+it.b.t:it.k==="prac"?"🏋️ Tekrar: "+it.us.map(u=>u.n+". ders").join(" + "):it.k==="speak"?"🎤 Konuş: "+it.u.t:it.k==="chest"?"🎁 Sandık":"🏆 "+it.t;
+    const sub=it.k==="story"?"Seviyene uygun kısa hikâye. Kelimelere dokun, anlamını gör.":it.k==="prac"?"Bu iki dersin kelime ve cümlelerinden 10 soru.":it.k==="speak"?"Cümleleri sesli söyle, telaffuzunu kontrol et.":it.k==="chest"?"İçinden XP çıkar. Önceki dersi bitirince açılır.":"Seviyedeki tüm derslerden 20 soru.";
+    const bt=it.k==="chest"?"Aç":it.k==="story"?"Oku":it.k==="speak"?"Konuş":"Başla";
+    const pc={prac:"#ff9600",speak:"#ff4b8b",story:"#a560f2",chest:"#ff9600",trophy:"#ffc800"}[it.k];
+    pathPop(b,`<b>${esc(lab)}</b><span>${sub}</span><button class="ppbtn">${bt}</button>`,pc,()=>run(it));});
+  function run(it){S.pn=S.pn||{};
     if(it.k==="prac"||it.k==="trophy")return freeReview(it.k==="trophy"?20:10,{P:poolOf(it.us),title:it.k==="trophy"?"🏆 "+it.t:"🏋️ Tekrar",key:it.key,onClose:back});
     if(it.k==="speak")return speakDrill(spItems(it.u,6),{u:it.u,mode:"mix",title:"🎤 "+it.u.t,onDone:()=>{S.pn[it.key]=1;save();back();}});
     if(it.k==="story"){window.RDBACK="learn";return reader(it.b.id);}
     if(it.k==="chest"){if(S.pn[it.key])return toast("Bu sandığı zaten açtın 🎉");if(!S.pass[it.u.key])return toast("Sandığı açmak için önce bu bölümdeki dersleri bitir");
       const xp=20+Math.floor(Math.random()*4)*10;S.pn[it.key]=1;S.xp=(S.xp||0)+xp;touch();save();sfx("win");confetti();
-      const d=document.createElement("div");d.className="combo";d.innerHTML=`${mascot("wow",54)}<div><b>🎁 +${xp} XP!</b><span>Sandık açıldı</span></div>`;document.body.appendChild(d);setTimeout(()=>d.remove(),2100);setTimeout(()=>learn(),900);}});}
+      const d=document.createElement("div");d.className="combo";d.innerHTML=`${mascot("wow",54)}<div><b>🎁 +${xp} XP!</b><span>Sandık açıldı</span></div>`;document.body.appendChild(d);setTimeout(()=>d.remove(),2100);setTimeout(()=>learn(),900);}}}
 function segDone(u,si,n,go,home){S.xp=(S.xp||0)+3;save();sfx("ok");window.scrollTo(0,0);const col=LVCOLOR[u.lv]||"var(--blue)";
   root().innerHTML=`<div class="page fade center" style="padding-top:40px;padding-bottom:180px"><div class="segw">${segRing(n,si,col,190,12)}<div class="segm">${mascot(si===n-1?"wow":"happy",110)}</div></div>
    <div class="h2" style="font-size:28px;margin-top:14px">${pick(["Bölüm tamam!","Süper gidiyorsun!","Bir parça daha!","Harika!"])}</div><div class="sub">${esc(u.t)} · ${si}/${n} bölüm${si<n?" · sıradaki: "+esc(segName(plan(u)[si])):""}</div><div class="mt"><span class="pill blue">+3 XP</span></div></div>

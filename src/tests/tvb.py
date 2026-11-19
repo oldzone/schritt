@@ -1,0 +1,21 @@
+from playwright.sync_api import sync_playwright
+with sync_playwright() as p:
+    b=p.chromium.launch(executable_path="/usr/bin/google-chrome")
+    pg=b.new_page(viewport={"width":390,"height":844});errs=[];pg.on("pageerror",lambda e:errs.append(str(e)))
+    pg.add_init_script('localStorage.setItem("schritt-v1",JSON.stringify({onb:true,pass:{"A1-1":1,"A1-2":1,"A1-3":1}}))')
+    pg.goto("file:///home/claude/multi/index.html?lang=de");pg.wait_for_timeout(700)
+    pg.evaluate("tab='bank';render()");pg.wait_for_timeout(300)
+    print("btn",bool(pg.query_selector("#vbx")))
+    pg.click("#vbx");pg.wait_for_timeout(300);pg.screenshot(path="/tmp/vb0.png")
+    print(pg.evaluate("vList().length"),pg.evaluate("vList().filter(v=>v.kind==='düzensiz').slice(0,12).map(v=>v.inf+':'+v.er+'/'+v.pt+'/'+v.perf+'/'+v.pat).join('  ')"))
+    print(pg.evaluate("vList().filter(v=>!v.tr).map(v=>v.inf).join(',')"))
+    pg.click("[data-vf=kalıp]");pg.wait_for_timeout(200);pg.screenshot(path="/tmp/vb1.png")
+    pg.click(".vrow");pg.wait_for_timeout(200);pg.screenshot(path="/tmp/vb2.png")
+    pg.evaluate("document.querySelector('.sheetbg').remove();verbQuiz(10)");pg.wait_for_timeout(200)
+    for i in range(10):
+        if pg.query_selector("#vin"):pg.fill("#vin","gefahren");pg.click("#vchk")
+        else:pg.click(".opt")
+        pg.wait_for_timeout(80)
+        if i==0:pg.screenshot(path="/tmp/vb3.png")
+        pg.click("#vnx");pg.wait_for_timeout(60)
+    pg.wait_for_timeout(300);print("after",bool(pg.query_selector("#vbox")),pg.evaluate("Object.keys(S.vb).length"),errs)

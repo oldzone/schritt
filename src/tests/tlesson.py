@@ -8,7 +8,7 @@ with sync_playwright() as p:
     L=sys.argv[1] if len(sys.argv)>1 else "de"
     pg.goto("file:///home/claude/multi/index.html?lang="+L);pg.wait_for_timeout(400)
     pg.screenshot(path="/tmp/l0.png")
-    pg.evaluate("if(window.ONB){S.onb=true;window.ONB=false;IN_LESSON=false;tab='learn';render()}");pg.click("#go");pg.wait_for_timeout(200);pg.screenshot(path="/tmp/l1.png",full_page=True)
+    pg.evaluate("if(window.ONB){S.onb=true;window.ONB=false;IN_LESSON=false;tab='learn';render()}");pg.evaluate("lesson(0)");pg.wait_for_timeout(200);pg.screenshot(path="/tmp/l1.png",full_page=True)
     pg.click("#nx");pg.wait_for_timeout(200);pg.screenshot(path="/tmp/l2.png",full_page=True)
     shots=0;types={};wrong=1
     for step in range(400):
@@ -16,6 +16,8 @@ with sync_playwright() as p:
             snk=globals().get("snk",0)+1;globals()["snk"]=snk
             if snk==1: pg.screenshot(path="/tmp/snack.png")
             pg.click("#skip");pg.wait_for_timeout(60);continue
+        if pg.query_selector("#sgn"):
+            pg.click("#sgn");pg.wait_for_timeout(30);continue
         if pg.query_selector("#nx") and not pg.query_selector(".opt") and not pg.query_selector("#bank"):
             pg.click("#nx");pg.wait_for_timeout(30);continue
         if pg.query_selector(".mt2"):
@@ -53,7 +55,7 @@ with sync_playwright() as p:
     print(types,st,errs)
     # resume test: start lesson 2, exit after grammar+1 intro
     pg.click("#h");pg.wait_for_timeout(100)
-    pg.click("#go");pg.click("#nx");pg.wait_for_timeout(50);pg.click("#nb");pg.wait_for_timeout(100)
+    pg.click(".pnode.cur");pg.wait_for_timeout(100);pg.click("#nx");pg.wait_for_timeout(50);pg.click("#sgh");pg.wait_for_timeout(100)
     pg.reload();pg.wait_for_timeout(400);pg.screenshot(path="/tmp/resume.png")
     print(pg.evaluate("JSON.stringify(S.lp)"),errs)
     b.close()

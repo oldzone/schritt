@@ -27,6 +27,9 @@ function segRing(n,done,col,sz,sw){const r=(sz-sw)/2-1,C=2*Math.PI*r,seg=C/n,gap
   for(let k=0;k<n;k++)h+=`<circle cx="${sz/2}" cy="${sz/2}" r="${r}" fill="none" stroke="${k<done?col:"var(--sep)"}" stroke-width="${sw}" stroke-linecap="round" stroke-dasharray="${Math.max(1,seg-gap)} ${C}" transform="rotate(${-90+k*360/n+(gap/C*180)} ${sz/2} ${sz/2})"/>`;
   return h+`</svg>`;}
 function poolOf(us){const ws=new Map(),ss=new Map();us.forEach(u=>{u.w.forEach(w=>{if(w[0]&&w[1]&&!ws.has(w[0]))ws.set(w[0],{fr:w[0],tr:w[1],pr:w[2]||""});if(w[3]&&w[4])ss.set(w[3],{t:w[3],tr:w[4]});});(u.sents||[]).forEach(x=>{const n=wtok(x[0]).length;if(n>=3&&n<=14)ss.set(x[0],{t:x[0],tr:x[1]});});});return{ws:[...ws.values()],ss:[...ss.values()]};}
+const PIC={star:`<svg viewBox="0 0 24 24" width="34" height="34"><path d="M12 2.8l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 16.8l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" fill="#fff" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>`,
+ check:`<svg viewBox="0 0 24 24" width="34" height="34"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+ book:`<svg viewBox="0 0 24 24" width="30" height="30"><path d="M4 5.5C6.5 4.3 9.3 4.3 12 6c2.7-1.7 5.5-1.7 8-.5V19c-2.5-1.2-5.3-1.2-8 .5-2.7-1.7-5.5-1.7-8-.5z" fill="currentColor"/><path d="M12 6v13.5" stroke="rgba(0,0,0,.18)" stroke-width="1.4"/></svg>`};
 function pathItems(units,lv){const out=[],bks=BOOKS.filter(b=>b.lv===lv);let bi=0;
   units.forEach((u,i)=>{out.push({k:"u",u,i});
     if(i%2===1)out.push({k:"prac",key:"pr:"+units[i-1].key,us:[units[i-1],u],t:"Tekrar"});
@@ -40,12 +43,12 @@ function pathHTML(units,lv){const col=LVCOLOR[lv]||"var(--blue)";const cur=units
   items.forEach((it,i)=>{const x=Math.round(Math.sin(i*.75)*70);
     if(it.k==="u"){const u=it.u,ok=!!S.pass[u.key],lp=S.lp&&S.lp[u.key]||0,isC=u===cur,n=plan(u).length;const best=S.best[u.key]||0,stars=ok?(best>=90?3:best>=70?2:1):0;
       h+=`<div class="pstep" style="--x:${x}px">${isC?`<div class="pbub">${lp?"Devam · "+lp+"/"+n:it.i?"Sıradaki":"Başla"}</div>`:""}
-       <div class="pwrap ${isC?"big":""}">${segRing(n,ok?n:lp,ok?"#ffb800":col,isC?112:100,7)}<button class="pnode ${ok?"done":isC?"cur":"todo"}" data-u="${u.gi}" aria-label="${esc(u.t)}"><span>${ok?"✓":isC?"★":u.n}</span></button></div>
+       <div class="pwrap ${isC?"big":""}">${isC||lp?segRing(n,lp,col,isC?116:104,8):""}<button class="pnode ${ok?"done":isC?"cur":"todo"}" data-u="${u.gi}" aria-label="${esc(u.t)}">${ok?PIC.check:isC?PIC.star:PIC.book}</button></div>
        ${ok?`<div class="pstars">${"★".repeat(stars)}<i>${"★".repeat(3-stars)}</i></div>`:""}<div class="plab">${esc(u.t)}</div></div>`;return;}
     const d=!!pn[it.key]||(it.k==="story"&&S.bk&&S.bk[it.b.id]&&S.bk[it.b.id].done);
     const ic={prac:"🏋️",speak:"🎤",story:"📖",chest:d?"📭":"🎁",trophy:"🏆"}[it.k];
     const lab=it.k==="story"?it.b.t:it.k==="prac"?"Tekrar: "+it.us.map(u=>u.n+". ders").join(" + "):it.k==="speak"?"Konuş: "+it.u.t:it.t;
-    h+=`<div class="pstep" style="--x:${x}px"><button class="pnode sp ${it.k} ${d?"pd":""}" data-pk="${i}" aria-label="${esc(lab)}"><span>${ic}</span>${d&&it.k!=="chest"?`<em>✓</em>`:""}</button><div class="plab">${esc(lab)}</div></div>`;});
+    h+=`<div class="pstep" style="--x:${x}px">${it.k==="chest"?`<button class="pchestb ${d?"pd":""}" data-pk="${i}" aria-label="${esc(lab)}">${ic}</button>`:`<button class="pnode sp ${it.k} ${d?"pd":""}" data-pk="${i}" aria-label="${esc(lab)}"><span>${ic}</span>${d?`<em>✓</em>`:""}</button>`}<div class="plab">${esc(lab)}</div></div>`;});
   return h+`</div>`;}
 function bindPath(units,lv){const items=pathItems(units,lv);const back=()=>{IN_LESSON=false;tab="learn";render();};
   root().querySelectorAll("[data-pk]").forEach(b=>b.onclick=()=>{const it=items[+b.dataset.pk];S.pn=S.pn||{};

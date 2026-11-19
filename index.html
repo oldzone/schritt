@@ -130,6 +130,26 @@ body{font-family:ui-rounded,"SF Pro Rounded","Nunito",-apple-system,BlinkMacSyst
 .jtile .je{font-size:28px;width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:color-mix(in srgb,var(--tc) 16%,transparent);flex:none}
 .jtile b{display:block;font:800 15px var(--sfd);color:var(--tc)}.jtile small{display:block;font-size:12px;color:var(--label2);line-height:1.25}
 .bgrid .cover,.bgrid>*{transition:transform .1s}.bgrid>*:active{transform:scale(.97)}
+
+/* ===== GERÇEKÇİ YOL DÜĞÜMLERİ ===== */
+.pnode,.pnode.sp,.pnode.cur,.pnode.done,.pnode.todo{--face:var(--lc);--side:color-mix(in srgb,var(--face) 62%,#000);position:relative;width:74px;height:74px;border-radius:50%;display:grid;place-items:center;color:#fff;
+  background:radial-gradient(130% 100% at 50% 0%,color-mix(in srgb,var(--face) 55%,#fff) 0%,var(--face) 48%,color-mix(in srgb,var(--face) 82%,#000) 100%);
+  box-shadow:inset 0 3px 1px rgba(255,255,255,.5),inset 0 -7px 10px rgba(0,0,0,.2),0 8px 0 var(--side),0 16px 18px rgba(0,0,0,.2);
+  transition:transform .09s ease,box-shadow .09s ease;animation:none;font-size:30px}
+.pnode::before{content:"";position:absolute;top:7px;left:17%;width:66%;height:30%;border-radius:50%;background:linear-gradient(180deg,rgba(255,255,255,.62),rgba(255,255,255,0));pointer-events:none}
+.pnode svg{filter:drop-shadow(0 2px 0 rgba(0,0,0,.18));position:relative}
+.pnode:active{transform:translateY(7px);box-shadow:inset 0 3px 1px rgba(255,255,255,.5),inset 0 -7px 10px rgba(0,0,0,.2),0 1px 0 var(--side),0 4px 6px rgba(0,0,0,.18)}
+.pnode.done{--face:#ffbe17;background:radial-gradient(130% 100% at 50% 0%,#fff1a8 0%,#ffcc2e 46%,#f29b00 100%);--side:#b97400}
+.pnode.todo{--face:#dfe3ea;color:#a3abb8;background:radial-gradient(130% 100% at 50% 0%,#ffffff 0%,#e6e9ef 50%,#c9ced8 100%);--side:#a9b0bc}
+.pnode.todo svg{filter:none}
+.pnode.cur{width:82px;height:82px;animation:pglow 1.8s ease-in-out infinite}
+@keyframes pglow{50%{filter:brightness(1.08)}}
+.pwrap{width:104px;height:104px}.pwrap.big{width:116px;height:116px}.sring{top:-3px}
+.pnode.sp{width:66px;height:66px;font-size:30px}.pnode.sp span{position:relative;filter:drop-shadow(0 2px 1px rgba(0,0,0,.2))}
+.pnode.sp.prac{--face:#ff9500}.pnode.sp.speak{--face:#ff4f7b}.pnode.sp.story{--face:#7c5cff}
+.pnode.sp.trophy{--face:#ffbe17;width:84px;height:84px;font-size:40px;background:radial-gradient(130% 100% at 50% 0%,#fff1a8 0%,#ffcc2e 46%,#f29b00 100%);--side:#b97400}
+.pnode.sp.pd{filter:saturate(.75)}.pnode.sp em{position:absolute;right:-4px;top:-4px;width:24px;height:24px;border-radius:50%;background:#34c759;color:#fff;font:800 14px/24px var(--sfd);font-style:normal;box-shadow:0 2px 0 #1f8a3a}
+.pchestb{font-size:52px;line-height:1;filter:drop-shadow(0 8px 6px rgba(0,0,0,.2));animation:mbob 2.4s ease-in-out infinite;transition:transform .1s}.pchestb:active{transform:scale(.92)}.pchestb.pd{animation:none;opacity:.7}
 </style></head><body>
 <title>Dilbaz · Dil öğren</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -40275,7 +40295,7 @@ function sfxCtx(){
   try{if(navigator.audioSession&&S.sfx!==false)navigator.audioSession.type="playback";}catch(e){}
   const c=new AC({latencyHint:"interactive"});
   const comp=c.createDynamicsCompressor();comp.threshold.value=-14;comp.ratio.value=3;comp.attack.value=.003;comp.release.value=.12;
-  const g=c.createGain();g.gain.value=.9;g.connect(comp).connect(c.destination);
+  const g=c.createGain();g.gain.value=.75;g.connect(comp).connect(c.destination);
   SFX.ctx=c;SFX.master=g;return c;
 }
 /* iOS: ilk dokunuşta ses motorunu aç (sessiz bir tampon çalmak gerekir) */
@@ -40316,6 +40336,10 @@ document.addEventListener("visibilitychange",()=>{if(!document.hidden&&SFX.ctx&&
 
 function impulse(c,sec,decay){const n=Math.floor(c.sampleRate*sec),b=c.createBuffer(2,n,c.sampleRate);for(let ch=0;ch<2;ch++){const d=b.getChannelData(ch);for(let i=0;i<n;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/n,decay);}return b;}
 /* çan sesi: temel + çan kısmi frekansları, yumuşak atak, doğal sönüm */
+/* yumuşak çan: az üst ses, yavaş atak, alçak geçiren filtre → telefon hoparlöründe çatlamaz */
+function sbell(c,out,f,t,dur,vol){const lp=c.createBiquadFilter();lp.type="lowpass";lp.frequency.value=2600;lp.Q.value=.4;lp.connect(out);
+  [[1,1,1],[2,.22,.55],[3,.06,.35]].forEach(([r,a,dl])=>{const o=c.createOscillator(),g=c.createGain();o.type="sine";o.frequency.value=f*r;
+    g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(vol*a,t+.018);g.gain.exponentialRampToValueAtTime(.0001,t+dur*dl);o.connect(g).connect(lp);o.start(t);o.stop(t+dur*dl+.05);});}
 function bell(c,out,f,t,dur,vol){
   [[1,1,1],[2.01,.42,.62],[3.0,.18,.42],[4.17,.09,.3],[5.43,.05,.22]].forEach(([r,a,dl])=>{
     const o=c.createOscillator(),g=c.createGain();o.type="sine";o.frequency.value=f*r;
@@ -40337,7 +40361,7 @@ function noiseHit(c,out,t,dur,freq,q,vol){
 }
 const RECIPES={
   /* doğru: iki notalı yükselen parlak çan (Do6 → Sol6) */
-  ok:[1.1,(c,dry,wet)=>{bell(c,dry,1046.5,0,.9,.22);bell(c,dry,1568,.085,1.1,.2);bell(c,wet,1568,.085,1.1,.07);}],
+  ok:[1.0,(c,dry,wet)=>{sbell(c,dry,659.3,0,.7,.2);sbell(c,dry,987.8,.09,.9,.2);sbell(c,wet,987.8,.09,.9,.05);}],
   /* yanlış: yumuşak, alçak "tok" ses — rahatsız etmeyen */
   bad:[.55,(c,dry,wet)=>{const o=c.createOscillator(),g=c.createGain(),lp=c.createBiquadFilter();o.type="sine";o.frequency.setValueAtTime(330,0);o.frequency.exponentialRampToValueAtTime(155,.22);lp.type="lowpass";lp.frequency.value=900;
       g.gain.setValueAtTime(0,0);g.gain.linearRampToValueAtTime(.32,.01);g.gain.exponentialRampToValueAtTime(.0001,.34);o.connect(lp).connect(g).connect(dry);o.start(0);o.stop(.4);
@@ -40352,12 +40376,12 @@ const RECIPES={
   pop:[.11,(c,dry)=>{blip(c,dry,430,600,0,.08,.15);}],
   unpop:[.11,(c,dry)=>{blip(c,dry,560,400,0,.08,.11);}],
   /* seri doğru: üç notalı, daha parlak */
-  ok3:[1.3,(c,dry,wet)=>{bell(c,dry,1046.5,0,.8,.2);bell(c,dry,1318.5,.075,.9,.19);bell(c,dry,2093,.15,1.2,.19);bell(c,wet,2093,.15,1.2,.08);}],
+  ok3:[1.2,(c,dry,wet)=>{sbell(c,dry,659.3,0,.6,.18);sbell(c,dry,830.6,.08,.7,.18);sbell(c,dry,987.8,.16,1.0,.18);sbell(c,wet,987.8,.16,1.0,.05);}],
   /* eşleşme: tek, kısa ve hafif çan */
-  match:[.6,(c,dry,wet)=>{bell(c,dry,1318.5,0,.55,.16);bell(c,wet,1318.5,0,.55,.05);}],
+  match:[.6,(c,dry,wet)=>{sbell(c,dry,880,0,.55,.16);sbell(c,wet,880,0,.55,.04);}],
   /* ders bitti: Do-Mi-Sol-Do arpej + akor parıltısı */
-  win:[2.2,(c,dry,wet)=>{[523.3,659.3,784,1046.5].forEach((f,i)=>{bell(c,dry,f,i*.11,1.0,.17);bell(c,wet,f,i*.11,1.0,.06);});
-      [1046.5,1318.5,1568,2093].forEach((f,i)=>{pluck(c,dry,f,.5+i*.012,1.2,.06);bell(c,wet,f,.5,1.4,.035);});}]
+  win:[2.0,(c,dry,wet)=>{[523.3,659.3,784,1046.5].forEach((f,i)=>{sbell(c,dry,f,i*.11,1.0,.17);sbell(c,wet,f,i*.11,1.0,.05);});
+      [784,1046.5,1318.5].forEach((f,i)=>{sbell(c,dry,f,.5+i*.02,1.2,.07);});}]
 };
 async function sfxRender(){
   if(SFX.ready||SFX.rendering)return;SFX.rendering=true;
@@ -40367,7 +40391,11 @@ async function sfxRender(){
     try{const len=Math.ceil(sr*(dur+(dur<.2?.03:.6)));const oc=new OAC(2,len,sr);
       const dry=oc.createGain();dry.connect(oc.destination);
       const cv=oc.createConvolver();cv.buffer=impulse(oc,1.1,3.2);const wg=oc.createGain();wg.gain.value=.55;const wet=oc.createGain();wet.connect(cv).connect(wg).connect(oc.destination);
-      fn(oc,dry,wet);SFX.bufs[k]=await oc.startRendering();}catch(e){}
+      fn(oc,dry,wet);const buf=await oc.startRendering();
+      /* tepe seviyeyi sınırla: hoparlör patlamasın */
+      const TGT={tap:.22,sel:.22,nav:.2,pop:.24,unpop:.2,ok:.32,ok3:.34,bad:.3,win:.36,match:.3}[k]||.3;let pk=0;for(let ch=0;ch<buf.numberOfChannels;ch++){const d=buf.getChannelData(ch);for(let i=0;i<d.length;i++){const a=d[i]<0?-d[i]:d[i];if(a>pk)pk=a;}}
+      if(pk>TGT){const m=TGT/pk;for(let ch=0;ch<buf.numberOfChannels;ch++){const d=buf.getChannelData(ch);for(let i=0;i<d.length;i++)d[i]*=m;}}
+      SFX.bufs[k]=buf;}catch(e){}
   }
   SFX.ready=true;SFX.rendering=false;elBuild();
 }
@@ -42812,6 +42840,9 @@ function segRing(n,done,col,sz,sw){const r=(sz-sw)/2-1,C=2*Math.PI*r,seg=C/n,gap
   for(let k=0;k<n;k++)h+=`<circle cx="${sz/2}" cy="${sz/2}" r="${r}" fill="none" stroke="${k<done?col:"var(--sep)"}" stroke-width="${sw}" stroke-linecap="round" stroke-dasharray="${Math.max(1,seg-gap)} ${C}" transform="rotate(${-90+k*360/n+(gap/C*180)} ${sz/2} ${sz/2})"/>`;
   return h+`</svg>`;}
 function poolOf(us){const ws=new Map(),ss=new Map();us.forEach(u=>{u.w.forEach(w=>{if(w[0]&&w[1]&&!ws.has(w[0]))ws.set(w[0],{fr:w[0],tr:w[1],pr:w[2]||""});if(w[3]&&w[4])ss.set(w[3],{t:w[3],tr:w[4]});});(u.sents||[]).forEach(x=>{const n=wtok(x[0]).length;if(n>=3&&n<=14)ss.set(x[0],{t:x[0],tr:x[1]});});});return{ws:[...ws.values()],ss:[...ss.values()]};}
+const PIC={star:`<svg viewBox="0 0 24 24" width="34" height="34"><path d="M12 2.8l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 16.8l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" fill="#fff" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>`,
+ check:`<svg viewBox="0 0 24 24" width="34" height="34"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+ book:`<svg viewBox="0 0 24 24" width="30" height="30"><path d="M4 5.5C6.5 4.3 9.3 4.3 12 6c2.7-1.7 5.5-1.7 8-.5V19c-2.5-1.2-5.3-1.2-8 .5-2.7-1.7-5.5-1.7-8-.5z" fill="currentColor"/><path d="M12 6v13.5" stroke="rgba(0,0,0,.18)" stroke-width="1.4"/></svg>`};
 function pathItems(units,lv){const out=[],bks=BOOKS.filter(b=>b.lv===lv);let bi=0;
   units.forEach((u,i)=>{out.push({k:"u",u,i});
     if(i%2===1)out.push({k:"prac",key:"pr:"+units[i-1].key,us:[units[i-1],u],t:"Tekrar"});
@@ -42825,12 +42856,12 @@ function pathHTML(units,lv){const col=LVCOLOR[lv]||"var(--blue)";const cur=units
   items.forEach((it,i)=>{const x=Math.round(Math.sin(i*.75)*70);
     if(it.k==="u"){const u=it.u,ok=!!S.pass[u.key],lp=S.lp&&S.lp[u.key]||0,isC=u===cur,n=plan(u).length;const best=S.best[u.key]||0,stars=ok?(best>=90?3:best>=70?2:1):0;
       h+=`<div class="pstep" style="--x:${x}px">${isC?`<div class="pbub">${lp?"Devam · "+lp+"/"+n:it.i?"Sıradaki":"Başla"}</div>`:""}
-       <div class="pwrap ${isC?"big":""}">${segRing(n,ok?n:lp,ok?"#ffb800":col,isC?112:100,7)}<button class="pnode ${ok?"done":isC?"cur":"todo"}" data-u="${u.gi}" aria-label="${esc(u.t)}"><span>${ok?"✓":isC?"★":u.n}</span></button></div>
+       <div class="pwrap ${isC?"big":""}">${isC||lp?segRing(n,lp,col,isC?116:104,8):""}<button class="pnode ${ok?"done":isC?"cur":"todo"}" data-u="${u.gi}" aria-label="${esc(u.t)}">${ok?PIC.check:isC?PIC.star:PIC.book}</button></div>
        ${ok?`<div class="pstars">${"★".repeat(stars)}<i>${"★".repeat(3-stars)}</i></div>`:""}<div class="plab">${esc(u.t)}</div></div>`;return;}
     const d=!!pn[it.key]||(it.k==="story"&&S.bk&&S.bk[it.b.id]&&S.bk[it.b.id].done);
     const ic={prac:"🏋️",speak:"🎤",story:"📖",chest:d?"📭":"🎁",trophy:"🏆"}[it.k];
     const lab=it.k==="story"?it.b.t:it.k==="prac"?"Tekrar: "+it.us.map(u=>u.n+". ders").join(" + "):it.k==="speak"?"Konuş: "+it.u.t:it.t;
-    h+=`<div class="pstep" style="--x:${x}px"><button class="pnode sp ${it.k} ${d?"pd":""}" data-pk="${i}" aria-label="${esc(lab)}"><span>${ic}</span>${d&&it.k!=="chest"?`<em>✓</em>`:""}</button><div class="plab">${esc(lab)}</div></div>`;});
+    h+=`<div class="pstep" style="--x:${x}px">${it.k==="chest"?`<button class="pchestb ${d?"pd":""}" data-pk="${i}" aria-label="${esc(lab)}">${ic}</button>`:`<button class="pnode sp ${it.k} ${d?"pd":""}" data-pk="${i}" aria-label="${esc(lab)}"><span>${ic}</span>${d?`<em>✓</em>`:""}</button>`}<div class="plab">${esc(lab)}</div></div>`;});
   return h+`</div>`;}
 function bindPath(units,lv){const items=pathItems(units,lv);const back=()=>{IN_LESSON=false;tab="learn";render();};
   root().querySelectorAll("[data-pk]").forEach(b=>b.onclick=()=>{const it=items[+b.dataset.pk];S.pn=S.pn||{};

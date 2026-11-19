@@ -9,25 +9,25 @@ with sync_playwright() as p:
         pg.goto(f"file:///home/claude/multi/index.html?lang={L}");pg.wait_for_timeout(700)
         res={}
         # hang: press keys until end
-        pg.evaluate("startGame('hang')");pg.wait_for_timeout(200)
+        pg.evaluate("startGame('hang',1)");pg.wait_for_timeout(200)
         for i in range(200):
             if pg.query_selector(".gscore"):break
             ks=pg.query_selector_all("#kb .wk:not([disabled])")
             if not ks: pg.wait_for_timeout(500);continue
             ks[0].click();pg.wait_for_timeout(30)
         pg.wait_for_timeout(2500);res["hang"]=pg.inner_text(".gscore") if pg.query_selector(".gscore") else "?"
-        if L=="de":pg.evaluate("startGame('hang')");pg.wait_for_timeout(300);pg.screenshot(path="/tmp/g_hang.png")
-        pg.evaluate("startGame('tf')");pg.wait_for_timeout(300)
+        if L=="de":pg.evaluate("startGame('hang',1)");pg.wait_for_timeout(300);pg.screenshot(path="/tmp/g_hang.png")
+        pg.evaluate("startGame('tf',1)");pg.wait_for_timeout(300)
         if L=="de":pg.screenshot(path="/tmp/g_tf.png")
         for i in range(15):
             pg.click("#ty");pg.wait_for_timeout(1900)
         res["tf"]=pg.inner_text(".gscore") if pg.query_selector(".gscore") else "?"
-        pg.evaluate("startGame('blank')");pg.wait_for_timeout(300)
+        pg.evaluate("startGame('blank',1)");pg.wait_for_timeout(300)
         if L=="de":pg.screenshot(path="/tmp/g_blank.png")
         n=pg.evaluate("document.querySelectorAll('#bo .opt').length")
-        pg.evaluate("startGame('search')");pg.wait_for_timeout(300)
+        pg.evaluate("startGame('search',1)");pg.wait_for_timeout(300)
         if L=="de":pg.screenshot(path="/tmp/g_search.png")
         # solve search using internal? click hint & first/last cells via placed not exposed; just verify grid
         cells=pg.evaluate("document.querySelectorAll('.wsc').length")
-        pg.evaluate("startGame('rain')");pg.wait_for_timeout(1500);pg.evaluate("stopGame()")
+        pg.evaluate("startGame('rain',1)");pg.wait_for_timeout(1500);pg.evaluate("stopGame()")
         print(L,res,"blank opts",n,"cells",cells,errs)

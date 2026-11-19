@@ -45,6 +45,7 @@ function pathHTML(units,lv){const col=LVCOLOR[lv]||"var(--blue)";const cur=units
   let h=`<div class="lvban" style="--lc:${col}"><div><small>${esc(lv)} · ${done}/${units.length} ders · ${items.length} adım</small><b>${esc(L.name)}</b></div>${mascot(done===units.length?"wow":"happy",58)}</div><div class="path" style="--lc:${col}">`;
   items.forEach((it,i)=>{const x=Math.round(Math.sin(i*.75)*70);
     if(it.k==="u"){const u=it.u,ok=!!S.pass[u.key],lp=S.lp&&S.lp[u.key]||0,isC=u===cur,n=plan(u).length;const best=S.best[u.key]||0,stars=ok?(best>=90?3:best>=70?2:1):0;
+      h+=`<div class="psec ${ok?"ok":isC?"cur":""}"><i></i><div><small>${it.i+1}. ders${ok?" · ✓":""}</small><b>${esc(u.t)}</b></div><i></i></div>`;
       h+=`<div class="pstep" style="--x:${x}px">${isC?`<div class="pbub">${lp?"Devam":"Başla"}</div>`:""}
        <div class="pwrap ${isC?"big":""}">${isC||lp?segRing(n,lp,col,isC?116:104,8):""}<button class="pnode ${ok?"done":isC?"cur":"todo"}" data-u="${u.gi}" aria-label="${esc(u.t)}">${ok?PIC.check:isC?PIC.star:PIC.book}</button></div>
        </div>`;return;}

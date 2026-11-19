@@ -131,25 +131,23 @@ body{font-family:ui-rounded,"SF Pro Rounded","Nunito",-apple-system,BlinkMacSyst
 .jtile b{display:block;font:800 15px var(--sfd);color:var(--tc)}.jtile small{display:block;font-size:12px;color:var(--label2);line-height:1.25}
 .bgrid .cover,.bgrid>*{transition:transform .1s}.bgrid>*:active{transform:scale(.97)}
 
-/* ===== GERÇEKÇİ YOL DÜĞÜMLERİ ===== */
-.pnode,.pnode.sp,.pnode.cur,.pnode.done,.pnode.todo{--face:var(--lc);--side:color-mix(in srgb,var(--face) 62%,#000);position:relative;width:74px;height:74px;border-radius:50%;display:grid;place-items:center;color:#fff;
-  background:radial-gradient(130% 100% at 50% 0%,color-mix(in srgb,var(--face) 55%,#fff) 0%,var(--face) 48%,color-mix(in srgb,var(--face) 82%,#000) 100%);
-  box-shadow:inset 0 3px 1px rgba(255,255,255,.5),inset 0 -7px 10px rgba(0,0,0,.2),0 8px 0 var(--side),0 16px 18px rgba(0,0,0,.2);
-  transition:transform .09s ease,box-shadow .09s ease;animation:none;font-size:30px}
-.pnode::before{content:"";position:absolute;top:7px;left:17%;width:66%;height:30%;border-radius:50%;background:linear-gradient(180deg,rgba(255,255,255,.62),rgba(255,255,255,0));pointer-events:none}
-.pnode svg{filter:drop-shadow(0 2px 0 rgba(0,0,0,.18));position:relative}
-.pnode:active{transform:translateY(7px);box-shadow:inset 0 3px 1px rgba(255,255,255,.5),inset 0 -7px 10px rgba(0,0,0,.2),0 1px 0 var(--side),0 4px 6px rgba(0,0,0,.18)}
-.pnode.done{--face:#ffbe17;background:radial-gradient(130% 100% at 50% 0%,#fff1a8 0%,#ffcc2e 46%,#f29b00 100%);--side:#b97400}
-.pnode.todo{--face:#dfe3ea;color:#a3abb8;background:radial-gradient(130% 100% at 50% 0%,#ffffff 0%,#e6e9ef 50%,#c9ced8 100%);--side:#a9b0bc}
-.pnode.todo svg{filter:none}
-.pnode.cur{width:82px;height:82px;animation:pglow 1.8s ease-in-out infinite}
-@keyframes pglow{50%{filter:brightness(1.08)}}
-.pwrap{width:104px;height:104px}.pwrap.big{width:116px;height:116px}.sring{top:-3px}
-.pnode.sp{width:66px;height:66px;font-size:30px}.pnode.sp span{position:relative;filter:drop-shadow(0 2px 1px rgba(0,0,0,.2))}
-.pnode.sp.prac{--face:#ff9500}.pnode.sp.speak{--face:#ff4f7b}.pnode.sp.story{--face:#7c5cff}
-.pnode.sp.trophy{--face:#ffbe17;width:84px;height:84px;font-size:40px;background:radial-gradient(130% 100% at 50% 0%,#fff1a8 0%,#ffcc2e 46%,#f29b00 100%);--side:#b97400}
-.pnode.sp.pd{filter:saturate(.75)}.pnode.sp em{position:absolute;right:-4px;top:-4px;width:24px;height:24px;border-radius:50%;background:#34c759;color:#fff;font:800 14px/24px var(--sfd);font-style:normal;box-shadow:0 2px 0 #1f8a3a}
-.pchestb{font-size:52px;line-height:1;filter:drop-shadow(0 8px 6px rgba(0,0,0,.2));animation:mbob 2.4s ease-in-out infinite;transition:transform .1s}.pchestb:active{transform:scale(.92)}.pchestb.pd{animation:none;opacity:.7}
+/* ===== YOL DÜĞÜMLERİ: düz, kalın alt dudak (Duolingo tarzı) ===== */
+.pnode,.pnode.sp,.pnode.cur,.pnode.done,.pnode.todo{--face:var(--lc);--side:color-mix(in srgb,var(--face) 70%,#000);position:relative;width:72px;height:66px;border-radius:50%;display:grid;place-items:center;color:#fff;
+  background:var(--face);box-shadow:0 7px 0 var(--side);transition:transform .08s ease,box-shadow .08s ease;animation:none;font-size:28px;margin-bottom:7px}
+.pnode svg{position:relative;display:block}
+.pnode:active{transform:translateY(7px);box-shadow:0 0 0 var(--side)}
+.pnode.done{--face:#ffc800;--side:#e0a000}
+.pnode.todo{--face:#e5e5e5;--side:#b7b7b7;color:#afafaf}
+.pnode.cur{width:78px;height:72px}
+.pwrap{width:104px;height:104px}.pwrap.big{width:112px;height:112px}.sring{top:-4px}
+.pnode.sp{width:66px;height:60px}
+.pnode.sp.prac{--face:#ff9600;--side:#d97f00}.pnode.sp.speak{--face:#ff4b8b;--side:#d6336f}.pnode.sp.story{--face:#a560f2;--side:#8445cf}
+.pnode.sp.trophy{--face:#ffc800;--side:#e0a000;width:78px;height:72px}
+.pnode.sp.pd{--face:#ffc800;--side:#e0a000}
+.pnode.sp em{position:absolute;right:-3px;top:-3px;width:22px;height:22px;border-radius:50%;background:#58cc02;color:#fff;font:800 13px/22px var(--sfd);font-style:normal;box-shadow:0 0 0 2px var(--bg,#fff)}
+.pchestb{font-size:50px;line-height:1;animation:mbob 2.4s ease-in-out infinite;transition:transform .1s}.pchestb:active{transform:scale(.92)}.pchestb.pd{animation:none;opacity:.6}
+.plab{font-weight:700;font-size:12.5px;color:var(--label2);margin-top:6px}
+.pbub{text-transform:uppercase;border-radius:12px;box-shadow:0 0 0 2px var(--sep),0 3px 0 var(--sep)}
 </style></head><body>
 <title>Dilbaz · Dil öğren</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -42842,6 +42840,9 @@ function segRing(n,done,col,sz,sw){const r=(sz-sw)/2-1,C=2*Math.PI*r,seg=C/n,gap
 function poolOf(us){const ws=new Map(),ss=new Map();us.forEach(u=>{u.w.forEach(w=>{if(w[0]&&w[1]&&!ws.has(w[0]))ws.set(w[0],{fr:w[0],tr:w[1],pr:w[2]||""});if(w[3]&&w[4])ss.set(w[3],{t:w[3],tr:w[4]});});(u.sents||[]).forEach(x=>{const n=wtok(x[0]).length;if(n>=3&&n<=14)ss.set(x[0],{t:x[0],tr:x[1]});});});return{ws:[...ws.values()],ss:[...ss.values()]};}
 const PIC={star:`<svg viewBox="0 0 24 24" width="34" height="34"><path d="M12 2.8l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 16.8l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" fill="#fff" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>`,
  check:`<svg viewBox="0 0 24 24" width="34" height="34"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+ dumb:`<svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><rect x="2" y="9" width="3" height="6" rx="1"/><rect x="5" y="6.5" width="3.2" height="11" rx="1.2"/><rect x="15.8" y="6.5" width="3.2" height="11" rx="1.2"/><rect x="19" y="9" width="3" height="6" rx="1"/><rect x="8" y="10.8" width="8" height="2.4" rx=".6"/></svg>`,
+ mic:`<svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor"><rect x="8.5" y="2.5" width="7" height="12" rx="3.5"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><rect x="10.9" y="17.5" width="2.2" height="3.5" rx="1"/></svg>`,
+ trophy:`<svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor"><path d="M7 3h10v6.5a5 5 0 0 1-10 0z"/><path d="M7 5H3.5v1.5A3.5 3.5 0 0 0 7 10M17 5h3.5v1.5A3.5 3.5 0 0 1 17 10" fill="none" stroke="currentColor" stroke-width="2"/><rect x="10.8" y="14" width="2.4" height="4"/><rect x="7.5" y="18" width="9" height="3" rx="1"/></svg>`,
  book:`<svg viewBox="0 0 24 24" width="30" height="30"><path d="M4 5.5C6.5 4.3 9.3 4.3 12 6c2.7-1.7 5.5-1.7 8-.5V19c-2.5-1.2-5.3-1.2-8 .5-2.7-1.7-5.5-1.7-8-.5z" fill="currentColor"/><path d="M12 6v13.5" stroke="rgba(0,0,0,.18)" stroke-width="1.4"/></svg>`};
 function pathItems(units,lv){const out=[],bks=BOOKS.filter(b=>b.lv===lv);let bi=0;
   units.forEach((u,i)=>{out.push({k:"u",u,i});
@@ -42859,9 +42860,9 @@ function pathHTML(units,lv){const col=LVCOLOR[lv]||"var(--blue)";const cur=units
        <div class="pwrap ${isC?"big":""}">${isC||lp?segRing(n,lp,col,isC?116:104,8):""}<button class="pnode ${ok?"done":isC?"cur":"todo"}" data-u="${u.gi}" aria-label="${esc(u.t)}">${ok?PIC.check:isC?PIC.star:PIC.book}</button></div>
        ${ok?`<div class="pstars">${"★".repeat(stars)}<i>${"★".repeat(3-stars)}</i></div>`:""}<div class="plab">${esc(u.t)}</div></div>`;return;}
     const d=!!pn[it.key]||(it.k==="story"&&S.bk&&S.bk[it.b.id]&&S.bk[it.b.id].done);
-    const ic={prac:"🏋️",speak:"🎤",story:"📖",chest:d?"📭":"🎁",trophy:"🏆"}[it.k];
+    const ic={prac:PIC.dumb,speak:PIC.mic,story:PIC.book,chest:d?"📭":"🎁",trophy:PIC.trophy}[it.k];
     const lab=it.k==="story"?it.b.t:it.k==="prac"?"Tekrar: "+it.us.map(u=>u.n+". ders").join(" + "):it.k==="speak"?"Konuş: "+it.u.t:it.t;
-    h+=`<div class="pstep" style="--x:${x}px">${it.k==="chest"?`<button class="pchestb ${d?"pd":""}" data-pk="${i}" aria-label="${esc(lab)}">${ic}</button>`:`<button class="pnode sp ${it.k} ${d?"pd":""}" data-pk="${i}" aria-label="${esc(lab)}"><span>${ic}</span>${d?`<em>✓</em>`:""}</button>`}<div class="plab">${esc(lab)}</div></div>`;});
+    h+=`<div class="pstep" style="--x:${x}px">${it.k==="chest"?`<button class="pchestb ${d?"pd":""}" data-pk="${i}" aria-label="${esc(lab)}">${ic}</button>`:`<button class="pnode sp ${it.k} ${d?"pd":""}" data-pk="${i}" aria-label="${esc(lab)}">${ic}${d?`<em>✓</em>`:""}</button>`}<div class="plab">${esc(lab)}</div></div>`;});
   return h+`</div>`;}
 function bindPath(units,lv){const items=pathItems(units,lv);const back=()=>{IN_LESSON=false;tab="learn";render();};
   root().querySelectorAll("[data-pk]").forEach(b=>b.onclick=()=>{const it=items[+b.dataset.pk];S.pn=S.pn||{};

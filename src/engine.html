@@ -73,6 +73,46 @@ button,.tw,.tile,.opt,.cell,a{-webkit-touch-callout:none;-webkit-user-select:non
 .clb.is-down,.mic.is-down{transform:scale(.9)!important}
 .tw:active{background:color-mix(in srgb,var(--blue) 14%,transparent)}
 .sw{transition:background .25s}
+
+/* ===== NEŞELİ TEMA ===== */
+:root{--sfd:ui-rounded,"SF Pro Rounded","Nunito",-apple-system,system-ui,sans-serif}
+body{font-family:ui-rounded,"SF Pro Rounded","Nunito",-apple-system,BlinkMacSystemFont,system-ui,sans-serif}
+.h2,.dpt,.word,.fbt,.oct,.lvban b,.nt{font-family:var(--sfd);font-weight:800}
+.masc{display:block;flex:none;overflow:visible}.masc.m-happy,.masc.m-wow{animation:mbob 2.6s ease-in-out infinite}
+@keyframes mbob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-4px) rotate(-2deg)}}
+.joyhead{display:flex;align-items:center;gap:10px;margin:4px 0 10px}
+.jbub{position:relative;background:var(--card);border-radius:18px;padding:12px 14px;font-weight:700;font-size:16px;line-height:1.35;box-shadow:0 3px 0 var(--sep),0 0 0 2px var(--sep) inset;flex:1}
+.jbub::before{content:"";position:absolute;left:-9px;top:50%;margin-top:-9px;border:9px solid transparent;border-right-color:var(--card);border-left:0}
+.jchips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.jc{display:inline-flex;align-items:center;gap:4px;border-radius:99px;padding:7px 12px;font-size:14px;font-weight:700;background:var(--card);box-shadow:0 2px 0 var(--sep),0 0 0 2px var(--sep) inset}
+.jc.fire b{color:#ff7a00}.jc.star b{color:#e0a100}.jc.due b{color:#0a84ff}
+.jc.goal{position:relative;overflow:hidden;flex:1;min-width:120px;justify-content:center}.jc.goal i{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,#7ee36b,#34c759);opacity:.35;border-radius:99px}.jc.goal em{position:relative;font-style:normal}
+.lvban{display:flex;align-items:center;justify-content:space-between;gap:10px;border-radius:20px;padding:14px 16px;margin:12px 0 6px;color:#fff;background:var(--lc);box-shadow:0 5px 0 color-mix(in srgb,var(--lc) 60%,#000)}
+.lvban small{display:block;font-weight:700;opacity:.9;font-size:13px;text-transform:uppercase;letter-spacing:.04em}.lvban b{font-size:22px}
+.path{display:flex;flex-direction:column;align-items:center;padding:18px 0 40px}
+.pstep{display:flex;flex-direction:column;align-items:center;transform:translateX(var(--x));margin:6px 0;position:relative}
+.pnode{width:76px;height:70px;border-radius:50%;display:grid;place-items:center;font:800 26px var(--sfd);color:#fff;background:var(--lc);box-shadow:0 7px 0 color-mix(in srgb,var(--lc) 60%,#000);transition:transform .1s}
+.pnode:active{transform:translateY(5px);box-shadow:0 2px 0 color-mix(in srgb,var(--lc) 60%,#000)}
+.pnode.todo{background:var(--fill);color:var(--label3);box-shadow:0 7px 0 var(--sep)}
+.pnode.done{background:linear-gradient(180deg,#ffd84d,#ffb800);color:#fff;box-shadow:0 7px 0 #c98a00;text-shadow:0 1px 0 rgba(0,0,0,.15)}
+.pnode.cur{animation:pring 1.6s ease-in-out infinite;width:86px;height:80px;font-size:32px}
+@keyframes pring{0%,100%{box-shadow:0 7px 0 color-mix(in srgb,var(--lc) 60%,#000),0 0 0 0 color-mix(in srgb,var(--lc) 45%,transparent)}50%{box-shadow:0 7px 0 color-mix(in srgb,var(--lc) 60%,#000),0 0 0 12px color-mix(in srgb,var(--lc) 0%,transparent)}}
+.pbub{background:var(--card);color:var(--lc);font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:.03em;border-radius:12px;padding:7px 12px;margin-bottom:10px;box-shadow:0 3px 0 var(--sep),0 0 0 2px var(--sep) inset;position:relative;animation:mbob 1.8s ease-in-out infinite}
+.pbub::after{content:"";position:absolute;left:50%;bottom:-8px;margin-left:-8px;border:8px solid transparent;border-top-color:var(--card);border-bottom:0}
+.plab{font-size:13px;font-weight:700;color:var(--label2);margin-top:9px;max-width:150px;text-align:center;line-height:1.25}
+.pstars{font-size:13px;color:#ffb800;margin-top:6px;letter-spacing:1px}.pstars i{font-style:normal;color:var(--sep)}
+.pdeco{transform:translateX(var(--x));margin:-6px 0}.pchest{font-size:44px;display:block;animation:mbob 3s ease-in-out infinite}
+.fbm{position:absolute;right:max(10px,env(safe-area-inset-right,0px));top:4px;display:flex;align-items:flex-end;gap:2px;pointer-events:none;animation:sheetup .45s var(--spring)}
+.fbm span{order:-1;background:var(--card);border-radius:12px;padding:5px 9px;font-weight:800;font-size:13px;box-shadow:0 2px 0 var(--sep),0 0 0 2px var(--sep) inset;margin-bottom:30px}
+.actbar.ok .fbm span{color:#1f9d45}.actbar.bad .fbm span{color:#e5342b}
+.combo{position:fixed;left:50%;top:calc(70px + env(safe-area-inset-top,0px));transform:translateX(-50%);z-index:70;display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,#ff9500,#ff375f);color:#fff;border-radius:20px;padding:6px 16px 6px 8px;box-shadow:0 5px 0 #b3361f,0 10px 24px rgba(0,0,0,.2);animation:combo 2.1s var(--spring) forwards}
+.combo b{display:block;font:800 17px var(--sfd)}.combo span{font-size:13px;font-weight:600;opacity:.95}
+@keyframes combo{0%{opacity:0;transform:translate(-50%,-20px) scale(.7)}12%{opacity:1;transform:translate(-50%,0) scale(1.05)}20%{transform:translate(-50%,0) scale(1)}85%{opacity:1}100%{opacity:0;transform:translate(-50%,-10px)}}
+.winm{display:flex;justify-content:center;margin-bottom:6px;animation:pop .6s var(--spring)}
+.tabbar button[aria-current="page"]::before{content:"";position:absolute;top:3px;bottom:3px;left:10%;right:10%;border-radius:14px;background:color-mix(in srgb,var(--blue) 13%,transparent);z-index:-1}
+.tabbar button{z-index:0}
+.prog{height:14px;border-radius:99px}.prog i{background:linear-gradient(180deg,#7ee36b,#34c759);border-radius:99px}.prog i::after{left:8px;right:8px;top:3px;height:4px}
+.itb button[aria-selected="true"]{transform:translateY(-1px)}
 </style></head><body>
 <title>Dilbaz · Dil öğren</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -945,7 +985,7 @@ function tabs(show){const t=$("#tabs");shell(show);if(!show){t.innerHTML="";retu
   const bd=k=>{const n=k==="review"?due:k==="bank"?bdue:0;return n?`<span class="badge">${n>99?"99+":n}</span>`:"";};
   t.innerHTML=`<nav class="tabbar"><div class="in">${T.map(([k,n,ic])=>`<button data-tab="${k}" ${tab===k?'aria-current="page"':""}>${ic}${n}${bd(k)}</button>`).join("")}</div></nav>`;
   t.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>{tab=b.dataset.tab;render();});}
-function render(){try{closeGloss();}catch(e){}IN_LESSON=false;if(tab==="conj")tab="learn";if(S.tab!==tab){S.tab=tab;try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}window.scrollTo(0,0);tabs(true);({learn,bank,review,dict,me,conj,books,games})[tab]();}
+function render(){try{closeGloss();}catch(e){}IN_LESSON=false;COMBO=0;if(tab==="conj")tab="learn";if(S.tab!==tab){S.tab=tab;try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}window.scrollTo(0,0);tabs(true);({learn,bank,review,dict,me,conj,books,games})[tab]();}
 const root=()=>$("#root");
 
 /* ===== Tema, dokunma, ses, konfeti ===== */
@@ -2000,31 +2040,14 @@ function learn(){
   const due=dueItems().length,today=S.last===day();
   const allPassed=Object.keys(S.pass).length;
   let h=`<div class="page wide fade">
-  <div class="dph"><div><div class="dpt">${firstName()?"Merhaba "+esc(firstName()):"Öğren"}</div><div class="dps">${firstName()?"Bugün biraz "+LANG.name+"? · ":""}${allPassed} / ${UNITS.length} ders tamamlandı</div></div></div>
-  <div class="ringcard fade">${rings([Math.min(1,dailyXP()/goal()),lw/tw,allPassed/UNITS.length],112)}<div class="rleg"><div><b style="color:#ff2d55">Bugünkü hedef</b><span>${dailyXP()}/${goal()} XP</span></div><div><b style="color:#30d158">Kelimeler</b><span>${lw}/${tw}</span></div><div><b style="color:#0a84ff">Dersler</b><span>${allPassed}/${UNITS.length}</span></div></div></div>
-  <div class="tiles4 stagger">
-    ${kpi("Günlük seri","",S.streak||0,"gün",today?"Bugün çalıştın, seri sürüyor":"Bugün bir alıştırma yap","","",I.flame)}
-    ${kpi("Toplam puan","",S.xp||0,"XP","Bugün +"+dailyXP()+" XP","","",I.star)}
-    ${kpi("Kelimeler","",lw,"/ "+tw,"%"+Math.round(lw/tw*100)+" öğrenildi","",bulletMicro(lw/tw,"#fff"),I.learn)}
-    ${kpi("Tekrar","",due,"öğe",due?"Bugün tekrar zamanı":"Bugünlük hepsi tamam","","",I.review)}
-  </div>
+  <div class="joyhead">${mascot(dailyXP()>=goal()?"wow":"happy",84)}<div class="jbub">${homeBubble()}</div></div>
+  <div class="jchips"><span class="jc fire">🔥 <b>${S.streak||0}</b> gün</span><span class="jc star">⭐ <b>${S.xp||0}</b> XP</span><button class="jc due" id="jdue">🔁 <b>${due}</b> tekrar</button>
+    <span class="jc goal"><i style="width:${Math.min(100,dailyXP()/goal()*100)}%"></i><em>🎯 ${dailyXP()}/${goal()}</em></span></div>
   <div class="dgrid"><div class="dmain">`;
-  if(target){
-    const P=plan(target),done=S.lp&&S.lp[target.key]?S.lp[target.key]:0;
-    h+=`<div class="ocard"><div class="och"><div><div class="ock">${RU?"Kaldığın yerden devam":"Sıradaki ders"} · ${esc(target.lv)} ${target.n}. ders</div><div class="oct">${esc(target.t)}</div><div class="ocs">${esc(target.s)}</div></div>
-      <span class="ostat ${done?"crit":"info"}">${done?"Devam ediyor":"Yeni"}</span></div>
-      <div class="segbar">${P.map((sg,i)=>`<i class="${i<done?"d":i===done?"c":""}" title="${segName(sg)}"></i>`).join("")}</div>
-      <div class="ocf"><span>${done?"Bölüm "+(done+1)+" / "+P.length+" · "+segName(P[done]):P.length+" bölüm · "+target.w.length+" kelime · "+target.sents.length+" cümle"}</span><button class="fbtn emph" id="go">${done?"Devam et":"Başla"}</button></div></div>`;
-  }
-  h+=syncNote()+bkNote();
-  h+=S.placed?"":`<button class="ocard plcard" id="plst"><div class="och"><div><div class="ock">Yeni misin, yoksa biraz biliyor musun?</div><div class="oct">🎯 Seviye belirleme testi</div><div class="ocs">5–10 dakikalık test seviyeni bulur ve seni doğru dersten başlatır.</div></div><span class="ostat info">Başla</span></div></button>`;
-  h+=`<div class="itb" role="tablist">${LV.map(l=>{const us=UNITS.filter(u=>u.lv===l.id),d=us.filter(u=>S.pass[u.key]).length;return `<button role="tab" data-lv="${l.id}" aria-selected="${l.id===lv}"><b>${l.id}</b><span>${d}/${us.length}</span></button>`;}).join("")}</div>
-  <div class="ftable"><div class="fth"><span>${esc(L.id)} · ${esc(L.name)} — Dersler (${units.length})</span><span>${passed}/${units.length}</span></div>`;
-  units.forEach(u=>{
-    const ok=!!S.pass[u.key],lp=S.lp&&S.lp[u.key];
-    const st=lp?`<span class="ostat crit">Devam · ${lp+1}/${plan(u).length}</span>`:ok?`<span class="ostat pos">Tamamlandı · %${S.best[u.key]||0}</span>`:`<span class="ostat neu">Başlanmadı</span>`;
-    h+=`<button class="frow" data-u="${u.gi}"><span class="fnum ${ok?"ok":lp?"cur":""}">${ok?I.check:u.n}</span><span class="ftx"><b>${esc(u.t)}</b><span>${esc(u.s)}</span></span>${st}${I.chev}</button>`;
-  });
+  let extra=syncNote()+bkNote();
+  extra+=S.placed?"":`<button class="ocard plcard" id="plst"><div class="och"><div><div class="ock">Yeni misin, yoksa biraz biliyor musun?</div><div class="oct">🎯 Seviye belirleme testi</div><div class="ocs">5–10 dakikalık test seviyeni bulur ve seni doğru dersten başlatır.</div></div><span class="ostat info">Başla</span></div></button>`;
+  h+=`<div class="itb" role="tablist">${LV.map(l=>{const us=UNITS.filter(u=>u.lv===l.id),d=us.filter(u=>S.pass[u.key]).length;return `<button role="tab" data-lv="${l.id}" aria-selected="${l.id===lv}"><b>${l.id}</b><span>${d}/${us.length}</span></button>`;}).join("")}</div>`;
+  h+=pathHTML(units,lv)+extra+`<div>`;
   h+=`</div></div><div class="dside">
     <div class="fcard"><div class="fch">Seviye ilerlemesi</div>${LV.map(l=>{const us=UNITS.filter(u=>u.lv===l.id),d=us.filter(u=>S.pass[u.key]).length;return `<div class="lvrow"><span class="lvn">${l.id}</span><div class="lvb"><i style="width:${d/us.length*100}%;background:${LVCOLOR[l.id]}"></i></div><span class="lvv">${d}/${us.length}</span></div>`;}).join("")}</div>
     <button class="fcard plside" id="plst2" style="text-align:left;width:100%"><div class="fch">🎯 Seviye testi</div><div class="fcx">${S.placed?`Son sonuç: <b style="color:${LVCOLOR[S.placed.lv]}">${S.placed.lv}</b> · Tekrar çözmek için dokun`:"Seviyeni öğrenmek için testi çöz."}</div></button>
@@ -2033,7 +2056,8 @@ function learn(){
   root().innerHTML=h;
   animRings();
   root().querySelectorAll("[data-lv]").forEach(b=>b.onclick=()=>{S.lv=b.dataset.lv;save();learn();});
-  const g=$("#go");if(g)g.onclick=()=>lesson(target.gi);
+  const g=$("#go");if(g)g.onclick=()=>lesson(target.gi);const jd=$("#jdue");if(jd)jd.onclick=()=>{tab="review";render();};
+  const pc=root().querySelector(".pnode.cur");if(pc&&!window.__pscrolled){window.__pscrolled=1;setTimeout(()=>{const r=pc.getBoundingClientRect();if(r.top>innerHeight*.7)window.scrollTo({top:scrollY+r.top-innerHeight*.45,behavior:"smooth"});},250);}
   const bk=$("#bkst");if(bk)bk.onclick=exportSheet;
   const p1=$("#plst");if(p1)p1.onclick=placement;const p2=$("#plst2");if(p2)p2.onclick=placement;
   root().querySelectorAll("[data-u]").forEach(b=>b.onclick=()=>lesson(+b.dataset.u));
@@ -2317,8 +2341,9 @@ function lesson(gi,restart){
     const nx=UNITS[gi+1];
     window.scrollTo(0,0);setTimeout(()=>{confetti();sfx("win");},150);
     root().innerHTML=`<div class="page fade center" style="padding-top:30px;padding-bottom:160px">
-      ${ring(pct/100,170,pct>=80?"var(--green)":"var(--orange)","%"+pct,"ilk seferde doğru")}
-      <div class="h2" style="font-size:28px;margin-top:12px">Geschafft!</div>
+      <div class="winm">${mascot(pct>=80?"wow":"happy",130)}</div>
+      ${ring(pct/100,150,pct>=80?"var(--green)":"var(--orange)","%"+pct,"ilk seferde doğru")}
+      <div class="h2" style="font-size:30px;margin-top:12px">${pct>=90?"Muhteşem! 🎉":pct>=70?"Harika iş! 🎉":"Geschafft! 💪"}</div>
       <div class="sub">${esc(u.t)} tamamlandı. ${u.w.length} kelime ve ${u.sents.length} cümleyle çalıştın.</div>
       <div class="mt"><span class="pill blue">+${gain} puan</span></div>
       <div class="sec-f" style="margin-top:14px">Zorlandığın kelimeler Tekrar sekmesinde daha sık karşına çıkacak.</div><button class="btn sec" id="spk2" style="margin-top:18px">🗣️ Bu konuyla konuş</button></div>
@@ -3511,6 +3536,53 @@ function verbQuiz(limit){const L=vList().filter(v=>v.kind!=="düzenli"||Math.ran
   show();}
 
 /*VERBS-END*/
+/*JOY*/
+/* ===== NEŞE: maskot, yol, seri kutlaması ===== */
+function mascot(mood,sz){mood=mood||"happy";sz=sz||90;
+  const eye=(x)=>mood==="happy"?`<path d="M${x-7} 46 q7 -8 14 0" stroke="#1d1d2b" stroke-width="4" fill="none" stroke-linecap="round"/>`
+    :mood==="sad"?`<circle cx="${x}" cy="47" r="6" fill="#1d1d2b"/><path d="M${x-8} 37 l14 4" stroke="#1d1d2b" stroke-width="3" stroke-linecap="round" transform="${x<60?"":"scale(-1,1) translate(-"+(2*x)+",0)"}"/>`
+    :mood==="think"?`<circle cx="${x}" cy="45" r="6.5" fill="#1d1d2b"/><circle cx="${x+2}" cy="43" r="2" fill="#fff"/>`
+    :`<circle cx="${x}" cy="45" r="8.5" fill="#1d1d2b"/><circle cx="${x+3}" cy="42" r="3" fill="#fff"/>`;
+  const mouth=mood==="sad"?`<path d="M52 66 q8 -5 16 0" stroke="#c2410c" stroke-width="3" fill="none" stroke-linecap="round"/>`:mood==="wow"?`<ellipse cx="60" cy="67" rx="6" ry="7" fill="#c2410c"/>`:"";
+  return `<svg class="masc m-${mood}" width="${sz}" height="${sz}" viewBox="0 0 120 120" aria-hidden="true">
+   <ellipse cx="60" cy="112" rx="30" ry="5" fill="rgba(0,0,0,.12)"/>
+   <path d="M52 20 q-4 -16 6 -16 q-2 10 2 16z" fill="#ff5d8f"/><path d="M60 18 q4 -17 14 -10 q-8 6 -8 13z" fill="#ffc53d"/><path d="M47 24 q-14 -8 -8 -16 q4 8 12 12z" fill="#7c5cff"/>
+   <ellipse cx="60" cy="64" rx="40" ry="42" fill="url(#mg)"/>
+   <ellipse cx="60" cy="80" rx="25" ry="24" fill="#ffe08a"/>
+   <path d="M21 64 q-12 18 4 32 q6 -14 2 -30z" fill="#0f8fa3"/><path d="M99 64 q12 18 -4 32 q-6 -14 -2 -30z" fill="#0f8fa3"/>
+   <circle cx="44" cy="46" r="13" fill="#fff"/><circle cx="76" cy="46" r="13" fill="#fff"/>${eye(44)}${eye(76)}
+   <path d="M52 55 q8 -6 16 0 q-2 10 -8 13 q-6 -3 -8 -13z" fill="#ff8a3d"/>${mouth}
+   <circle cx="33" cy="60" r="5" fill="#ff8fb1" opacity=".55"/><circle cx="87" cy="60" r="5" fill="#ff8fb1" opacity=".55"/>
+   <path d="M48 104 l-4 8 M52 104 l0 8 M68 104 l0 8 M72 104 l4 8" stroke="#ff8a3d" stroke-width="3.5" stroke-linecap="round"/>
+   <defs><linearGradient id="mg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2fd0e0"/><stop offset="1" stop-color="#139bb5"/></linearGradient></defs></svg>`;}
+const JOY_OK=["Harika!","Süpersin!","Tam isabet!","Bravo!","Çok iyi!","Aynen böyle!","Mükemmel!"],JOY_BAD=["Olsun, bir dahakine!","Neredeyse!","Az kaldı!","Bu da öğrenmenin parçası."];
+function homeBubble(){const due=dueItems().length,st=S.streak||0,dx=dailyXP(),g=goal(),nm=firstName();
+  if(dx>=g)return `Bugünkü hedef tamam! 🎉 ${nm?esc(nm)+", ":""}istersen biraz daha.`;
+  if(due>=10)return `${due} kelime seni özledi. Kısa bir tekrar? 🔁`;
+  if(st>=2)return `🔥 ${st} günlük seri! Bugün de devam edelim mi?`;
+  if(!Object.keys(S.pass||{}).length)return `Merhaba${nm?" "+esc(nm):""}! Ben Baz. İlk dersine hazır mısın?`;
+  return pick([`Bugün ${g-dx} XP daha, hedef tamam!`,`Bir ders = 5 dakika. Hadi! 💪`,`Yeni kelimeler seni bekliyor ✨`]);}
+function pathHTML(units,lv){const col=LVCOLOR[lv]||"var(--blue)";const cur=units.find(u=>S.lp&&S.lp[u.key])||units.find(u=>!S.pass[u.key]);
+  const L=LV.find(l=>l.id===lv);const done=units.filter(u=>S.pass[u.key]).length;
+  let h=`<div class="lvban" style="--lc:${col}"><div><small>${esc(lv)} · ${done}/${units.length} ders</small><b>${esc(L.name)}</b></div>${mascot(done===units.length?"wow":"happy",58)}</div><div class="path" style="--lc:${col}">`;
+  units.forEach((u,i)=>{const ok=!!S.pass[u.key],lp=S.lp&&S.lp[u.key],isC=u===cur;const x=Math.round(Math.sin(i*.85)*68);
+    const best=S.best[u.key]||0,stars=ok?(best>=90?3:best>=70?2:1):0;
+    const st=ok?"done":isC?"cur":"todo";
+    h+=`<div class="pstep" style="--x:${x}px">${isC?`<div class="pbub">${lp?"Devam · "+(lp+1)+"/"+plan(u).length:i?"Sıradaki":"Başla"}</div>`:""}
+      <button class="pnode ${st}" data-u="${u.gi}" aria-label="${esc(u.t)}"><span>${ok?"✓":isC?"★":u.n}</span></button>
+      ${ok?`<div class="pstars">${"★".repeat(stars)}<i>${"★".repeat(3-stars)}</i></div>`:""}<div class="plab">${esc(u.t)}</div></div>`;
+    if(i%5===3&&i<units.length-1)h+=`<div class="pdeco" style="--x:${-x}px">${i%10===3?mascot(pick(["happy","think","wow"]),74):`<span class="pchest">🎁</span>`}</div>`;});
+  return h+`</div>`;}
+// geri bildirim çubuğuna maskot + üst üste doğru (combo) kutlaması
+let COMBO=0;
+function comboToast(n){const d=document.createElement("div");d.className="combo";d.innerHTML=`${mascot("wow",54)}<div><b>🔥 ${n} doğru üst üste!</b><span>${n>=10?"Durdurulamıyorsun!":n>=5?"Alev aldın!":"Böyle devam!"}</span></div>`;document.body.appendChild(d);setTimeout(()=>d.remove(),2100);if(n>=5)try{confetti();}catch(e){}}
+new MutationObserver(ms=>{for(const m of ms){const el=m.target;if(!(el instanceof HTMLElement)||!el.classList.contains("actbar"))continue;
+    const ok=el.classList.contains("ok"),bad=el.classList.contains("bad");if(!ok&&!bad)continue;if(el.dataset.mj===el.innerHTML.length+"")continue;
+    const old=el.querySelector(".fbm");if(old)old.remove();const d=document.createElement("div");d.className="fbm";d.innerHTML=mascot(ok?"happy":"sad",54)+`<span>${pick(ok?JOY_OK:JOY_BAD)}</span>`;el.appendChild(d);el.dataset.mj=el.innerHTML.length+"";
+    if(ok){COMBO++;if([3,5,8,10,15,20,30].includes(COMBO))setTimeout(()=>comboToast(COMBO),250);}else COMBO=0;}})
+  .observe(document.documentElement,{subtree:true,attributes:true,attributeFilter:["class"]});
+
+/*JOY-END*/
 function yPrompt(s,tr){return `You are a friendly ${ENNAME} teacher for a Turkish speaker (level ${S.lv||"A1"}) who does not understand sentence structure. Analyse this ${ENNAME} sentence: "${s}"${tr?` (Turkish: "${tr}")`:""}.
 Reply ONLY with JSON (all explanations in simple, natural Turkish, no grammar jargon without a short explanation):
 {"tr":"Turkish translation",

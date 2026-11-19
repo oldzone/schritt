@@ -102,3 +102,4 @@ Her adımdan sonra: build → test (playwright) → yayınla (mümkünse) → Ma
 - 17 Kas: iOS ÇÖKME düzeltildi (yüklenmedi): NativeRec.begin içinde mikrofon biçimi oturum playAndRecord yapılmadan okunuyordu → installTap 0 Hz → NSException. Artık önce setCategory/setActive, sonra inputNode; sampleRate/channel kontrolü. Telefona bir sonraki yüklemede gidecek.
 - 19 Kas: Dilbaz 3.0 — Cümle röntgeni (çekim motoru, hâl, sıra), kalıp makinesi, kardeş örnekler, Neden yanlış?, Dönüştür alıştırması. Kaynak: xray_de.js + xray_core.js engine.html içine gömülü (değiştirince yeniden göm!). replica/ klasöründe Duolingo analizi.
 - 19 Kas: Fiil atölyesi (verbs.js, /*VERBS*/ işaretleri arasında gömülü): 159 fiil tablosu, ses kalıpları, SRS ezber testi (S.vb). Hazine'de 'Fiil atölyesi' butonu.
+- 19 Kas: Neşeli tema (joy.js, /*JOY*/ arası): maskot Baz (özgün papağan SVG), Duolingo tarzı zikzak yol, seviye bandı, yuvarlak font, geri bildirimde maskot+övgü, combo kutlaması, ders sonu maskot.

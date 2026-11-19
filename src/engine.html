@@ -49,6 +49,11 @@
 .typing span{display:inline-block;margin:0 2px;animation:pulse 1.2s infinite}.typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}
 
 .ybtn{display:inline-flex;align-items:center;gap:4px;margin-top:6px;font-size:13px;font-weight:700;padding:5px 11px;border-radius:99px;background:color-mix(in srgb,var(--blue) 12%,transparent);color:var(--blue)}
+.xws{display:flex;flex-direction:column;gap:8px}.xw{background:var(--card);border-radius:14px;padding:10px 12px;border-left:4px solid var(--yc);box-shadow:var(--shadow)}
+.xwh{display:flex;align-items:center;gap:8px}.xwh b{font-size:18px;color:var(--yc)}.xwh .yrl{flex:1;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.03em;color:var(--yc)}
+.xw ul{margin:6px 0 0;padding-left:18px}.xw li{font-size:14px;line-height:1.4;margin-bottom:3px}
+.xct{width:100%;border-collapse:collapse;font-size:14px}.xct th,.xct td{padding:5px 6px;text-align:left;border-bottom:.5px solid var(--sep)}.xct th{font-size:12px;color:var(--label2)}
+.xwhy{margin-top:8px;font-size:14px;text-align:left}.xwhy ul{margin:4px 0 0;padding-left:18px}.xwhy li{margin-bottom:4px}.xwhy .bad{color:var(--red)}.xwhy .good{color:var(--green)}
 .ybig{font-family:var(--sfd);font-size:22px;font-weight:700;line-height:1.35;margin:6px 0 4px;display:flex;gap:8px;align-items:flex-start;justify-content:space-between}
 .yparts{display:flex;flex-wrap:wrap;gap:10px 8px;margin:16px 0 10px}
 .ypart{position:relative;border-radius:14px;padding:8px 10px;background:color-mix(in srgb,var(--yc) 12%,var(--card));border:2px solid color-mix(in srgb,var(--yc) 55%,transparent);display:flex;flex-direction:column;min-width:64px;max-width:100%}
@@ -2064,9 +2069,20 @@ function wordMatcher(w){
     if(verb&&t.some(x=>x==="ge"+stem+"t"||x.startsWith("ge"+stem)))return true;
     return false;};
 }
+function unitFocus(u){if(u._focus!==undefined)return u._focus;const cnt={};
+  u.sents.forEach(x=>{try{const a=xAnalyze(x[0]);if(a&&!a.gen)xKey(a).filter(k=>!/^p:|^akk|^inv$/.test(k)).forEach(k=>cnt[k]=(cnt[k]||0)+1);}catch(e){}});
+  const top=Object.entries(cnt).sort((a,b)=>b[1]-a[1]).filter(e=>e[1]>=2).slice(0,2).map(e=>e[0]);u._focus=top;return top;}
+function exRow(e,i){return `${i?'<div class="hr"></div>':""}<div class="wordline ex"><div style="flex:1;min-width:0"><div class="fr">${tapS(e[0])}</div><div class="tr">${e[2]?e[1]:esc(e[1])}</div>${ybtn(e[0],e[2]?"":e[1])}</div>${spk(e[0],1)}</div>`;}
+function unitMore(u){const all=u.sents.map(x=>[x[0],x[1]]);let h=`<div class="sec-h" style="margin-left:4px">Bu ünitenin bütün örnekleri (${all.length})</div><div class="card stack">${all.map(exRow).join("")}</div>`;
+  if(LANG.code==="de"){const gen=[];for(const x of u.sents){if(gen.length>=12)break;try{const a=xAnalyze(x[0]);xVariants(a).filter(v=>v.k==="p"||v.k==="q"||v.k==="neg"||v.k==="perf"||v.k==="mod").slice(0,2).forEach(v=>gen.push([v.s,v.lab,1]));}catch(e){}}
+    if(gen.length)h+=`<div class="sec-h" style="margin-left:4px">Kalıp makinesi · aynı cümleler, başka kişi ve zamanlarla (${gen.length})</div><div class="card stack">${gen.map(exRow).join("")}</div>`;
+    const fk=unitFocus(u);if(fk.length){const C=xCorpus(),seen=new Set(u.sents.map(x=>lk(x[0]))),out=[];
+      for(const o of C){if(out.length>=10)break;if(seen.has(lk(o.s)))continue;if(!o.key){try{o.key=xKey(xrayDe(o.s));}catch(e){o.key=[];}}if(fk.every(k=>o.key.includes(k))||fk[0]&&o.key.includes(fk[0])&&out.length<6){out.push([o.s,o.tr]);seen.add(lk(o.s));}}
+      if(out.length)h+=`<div class="sec-h" style="margin-left:4px">Başka ünitelerden aynı kalıp · ${esc(fk.map(XKEY_TR).join(", "))}</div><div class="card stack">${out.map(exRow).join("")}</div>`;}}
+  return h+`<div class="sec-f" style="margin:6px 4px 0">Her örnekte <b>🧩 Cümle röntgeni</b>: kelime kelime görev, hâl, fiil çekimi ve aynı kalıpla dönüştürme alıştırması.</div>`;}
 function examplesFor(w,u){
   const m=wordMatcher(w[0]);const out=[[w[3],w[4]]];const seen=new Set([w[3]]);
-  const add=s=>{if(out.length<5&&!seen.has(s.de)&&m(s.de)){out.push([s.de,s.tr]);seen.add(s.de);}};
+  const add=s=>{if(out.length<8&&!seen.has(s.de)&&m(s.de)){out.push([s.de,s.tr]);seen.add(s.de);}};
   ALLS.filter(s=>s.u===u).forEach(add);ALLS.filter(s=>s.u!==u&&s.u.gi<u.gi).forEach(add);ALLS.filter(s=>s.u.gi>u.gi).forEach(add);
   return out;
 }
@@ -2151,7 +2167,7 @@ function lesson(gi,restart){
     root().innerHTML=`<div class="nav"><div class="in"><button class="back" id="nb"><span style="width:22px;height:22px;display:grid;place-items:center">${I.x}</span></button>${hp>0?`<button class="hbk" id="hb" aria-label="Önceki">‹ Önceki</button>`:""}<div class="nt">${inReplay()?"↩ ":""}${esc(title)}</div><button class="cnt rulebtn" id="rb">Kural</button></div><div class="prog"><i style="width:${prog*100}%"></i></div></div>`+
       `<div class="page push" style="padding-bottom:230px">${body}</div><div class="actbar" id="ab"><div class="in" id="abi">${act}</div></div>`;
     $("#nb").onclick=()=>{S.lp[u.key]=si;save();IN_LESSON=false;tab="learn";render();};
-    $("#rb").onclick=()=>sheet(`<div class="h2" style="font-size:24px;margin-bottom:10px">${esc(u.t)}</div><div class="gram">${u.g}</div>${conjFor(u).length&&CONJ_THEORY.length?conjTheory():""}`);
+    $("#rb").onclick=()=>{sheet(`<div class="h2" style="font-size:24px;margin-bottom:10px">${esc(u.t)}</div><div class="gram">${u.g}</div>${conjFor(u).length&&CONJ_THEORY.length?conjTheory():""}${unitMore(u)}`);const sh=document.querySelector(".sheetbg:last-child");if(sh){bindTap(sh);bindSay(sh);}};
     const hb=$("#hb");if(hb)hb.onclick=hback;
     bindSay(root());bindTap(root());
   }
@@ -2167,9 +2183,10 @@ function lesson(gi,restart){
   }
   function grammar(rp){
     if(!rp)hpush({replay:()=>grammar(1),live:()=>grammar(1)});
-    const xs=u.x.slice(0,4);
+    const xs=[];
     shell(segTitle(),`<div class="stack fade"><div><span class="pill orange">Yeni konu</span></div><div class="h2" style="font-size:28px">${esc(u.t)}</div><div class="card gram">${u.g}</div>
       ${xs.length?`<div class="sec-h" style="margin-left:4px">Bu konuyla örnekler</div><div class="card stack">${xs.map((s,i)=>`${i?'<div class="hr"></div>':""}<div class="wordline ex"><div style="flex:1;min-width:0"><div class="fr">${tapS(s[0])}</div><div class="tr">${esc(s[1])}</div></div>${spk(s[0],1)}</div>`).join("")}</div>`:""}
+      ${unitMore(u)}
       <div class="sec-f" style="margin:0 4px">Kelimeye dokununca anlamını görürsün. Kurala ders boyunca sağ üstteki <b>Kural</b> düğmesiyle dönebilirsin.</div></div>`,
       `<button class="btn" id="nx">Kelimelere geç</button>`,si/P.length,"");
     $("#nx").onclick=()=>inReplay()?hfwd():nextSeg();
@@ -2215,9 +2232,9 @@ function lesson(gi,restart){
         const upd=()=>{ans.innerHTML=seq.map((j,n)=>`<button class="tile" data-n="${n}">${esc(Q.tokens[j])}</button>`).join("");chk.disabled=!seq.length;
           ans.querySelectorAll("[data-n]").forEach(b=>b.onclick=()=>{const rr=b.getBoundingClientRect();const j=seq.splice(+b.dataset.n,1)[0];const bt=bank.querySelector(`[data-j="${j}"]`);bt.classList.remove("used");upd();flyIn(rr,bt);sfx("unpop");});};
         bank.querySelectorAll("[data-j]").forEach(b=>b.onclick=()=>{const rr=b.getBoundingClientRect();seq.push(+b.dataset.j);b.classList.add("used");upd();flyIn(rr,ans.lastElementChild);sfx("pop");});
-        chk.onclick=()=>{const got=seq.map(j=>Q.tokens[j]).join(" ");const ok=norm(got)===norm(Q.ans);root().querySelectorAll(".tile").forEach(t=>t.disabled=true);fin(ok,ok&&got!==Q.ans?"Büyük harf / noktalamaya dikkat. ":"");};}
+        chk.onclick=()=>{const got=seq.map(j=>Q.tokens[j]).join(" ");window.LASTIN=got;const ok=norm(got)===norm(Q.ans);root().querySelectorAll(".tile").forEach(t=>t.disabled=true);fin(ok,ok&&got!==Q.ans?"Büyük harf / noktalamaya dikkat. ":"");};}
       else if(Q.t==="type"){const inp=$("#inp");setTimeout(()=>{try{inp.focus();}catch(e){}},60);
-        const check=()=>{const v=inp.value.trim();if(!v)return;const a=Q.ans;const exact=v.toLowerCase()===a.toLowerCase()||v.toLowerCase()===noArt(a).toLowerCase()&&!/^(der|die|das) /.test(a);const loose=norm(v)===norm(a)||(!/^(der|die|das) /.test(a)&&norm(v)===norm(noArt(a)));const typo=!loose&&(nearEq(v,a)||(!/^(der|die|das) /.test(a)&&nearEq(v,noArt(a))));const okk=loose||typo;inp.disabled=true;inp.classList.add(okk?"ok":"bad");fin(okk,typo?TYPO(a):loose&&!exact?"Umlaut / ß yazımına dikkat. ":"");};
+        const check=()=>{const v=inp.value.trim();if(!v)return;window.LASTIN=v;const a=Q.ans;const exact=v.toLowerCase()===a.toLowerCase()||v.toLowerCase()===noArt(a).toLowerCase()&&!/^(der|die|das) /.test(a);const loose=norm(v)===norm(a)||(!/^(der|die|das) /.test(a)&&norm(v)===norm(noArt(a)));const typo=!loose&&(nearEq(v,a)||(!/^(der|die|das) /.test(a)&&nearEq(v,noArt(a))));const okk=loose||typo;inp.disabled=true;inp.classList.add(okk?"ok":"bad");fin(okk,typo?TYPO(a):loose&&!exact?"Umlaut / ß yazımına dikkat. ":"");};
         $("#chk").onclick=check;inp.onkeydown=e=>{if(e.key==="Enter")check();};$("#skip").onclick=()=>{inp.disabled=true;inp.classList.add("bad");fin(false,"");};}
       else root().querySelectorAll(".opt").forEach(b=>b.onclick=()=>{root().querySelectorAll(".opt").forEach(x=>{x.disabled=true;if(x.dataset.o===Q.ans)x.classList.add("ok");});const ok=b.dataset.o===Q.ans;if(!ok)b.classList.add("bad");fin(ok,"");});
     }
@@ -2235,9 +2252,9 @@ function lesson(gi,restart){
       ab.innerHTML=`<div class="in" style="display:block"><div class="fbt">${ok?pick(["Sehr gut!","Richtig!","Super!","Genau!","Toll!"]):"Doğru cevap:"}</div>
         <div class="fbs">${note?`<span class="sub">${esc(note)}</span>`:""}<b>${it.kind==="w"?fmt(de):tapS(de)}</b>${it.kind==="w"?" /"+esc(it.obj[2])+"/":""} · ${esc(tr)}${it.kind!=="w"?"<div>"+ybtn(de,tr)+"</div>":""}
         ${shown&&it.kind==="w"?`<div class="fbx">${tapS(shown[0])}<br><span class="sub">${esc(shown[1])}</span><div>${ybtn(shown[0],shown[1])}</div></div>`:""}
-        ${ok?"":`<div class="sub" style="font-size:13px;margin-top:4px">Bunu birazdan tekrar soracağım.</div>`}</div>
+        ${ok?"":`<div class="sub" style="font-size:13px;margin-top:4px">Bunu birazdan tekrar soracağım.</div>`}${!ok&&window.LASTIN?whyWrong(LASTIN,Q.tokens&&Q.say?Q.say:Q.ans):""}</div>
         <button class="btn ${ok?"green":"red"}" id="go">Devam</button></div>`;
-      bindTap(ab);$("#go").onclick=()=>{const E=H[hp];if(E)E.cont=null;step();};$("#go").focus();
+      window.LASTIN=null;bindTap(ab);$("#go").onclick=()=>{const E=H[hp];if(E)E.cont=null;step();};$("#go").focus();
     }
     function replayFb(it,Q,ok,note){
       sfx(ok?"ok":"bad");sayAfter(Q.say);
@@ -2597,7 +2614,7 @@ function freeReview(limit){
   function make(){
     const ag=again.findIndex(a=>a.wait<=0);if(ag>=0){const a=again.splice(ag,1)[0];return a.q;}
     const hasW=P.ws.length>=4,hasS=P.ss.length>=3;
-    const types=[];if(hasW)types.push(...Array(3).fill("type"),...Array(3).fill("blank"),"listen","listen","meaning");if(hasS)types.push("sent","sent","dict");
+    const types=[];if(hasW)types.push(...Array(3).fill("type"),...Array(3).fill("blank"),"listen","listen","meaning");if(hasS)types.push("sent","sent","dict");if(hasS&&LANG.code==="de")types.push("tf","tf","tf");
     for(let tries=0;tries<10;tries++){const t=types[Math.random()*types.length|0];
       if(t==="type"){const w=pickW();return{t,key:w.fr,label:"✍️ Yaz",prompt:esc(w.tr),sub:LANG.sini+" yaz",ans:w.fr,w,say:w.fr};}
       if(t==="listen"){const w=pickW();return{t,key:w.fr,label:"🎧 Dinle ve yaz",prompt:"",sub:"Duyduğunu yaz",ans:w.fr,w,say:w.fr};}
@@ -2605,6 +2622,9 @@ function freeReview(limit){
       if(t==="meaning"){const w=pickW();const d=shuffle(P.ws.filter(x=>x.tr!==w.tr)).slice(0,5).map(x=>x.tr);return{t,key:w.fr,label:"💬 Anlamı ne?",prompt:fmt(w.fr),sub:"Türkçesi hangisi?",ans:w.tr,opts:shuffle([w.tr,...d]),w,say:w.fr};}
       if(t==="sent"){const s=pickS();return{t,key:s.t,label:"📝 Cümleyi yaz",prompt:esc(s.tr),sub:LANG.sini+" yaz",ans:s.t,s,say:s.t};}
       if(t==="dict"){const s=pickS();return{t,key:s.t,label:"🎧 Dikte",prompt:"",sub:"Duyduğun cümleyi yaz",ans:s.t,s,say:s.t};}
+      if(t==="tf"){const s=pickS();let vs=[];try{vs=xVariants(xAnalyze(s.t));}catch(e){}if(!vs.length)continue;const v=vs[Math.random()*vs.length|0];
+        const ask=v.k==="p"?"Özneyi değiştir: "+v.lab.replace(/ → .*$/,"").replace(/<[^>]+>/g,""):v.k==="q"?"Evet/hayır sorusuna çevir":v.k==="perf"?"Perfekt'e (geçmişe) çevir":v.k==="mod"?"Ekle: "+((v.lab.match(/<b>(\w+)<\/b>/)||[])[1]||"modal"):"Olumsuz yap (nicht / kein)";
+        return{t,key:"tf:"+v.s,label:"🔁 Dönüştür",prompt:tapS(s.t),sub:esc(ask),ans:v.s,s:{t:v.s,tr:s.tr+" → "+v.lab.replace(/<[^>]+>/g,"")},say:v.s,tf:v};}
     }
     const w=pickW();return{t:"type",key:w.fr,label:"✍️ Yaz",prompt:esc(w.tr),sub:LANG.sini+" yaz",ans:w.fr,w,say:w.fr};
   }
@@ -2614,7 +2634,7 @@ function freeReview(limit){
     $("#fx").onclick=finish;bindSay(root());}
   function next(){if(limit&&nOk+nBad>=limit)return finish();again.forEach(a=>a.wait--);cur=make();recent.push(cur.key);if(recent.length>12)recent.shift();ask(cur);}
   function ask(Q){
-    const typed=Q.t!=="meaning";const isSent=Q.t==="sent"||Q.t==="dict";
+    const typed=Q.t!=="meaning";const isSent=Q.t==="sent"||Q.t==="dict"||Q.t==="tf";
     let body=`<div class="stack fade"><div><span class="pill blue">${Q.label}</span></div><div class="card stack">`;
     if(Q.t==="listen"||Q.t==="dict")body+=`<button class="sbtn bigspk" id="ls" aria-label="Tekrar dinle">${I.spk}</button><button class="btn sec small" style="margin:0 auto" id="lss">Yavaş dinle</button><div class="qs center">${Q.sub}</div>`;
     else body+=`<div class="qp" ${Q.t==="blank"?'style="font-size:22px;line-height:1.45"':""}>${Q.prompt}</div><div class="qs">${Q.sub}</div>`;
@@ -2626,7 +2646,7 @@ function freeReview(limit){
     if(Q.t==="listen"||Q.t==="dict"){setTimeout(()=>say(Q.say),250);$("#ls").onclick=()=>say(Q.say);$("#lss").onclick=()=>say(Q.say,true);}
     if(typed){const inp=$("#inp");setTimeout(()=>{try{inp.focus();}catch(e){}},60);
       const check=()=>{const v=inp.value.trim();if(!v)return;inp.disabled=true;let ok,note="";
-        if(isSent){const r=wcompare(Q.ans,v);ok=r.sc>=.85;note=r.T.map((w,i)=>`<span class="pw ${r.ok[i]?(r.cl[i]?"cl":"ok"):"no"}">${esc(w)}</span>`).join(" ");}
+        window.LASTIN=v;if(isSent){const r=wcompare(Q.ans,v);ok=r.sc>=.85;note=r.T.map((w,i)=>`<span class="pw ${r.ok[i]?(r.cl[i]?"cl":"ok"):"no"}">${esc(w)}</span>`).join(" ");}
         else{const a=Q.ans;const loose=norm(v)===norm(a)||norm(v)===norm(noArt(a));const typo=!loose&&(nearEq(v,a)||nearEq(v,noArt(a)));ok=loose||typo;if(typo)note="Küçük yazım hatası, doğru sayıldı. ";}
         inp.classList.add(ok?"ok":"bad");done(Q,ok,note);};
       $("#chk").onclick=check;inp.onkeydown=e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();check();}};$("#skip").onclick=()=>{inp.disabled=true;inp.classList.add("bad");done(Q,false,"");};}
@@ -2635,13 +2655,13 @@ function freeReview(limit){
   function done(Q,ok,note){
     sfx(ok?"ok":"bad");if(ok){nOk++;S.xp=(S.xp||0)+2;dqInc("ok");}else{nBad++;const it=S.items[Q.key];if(it)it.x=(it.x||0)+1;missed.set(Q.key,Q);again.push({q:Q,wait:3+(Math.random()*3|0)});}
     touch();save();sayAfter(Q.say);
-    const isSent=Q.t==="sent"||Q.t==="dict";
+    const isSent=Q.t==="sent"||Q.t==="dict"||Q.t==="tf";
     const ansHtml=Q.t==="blank"?tapS(Q.full):isSent?tapS(Q.ans):fmt(Q.w.fr);
     const trH=Q.w?esc(Q.w.tr):esc(Q.s.tr);
     const ab=$("#ab");ab.className="actbar "+(ok?"ok":"bad");
-    ab.innerHTML=`<div class="in" style="display:block"><div class="fbt">${ok?"Doğru!":"Doğru cevap"}</div><div class="fbs">${isSent&&note?`<div class="spres" style="font-size:16px;margin:0 0 6px">${note}</div>`:note}${ansHtml} · ${trH}${isSent||Q.t==="blank"?"<div>"+ybtn(Q.t==="blank"?Q.full:Q.ans,Q.s?Q.s.tr:"")+"</div>":""}${ok?"":`<br><span class="sub" style="font-size:13px">Birazdan tekrar sorulacak.</span>`}</div>
+    ab.innerHTML=`<div class="in" style="display:block"><div class="fbt">${ok?"Doğru!":"Doğru cevap"}</div><div class="fbs">${isSent&&note?`<div class="spres" style="font-size:16px;margin:0 0 6px">${note}</div>`:note}${!ok&&window.LASTIN&&isSent?whyWrong(LASTIN,Q.ans):""}${ansHtml} · ${trH}${isSent||Q.t==="blank"?"<div>"+ybtn(Q.t==="blank"?Q.full:Q.ans,Q.s?Q.s.tr:"")+"</div>":""}${ok?"":`<br><span class="sub" style="font-size:13px">Birazdan tekrar sorulacak.</span>`}</div>
       <div style="display:flex;gap:10px;margin-top:10px"><button class="btn sec" id="fin" style="flex:0 0 auto;padding:0 18px">Bitir</button><button class="btn ${ok?"green":"red"}" id="nx" style="flex:1">${limit&&nOk+nBad>=limit?"Sonuçları gör":"Devam"}</button></div></div>`;
-    bindTap(ab);bindSay(ab);$("#nx").onclick=next;$("#fin").onclick=finish;try{$("#nx").focus();}catch(e){}
+    window.LASTIN=null;bindTap(ab);bindSay(ab);$("#nx").onclick=next;$("#fin").onclick=finish;try{$("#nx").focus();}catch(e){}
   }
   function finish(){
     save();checkBadges();IN_LESSON=false;window.scrollTo(0,0);const tot=nOk+nBad;
@@ -2851,6 +2871,557 @@ const YROLE={S:["Özne","#0a84ff"],V:["Fiil","#ff375f"],V2:["Fiilin 2. parçası
 const YCACHE="schritt-yapi-"+LANG.code;
 function yGet(s){try{return (JSON.parse(localStorage.getItem(YCACHE)||"{}"))[s]||null;}catch(e){return null;}}
 function yPut(s,v){try{const o=JSON.parse(localStorage.getItem(YCACHE)||"{}");o[s]=v;const k=Object.keys(o);if(k.length>300)delete o[k[0]];localStorage.setItem(YCACHE,JSON.stringify(o));}catch(e){}}
+/* ===== CÜMLE RÖNTGENİ: Almanca çekim motoru ===== */
+// inf|3.tekil şimdiki|Präteritum 3.tekil|Partizip II|yardımcı (h/s)
+const STRONG=`backen|backt|backte|gebacken|h
+beginnen|beginnt|begann|begonnen|h
+beißen|beißt|biss|gebissen|h
+bieten|bietet|bot|geboten|h
+binden|bindet|band|gebunden|h
+bitten|bittet|bat|gebeten|h
+bleiben|bleibt|blieb|geblieben|s
+braten|brät|briet|gebraten|h
+brechen|bricht|brach|gebrochen|h
+brennen|brennt|brannte|gebrannt|h
+bringen|bringt|brachte|gebracht|h
+denken|denkt|dachte|gedacht|h
+dürfen|darf|durfte|gedurft|h
+empfehlen|empfiehlt|empfahl|empfohlen|h
+essen|isst|aß|gegessen|h
+fahren|fährt|fuhr|gefahren|s
+fallen|fällt|fiel|gefallen|s
+fangen|fängt|fing|gefangen|h
+finden|findet|fand|gefunden|h
+fliegen|fliegt|flog|geflogen|s
+fliehen|flieht|floh|geflohen|s
+fließen|fließt|floss|geflossen|s
+fressen|frisst|fraß|gefressen|h
+frieren|friert|fror|gefroren|h
+geben|gibt|gab|gegeben|h
+gehen|geht|ging|gegangen|s
+gelingen|gelingt|gelang|gelungen|s
+gelten|gilt|galt|gegolten|h
+genießen|genießt|genoss|genossen|h
+geschehen|geschieht|geschah|geschehen|s
+gewinnen|gewinnt|gewann|gewonnen|h
+gießen|gießt|goss|gegossen|h
+gleichen|gleicht|glich|geglichen|h
+graben|gräbt|grub|gegraben|h
+greifen|greift|griff|gegriffen|h
+haben|hat|hatte|gehabt|h
+halten|hält|hielt|gehalten|h
+hängen|hängt|hing|gehangen|h
+heben|hebt|hob|gehoben|h
+heißen|heißt|hieß|geheißen|h
+helfen|hilft|half|geholfen|h
+kennen|kennt|kannte|gekannt|h
+klingen|klingt|klang|geklungen|h
+kommen|kommt|kam|gekommen|s
+können|kann|konnte|gekonnt|h
+laden|lädt|lud|geladen|h
+lassen|lässt|ließ|gelassen|h
+laufen|läuft|lief|gelaufen|s
+leiden|leidet|litt|gelitten|h
+leihen|leiht|lieh|geliehen|h
+lesen|liest|las|gelesen|h
+liegen|liegt|lag|gelegen|h
+lügen|lügt|log|gelogen|h
+meiden|meidet|mied|gemieden|h
+messen|misst|maß|gemessen|h
+mögen|mag|mochte|gemocht|h
+müssen|muss|musste|gemusst|h
+nehmen|nimmt|nahm|genommen|h
+nennen|nennt|nannte|genannt|h
+raten|rät|riet|geraten|h
+reiten|reitet|ritt|geritten|s
+rennen|rennt|rannte|gerannt|s
+riechen|riecht|roch|gerochen|h
+rufen|ruft|rief|gerufen|h
+scheinen|scheint|schien|geschienen|h
+schieben|schiebt|schob|geschoben|h
+schießen|schießt|schoss|geschossen|h
+schlafen|schläft|schlief|geschlafen|h
+schlagen|schlägt|schlug|geschlagen|h
+schließen|schließt|schloss|geschlossen|h
+schneiden|schneidet|schnitt|geschnitten|h
+schreiben|schreibt|schrieb|geschrieben|h
+schreien|schreit|schrie|geschrien|h
+schweigen|schweigt|schwieg|geschwiegen|h
+schwimmen|schwimmt|schwamm|geschwommen|s
+sehen|sieht|sah|gesehen|h
+sein|ist|war|gewesen|s
+senden|sendet|sandte|gesandt|h
+singen|singt|sang|gesungen|h
+sinken|sinkt|sank|gesunken|s
+sitzen|sitzt|saß|gesessen|h
+sollen|soll|sollte|gesollt|h
+sprechen|spricht|sprach|gesprochen|h
+springen|springt|sprang|gesprungen|s
+stehen|steht|stand|gestanden|h
+stehlen|stiehlt|stahl|gestohlen|h
+steigen|steigt|stieg|gestiegen|s
+sterben|stirbt|starb|gestorben|s
+stoßen|stößt|stieß|gestoßen|h
+streiten|streitet|stritt|gestritten|h
+tragen|trägt|trug|getragen|h
+treffen|trifft|traf|getroffen|h
+treiben|treibt|trieb|getrieben|h
+treten|tritt|trat|getreten|s
+trinken|trinkt|trank|getrunken|h
+tun|tut|tat|getan|h
+vergessen|vergisst|vergaß|vergessen|h
+verlieren|verliert|verlor|verloren|h
+wachsen|wächst|wuchs|gewachsen|s
+waschen|wäscht|wusch|gewaschen|h
+weisen|weist|wies|gewiesen|h
+wenden|wendet|wandte|gewandt|h
+werden|wird|wurde|geworden|s
+werfen|wirft|warf|geworfen|h
+wiegen|wiegt|wog|gewogen|h
+wissen|weiß|wusste|gewusst|h
+wollen|will|wollte|gewollt|h
+ziehen|zieht|zog|gezogen|h
+zwingen|zwingt|zwang|gezwungen|h`.split("\n").reduce((o,l)=>{const a=l.split("|");o[a[0]]={p3:a[1],pt:a[2],pp:a[3],aux:a[4]};return o;},{});
+// zayıf ama sein alan fiiller
+const SEIN_W=new Set(["reisen","wandern","landen","passieren","aufwachen","umziehen","folgen","joggen","klettern","rasen","segeln","stolpern","verreisen","einschlafen","aufstehen","erscheinen","verschwinden","entstehen","vergehen","entkommen","umsteigen","einsteigen","aussteigen","ankommen","abfahren","zurückkommen","mitkommen","weggehen","ausgehen","hinfallen","aufwachsen","wegfahren","zurückfahren","vorbeikommen","losfahren","starten"]);
+const HABEN_OV=new Set(["bekommen","verstehen","bestehen","gefallen","verlassen","besitzen","erfahren","empfangen","überfahren","bekommen","beginnen","gewinnen","verbringen","besuchen","beraten"]);
+const INSEP=["miss","emp","ent","zer","ver","be","er","ge","hinter","über","unter","wider"];
+const SEPX=["zurück","vorbei","weiter","zusammen","fest","fern","heim","los","weg","nach","vor","mit","aus","auf","ein","an","ab","bei","dar","her","hin","um","zu","teil","statt","kennen","spazieren","fertig","sauber","statt"];
+const PERS=["ich","du","er/sie/es","wir","ihr","sie/Sie"];
+const PRON_P={ich:0,du:1,er:2,es:2,man:2,wir:3,ihr:4,Sie:5};
+const P_TR=["ben","sen","o","biz","siz","onlar / Siz (resmi)"];
+const MOD_TR={können:"-ebilmek (yapabilir)",müssen:"-malı, zorunda olmak",wollen:"istemek (niyet)",sollen:"-malı (biri öyle istiyor)",dürfen:"izinli olmak (-ebilir)",mögen:"sevmek / hoşlanmak","möchten":"istemek (kibar: -mek isterim)"};
+const MODALS=new Set(["können","müssen","wollen","sollen","dürfen","mögen","möchten"]);
+const MOD_PRES={können:["kann","kannst","kann","können","könnt","können"],müssen:["muss","musst","muss","müssen","müsst","müssen"],wollen:["will","willst","will","wollen","wollt","wollen"],sollen:["soll","sollst","soll","sollen","sollt","sollen"],dürfen:["darf","darfst","darf","dürfen","dürft","dürfen"],mögen:["mag","magst","mag","mögen","mögt","mögen"],möchten:["möchte","möchtest","möchte","möchten","möchtet","möchten"],wissen:["weiß","weißt","weiß","wissen","wisst","wissen"],sein:["bin","bist","ist","sind","seid","sind"],haben:["habe","hast","hat","haben","habt","haben"],werden:["werde","wirst","wird","werden","werdet","werden"],tun:["tue","tust","tut","tun","tut","tun"]};
+const PRAT_IRR={sein:["war","warst","war","waren","wart","waren"],haben:["hatte","hattest","hatte","hatten","hattet","hatten"],werden:["wurde","wurdest","wurde","wurden","wurdet","wurden"]};
+function splitVerb(inf){inf=inf.replace(/^sich\s+/,"");
+  for(const p of SEPX){if(inf.startsWith(p)&&inf.length>p.length+3){const b=inf.slice(p.length);const V=typeof LEX!=="undefined"?verbSet():null;const bb=b.replace(/^(be|ver|er|ent|emp|zer|ge|miss)/,"");if(STRONG[b]||STRONG[bb]||V&&(V.has(b)))return{sep:p,base:b,ins:""};}}
+  for(const p of INSEP){if(inf.startsWith(p)&&inf.length>p.length+3){const b=inf.slice(p.length);return{sep:"",base:b,ins:p};}}
+  return{sep:"",base:inf,ins:""};}
+function vstem(b){return b.endsWith("eln")||b.endsWith("ern")?b.slice(0,-1):b.replace(/e?n$/,"");}
+function presBase(b){// sein önek yok
+  if(MOD_PRES[b])return MOD_PRES[b].slice();
+  const st=vstem(b),st3=STRONG[b]?STRONG[b].p3.replace(/t$/,""):null,dt=/[dt]$|[^lrhmnaeiouäöü][mn]$/.test(st),sz=/[sßzx]$/.test(st);
+  const e=dt?"e":"";
+  let du=st+e+"st",er=st+e+"t";
+  if(STRONG[b]){const p3=STRONG[b].p3;er=p3;const s3=p3.replace(/e?t$/,"");if(s3!==st){du=/[sßzx]$/.test(s3)?s3+"t":(/[dt]$/.test(s3)?s3+"st":s3+"st");if(b==="halten")du="hältst";if(b==="treten")du="trittst";if(b==="laden")du="lädst";if(b==="raten")du="rätst";if(b==="braten")du="brätst";}}
+  if(sz&&du===st+"st")du=st+"t";
+  if(b.endsWith("eln"))return[st.replace(/el$/,"le"),st+"st",st+"t",b,st+"t",b];
+  return[st+"e",du,er,b,st+e+"t",b];}
+function conjDe(inf){inf=String(inf||"").toLowerCase().replace(/^sich\s+/,"").trim();if(!inf)return null;
+  const {sep,base,ins}=splitVerb(inf),full=ins+base;
+  const strong=STRONG[full]||STRONG[base];
+  let pres=presBase(STRONG[full]||MOD_PRES[full]?full:base);if(ins&&!STRONG[full]&&!MOD_PRES[full])pres=pres.map(x=>ins+x);
+  let pp,aux="h",pt3;
+  if(STRONG[full]){pp=STRONG[full].pp;aux=STRONG[full].aux;pt3=STRONG[full].pt;}
+  else if(strong){pp=STRONG[base].pp;aux=STRONG[base].aux;pt3=STRONG[base].pt;if(ins){pp=ins+pp.replace(/^ge/,"");pt3=ins+pt3;aux=["entstehen","vergehen","entkommen","gelingen","geschehen","erscheinen","verschwinden","ertrinken","zerfallen","verfallen","entfliehen","erwachen","ersterben","erfrieren","verderben"].includes(full)?"s":"h";}}
+  else{const st=vstem(full),e=/[dt]$|[^lrhmnaeiouäöü][mn]$/.test(st)?"e":"";pp=(ins||/ieren$/.test(full)?"":"ge")+st+e+"t";pt3=st+e+"te";}
+  if(full==="ieren")pp="iert";
+  if(sep){pp=sep+pp;}
+  if(SEIN_W.has(inf)||SEIN_W.has(full))aux="s";if(HABEN_OV.has(inf))aux="h";
+  if(MOD_PRES[full]&&full!=="sein"&&full!=="haben"&&full!=="werden"&&full!=="tun")pres=MOD_PRES[full].slice();
+  const pres6=pres.map(x=>x+(sep?" "+sep:""));
+  let prat=PRAT_IRR[full];if(!prat&&pt3){const b=pt3;const strongPt=!/te$/.test(b);prat=strongPt?[b,b+(/[sßzt]$/.test(b)?"est":"st"),b,b+"en",b+(/[dt]$/.test(b)?"et":"t"),b+"en"]:[b,b+"st",b,b+"n",b+"t",b+"n"];if(full==="möchten")prat=["wollte","wolltest","wollte","wollten","wolltet","wollten"];}
+  const pratS=prat?prat.map(x=>x+(sep?" "+sep:"")):null;
+  const auxF=aux==="s"?MOD_PRES.sein:MOD_PRES.haben;
+  let imp=null;if(!MODALS.has(full)&&full!=="wissen"){const st0=vstem(full),du0=pres[1].replace(/e?s?t$/,"").replace(/ß$/,"ß");
+    let b=st0;if(STRONG[full]||strong){const d=/[sßzx]$/.test(st0)?pres[1].slice(0,-1):pres[1].slice(0,-2);if(/i/.test(d)&&!/i/.test(st0))b=d;}
+    if(/[dt]$|[^lrhmnaeiouäöü][mn]$/.test(b))b+="e";if(/eln$/.test(full))b=st0.replace(/el$/,"le");
+    imp={sein:"sei",haben:"hab",werden:"werde",tun:"tu"}[full]||b;if(sep)imp+=" "+sep;}
+  if(full==="möchten"){pp="gewollt";}
+  return{inf,sep,base:full,pres:pres.slice(),pres6,prat:pratS,pp,aux:aux==="s"?"sein":"haben",perf:auxF.map(a=>a+" "+pp),strong:!!strong,imp,modal:MODALS.has(full)};}
+// çekimli bir biçimden mastarı bul
+let VERBSET=null;
+function verbSet(){if(VERBSET)return VERBSET;VERBSET=new Set(Object.keys(STRONG));
+  Object.values(MOD_PRES).length;for(const k of Object.keys(MOD_PRES))VERBSET.add(k);
+  LEX.forEach((e,k)=>{const fr=String(e.fr||"").replace(/^sich\s+/i,"").trim().toLowerCase(),tr=String(e.tr||"");if(/^[a-zäöüß]+(en|ern|eln|n)$/.test(fr)&&/(mek|mak)\b/.test(tr))VERBSET.add(fr);});
+  SEIN_W.forEach(v=>VERBSET.add(v));return VERBSET;}
+const FORMIDX={};
+function formIndex(inf){if(FORMIDX[inf]!==undefined)return FORMIDX[inf];const c=conjDe(inf);if(!c){FORMIDX[inf]=null;return null;}
+  const o={};c.pres.forEach((f,i)=>{(o[f]=o[f]||[]).push({t:"pres",p:i});});(c.prat||[]).forEach((f,i)=>{const x=f.split(" ")[0];(o[x]=o[x]||[]).push({t:"prat",p:i});});
+  o[c.pp]=(o[c.pp]||[]).concat([{t:"pp"}]);if(c.sep)o[c.pp.slice(c.sep.length)]=(o[c.pp.slice(c.sep.length)]||[]).concat([{t:"pp-sep"}]);
+  o[c.inf]=(o[c.inf]||[]).concat([{t:"inf"}]);if(c.sep){o[c.base]=(o[c.base]||[]).concat([{t:"inf-sep"}]);const zu=c.sep+"zu"+c.base;o[zu]=[{t:"zuinf"}];}
+  const k2=c.pres[1].replace(/e?st$/,"");if(!o[k2])o[k2]=[{t:"imp"}];
+  if(["sein","haben","werden","können","müssen","dürfen","mögen"].includes(inf)){const K2={sein:["wäre","wärst","wäre","wären","wärt","wären"],haben:["hätte","hättest","hätte","hätten","hättet","hätten"],werden:["würde","würdest","würde","würden","würdet","würden"],können:["könnte","könntest","könnte","könnten","könntet","könnten"],müssen:["müsste","müsstest","müsste","müssten","müsstet","müssten"],dürfen:["dürfte","dürftest","dürfte","dürften","dürftet","dürften"],mögen:["möchte","möchtest","möchte","möchten","möchtet","möchten"]}[inf];K2.forEach((f,i)=>{(o[f]=o[f]||[]).push({t:"k2",p:i});});}
+  if(inf==="sein"){["sei","seid"].forEach(f=>{(o[f]=o[f]||[]).push({t:"imp"});});}
+  FORMIDX[inf]=o;return o;}
+function findVerb(w,sepTail){const lw=w.toLowerCase(),V=verbSet(),cands=new Set();
+  if(IRR[lw]&&V.has(IRR[lw]))cands.add(IRR[lw]);
+  lemmas(lw).forEach(c=>{if(V.has(c))cands.add(c);});
+  const st=[lw.replace(/(est|st|et|t|e|en|n|te|test|ten|tet)$/,""),lw.replace(/(st|t|e|en|n)$/,"")];
+  st.forEach(s=>{[s+"en",s+"n",s.replace(/ie/,"e")+"en",s.replace(/i/,"e")+"en",s.replace(/ä/,"a")+"en",s.replace(/äu/,"au")+"en",s.replace(/ö/,"o")+"en",s+"ern",s+"eln"].forEach(c=>{if(V.has(c))cands.add(c);});});
+  const g=lw.match(/^(.*?)ge(.+?)(t|en)$/);if(g){[g[1]+g[2]+"en",g[1]+g[2]+"n"].forEach(c=>{if(V.has(c))cands.add(c);});}
+  if(/iert$/.test(lw))cands.add(lw.replace(/iert$/,"ieren"));
+  const zu=lw.match(/^(.+?)zu(.+en)$/);if(zu&&V.has(zu[1]+zu[2]))cands.add(zu[1]+zu[2]);
+  // tablo: tüm fiillerde biçimi ara (sonek eşleşmesi tutmazsa)
+  if(!cands.size){for(const v of Object.keys(STRONG)){const fi=formIndex(v);if(!fi)continue;if(fi[lw]){cands.add(v);continue;}
+      for(const f of Object.keys(fi)){if(f.length>2&&lw.length>f.length&&lw.endsWith(f)){const pre=lw.slice(0,-f.length);
+        if(INSEP.includes(pre))cands.add(pre+v);else if(pre.endsWith("ge")&&SEPX.includes(pre.slice(0,-2))&&fi[f].some(h=>h.t==="pp"))cands.add(pre.slice(0,-2)+v);
+        else if(SEPX.includes(pre)&&fi[f].some(h=>h.t==="inf"||h.t==="pp"))cands.add(pre+v);}}}}
+  const out=[];
+  for(const inf of cands){const tries=[inf];if(sepTail)tries.unshift(sepTail+inf);
+    for(const t of tries){if(t!==inf&&!V.has(t)&&!STRONG[t.slice(sepTail.length)])continue;const fi=formIndex(t);if(!fi)continue;let hit=fi[lw];
+      if(!hit&&t!==inf){const fb=formIndex(inf);if(fb&&fb[lw])hit=fb[lw].map(h=>Object.assign({},h,{sepSplit:1}));}
+      if(hit){out.push({inf:t,forms:hit});break;}}}
+  if(!out.length&&cands.size){const inf=[...cands][0];out.push({inf,forms:[{t:"?"}]});}
+  return out[0]||null;}
+
+/* ===== CÜMLE RÖNTGENİ: cümle çözümleme ===== */
+const XP={// zamir: kişi, hâl, Türkçe
+ ich:[0,"N","ben"],mich:[0,"A","beni"],mir:[0,"D","bana"],du:[1,"N","sen"],dich:[1,"A","seni"],dir:[1,"D","sana"],
+ er:[2,"N","o (erkek / eril isim)"],ihn:[2,"A","onu (erkek)"],ihm:[2,"D","ona (erkek / nötr)"],es:[2,"NA","o (nötr) / kişisiz özne"],
+ man:[2,"N","insan, kişi (genel özne)"],wir:[3,"N","biz"],uns:[3,"AD","bizi / bize"],euch:[4,"AD","sizi / size"],
+ Sie:[5,"NA","Siz (resmi) / onlar"],Ihnen:[5,"D","size (resmi)"],ihnen:[5,"D","onlara"],sich:[-1,"AD","kendini / kendine"]};
+const XREFL={0:"mich",1:"dich",2:"sich",3:"uns",4:"euch",5:"sich"},XREFLD={0:"mir",1:"dir",2:"sich",3:"uns",4:"euch",5:"sich"};
+const CASE_TR={N:"Nominativ (yalın hâl: kim? ne?)",A:"Akkusativ (-i hâli: kimi? neyi?)",D:"Dativ (-e hâli: kime? nerede?)",G:"Genitiv (-in hâli: kimin?)"};
+const CASE_S={N:"Nom.",A:"Akk.",D:"Dat.",G:"Gen."};
+const G_TR={m:"eril (der)",f:"dişil (die)",n:"nötr (das)",pl:"çoğul (die)"};
+const XPREP={durch:["A","içinden, -den geçerek"],für:["A","için"],gegen:["A","-e karşı"],ohne:["A","-sız, -meden"],um:["A","etrafında / saat …'de"],bis:["A","-e kadar"],entlang:["A","boyunca"],
+ aus:["D","-den (içinden çıkış / memleket)"],bei:["D","-de, yanında"],mit:["D","ile"],nach:["D","-e (şehir/ülke) / -den sonra"],seit:["D","-den beri"],von:["D","-den / -in"],zu:["D","-e (kişiye/yere)"],gegenüber:["D","karşısında"],ab:["D","-den itibaren"],außer:["D","-den başka"],
+ an:["W","-de/-e (kenar, dikey yüzey, gün)"],auf:["W","üstünde / üstüne"],hinter:["W","arkasında / arkasına"],in:["W","içinde / içine"],neben:["W","yanında / yanına"],über:["W","üstünde / hakkında"],unter:["W","altında / altına"],vor:["W","önünde / önce"],zwischen:["W","arasında / arasına"],
+ wegen:["G","yüzünden"],trotz:["G","-e rağmen"],während:["G","sırasında"],statt:["G","yerine"],innerhalb:["G","içinde (süre)"]};
+const XCONTR={im:["in","dem"],ins:["in","das"],am:["an","dem"],ans:["an","das"],zum:["zu","dem"],zur:["zu","der"],vom:["von","dem"],beim:["bei","dem"],aufs:["auf","das"]};
+const XSUB={dass:"-dığını / ki",weil:"çünkü",wenn:"-ince / eğer",ob:"-ip -mediğini",obwohl:"-mesine rağmen",damit:"-sin diye",bevor:"-meden önce",nachdem:"-dikten sonra",als:"-dığında (geçmişte bir kez)",während:"-irken",falls:"eğer, olur da",bis:"-ene kadar",seit:"-den beri",seitdem:"-den beri",sodass:"öyle ki",da:"-dığı için",sobald:"-ir -mez",solange:"-dığı sürece",indem:"-erek",ehe:"-meden önce",wie:"nasıl (dolaylı soru)",wo:"nerede (dolaylı soru)",warum:"neden (dolaylı soru)",wer:"kim (dolaylı soru)",was:"ne (dolaylı soru)",wann:"ne zaman (dolaylı soru)"};
+const XCOORD={und:"ve",oder:"veya",aber:"ama",denn:"çünkü",sondern:"bilakis, aksine"};
+const XQW={was:"ne",wer:"kim",wen:"kimi",wem:"kime",wessen:"kimin",wie:"nasıl",wo:"nerede",wohin:"nereye",woher:"nereden",wann:"ne zaman",warum:"neden",wieso:"neden",weshalb:"neden",welcher:"hangi",welche:"hangi",welches:"hangi",welchen:"hangi",welchem:"hangi"};
+const XTIME=new Set("heute morgen gestern jetzt nun bald später früher immer oft manchmal selten nie niemals schon noch dann danach vorher zuerst endlich abends morgens mittags nachts täglich wöchentlich gerade sofort wieder lange montags sonntags gleich bisher damals inzwischen zurzeit mittlerweile übermorgen vorgestern".split(" "));
+const XPLACE=new Set("hier da dort oben unten links rechts draußen drinnen zuhause hause überall irgendwo hin her vorne hinten nebenan".split(" "));
+const XNEG=new Set(["nicht","nie","niemals","nichts","niemand"]);
+const XNONV=new Set("bitte danke gern gerne mal doch ja nein sehr auch noch schon nur etwa ganz mehr viel wenig etwas alle alles beide eben halt wohl sogar fast genug zusammen allein leider vielleicht natürlich wirklich echt einfach schnell langsam gut schlecht neu alt groß klein lange zu so".split(" "));
+const XTIMEN=new Set("Abend Morgen Mittag Nachmittag Vormittag Nacht Tag Woche Monat Jahr Wochenende Montag Dienstag Mittwoch Donnerstag Freitag Samstag Sonntag Sommer Winter Herbst Frühling".split(" "));
+const XDETEND={"":[["m","N"],["n","N"],["n","A"]],e:[["f","N"],["f","A"],["pl","N"],["pl","A"]],en:[["m","A"],["pl","D"]],em:[["m","D"],["n","D"]],er:[["f","D"],["f","G"],["pl","G"]],es:[["m","G"],["n","G"]]};
+const XDEF={der:[["m","N"],["f","D"],["f","G"],["pl","G"]],die:[["f","N"],["f","A"],["pl","N"],["pl","A"]],das:[["n","N"],["n","A"]],den:[["m","A"],["pl","D"]],dem:[["m","D"],["n","D"]],des:[["m","G"],["n","G"]]};
+const XDIES={er:[["m","N"],["f","D"],["f","G"],["pl","G"]],e:[["f","N"],["f","A"],["pl","N"],["pl","A"]],es:[["n","N"],["n","A"],["m","G"],["n","G"]],en:[["m","A"],["pl","D"]],em:[["m","D"],["n","D"]]};
+const XPOSS={mein:"benim",dein:"senin",sein:"onun (erkek/nötr)",ihr:"onun (kadın) / onların",unser:"bizim",euer:"sizin",eur:"sizin",Ihr:"sizin (resmi)",ein:"bir",kein:"hiç … yok (olumsuz artikel)"};
+function xDet(w,next){const lw=w.toLowerCase();
+  if(XDEF[lw])return{k:"def",o:XDEF[lw],tr:"belirli artikel (the)"};
+  for(const st of ["kein","mein","dein","sein","ihr","unser","euer","eur","ein"]){if(lw.startsWith(st)){const end=lw.slice(st.length);if(XDETEND[end]!==undefined&&(st!=="euer"||end==="")&&(st!=="eur"||end!=="")){
+     if((st==="sein"||st==="ihr")&&!(next&&/^\p{Lu}/u.test(next)))return null;
+     return{k:st==="ein"?"indef":st==="kein"?"neg":"poss",o:XDETEND[end],tr:XPOSS[w==="Ihr"||w==="Ihre"||w==="Ihren"||w==="Ihrem"||w==="Ihrer"?"Ihr":st],stem:st};}}}
+  for(const st of ["dies","jed","welch","manch","all","solch"]){if(lw.startsWith(st)){const end=lw.slice(st.length);if(XDIES[end])return{k:"dem",o:XDIES[end],tr:{dies:"bu",jed:"her",welch:"hangi",manch:"bazı",all:"bütün",solch:"böyle"}[st]};}}
+  return null;}
+function xNoun(w){const r=findLex(w);if(!r)return{tr:"",g:null};const fr=String(r.e.fr||""),m=fr.match(/^(der|die|das)\s/i);
+  let g=m?{der:"m",die:"f",das:"n"}[m[1].toLowerCase()]:null;let pl=false;
+  if(LANG.plurRe&&LANG.plurRe.test(fr))pl=true;else if(g&&lk(noArt(fr))!==lk(w)&&!lk(w).startsWith(lk(noArt(fr)).slice(0,-1)+"s"))pl=/(en|n|e|er|s)$/i.test(w)&&lk(w).length>lk(noArt(fr)).length;
+  return{tr:r.e.tr,g,pl,lemma:fr};}
+function xUpper(w){return /^\p{Lu}/u.test(w);}
+function xrayDe(s){
+  const raw=toks(s),T=[];let wi=0;raw.forEach(t=>{if(isW(t))T.push({w:t,i:wi++,r:"X",tr:"",info:[],lw:t.toLowerCase()});else if(/[,;:.!?—–]/.test(t)&&T.length)T[T.length-1].punct=(T[T.length-1].punct||"")+t.trim();});
+  if(!T.length)return null;
+  const q=/\?\s*$/.test(s),ex=/!\s*$/.test(s);
+  // yan cümle sınırları
+  const clauses=[];let cur={start:0,sub:null,toks:[]};
+  T.forEach((t,i)=>{const prevP=i>0&&T[i-1].punct&&/[,;:—–]/.test(T[i-1].punct);
+    if(i>0&&(prevP||(XSUB[t.lw]&&!["wie","wo","was","wer","wann","warum","bis","seit","während","da","als"].includes(t.lw)))&&(XSUB[t.lw]||XCOORD[t.lw]||prevP)){
+      if(cur.toks.length){clauses.push(cur);}cur={start:i,sub:XSUB[t.lw]&&(prevP||i>0)&&!XCOORD[t.lw]?t.lw:null,toks:[]};
+      if(prevP&&/^(der|die|das|dem|den|deren|dessen|denen)$/.test(t.lw)&&i>1)cur.sub="rel:"+t.lw;
+      if(prevP&&t.lw==="um")cur.sub="um";if(prevP&&t.lw==="zu")cur.sub="zu";}
+    cur.toks.push(t);t.cl=clauses.length;});
+  clauses.push(cur);
+  for(let k=clauses.length-1;k>=2;k--){const c=clauses[k],pv=clauses[k-1];if(!c.sub&&pv.sub&&pv.sub.startsWith("rel")){const host=clauses.slice(0,k-1).reverse().find(x=>!x.sub);
+      if(host&&!host.toks.some(t=>!xUpper(t.w)&&!XDEF[t.lw]&&!xDet(t.w,"")&&findVerb(t.w,""))){host.toks.push(...c.toks);c.toks.forEach(t=>t.cl=clauses.indexOf(host));clauses.splice(k,1);}}}
+  clauses.forEach((c,ix)=>c.toks.forEach(t=>t.cl=ix));
+  if(clauses[0].toks.length&&XSUB[clauses[0].toks[0].lw]&&!q&&!["wie","wo","was","wer","wann","warum","da"].includes(clauses[0].toks[0].lw))clauses[0].sub=clauses[0].toks[0].lw;
+  // ayrılabilen ön ek: ana cümlenin son kelimesi
+  clauses.forEach(c=>{const last=c.toks[c.toks.length-1];if(!c.sub&&last&&SEPX.includes(last.lw)&&c.toks.length>2&&!XPREP[last.lw]||(!c.sub&&last&&["an","auf","aus","ein","mit","zu","ab","vor","um","nach","zurück","weg","los","fern","vorbei","her","hin","fest"].includes(last.lw)&&c.toks.length>2&&!(c.toks[c.toks.length-2]&&XPREP[c.toks[c.toks.length-2].lw]))){c.sepT=last;}});
+  // kelime kelime
+  const V=verbSet();
+  T.forEach((t,i)=>{const lw=t.lw,nx=T[i+1]&&T[i+1].w,c=clauses[t.cl];
+    if(XCONTR[lw]){const [p,a]=XCONTR[lw];t.r="P";t.prep=p;t.contr=a;t.tr=(XPREP[p]||["",""])[1];t.info.push(`<b>${p} + ${a}</b> birleşmiş hâli`);return;}
+    if(t===c.sepT){t.r="V2";t.sepPart=1;return;}
+    if(i===c.start&&c.sub==="um"&&lw==="um"){t.r="C";t.tr="-mek için";t.umzu=1;return;}
+    if(i===c.start&&c.sub&&!c.sub.startsWith("rel")&&XSUB[lw]){t.r="C";t.tr=XSUB[lw];t.subord=1;return;}
+    if(c.sub&&c.sub.startsWith("rel")&&i===c.start){t.r="C";t.tr="ki o / -en (ilgi zamiri)";t.rel=1;return;}
+    if(XCOORD[lw]){t.r="C";t.tr=XCOORD[lw];t.coord=1;return;}
+    if(i===0&&XQW[lw]&&q){t.r="Q";t.tr=XQW[lw];return;}
+    if(XNEG.has(lw)){t.r="N";t.tr={nicht:"değil, -me",nie:"asla",niemals:"asla",nichts:"hiçbir şey",niemand:"hiç kimse"}[lw];return;}
+    if(lw==="zu"&&T[i+1]&&!xUpper(T[i+1].w)&&findVerb(T[i+1].w,"")&&!/^(dem|der|den)$/.test(T[i+1].lw)){t.r="V2";t.zu=1;t.tr="mastar eki (-mek)";return;}
+    if(XPREP[w2(lw)]&&!(lw==="bis"&&c.sub==="bis")){t.r="P";t.prep=lw;t.tr=XPREP[lw][1];return;}
+    const d=xDet(t.w,nx);if(d&&!(XP[t.w]||XP[lw])||d&&(lw==="ihr"&&nx&&xUpper(nx)&&i>0)){t.det=d;t.r="DET";t.tr=d.tr;return;}
+    if((XP[t.w]||XP[lw]&&!(lw==="sie"))&&!(t.w==="Sie"&&i===0)){const p=XP[t.w]||XP[lw];t.pron=p;t.tr=p[2];t.r=p[1].includes("N")?"S?":p[1].includes("A")?"O":"D";return;}
+    if(lw==="sie"||t.w==="Sie"&&i===0){t.pron=[-2,"NA","o (kadın / dişil isim) ya da onlar"];t.tr=t.pron[2];t.r="S?";return;}
+    if(xUpper(t.w)&&!(i===0)){const n=xNoun(t.w);t.noun=n;t.tr=n.tr;t.r="NP";return;}
+    if(i===0&&xUpper(t.w)){const n=xNoun(t.w);const nv=T[1]&&!xUpper(T[1].w)&&findVerb(T[1].w,"");if((n.g||nv&&!XQW[lw]&&!XP[lw]&&!XSUB[lw]&&!XCOORD[lw]&&!XTIME.has(lw)&&!XDEF[lw]&&!xDet(t.w,T[1].w)&&!(lw==="sie"))&&!findVerb(t.w,"")){t.noun=n;t.tr=n.tr;t.r="NP";return;}}
+    const sepTail=c.sepT&&!c.sepUsed?c.sepT.lw:"";
+    const v=XNONV.has(lw)?null:findVerb(t.w,sepTail);
+    if(v&&!(XTIME.has(lw)||XPLACE.has(lw))){t.verb=v;t.r="VERB";if(sepTail&&v.inf.startsWith(sepTail))c.sepUsed=1;return;}
+    if(XTIME.has(lw)){t.r="T";const r=findLex(t.w);t.tr=r?r.e.tr:FUNC[lw]||"";return;}
+    if(XPLACE.has(lw)){t.r="P";const r=findLex(t.w);t.tr=r?r.e.tr:"";t.adv=1;return;}
+    if(i===0&&XQW[lw]){t.r="Q";t.tr=XQW[lw];return;}
+    const r=findLex(t.w);t.tr=r?r.e.tr:(FUNC[lw]||FUNC[t.w]||"");if(r&&lk(r.e.fr)!==lw)t.lem=r.e.fr;t.r="A";});
+  function w2(x){return x;}
+  clauses.forEach(c=>{if(c.toks.some(t=>t.r==="VERB"))return;const pos=an0q(c);const t=c.toks[pos];
+    if(t&&t.r==="A"&&/^[a-zäöüß]+(e|st|t|en)$/.test(t.w)&&!XNONV.has(t.lw)){const stem=t.lw.replace(/(e|st|est|et|t|en)$/,"");const inf=stem+"en";t.verb={inf,forms:[{t:"pres",p:/st$/.test(t.lw)?1:/e$/.test(t.lw)?0:/en$/.test(t.lw)?3:2}],guess:1};t.r="VERB";}});
+  function an0q(c){if(c.sub)return c.toks.length-1;const f=c.toks[0];if(f&&(f.r==="Q"||q&&c===clauses[0]))return f.r==="Q"?1:0;let k=1;if(f&&f.r==="DET"){k=1;while(c.toks[k]&&c.toks[k].r!=="NP")k++;k++;}return k;}
+  // fiil rolleri: çekimli fiil / ikinci parça
+  clauses.forEach(c=>{const vs=c.toks.filter(t=>t.r==="VERB");if(!vs.length)return;
+    let fin;
+    if(c.sub&&c.sub!=="um"&&c.sub!=="zu"){fin=vs[vs.length-1];const fins=vs.filter(v=>v.verb.forms.some(f=>/pres|prat|k2/.test(f.t)));if(fins.length)fin=fins[fins.length-1];}
+    else if(c.sub==="um"||c.sub==="zu"){fin=null;}
+    else{fin=vs.find(v=>v.verb.forms.some(f=>/pres|prat|k2|imp/.test(f.t)))||vs[0];}
+    vs.forEach(v=>{if(v===fin){v.r="V";c.fin=v;}else{v.r="V2";c.rest=(c.rest||[]).concat([v]);}});});
+  // özne, nesne, hâl
+  clauses.forEach(c=>{const fin=c.fin;let subj=null;
+    c.toks.forEach((t,k)=>{if(t.r==="S?"){if(!subj&&t.pron[1].includes("N")){t.r="S";subj=t;}else t.r=t.pron[1].includes("A")?"O":"D";
+        if(t.r!=="S"&&t.pron[0]===-2){t.tr="onu (kadın) / onları";}}});
+    c.subj=subj;
+    // isim öbekleri
+    let prep=null;
+    c.toks.forEach((t,k)=>{if(t.r==="P"&&(t.prep)){prep=t;if(t.contr){const d=XDEF[t.contr];t.npCase=null;t.pendingDet={k:"def",o:d};}return;}
+      if(t.r==="DET"||t.r==="NP"||(t.r==="A"&&k+1<c.toks.length&&(c.toks[k+1].r==="NP")&&!/(lich|ig|isch)$/.test("")&&prep===null&&false)){}
+      if(t.r==="DET"){t.np={det:t,prep,parts:[t]};let j=k+1;while(j<c.toks.length&&(c.toks[j].r==="A")){t.np.parts.push(c.toks[j]);j++;}if(j<c.toks.length&&c.toks[j].r==="NP"){t.np.parts.push(c.toks[j]);t.np.noun=c.toks[j];c.toks[j].inNP=t.np;}
+        t.np.parts.forEach(x=>{if(x!==t)x.inNP=t.np;});prep=null;}
+      else if(t.r==="NP"&&!t.inNP){t.np={det:null,prep,parts:[t],noun:t};t.inNP=t.np;if(prep&&prep.pendingDet){t.np.det={det:prep.pendingDet};t.np.contr=prep;}prep=null;}
+      else if(t.r!=="A")prep=null;});
+    const nps=[];c.toks.forEach(t=>{if(t.np&&!nps.includes(t.np))nps.push(t.np);});
+    nps.forEach(np=>{const n=np.noun&&np.noun.noun||{};let opts=(np.det&&(np.det.det?np.det.det.o:np.det.o))||[["?","?"]];
+      if(n.g)opts=opts.filter(o=>o[0]===(n.pl?"pl":n.g)||(o[0]==="pl"&&n.pl));if(!opts.length)opts=(np.det&&(np.det.det?np.det.det.o:np.det.o))||[];
+      const pc=np.prep?XPREP[np.prep.prep]:np.contr?XPREP[np.contr.prep]:null;let caseW=null;
+      if(pc){if(pc[0]==="W"){const cs=opts.map(o=>o[1]).filter(x=>x==="A"||x==="D");caseW=cs.includes("D")&&!cs.includes("A")?"D":cs.includes("A")&&!cs.includes("D")?"A":(np.contr&&np.contr.contr==="dem"?"D":np.contr&&np.contr.contr==="das"?"A":"D");np.wechsel=caseW;}else caseW=pc[0];
+        opts=opts.filter(o=>o[1]===caseW);if(!opts.length&&np.det)opts=[[n.g||"?",caseW]];}
+      else{const hasN=opts.some(o=>o[1]==="N"),hasA=opts.some(o=>o[1]==="A");
+        if(hasN&&hasA){opts=opts.filter(o=>o[1]===(subj?"A":"N"));}
+        else if(opts.length>1&&opts.some(o=>o[1]==="G")&&opts.some(o=>o[1]!=="G")){const prevNoun=c.toks[c.toks.indexOf(np.parts[0])-1];if(!(prevNoun&&prevNoun.r==="NP"))opts=opts.filter(o=>o[1]!=="G");}}
+      const o=opts[0]||[n.g||"?",caseW||(subj?"A":"N")];np.g=n.pl?"pl":(n.g||o[0]);np.c=caseW||o[1];
+      if(!np.det&&!pc){np.c=subj?"A":"N";}
+      if(np.c==="N"&&!subj&&!np.prep&&!np.contr){subj=np;c.subj=np;}
+      const role=np.prep||np.contr?"P":np.c==="N"?"S":np.c==="A"?"O":np.c==="D"?"D":"A";
+      np.parts.forEach(x=>{x.r=role;x.np=np;});if(np.prep)np.prep.np=np;if(np.contr)np.contr.np=np;});
+    // yer/zaman kaba ayrımı
+    c.toks.forEach(t=>{if(t.r==="P"&&t.prep&&t.np&&["seit","bis","ab","vor","nach","während","um"].includes(t.prep)&&t.np.noun&&/^(Jahr|Jahre|Jahren|Monat|Monaten|Woche|Wochen|Tag|Tagen|Stunde|Stunden|Minute|Minuten|Uhr|Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag|Sonntag|Morgen|Abend|Mittag|Nacht|Sommer|Winter|Urlaub|Essen|Arbeit|Unterricht|Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)$/.test(t.np.noun.w)){t.r="T";t.np.parts.forEach(x=>x.r="T");}});
+    c.toks.forEach((t,k)=>{if(t.np&&!t.np.prep&&!t.np.contr&&t.np.noun&&XTIMEN.has(t.np.noun.w)&&(t.np.det||k>0&&c.toks[k-1].r==="T")){t.r="T";t.np.timeAkk=1;}});
+    if(fin&&["sein","werden","bleiben","heißen"].includes(fin.verb.inf)){c.toks.forEach(t=>{if(t.np&&t.np.c==="N"&&t.np!==c.subj&&!t.np.prep){t.r="A";t.inNP=t.np;t.np.pred=1;}});}
+    // kişi
+    if(fin){let p=null;const sj=c.subj;
+      if(sj&&sj.pron){p=sj.pron[0];if(p===-2){const f=fin.verb.forms.find(f=>f.p!==undefined);p=f&&(f.p===5||f.p===3)?5:2;sj.tr=p===5?"onlar":"o (kadın / dişil isim)";}}
+      else if(sj&&sj.g)p=sj.g==="pl"?5:2;
+      const fs=fin.verb.forms.filter(f=>f.p!==undefined);if(p===null&&fs.length)p=fs[0].p;
+      fin.person=p;c.person=p;}});
+  // zaman ve yapı
+  const main=clauses.find(c=>!c.sub)||clauses[0];
+  clauses.forEach(c=>{const fin=c.fin;if(!fin){c.tense=c.sub==="um"||c.sub==="zu"?"zu":"none";return;}
+    const L=fin.verb.inf,rest=c.rest||[],rf=rest.map(r=>r.verb.forms.map(f=>f.t)).flat(),ff=fin.verb.forms.map(f=>f.t);
+    const pt=ff.includes("prat")&&!ff.includes("pres");
+    if((L==="haben"||L==="sein")&&rf.some(x=>x==="pp"||x==="pp-sep"))c.tense=pt?"Plusquamperfekt":"Perfekt";
+    else if(L==="werden"&&rf.some(x=>x==="pp"||x==="pp-sep"))c.tense=ff.includes("k2")?"Konjunktiv II Passiv":pt?"Präteritum Passiv":"Passiv";
+    else if(L==="werden"&&ff.includes("k2")&&rest.length)c.tense="würde";
+    else if(L==="werden"&&rest.length)c.tense="Futur";
+    else if(MODALS.has(L)&&rest.length)c.tense=ff.includes("k2")?"Modal K2":pt?"Modal Prät":"Modal";
+    else if(ff.includes("k2"))c.tense="Konjunktiv II";
+    else if(pt)c.tense="Präteritum";
+    else if(fin.i===0&&ex&&!q)c.tense="Imperativ";
+    else c.tense="Präsens";
+    if(c.sepT){c.sep=1;}});
+  const ty=q?(T[0].r==="Q"?"W":"JN"):(main.fin&&main.fin.i===0&&!q?(ex||T.find(t=>t.lw==="Sie"&&t.i===1)?"IMP":"V1"):"A");
+  return{s,T,clauses,main,q,ex,ty};}
+
+/* ---- açıklama metinleri ---- */
+function xTenseInfo(c){const f=c.fin;if(!f)return"";const L=f.verb.inf;
+  return{Perfekt:`<b>Perfekt (konuşmada geçmiş zaman)</b>: ${L==="sein"?"<b>sein</b>":"<b>haben</b>"} 2. sırada çekilir + asıl fiilin <b>Partizip II</b> hali en sona gider. Türkçe: <i>-dı / -miş</i>.${L==="sein"?" Yer değiştirme ya da durum değişimi bildiren fiiller (gehen, fahren, kommen, aufstehen…) <b>sein</b> alır.":""}`,
+   Plusquamperfekt:`<b>Plusquamperfekt (geçmişin geçmişi)</b>: hatte/war + Partizip II. Türkçe: <i>-mıştı</i>.`,
+   Passiv:`<b>Edilgen (Passiv)</b>: werden + Partizip II. İşi yapan değil, işin kendisi önemli. Türkçe: <i>-ılır / -ılıyor</i>.`,
+   "Präteritum Passiv":`<b>Geçmiş edilgen</b>: wurde + Partizip II. Türkçe: <i>-ıldı</i>.`,
+   würde:`<b>Konjunktiv II (würde + mastar)</b>: dilek, hayal, kibar istek. Türkçe: <i>-ardı / -ar mıydı</i>.`,
+   Futur:`<b>Futur I</b>: werden + mastar (en sonda). Türkçe: <i>-ecek</i>. Günlük dilde çoğu zaman şimdiki zaman + zaman zarfı kullanılır.`,
+   Modal:`<b>Modal fiil</b> (${esc(L)} = ${esc(MOD_TR[L]||"")}) 2. sırada çekilir, asıl fiil <b>mastar hâlinde en sona</b> gider. Türkçede de fiil sonda: <i>yapmalıyım, yapabilirim</i>.`,
+   "Modal Prät":`<b>Modal fiilin geçmişi</b> (${esc(L)}): konnte/musste/wollte… + mastar en sonda. Türkçe: <i>yapabildim, yapmak zorunda kaldım</i>.`,
+   "Modal K2":`<b>Kibar/varsayım modal</b> (könnte, müsste, dürfte…): + mastar en sonda. Türkçe: <i>yapabilir miydiniz, yapmalıydı</i>.`,
+   "Konjunktiv II":`<b>Konjunktiv II</b> (hätte, wäre, könnte…): dilek, kibarlık, gerçek dışı durum. Türkçe: <i>olsaydı, olurdu</i>.`,
+   Präteritum:`<b>Präteritum (yazı dilinde geçmiş)</b>: fiilin geçmiş biçimi 2. sırada. sein/haben/modal fiillerde konuşmada da kullanılır (war, hatte, konnte). Türkçe: <i>-dı</i>.`,
+   Imperativ:`<b>Emir kipi</b>: fiil başa gelir, du için özne düşer (Komm!), Sie için özne kalır (Kommen Sie!).`,
+   Präsens:`<b>Präsens (şimdiki/geniş zaman)</b>: fiil kişiye göre ek alır. Türkçedeki <i>-iyor</i> ve <i>-ir</i> ikisini de karşılar; yakın geleceği de anlatır (Morgen fahre ich…).`}[c.tense]||"";}
+function xVerbNote(t,c){const v=t.verb,inf=v.inf,cj=conjDe(inf),forms=v.forms.map(f=>f.t),notes=[];
+  const trv=(findLex(inf)||{e:{tr:""}}).e.tr||({sein:"olmak",haben:"sahip olmak",werden:"olmak, -ecek",können:"-ebilmek",müssen:"-malı",wollen:"istemek",sollen:"-malı",dürfen:"izinli olmak",möchten:"istemek",mögen:"sevmek",wissen:"bilmek",tun:"yapmak"}[inf]||"");
+  if(t.r==="V"){const p=t.person;const pt=forms.includes("prat")&&!forms.includes("pres");const k2=forms.includes("k2");
+    notes.push(`sözlük biçimi: <b>${esc(inf)}</b>${trv?" ("+esc(trv)+")":""}`);
+    if(p!==null&&p!==undefined&&cj){const tense=k2?"Konjunktiv II":pt?"Präteritum":"Präsens";const tbl=k2?null:pt?cj.prat:cj.pres6;
+      notes.push(`${PERS[p]} için ${tense} hâli${tbl?": "+esc(inf)+" → <b>"+esc((tbl[p]||"").split(" ")[0])+"</b>":""}`);
+      if(!pt&&!k2&&!MOD_PRES[cj.base]){const st=vstem(cj.base),f=(cj.pres[p]||"");if(f.startsWith(st))notes.push(`kök <b>${esc(st)}</b> + ek <b>-${esc(f.slice(st.length)||"∅")}</b> (${["ich -e","du -st","er/sie/es -t","wir -en","ihr -t","sie/Sie -en"][p]})`);else notes.push(`düzensiz fiil: kök değişir (${esc(st)} → ${esc(f)})`);}
+      else if(MOD_PRES[cj.base]&&!pt)notes.push("düzensiz fiil: bu çekimi ezberle (tablo aşağıda)");}
+    if(c.sep&&cj&&cj.sep)notes.push(`ayrılabilen fiil: ön ek <b>${esc(cj.sep)}</b> kopup cümlenin sonuna gider`);}
+  else{if(forms.includes("pp")||forms.includes("pp-sep"))notes.push(`<b>Partizip II</b> (${esc(inf)}${trv?": "+esc(trv):""})${cj&&cj.strong?" — düzensiz, ezberlenir":cj&&/ieren$/.test(inf)?" — -ieren fiilleri ge- almaz":cj&&cj.sep?" — ön ek + ge + kök + t/en":" — ge + kök + t"}`);
+    else if(forms.includes("inf")||forms.includes("inf-sep"))notes.push(`<b>mastar</b> (${esc(trv||inf)}): modal/werden/zu ile en sona gider`);
+    else if(forms.includes("zuinf"))notes.push(`<b>zu + mastar</b> (${esc(inf)})`);
+    else notes.push(`fiil: ${esc(inf)}${trv?" ("+esc(trv)+")":""}`);}
+  return notes;}
+function xWordNotes(t,c,an){const out=[];
+  if(t.r==="V"||t.r==="V2"&&t.verb)return xVerbNote(t,c);
+  if(t.sepPart){const cj=c.fin&&conjDe(c.fin.verb.inf);return[`ayrılabilen fiilin ön eki${cj&&cj.sep?`: <b>${esc(cj.sep)}</b> + ${esc(cj.base)} = <b>${esc(cj.inf)}</b>`:""}`,"ana cümlede çekimli fiilden kopup en sona gider"];}
+  if(t.zu)return["mastardan önce gelen <b>zu</b> (Türkçe -mek)"];
+  if(t.contr){const np=t.np;return[`<b>${t.prep} + ${t.contr}</b> = ${esc(t.w)}`,`${t.prep}: ${esc(XPREP[t.prep][1])}`,XPREP[t.prep][0]==="W"?(t.contr==="dem"?"<b>Wo?</b> (nerede?) → Dativ":"<b>Wohin?</b> (nereye?) → Akkusativ"):`${t.prep} → hep ${CASE_TR[XPREP[t.prep][0]]}`];}
+  if(t.prep){const P=XPREP[t.prep];if(P[0]==="W"){const cs=t.np&&t.np.c;return[`anlamı: ${esc(P[1])}`,`iki yönlü edat: <b>Wo?</b> (nerede, durum) → Dativ, <b>Wohin?</b> (nereye, hareket) → Akkusativ`,cs?`burada: <b>${CASE_S[cs]}</b> ${cs==="D"?"(durum: nerede?)":"(hareket: nereye?)"}`:""].filter(Boolean);}
+    return[`anlamı: ${esc(P[1])}`,`<b>${esc(t.w)}</b> kendinden sonraki ismi hep <b>${CASE_TR[P[0]]}</b> yapar`];}
+  if(t.subord)return[`yan cümle bağlacı: ${esc(XSUB[t.lw])}`,"yan cümlede çekimli fiil <b>en sona</b> gider (Türkçe gibi!)"];
+  if(t.rel)return["ilgi zamiri (Türkçe <i>-en, -dığı</i>)","cinsiyeti önceki isimden, hâli yan cümledeki görevinden gelir; fiil en sonda"];
+  if(t.coord)return[`bağlaç: ${esc(XCOORD[t.lw])}`,"sırayı değiştirmez: arkasından normal cümle gelir (0. pozisyon)"];
+  if(t.pron){const p=t.pron;const cs=t.r==="S"?"N":t.r==="O"?"A":t.r==="D"?"D":p[1][0];return[`kişi zamiri: ${esc(t.tr)}`,`${CASE_TR[cs]||""}`,t.lw==="sich"?"dönüşlü zamir: özne ile aynı kişiyi gösterir":""].filter(Boolean);}
+  if(t.det){const np=t.np||{};const g=np.g,cs=np.c;const base=t.det.k==="def"?{m:"der",f:"die",n:"das",pl:"die"}[g]:t.det.stem?(t.det.stem+(g==="f"||g==="pl"?"e":"")):"";
+    const a=[`${esc(t.det.tr)}`];if(g&&cs)a.push(`isim ${G_TR[g]||""} · ${CASE_TR[cs]||""}`);
+    if(base&&cs&&cs!=="N"&&lk(base)!==t.lw)a.push(`<b>${esc(base)} → ${esc(t.w)}</b>: ${cs==="A"?"nesne olunca (Akkusativ) sadece eril değişir: der→den, ein→einen":cs==="D"?"Dativ'de: der/das→dem, die→der, çoğul→den (+isme -n)":"Genitiv: des/der"}`);
+    else if(cs==="N"&&g)a.push("yalın hâl: sözlükteki artikel değişmez");
+    return a;}
+  if(t.noun||t.r==="S"||t.r==="O"||t.r==="D"||t.r==="T"&&t.np){const n=t.noun||{};const a=[];if(n.tr)a.push(`anlamı: ${esc(n.tr)}`);if(n.lemma)a.push(`sözlük: <b>${esc(n.lemma)}</b>${n.pl?" (burada çoğul)":""}`);else if(xUpper(t.w))a.push("büyük harf: Almancada bütün isimler büyük harfle yazılır");
+    if(t.np&&t.np.timeAkk)a.push("zaman ifadesi: artikelli olunca <b>Akkusativ</b> (jeden Tag, nächste Woche)");else if(t.np&&t.np.pred)a.push("<b>sein/werden/heißen</b> sonrası: yalın hâl (Nominativ) kalır, nesne değildir");else if(t.np&&t.np.c&&!t.np.det)a.push(CASE_TR[t.np.c]);if(t.np&&t.np.c==="D"&&t.np.g==="pl"&&/n$/.test(t.w))a.push("çoğul Dativ: isme <b>-n</b> eklenir");return a;}
+  if(t.r==="A"&&t.inNP){const a=[];if(t.tr)a.push(`anlamı: ${esc(t.tr)}`);const m=t.lw.match(/(e|en|er|es|em)$/);if(m)a.push(`isimden önce sıfat <b>-${m[1]}</b> eki alır (artikel ve hâle göre)`);return a;}
+  if(t.r==="T")return[t.tr?`anlamı: ${esc(t.tr)}`:"","zaman bildirir: Almancada <b>Zaman – Neden – Nasıl – Yer</b> sırası (TeKaMoLo)"].filter(Boolean);
+  if(t.r==="N")return[`anlamı: ${esc(t.tr)}`,t.lw==="nicht"?"fiili/sıfatı/belirli şeyi olumsuz yapar; çoğunlukla sona ya da olumsuzladığı kelimenin önüne gelir. İsim artikelsizse <b>kein</b> kullanılır":""].filter(Boolean);
+  if(t.r==="Q")return[`soru kelimesi: ${esc(t.tr)}`,"W-sorusu: <b>soru kelimesi + fiil + özne</b>"];
+  if(t.tr)out.push(`anlamı: ${esc(t.tr)}`);if(t.lem)out.push(`sözlük: ${esc(t.lem)}`);return out;}
+function xRoleOf(t){if(t.r==="DET"||t.r==="NP")return"X";if(t.r==="S?")return"S";if(t.r==="VERB")return"V";if(t.r==="A"&&!t.inNP)return t.adv?"P":"M";return t.r;}
+function xRules(an){const R=[],m=an.main,c0=an.clauses;
+  if(an.ty==="A"&&m.fin){const pre=m.toks.filter(t=>t.i<m.fin.i);const subjFirst=m.subj&&(m.subj.i===0||m.subj.parts&&m.subj.parts[0].i===0||m.subj.np&&m.subj.np.parts[0].i===0);
+    R.push(`<b>Fiil 2. sırada</b> (V2 kuralı): ana cümlede çekimli fiil (<b>${esc(m.fin.w)}</b>) her zaman ikinci "yeri" tutar.`);
+    if(pre.length&&!subjFirst&&m.subj&&!m.toks[0].coord)R.push(`Başa <b>${esc(pre.map(t=>t.w).join(" "))}</b> geldiği için özne (<b>${esc(m.subj.w||(m.subj.parts||[]).map(x=>x.w).join(" "))}</b>) fiilin <b>arkasına</b> geçti (devrik cümle). Türkçede böyle bir kural yok, bu yüzden dikkat!`);}
+  if(an.ty==="W")R.push(`<b>W-sorusu</b>: soru kelimesi başta, fiil 2. sırada, özne fiilden sonra.`);
+  if(an.ty==="JN")R.push(`<b>Evet/hayır sorusu</b>: çekimli fiil <b>en başa</b> geçer, özne arkasından gelir. Türkçedeki <i>mı/mi</i> ekinin işini fiilin yeri yapar.`);
+  if(an.ty==="IMP")R.push(`<b>Emir/rica</b>: fiil başta. ${an.T.some(t=>t.lw==="sie"||t.w==="Sie")?"Sie ile resmi rica.":"du'ya emir: özne düşer, fiil eksiz kökle kalır."}`);
+  c0.forEach(c=>{const ti=xTenseInfo(c);if(ti&&!R.includes(ti))R.push(ti);});
+  c0.filter(c=>c.sub).forEach(c=>{if(c.sub==="um"||c.sub==="zu")R.push(`<b>um … zu + mastar</b>: "-mek için". Özne yok, mastar en sonda.`);
+    else if(c.sub.startsWith("rel"))R.push(`<b>İlgi cümlesi</b> (der/die/das …): Türkçedeki <i>-en / -dığı</i> yapısı. Fiil yan cümlenin <b>sonuna</b> gider.`);
+    else R.push(`<b>Yan cümle</b> (<b>${esc(c.sub)}</b> = ${esc(XSUB[c.sub]||"")}): çekimli fiil (${esc(c.fin?c.fin.w:"")}) <b>en sona</b> gider. Yan cümle başta gelirse ana cümle <b>fiille</b> başlar (… , dann/fiil + özne).`);});
+  if(m.sep)R.push(`<b>Ayrılabilen fiil</b>: ${esc(conjDe(m.fin.verb.inf).inf)} → çekimli kısım 2. sırada, ön ek (<b>${esc(m.sepT.w)}</b>) en sonda. Yan cümlede ve mastarda bitişik yazılır.`);
+  const nps=new Set();an.T.forEach(t=>{if(t.np)nps.add(t.np);});
+  [...nps].forEach(np=>{if(np.prep&&XPREP[np.prep.prep]&&XPREP[np.prep.prep][0]==="W")R.push(`<b>${esc(np.prep.w)}</b> iki yönlü edat: burada <b>${np.c==="D"?"Dativ (nerede? – durum)":"Akkusativ (nereye? – hareket)"}</b>.`);});
+  if(an.T.some(t=>t.r==="N"&&t.lw==="nicht"))R.push(`<b>nicht</b> nereye? Fiili olumsuzlarken sona yakın (ama 2. parça fiilden önce); belirli bir kelimeyi olumsuzlarken onun hemen önüne. Artikelsiz/ein'li isimler için <b>kein</b>.`);
+  if(an.T.some(t=>t.det&&t.det.k==="neg"))R.push(`<b>kein</b> = "ein/artikelsiz ismin olumsuzu" (hiç … yok). ein gibi çekilir: kein, keine, keinen, keinem.`);
+  const tk=an.T.filter(t=>t.r==="T").length,pl=an.T.filter(t=>t.r==="P").length;if(tk&&pl)R.push(`Zaman, yerden <b>önce</b> gelir: <b>Te-Ka-Mo-Lo</b> (temporal, kausal, modal, lokal).`);
+  return R;}
+function xFormula(an){const out=[];const m=an.main;
+  const slot=t=>{const r=xRoleOf(t);return YROLE[r]?YROLE[r][0]:"";};
+  const seen=new Set();an.T.forEach(t=>{const key=t.np?"np"+an.T.indexOf(t.np.parts[0]):"t"+t.i;if(seen.has(key))return;seen.add(key);let lab=slot(t);if(t.r==="V"&&t.cl===an.clauses.indexOf(m))lab="Fiil (2. yer)";if(t.r==="V"&&an.clauses[t.cl].sub)lab="Fiil (yan cümle sonu)";if(t.r==="V2")lab="Fiil sonu";if(t.r==="C")lab="Bağlaç";out.push(lab);});
+  const comp=[];out.forEach(x=>{if(comp[comp.length-1]!==x)comp.push(x);});return comp.join(" + ");}
+function xKey(an){const m=an.main,ks=[];
+  an.clauses.forEach(c=>{if(c.sub&&!c.sub.startsWith("rel"))ks.push("sub:"+c.sub);else if(c.sub)ks.push("rel");});
+  if(m.tense&&m.tense!=="Präsens")ks.push("t:"+m.tense);if(m.sep)ks.push("sep");if(an.ty!=="A")ks.push("ty:"+an.ty);
+  an.T.forEach(t=>{if(t.prep&&XPREP[t.prep]&&XPREP[t.prep][0]==="W"&&t.np)ks.push("w:"+t.np.c);else if(t.prep)ks.push("p:"+XPREP[t.prep][0]);if(t.det&&t.det.k==="neg")ks.push("kein");if(t.lw==="nicht")ks.push("nicht");if(t.np&&t.np.c==="A"&&t.det&&/^(den|einen|keinen|meinen|deinen|seinen|ihren|unseren)$/.test(t.lw))ks.push("akk-m");if(t.np&&t.np.c==="D"&&!t.np.prep&&!t.np.contr&&t.r==="D")ks.push("dat-obj");if(t.lw==="sich"||XREFL[m.person]===t.lw&&t.r==="O"&&m.subj&&m.subj.pron)ks.push("refl");});
+  if(m.fin&&an.ty==="A"&&m.subj&&m.toks[0]&&m.toks[0].r!=="C"){const si=m.subj.parts?m.subj.parts[0].i:m.subj.i;if(si>m.fin.i)ks.push("inv");}
+  return[...new Set(ks)];}
+/* ---- aynı kalıp, başka biçimler (üretici) ---- */
+function xJoin(arr){let o="";arr.forEach((w,i)=>{if(!w)return;o+=(o&&!/^[,.!?;:]/.test(w)?" ":"")+w;});return o;}
+function xCap(s){return s?s[0].toUpperCase()+s.slice(1):s;}
+function xVariants(an){const out=[];const m=an.main;if(!m||!m.fin||an.clauses.length>1)return out;
+  const fin=m.fin,cj=conjDe(fin.verb.inf);if(!cj)return out;const sj=m.subj;if(!(sj&&sj.pron&&sj.pron[0]>=0||sj&&sj.pron&&sj.pron[0]===-2))return out;
+  const p0=fin.person;if(p0===null||p0===undefined)return out;
+  if(sj.lw==="es"||fin.verb.guess)return out;if(sj.w==="Sie"&&fin.i<sj.i&&!an.q)return out;
+  if(an.T.some(t=>t.coord&&an.T.some(u=>u.i>t.i&&(u.r==="V"||u.r==="VERB"))))return out;const ff=fin.verb.forms.map(f=>f.t);const pt=ff.includes("prat")&&!ff.includes("pres");if(ff.includes("k2")&&!pt)return out;
+  const words=an.T.map(t=>t.w),punct=an.T.map(t=>t.punct||"");const endP=(punct[punct.length-1]||".").replace(/[,;]/g,"")||".";
+  const build=(ws,ps,end)=>{let s=xJoin(ws.map((w,i)=>w+(i<ws.length-1?(ps[i]||"").replace(/[.!?]/g,""):"")));return xCap(s)+end;};
+  const SUBJ=["ich","du","er","wir","ihr","sie"],SUBJTR=["ben","sen","o","biz","siz","onlar"];
+  const finTab=pt?cj.prat:(MOD_PRES[cj.base]||cj.pres);
+  // 1) kişi değiştir
+  const targets=[0,1,2,3,4,5].filter(p=>p!==p0);const pick=[2,0,3,1,5,4].filter(p=>targets.includes(p)).slice(0,3);
+  const usedP=new Set(an.T.filter(t=>t.pron&&t!==sj&&t.pron[0]>=0&&!(t.lw===XREFL[p0]||t.lw===XREFLD[p0])).map(t=>t.pron[0]));
+  const pick2=[2,0,3,1,5,4].filter(p=>targets.includes(p)&&!usedP.has(p)).slice(0,3);
+  pick2.forEach(p=>{const ws=words.slice();ws[sj.i]=sj.i===0?xCap(SUBJ[p]):SUBJ[p];
+    let f=(finTab[p]||"").split(" ")[0];if(!f)return;ws[fin.i]=fin.i===0?xCap(f):f;
+    an.T.forEach(t=>{if(t.i!==sj.i&&(t.lw===XREFL[p0]||t.lw===XREFLD[p0])&&(t.r==="O"||t.r==="D")&&t.pron){ws[t.i]=t.lw===XREFLD[p0]&&XREFLD[p0]!==XREFL[p0]?XREFLD[p]:XREFL[p];}});
+    out.push({s:build(ws,punct,endP),lab:`özne <b>${SUBJ[p]}</b> (${SUBJTR[p]}) → fiil <b>${esc(f)}</b>`,k:"p"});});
+  if(an.ty!=="A"||pt)return out;
+  const simple=m.tense==="Präsens";
+  const sjFirst=sj.i===0&&fin.i===1;
+  // 2) soru
+  if(sjFirst&&!(p0===0&&usedP.has(1))){const p=p0===0?1:p0;const ws=words.slice();const f=(MOD_PRES[cj.base]||cj.pres)[p]||"";const sjw=p0===0?"du":sj.lw==="Sie"?"Sie":sj.lw;
+    let rest=ws.slice(2);if(p0===0)rest=rest.map((w,k)=>{const t=an.T[k+2];if(t&&t.pron&&(t.lw==="mich"||t.lw==="mir"))return t.lw==="mich"?"dich":"dir";if(t&&t.det&&/^mein/.test(t.lw))return t.w.replace(/^mein/,"dein");return w;});
+    const nw=[xCap(f.split(" ")[0]),sjw,...rest];out.push({s:build(nw,["",""].concat(punct.slice(2)),"?"),lab:`<b>evet/hayır sorusu</b>: fiil başa → <i>…mı?</i>`,k:"q"});}
+  // 3) Perfekt
+  if(simple&&sjFirst&&!["sein","haben"].includes(cj.base)&&!MODALS.has(cj.base)&&cj.pp){const aux=(cj.aux==="sein"?MOD_PRES.sein:MOD_PRES.haben)[p0];
+    let mid=words.slice(2);if(m.sep)mid=mid.slice(0,-1);const ws=[words[0],aux,...mid,cj.pp];const ps=[punct[0],""].concat(punct.slice(2,2+mid.length)).concat([""]);
+    out.push({s:build(ws,ps,endP),lab:`<b>Perfekt (geçmiş)</b>: ${cj.aux} → <b>${esc(aux)}</b> + <b>${esc(cj.pp)}</b> sonda → <i>-dı</i>`,k:"perf"});}
+  // 4) modal
+  if(simple&&sjFirst&&!MODALS.has(cj.base)&&cj.base!=="werden"){const md=["müssen","können","möchten"][(an.s.length)%3];const mf=MOD_PRES[md][p0];let mid=words.slice(2);if(m.sep)mid=mid.slice(0,-1);
+    if(!(cj.base==="sein"||cj.base==="haben")||true){const ws=[words[0],mf,...mid,cj.inf];out.push({s:build(ws,[punct[0],""].concat(punct.slice(2,2+mid.length)).concat([""]),endP),lab:`<b>${md}</b> (${esc(MOD_TR[md])}) 2. yerde, <b>${esc(cj.inf)}</b> mastar olarak sonda`,k:"mod"});}}
+  // 5) olumsuz
+  if(simple&&!an.T.some(t=>t.r==="N"||t.det&&t.det.k==="neg")){const ws=words.slice();let done=false;
+    for(const t of an.T){if(t.det&&t.det.k==="indef"&&t.np&&t.np.c!=="N"){ws[t.i]="k"+t.lw;done=true;break;}}
+    if(!done){const bare=an.T.find(t=>t.np&&t.np.noun===t&&!t.np.det&&!t.np.prep&&!t.np.contr&&t.r==="O"&&t.noun&&t.noun.g);
+      if(bare){const g=bare.noun.pl?"pl":bare.noun.g;ws.splice(bare.i,0,{m:"keinen",f:"keine",n:"kein",pl:"keine"}[g]);punct.splice(bare.i,0,"");done=true;}}
+    let lab="<b>kein</b>: ein → kein (hiç … yok)";
+    if(!done){let pos=an.T.length;if(m.sep)pos=m.sepT.i;const pp=an.T.find(t=>t.i>fin.i&&(t.prep||t.contr||t.r==="A"&&!t.inNP||t.r==="P"&&t.adv));if(pp&&pp.i<pos)pos=pp.i;
+      ws.splice(pos,0,"nicht");punct.splice(pos,0,"");lab="<b>nicht</b>: fiili olumsuz yapar (edat öbeğinin/sıfatın önüne, yoksa sona)";}
+    if(ws.length>2)out.push({s:build(ws,punct,endP),lab,k:"neg"});}
+  return out;}
+/* ---- kurstan aynı kalıpta örnekler ---- */
+let XCACHE=null;
+function xCorpus(){if(XCACHE)return XCACHE;XCACHE=[];const seen=new Set();
+  (typeof ALLS!=="undefined"?ALLS:[]).forEach(o=>{const k=lk(o.de);if(seen.has(k)||!o.tr)return;seen.add(k);XCACHE.push({s:o.de,tr:o.tr,lv:o.u&&o.u.lv,key:null});});return XCACHE;}
+function xSiblings(an,n){if(LANG.code!=="de")return xSiblingsGen(an,n);const keys=xKey(an);const pri=keys.filter(k=>!/^p:|^akk/.test(k)),sec=keys.filter(k=>/^p:|^akk/.test(k));const want=pri.length?pri:sec;if(!want.length)return{want:[],list:[]};
+  const C=xCorpus(),me=lk(an.s),lvs=["A1","A2","B1","B2","C1"],ul=lvs.indexOf(S.lv||"A1");const hits=[];
+  for(const o of C){if(lk(o.s)===me)continue;if(!o.key){try{const a=xrayDe(o.s);o.key=a?xKey(a):[];}catch(e){o.key=[];}}
+    const sc=want.filter(k=>o.key.includes(k)).length+(pri.length?sec.filter(k=>o.key.includes(k)).length*.3:0)-o.key.filter(k=>!keys.includes(k)&&!/^p:|^akk/.test(k)).length*.4;if(!want.some(k=>o.key.includes(k)))continue;const lvp=Math.abs(lvs.indexOf(o.lv)-ul);hits.push({o,sc:sc*10-lvp*2-Math.abs(o.s.length-an.s.length)/20});
+    if(hits.length>400)break;}
+  hits.sort((a,b)=>b.sc-a.sc);return{want,list:hits.slice(0,n||6).map(h=>h.o)};}
+function xSiblingsGen(an,n){const ws=toks(an.s).filter(isW).map(w=>w.toLowerCase());const fw=ws.filter(w=>FUNC[w]&&w.length>1);if(!fw.length)return{want:[],list:[]};
+  const C=xCorpus(),me=lk(an.s),hits=[];for(const o of C){if(lk(o.s)===me)continue;const ow=toks(o.s).filter(isW).map(w=>w.toLowerCase());const sc=fw.filter(w=>ow.includes(w)).length;if(sc)hits.push({o,sc:sc*10-Math.abs(o.s.length-an.s.length)/20});}
+  hits.sort((a,b)=>b.sc-a.sc);return{want:fw.slice(0,3),list:hits.slice(0,n||6).map(h=>h.o)};}
+const XKEY_TR=k=>({"t:Perfekt":"Perfekt (geçmiş)","t:Modal":"modal fiil + mastar","t:Futur":"Futur","t:Präteritum":"Präteritum","t:Passiv":"edilgen","t:würde":"würde + mastar","t:Konjunktiv II":"Konjunktiv II",sep:"ayrılabilen fiil",rel:"ilgi cümlesi","ty:W":"W-sorusu","ty:JN":"evet/hayır sorusu","ty:IMP":"emir/rica",kein:"kein",nicht:"nicht","w:D":"iki yönlü edat + Dativ","w:A":"iki yönlü edat + Akkusativ","p:D":"Dativ edatı","p:A":"Akkusativ edatı","dat-obj":"Dativ nesne",refl:"dönüşlü fiil","akk-m":"eril Akkusativ (den/einen)",inv:"devrik sıra"}[k]||(k.startsWith("sub:")?k.slice(4)+" yan cümlesi":k.startsWith("t:")?k.slice(2):k));
+/* ---- diğer diller için hafif çözümleme ---- */
+function xrayGen(s){const raw=toks(s),T=[];let wi=0;raw.forEach(t=>{if(isW(t))T.push({w:t,i:wi++,lw:t.toLowerCase(),info:[]});});
+  T.forEach(t=>{const lw=t.lw;if(FUNC[lw]){t.tr=FUNC[lw];t.r="C";t.fn=1;}else{const r=findLex(t.w);t.tr=r?r.e.tr:"";if(r&&lk(r.e.fr)!==lw)t.lem=r.e.fr;
+      t.r=r&&/(mek|mak)\b/.test(r.e.tr)?"V":r&&LANG.nounRe&&LANG.nounRe.test(r.e.fr)?"O":"X";}});
+  return{s,T,clauses:[],main:{},gen:1,ty:/\?\s*$/.test(s)?"Q":"A"};}
+function xAnalyze(s){try{return LANG.code==="de"?xrayDe(s):xrayGen(s);}catch(e){console.error(e);return xrayGen(s);}}
+/* ---- çekim tablosu ---- */
+function xConjTable(inf){const c=conjDe(inf);if(!c)return"";const tr=(findLex(c.inf)||{e:{tr:""}}).e.tr;
+  const row=(p,i)=>`<tr><td>${PERS[i]}</td><td><b>${esc(c.pres6[i])}</b></td><td>${esc(c.perf[i]||"")}</td><td>${esc(c.prat?c.prat[i]:"")}</td></tr>`;
+  return `<div class="sec-h" style="margin-left:2px">Fiil kartı: ${esc(c.inf)}${tr?" · "+esc(tr):""}</div><div class="card" style="padding:10px 12px"><div class="tw"><table class="xct"><tr><th></th><th>Präsens</th><th>Perfekt</th><th>Präteritum</th></tr>${PERS.map(row).join("")}</table></div>
+   <div class="sub" style="font-size:13px;margin-top:6px">${c.strong?"Düzensiz (güçlü) fiil: kök değişir, Partizip <b>"+esc(c.pp)+"</b> ezberlenir.":"Düzenli fiil: kök + ek. Partizip: <b>"+esc(c.pp)+"</b>."} Perfekt yardımcısı: <b>${c.aux}</b>.${c.imp?" Emir (du): <b>"+esc(xCap(c.imp))+"!</b>":""}${c.sep?" Ayrılabilen: ön ek <b>"+esc(c.sep)+"</b> ana cümlede sona gider.":""}</div></div>`;}
+/* ---- ekran ---- */
+function xRender(s,tr,an,siblings){const parts=an.T;
+  const card=t=>{const c=an.clauses[t.cl]||{};const R=xRoleOf(t),Y=YROLE[R]||YROLE.X;const notes=an.gen?[t.tr?`anlamı: ${esc(t.tr)}`:"",t.lem?`sözlük: ${esc(t.lem)}`:""].filter(Boolean):xWordNotes(t,c,an);
+    const lab=an.gen?(t.fn?"işlev kelimesi":R==="V"?"fiil":R==="O"?"isim":""):(t.r==="DET"?"artikel":Y[0]);
+    return `<div class="xw" style="--yc:${Y[1]}"><div class="xwh"><b>${esc(t.w)}</b><span class="yrl">${esc(lab||"")}</span><button class="sbtn sm" data-say="${esc(t.w)}" aria-label="Dinle">${I.spk}</button></div>${notes.length?`<ul>${notes.map(n=>`<li>${n}</li>`).join("")}</ul>`:""}</div>`;};
+  const groups=[];if(!an.gen){const seen=new Set();parts.forEach(t=>{const np=t.np&&t.np.parts?t.np:null;const k=np?np:t;if(seen.has(k))return;seen.add(k);
+    if(np&&(t.prep||t.contr)&&!np.parts.includes(t)){groups.push([t,...np.parts]);return;}groups.push(np?np.parts:[t]);});}
+  const chips=an.gen?"":`<div class="yparts">${groups.map((g,i)=>{const t=g[g.length-1].r==="P"&&g[0].prep?g[0]:g[0];const R=xRoleOf(g.find(x=>x.r!=="DET"&&x.r!=="A")||t)||"X";const Y=YROLE[R]||YROLE.X;
+      return `<div class="ypart" style="--yc:${Y[1]}"><div class="ypn">${i+1}</div><b>${esc(g.map(x=>x.w).join(" "))}</b><span class="yrl">${esc(Y[0])}</span><small>${esc(g.map(x=>x.tr).filter(Boolean).slice(0,2).join(" · "))}</small></div>`;}).join("")}</div>`;
+  const rules=an.gen?((yOffline(s)||{}).why||[]):xRules(an);
+  const formula=an.gen?"":xFormula(an);
+  const vs=an.gen?[]:xVariants(an);
+  const mv=!an.gen&&an.main&&an.main.fin?an.main.fin.verb.inf:null;
+  const sb=siblings||{list:[]};
+  return `<div class="h2" style="font-size:22px;margin-bottom:4px">🧩 Cümle röntgeni</div>
+  <div class="ybig">${tapS(s)} <button class="sbtn sm" data-say="${esc(s)}" aria-label="Dinle">${I.spk}</button></div>${tr?`<div class="sub">${esc(tr)}</div>`:""}
+  ${chips}
+  ${formula?`<div class="yform">${esc(formula)}</div>`:""}
+  ${!an.gen?`<div class="sub" style="font-size:13px;margin:8px 2px 0">Türkçede sıra: <b>Özne + Zaman + Yer + Nesne + Fiil</b> (fiil hep sonda). Almancada ana cümlede fiil <b>2. yerde</b>, yan cümlede <b>sonda</b>.</div>`:""}
+  ${rules.length?`<div class="sec-h" style="margin-left:2px">Neden böyle kuruldu?</div><div class="gram"><ul class="ywhy">${rules.map(w=>`<li>${w}</li>`).join("")}</ul></div>`:""}
+  <div class="sec-h" style="margin-left:2px">Kelime kelime</div><div class="xws">${parts.map(card).join("")}</div>
+  ${mv?xConjTable(mv):""}
+  ${vs.length?`<div class="sec-h" style="margin-left:2px">Aynı cümle, başka biçimlerde</div><div class="card stack">${vs.map((v,i)=>`${i?'<div class="hr"></div>':""}<div class="wordline ex"><div style="flex:1;min-width:0"><div class="fr">${tapS(v.s)}</div><div class="tr">${v.lab}</div></div><button class="sbtn sm" data-say="${esc(v.s)}">${I.spk}</button></div>`).join("")}</div>
+    <button class="btn" id="xdrill" style="margin-top:10px">✍️ Kendin dönüştür (${vs.length} alıştırma)</button>`:""}
+  ${sb.list.length?`<div class="sec-h" style="margin-left:2px">Kurstan aynı kalıpta ${sb.list.length} örnek${sb.want&&sb.want.length&&!an.gen?" · "+esc(sb.want.slice(0,2).map(XKEY_TR).join(", ")):""}</div><div class="card stack">${sb.list.map((o,i)=>`${i?'<div class="hr"></div>':""}<div class="wordline ex"><div style="flex:1;min-width:0"><div class="fr">${tapS(o.s)}</div><div class="tr">${esc(o.tr)}</div><button class="ybtn" data-yapi="${esc(o.s)}" data-ytr="${esc(o.tr)}">🧩 Röntgen</button></div><button class="sbtn sm" data-say="${esc(o.s)}">${I.spk}</button></div>`).join("")}</div>`:""}
+  <div id="xai"></div>
+  ${ART_RULES[LANG.code]?`<button class="btn sec" id="yart" style="margin-top:14px">${LANG.code==="de"?"der/die/das":"Cinsiyet"} kurallarını gör</button>`:""}`;}
+function xDrill(src,vs){let i=0,ok=0;const next=()=>{const box=$("#ybox");if(!box)return;if(i>=vs.length){box.innerHTML=`<div class="h2" style="font-size:22px">✍️ Bitti: ${ok}/${vs.length}</div><div class="sub">Her biçimi kendin kurdun. Ezber değil, kural.</div><button class="btn" id="xagain" style="margin-top:12px">Röntgene dön</button>`;$("#xagain").onclick=()=>structSheet(src.s,src.tr,1);return;}
+    const v=vs[i];const ask=v.k==="p"?`Özneyi değiştir: ${v.lab.replace(/ → .*$/,"")}`:v.k==="q"?"Soru cümlesine çevir":v.k==="perf"?"Perfekt'e (geçmişe) çevir":v.k==="mod"?`Modal fiil ekle: ${(v.lab.match(/<b>(\w+)<\/b>/)||[])[1]||""}`:"Olumsuz yap";
+    box.innerHTML=`<div class="h2" style="font-size:20px">✍️ ${i+1}/${vs.length} · ${ask.replace(/<[^>]+>/g,"")}</div><div class="ybig">${tapS(src.s)}</div><textarea id="xin" class="inp" rows="2" style="font:inherit;font-size:18px;width:100%;margin-top:8px" placeholder="Cümleyi yaz…" autocapitalize="sentences" autocorrect="off" spellcheck="false" style="width:100%;margin-top:8px"></textarea><div id="xres"></div><button class="btn" id="xok" style="margin-top:10px">Kontrol et</button>`;
+    bindTap(box);const inp=$("#xin");inp.focus();
+    $("#xok").onclick=()=>{if($("#xok").dataset.done){i++;next();return;}const val=inp.value.trim();const good=norm(val)===norm(v.s)||nearEq(val,v.s);if(good)ok++;sfx(good?"ok":"bad");
+      $("#xres").innerHTML=`<div class="gram" style="margin-top:10px;border-left:4px solid ${good?"var(--green)":"var(--red)"}"><b>${good?"Doğru!":"Doğrusu:"}</b> ${tapS(v.s)}<div class="sub" style="font-size:13px;margin-top:4px">${v.lab}</div>${good?"":whyWrong(val,v.s)}</div>`;bindTap($("#xres"));
+      $("#xok").textContent=i===vs.length-1?"Bitir":"Sonraki";$("#xok").dataset.done=1;};
+    inp.onkeydown=e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();$("#xok").click();}};};next();}
+/* ---- Neden yanlış? ---- */
+function whyWrong(user,correct){user=String(user||"").trim();if(!user)return"";const U=toks(user).filter(isW),C=toks(correct).filter(isW);if(!C.length)return"";
+  const n=U.length,m=C.length,d=[...Array(n+1)].map(()=>Array(m+1).fill(0));for(let i=0;i<=n;i++)d[i][0]=i;for(let j=0;j<=m;j++)d[0][j]=j;
+  const same=(a,b)=>a.toLowerCase()===b.toLowerCase();
+  for(let i=1;i<=n;i++)for(let j=1;j<=m;j++)d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(same(U[i-1],C[j-1])?0:1));
+  const ops=[];let i=n,j=m;while(i>0||j>0){if(i>0&&j>0&&d[i][j]===d[i-1][j-1]+(same(U[i-1],C[j-1])?0:1)){if(!same(U[i-1],C[j-1]))ops.unshift({u:U[i-1],c:C[j-1],j:j-1});i--;j--;}
+    else if(j>0&&d[i][j]===d[i][j-1]+1){ops.unshift({u:null,c:C[j-1],j:j-1});j--;}else{ops.unshift({u:U[i-1],c:null});i--;}}
+  if(!ops.length){const ur=U.map(x=>x.toLowerCase()).join(" "),cr=C.map(x=>x.toLowerCase()).join(" ");if(ur===cr)return"";}
+  let an=null;try{an=xAnalyze(correct);}catch(e){}
+  const tokAt=j=>an&&an.T?an.T[j]:null;
+  const li=[];
+  // sıra hatası: aynı kelimeler, farklı sıra
+  const su=[...U].map(x=>x.toLowerCase()).sort().join(" "),sc=[...C].map(x=>x.toLowerCase()).sort().join(" ");
+  if(su===sc&&U.length===C.length){let hint="Kelimeler doğru, <b>sıra</b> yanlış.";if(an&&an.main&&an.main.fin)hint+=an.clauses.some(c=>c.sub)?" Yan cümlede çekimli fiil <b>en sonda</b> olmalı.":an.ty==="JN"?" Evet/hayır sorusunda fiil <b>en başta</b>.":an.ty==="A"?` Ana cümlede çekimli fiil (<b>${esc(an.main.fin.w)}</b>) <b>2. yerde</b> olmalı.`:"";return `<div class="xwhy"><b>Neden yanlış?</b><ul><li>${hint}</li></ul></div>`;}
+  ops.slice(0,4).forEach(o=>{const t=o.c!==null&&o.j!==undefined?tokAt(o.j):null;let why="";
+    if(t&&LANG.code==="de"){const c=an.clauses[t.cl]||{};const ns=xWordNotes(t,c,an).filter(x=>!/^anlamı/.test(x));why=ns.slice(0,2).join(" · ");}
+    else if(t&&t.tr)why="anlamı: "+esc(t.tr);
+    if(o.u&&o.c){const close=wclose?wclose(o.u.toLowerCase(),o.c.toLowerCase()):false;li.push(`<b class="bad">${esc(o.u)}</b> → <b class="good">${esc(o.c)}</b>${close?" (yazım farkı)":""}${why?`<br><span class="sub">${why}</span>`:""}`);}
+    else if(o.c)li.push(`eksik: <b class="good">${esc(o.c)}</b>${why?`<br><span class="sub">${why}</span>`:""}`);
+    else if(o.u)li.push(`fazla: <b class="bad">${esc(o.u)}</b>`);});
+  return li.length?`<div class="xwhy"><b>Neden yanlış?</b><ul>${li.map(x=>`<li>${x}</li>`).join("")}</ul></div>`:"";}
+
 function yPrompt(s,tr){return `You are a friendly ${ENNAME} teacher for a Turkish speaker (level ${S.lv||"A1"}) who does not understand sentence structure. Analyse this ${ENNAME} sentence: "${s}"${tr?` (Turkish: "${tr}")`:""}.
 Reply ONLY with JSON (all explanations in simple, natural Turkish, no grammar jargon without a short explanation):
 {"tr":"Turkish translation",
@@ -2897,15 +3468,22 @@ function yRender(s,j){const parts=(j.parts||[]).filter(p=>p&&p.t);
   ${j.try&&j.try.s?`<div class="sec-h" style="margin-left:2px">Aynı kalıpla yeni cümle</div><div class="card" style="padding:14px"><div class="wordline"><div style="flex:1"><div class="fr" style="font-weight:600">${tapS(j.try.s)}</div><div class="sub">${esc(j.try.tr||"")}</div></div><button class="sbtn sm" data-say="${esc(j.try.s)}">${I.spk}</button></div></div>`:""}
   ${j.off?`<div class="sec-f" style="margin:12px 2px 0">Kelimelere dokunarak anlamlarını gör. Ayrıntılı, parça parça anlatım Claude uygulamasındaki sürümde yapay zekâ ile yapılır.</div>`:""}
   ${ART_RULES[LANG.code]?`<button class="btn sec" id="yart" style="margin-top:14px">${LANG.code==="de"?"der/die/das":"Cinsiyet"} kurallarını gör</button>`:""}`;}
-async function structSheet(s,tr){s=String(s||"").trim();if(!s)return;closeGloss();
-  sheet(`<div id="ybox"><div class="h2" style="font-size:22px">🧩 Cümle yapısı</div><div class="ybig">${esc(s)}</div><div class="sub" style="margin-top:10px">Cümle parçalara ayrılıyor…</div><div class="typing"><span>●</span><span>●</span><span>●</span></div></div>`);
-  const box=$("#ybox"),show=j=>{const b=$("#ybox");if(!b)return;b.innerHTML=yRender(s,j);bindTap(b);bindSay(b);const a=$("#yart");if(a)a.onclick=()=>{a.closest(".sheetbg").remove();artSheet();};};
-  const c=yGet(s);if(c)return show(c);
-  if(!CAPS.sample)return show(yOffline(s));
-  try{const r=await CAPS.sample(yPrompt(s,tr),{modelTier:"default"});const j=parseAI(r&&r.text);
-    if(!j||!Array.isArray(j.parts)||!j.parts.length)throw{code:"bad"};yPut(s,j);show(j);}
-  catch(e){const j=yOffline(s);if(e&&e.code==="not_granted")CAPS.sample=null;show(j);}}
-const ybtn=(s,tr)=>`<button class="ybtn" data-yapi="${esc(s)}" data-ytr="${esc(tr||"")}">🧩 Nasıl kuruldu?</button>`;
+async function structSheet(s,tr,keep){s=String(s||"").trim();if(!s)return;closeGloss();
+  if(!tr){const f=(typeof ALLS!=="undefined"?ALLS:[]).find(o=>lk(o.de)===lk(s));if(f)tr=f.tr;}
+  const an=xAnalyze(s);if(!an)return;
+  const sib=xSiblings(an,6);const html=xRender(s,tr,an,sib);
+  if(keep&&$("#ybox"))$("#ybox").innerHTML=html;else{const old=document.querySelector(".sheetbg #ybox");if(old)old.closest(".sheetbg").remove();sheet(`<div id="ybox">${html}</div>`);}
+  const b=$("#ybox");b.scrollTop=0;const sh=b.closest(".sheet");if(sh)sh.scrollTop=0;bindTap(b);bindSay(b);
+  const a=$("#yart");if(a)a.onclick=()=>{a.closest(".sheetbg").remove();artSheet();};
+  const dr=$("#xdrill");if(dr)dr.onclick=()=>xDrill({s,tr},xVariants(an));
+  if(!CAPS.sample)return;
+  const ai=$("#xai");const showAI=j=>{const x=$("#xai");if(!x||!j)return;const why=(j.why||[]).slice(0,5),wd=(j.words||[]).slice(0,4);
+    x.innerHTML=`<div class="sec-h" style="margin-left:2px">🤖 Öğretmen notu</div><div class="gram">${j.tr&&!tr?`<div style="margin-bottom:6px"><b>${esc(j.tr)}</b></div>`:""}${j.formula?`<div class="yform" style="margin-bottom:8px">${esc(j.formula)}</div>`:""}<ul class="ywhy">${why.concat(wd).map(w=>`<li>${esc(w)}</li>`).join("")}</ul>${j.try&&j.try.s?`<div style="margin-top:8px">Aynı kalıpla: <b>${tapS(j.try.s)}</b> <span class="sub">${esc(j.try.tr||"")}</span></div>`:""}</div>`;bindTap(x);};
+  const c=yGet(s);if(c)return showAI(c);
+  ai.innerHTML=`<div class="sec-h" style="margin-left:2px">🤖 Öğretmen notu</div><div class="typing"><span>●</span><span>●</span><span>●</span></div>`;
+  try{const r=await CAPS.sample(yPrompt(s,tr),{modelTier:"default"});const j=parseAI(r&&r.text);if(!j)throw{code:"bad"};yPut(s,j);showAI(j);}
+  catch(e){if(e&&e.code==="not_granted")CAPS.sample=null;const x=$("#xai");if(x)x.innerHTML="";}}
+const ybtn=(s,tr)=>`<button class="ybtn" data-yapi="${esc(s)}" data-ytr="${esc(tr||"")}">🧩 Cümle röntgeni</button>`;
 document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-yapi]");if(b){e.stopPropagation();structSheet(b.dataset.yapi,b.dataset.ytr);}},true);
 function yapiCard(){return `<div class="fcard ycard"><div class="fch">🧩 Yapı atölyesi</div><div class="fcx">Bir cümlenin nasıl kurulduğunu, kelimelerin neden öyle değiştiğini parça parça gör. Ders ve kitaplarda herhangi bir kelimeye dokun → <b>🧩 Cümle yapısı</b>.</div>
   <div class="spbtns" style="margin-top:12px"><button class="ybtn2" data-yy="ex"><span>🧩</span>Örnek cümle çöz</button>${ART_RULES[LANG.code]||LANG.code==="en"?`<button class="ybtn2" data-yy="art"><span>${LANG.code==="de"?"🎨":"⚖️"}</span>${LANG.code==="de"?"der/die/das kuralları":"Cinsiyet kuralları"}</button>`:""}</div></div>`;}

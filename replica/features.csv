@@ -1,0 +1,24 @@
+feature,area,priority,original,clone,notes
+Yol (path) ünite/ders düğümleri,core,must,yes,yes,Öğren sekmesi
+Guidebook ünite kuralları,core,must,yes,yes,Kural sayfası
+Kelime blokları ile çeviri,exercise,must,yes,yes,build
+Yazarak çeviri,exercise,must,yes,yes,type/tr2de
+Dinle-yaz,exercise,must,yes,yes,listen/dict
+Eşleştirme,exercise,must,yes,yes,match
+Boşluk doldurma,exercise,must,yes,yes,blank/sblank
+Konuşma egzersizi,exercise,must,yes,yes,speakDrill
+Yazım hatası toleransı,exercise,must,yes,yes,wclose
+Hata tekrarı (Mistakes),practice,must,yes,yes,missed + free review
+Kelime tekrarı (Words),practice,must,yes,yes,Hazine
+Sınırsız tekrar,practice,should,paid,yes,freeReview ∞
+Hikâyeler,content,should,yes,yes,Kitaplar
+Explain my answer,feedback,must,yes(2026 ücretsiz),yes,→ Neden yanlış? diff açıklaması
+Kelimeye dokun → anlam,feedback,must,yes,yes,gloss
+Cümle yapısı ayrıntılı analiz,feedback,must,no,yes,→ Cümle Röntgeni (offline)
+Aynı kalıpla çok örnek,content,must,no,yes,→ Kalıp makinesi
+Fiil çekim tablosu,content,should,no,yes,→ Röntgende
+Yapay zekâ konuşma,ai,should,paid,yes,Lena (Apple Intelligence)
+Seri (streak),motivation,should,yes,yes,
+Kalpler/enerji,motivation,could,yes,skip,şikayet kaynağı — bilerek yok
+Ligler,motivation,could,yes,skip,sosyal ağ gerekir
+Çevrimdışı,platform,should,paid,yes,tamamen yerel

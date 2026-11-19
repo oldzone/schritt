@@ -2624,7 +2624,7 @@ function freeReview(limit){
       if(t==="dict"){const s=pickS();return{t,key:s.t,label:"🎧 Dikte",prompt:"",sub:"Duyduğun cümleyi yaz",ans:s.t,s,say:s.t};}
       if(t==="tf"){const s=pickS();let vs=[];try{vs=xVariants(xAnalyze(s.t));}catch(e){}if(!vs.length)continue;const v=vs[Math.random()*vs.length|0];
         const ask=v.k==="p"?"Özneyi değiştir: "+v.lab.replace(/ → .*$/,"").replace(/<[^>]+>/g,""):v.k==="q"?"Evet/hayır sorusuna çevir":v.k==="perf"?"Perfekt'e (geçmişe) çevir":v.k==="mod"?"Ekle: "+((v.lab.match(/<b>(\w+)<\/b>/)||[])[1]||"modal"):"Olumsuz yap (nicht / kein)";
-        return{t,key:"tf:"+v.s,label:"🔁 Dönüştür",prompt:tapS(s.t),sub:esc(ask),ans:v.s,s:{t:v.s,tr:s.tr+" → "+v.lab.replace(/<[^>]+>/g,"")},say:v.s,tf:v};}
+        return{t,key:"tf:"+v.s,label:"🔁 Dönüştür",prompt:tapS(s.t),sub:esc(ask),ans:v.s,s:{t:v.s,tr:"(asıl cümle: "+s.tr+") · "+v.lab.replace(/<[^>]+>/g,"")},say:v.s,tf:v};}
     }
     const w=pickW();return{t:"type",key:w.fr,label:"✍️ Yaz",prompt:esc(w.tr),sub:LANG.sini+" yaz",ans:w.fr,w,say:w.fr};
   }
@@ -2660,7 +2660,7 @@ function freeReview(limit){
     const trH=Q.w?esc(Q.w.tr):esc(Q.s.tr);
     const ab=$("#ab");ab.className="actbar "+(ok?"ok":"bad");
     ab.innerHTML=`<div class="in" style="display:block"><div class="fbt">${ok?"Doğru!":"Doğru cevap"}</div><div class="fbs">${isSent&&note?`<div class="spres" style="font-size:16px;margin:0 0 6px">${note}</div>`:note}${!ok&&window.LASTIN&&isSent?whyWrong(LASTIN,Q.ans):""}${ansHtml} · ${trH}${isSent||Q.t==="blank"?"<div>"+ybtn(Q.t==="blank"?Q.full:Q.ans,Q.s?Q.s.tr:"")+"</div>":""}${ok?"":`<br><span class="sub" style="font-size:13px">Birazdan tekrar sorulacak.</span>`}</div>
-      <div style="display:flex;gap:10px;margin-top:10px"><button class="btn sec" id="fin" style="flex:0 0 auto;padding:0 18px">Bitir</button><button class="btn ${ok?"green":"red"}" id="nx" style="flex:1">${limit&&nOk+nBad>=limit?"Sonuçları gör":"Devam"}</button></div></div>`;
+      <div style="display:flex;gap:10px;margin-top:10px"><button class="btn sec" id="fin" style="flex:0 0 auto;width:auto;padding:0 18px">Bitir</button><button class="btn ${ok?"green":"red"}" id="nx" style="flex:1">${limit&&nOk+nBad>=limit?"Sonuçları gör":"Devam"}</button></div></div>`;
     window.LASTIN=null;bindTap(ab);bindSay(ab);$("#nx").onclick=next;$("#fin").onclick=finish;try{$("#nx").focus();}catch(e){}
   }
   function finish(){

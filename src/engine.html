@@ -109,7 +109,7 @@ body{font-family:ui-rounded,"SF Pro Rounded","Nunito",-apple-system,BlinkMacSyst
 .combo b{display:block;font:800 17px var(--sfd)}.combo span{font-size:13px;font-weight:600;opacity:.95}
 @keyframes combo{0%{opacity:0;transform:translate(-50%,-20px) scale(.7)}12%{opacity:1;transform:translate(-50%,0) scale(1.05)}20%{transform:translate(-50%,0) scale(1)}85%{opacity:1}100%{opacity:0;transform:translate(-50%,-10px)}}
 .winm{display:flex;justify-content:center;margin-bottom:6px;animation:pop .6s var(--spring)}
-.tabbar button[aria-current="page"]::before{content:"";position:absolute;top:3px;bottom:3px;left:10%;right:10%;border-radius:14px;background:color-mix(in srgb,var(--blue) 13%,transparent);z-index:-1}
+@media(max-width:899px){.tabbar button[aria-current="page"]::before{content:"";position:absolute;top:3px;bottom:3px;left:10%;right:10%;border-radius:14px;background:color-mix(in srgb,var(--blue) 13%,transparent);z-index:-1}}
 .tabbar button{z-index:0}
 .prog{height:14px;border-radius:99px}.prog i{background:linear-gradient(180deg,#7ee36b,#34c759);border-radius:99px}.prog i::after{left:8px;right:8px;top:3px;height:4px}
 .itb button[aria-selected="true"]{transform:translateY(-1px)}
@@ -570,6 +570,8 @@ body::before{display:none}
   .tabbar button{flex:none;flex-direction:row;justify-content:flex-start;gap:14px;padding:10px 14px;font-size:16px;border-radius:12px}
   .tabbar button svg{width:22px;height:22px}
   .tabbar button[aria-current="page"]{background:color-mix(in srgb,var(--blue) 12%,transparent)}
+  .tabbar button .badge{position:static;margin-left:auto}
+  .tabbar button svg{flex:none}
   .badge{position:static;margin-left:auto}
   body.hasnav .page{padding-bottom:40px}
 }
@@ -1014,7 +1016,7 @@ function say(t,slow){speakText(t,(slow?.7:.95)*vRate());}
 
 /* ===== Icons ===== */
 const I={
-book:'<svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 6.5c3.5-1.6 6.8-1.4 10 .8 3.2-2.2 6.5-2.4 10-.8v15c-3.5-1.6-6.8-1.4-10 .8-3.2-2.2-6.5-2.4-10-.8z"/><path d="M14 7.3v15"/></svg>',
+book:'<svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M7 4h14a1 1 0 0 1 1 1v16H8.5A2.5 2.5 0 0 0 6 23.5V5a1 1 0 0 1 1-1z"/><path d="M6 23.5A2.5 2.5 0 0 1 8.5 21H22v3H8.5A2.5 2.5 0 0 1 6 23.5z"/><path d="M11 9h7M11 13h5"/></svg>',
 play:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 001.5.86l12.5-7.5a1 1 0 000-1.72L8.5 3.64A1 1 0 007 4.5z"/></svg>',
 pause:'<svg viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="4" width="5" height="16" rx="1.5"/><rect x="14" y="4" width="5" height="16" rx="1.5"/></svg>',
 star:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg>',

@@ -998,7 +998,7 @@ let tab=S.tab||"learn";
 function tabs(show){const t=$("#tabs");shell(show);if(!show){t.innerHTML="";return;}
   const due=dueItems().length;
   const bdue=bankDue().length+bankNew().length;
-  const T=[["learn","Öğren",I.learn],["books","Kitaplar",I.book],["bank","Hazine",I.bank],["review","Tekrar",I.review],["dict","Sözlük",I.dict]];
+  const T=[["learn","Öğren",I.learn],["games","Oyunlar",`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12a4 4 0 0 1 4 4v1.5a3.5 3.5 0 0 1-6.3 2.1L14.5 14h-5l-1.2 1.6A3.5 3.5 0 0 1 2 13.5V12a4 4 0 0 1 4-4z"/><path d="M7 11v3M5.5 12.5h3"/><circle cx="16" cy="11.5" r=".9" fill="currentColor"/><circle cx="18" cy="13.5" r=".9" fill="currentColor"/></svg>`],["books","Kitaplar",I.book],["bank","Hazine",I.bank],["review","Tekrar",I.review],["dict","Sözlük",I.dict]];
   const bd=k=>{const n=k==="review"?due:k==="bank"?bdue:0;return n?`<span class="badge">${n>99?"99+":n}</span>`:"";};
   t.innerHTML=`<nav class="tabbar"><div class="in">${T.map(([k,n,ic])=>`<button data-tab="${k}" ${tab===k?'aria-current="page"':""}>${ic}${n}${bd(k)}</button>`).join("")}</div></nav>`;
   t.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>{tab=b.dataset.tab;render();});}
@@ -1380,14 +1380,14 @@ const GAMES=[
 ];
 function games(){
   const L=league(),q=dq(),done=questsDone();S.games=S.games||{};
-  let h=`<div class="page wide fade"><div class="dph"><div class="dpt">Oyunlar</div><div class="dps">Oyna, puan topla, kelimeleri pekiştir</div></div>
+  let h=`<div class="page wide fade">${pageHead("Oyunlar","wow","Oyun zamanı! 🎮 Oynadıkça kelimeler kendiliğinden yerleşir. Hangisiyle başlıyoruz?")}
   <div class="lgcard" style="background:${L.cur[3]}"><span class="lgem">${L.cur[2]}</span><div class="lgtx"><b>${L.cur[1]} Lig</b><span>${S.xp||0} XP${L.nx?` · ${L.nx[1]} için ${L.nx[0]-(S.xp||0)} XP`:" · En üst lig!"}</span><div class="lgbar"><i style="width:${Math.round(L.p*100)}%"></i></div></div></div>
+  <div class="ggrid stagger">${GAMES.filter(g=>g[1]).map(g=>`<button class="gcard" data-g="${g[0]}" style="background:${g[4]}"><span class="gem">${g[2]}</span><b>${g[1]}</b><span>${g[3]}</span><small>${S.games[g[0]]?"Rekor: "+S.games[g[0]]:"Henüz oynanmadı"}</small></button>`).join("")}</div>
   ${speakCard()}${yapiCard()}
   <div class="fcard qcard"><div class="fch">Günlük görevler <span class="qc">${done}/3</span></div>
   ${QUESTS.slice(0,4).map(([k,t,n,ic])=>{const v=Math.min(n,q[k]||0);return `<div class="qrow ${v>=n?"ok":""}"><span class="qic">${v>=n?"✓":ic}</span><div class="qtx"><b>${t}</b><div class="qbar"><i style="width:${v/n*100}%"></i></div></div><span class="qv">${v}/${n}</span></div>`;}).join("")}
   <button class="chest ${done>=3&&!q.chest?"ready":""}" id="chest" ${done>=3&&!q.chest?"":"disabled"}><span class="chem">${q.chest?"📭":"🎁"}</span><span>${q.chest?"Bugünün hazinesi açıldı":done>=3?"Hazine sandığını aç!":"3 görevi bitir, hazineyi aç"}</span></button>
   <div class="sec-f" style="margin:8px 2px 0">❄️ Seri koruması: ${S.freeze||0} · Bir gün kaçırırsan serin bozulmaz.</div></div>
-  <div class="ggrid stagger">${GAMES.filter(g=>g[1]).map(g=>`<button class="gcard" data-g="${g[0]}" style="background:${g[4]}"><span class="gem">${g[2]}</span><b>${g[1]}</b><span>${g[3]}</span><small>${S.games[g[0]]?"Rekor: "+S.games[g[0]]:"Henüz oynanmadı"}</small></button>`).join("")}</div>
   <div class="fcard" style="margin-top:14px"><div class="fch">Rozetler <span class="qc">${(S.badges||[]).length}/${BADGES.length}</span></div><div class="bdgrid">${BADGES.map(b=>{const on=(S.badges||[]).includes(b[0]);return `<div class="bdg ${on?"on":""}"><span>${b[2]}</span><b>${b[1]}</b><small>${b[3]}</small></div>`;}).join("")}</div></div></div>`;
   root().innerHTML=h;
   root().querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>startGame(b.dataset.g));bindSpeakCard(root());bindYapiCard(root());

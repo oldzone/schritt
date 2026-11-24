@@ -1,0 +1,196 @@
+## İş hayatı
+l'emploi|iş, istihdam|lanplua
+le poste de travail|iş yeri, pozisyon|lö post dö travay
+l'employeur|işveren|lanpluayör
+le salarié|maaşlı çalışan|lö salarye
+le chômeur|işsiz|lö şomör
+le travail à temps partiel|yarı zamanlı iş|lö travay a tan parsyel
+le travail à temps plein|tam zamanlı iş|lö travay a tan plen
+les heures supplémentaires|fazla mesai|lez ör süplemanter
+le congé|izin|lö konje
+les congés payés|ücretli izin|le konje peye
+l'arrêt maladie|hastalık izni|lare maladi
+la retraite|emeklilik|la rötret
+le retraité|emekli|lö rötrete
+la candidature|başvuru|la kandidatü:r
+le candidat|aday|lö kandida
+l'expérience professionnelle|iş deneyimi|leksperyans profesyonel
+la formation|eğitim|la formasyon
+le stage|staj|lö staj
+le stagiaire|stajyer|lö stajye:r
+la tâche|görev|la taş
+l'objectif|hedef|lobjektif
+la réussite (B)|başarı|la reüsit
+l'augmentation de salaire|maaş zammı|logmantasyon dö sale:r
+le chef de projet|proje müdürü|lö şef dö proje
+le directeur|müdür|lö direktör
+l'entreprise (B)|şirket|lantröpriz
+la société (entreprise)|şirket|la sosyete
+le siège social|genel merkez|lö syej sosyal
+la succursale|şube|la sükürsal
+le fournisseur|tedarikçi|lö furnisör
+la livraison|teslimat|la livrezon
+la commande|sipariş|la komand
+le stock|stok|lö stok
+l'usine|fabrika|lüzin
+l'industrie|sanayi|lendüstri
+le commerce|ticaret|lö komers
+les ventes|satışlar|le vant
+la publicité (B)|reklam|la püblisite
+embaucher (B)|işe almak|anboşe
+travailler à domicile|evden çalışmak|travaye a domisil
+gagner sa vie|geçimini sağlamak|ganye sa vi
+diriger|yönetmek|dirije
+organiser|düzenlemek|organize
+assister à|katılmak|asiste a
+## Resmi işler
+l'administration|idare|ladministrasyon
+la préfecture|valilik|la prefektü:r
+le formulaire (B)|form|lö formüle:r
+la carte d'identité|kimlik kartı|la kart didantite
+le permis de conduire|ehliyet|lö permi dö kondüir
+le titre de séjour|oturma izni|lö titr dö sejur
+le visa|vize|lö viza
+la nationalité|uyruk|la nasyonalite
+l'ambassade|büyükelçilik|lanbasad
+le consulat|konsolosluk|lö konsüla
+l'inscription|kayıt|lenskripsyon
+les frais|masraflar, ücretler|le fre
+la déclaration d'impôts|vergi beyannamesi|la deklarasyon denpo
+l'attestation|belge|latestasyon
+le justificatif de domicile|ikametgâh belgesi|lö jüstifikatif dö domisil
+le guichet|gişe|lö gişe
+la file d'attente|kuyruk|la fil datant
+s'inscrire|kaydolmak|senskrir
+remplir un formulaire|form doldurmak|ranplir en formüle:r
+renouveler|yenilemek|rönuvle
+expirer|süresi dolmak|ekspire
+## Ev ve kira
+le propriétaire|ev sahibi|lö propriyete:r
+le locataire|kiracı|lö lokate:r
+le bail|kira sözleşmesi|lö bay
+la caution|depozito|la kosyon
+les charges|aidat, ek giderler|le şarj
+le chauffage|ısıtma|lö şofaj
+l'électricité|elektrik|lelektrisite
+le déménagement|taşınma|lö demenajman
+déménager|taşınmak|demenaje
+emménager|eve yerleşmek|anmenaje
+le colocataire|ev arkadaşı|lö kolokate:r
+la colocation|ortak ev|la kolokasyon
+le rez-de-chaussée|zemin kat|lö red şose
+la cave|bodrum|la kav
+le grenier|tavan arası|lö grönye
+le plombier|tesisatçı|lö plombye
+l'électricien|elektrikçi|lelektrisyen
+la fuite|sızıntı|la füit
+le robinet|musluk|lö robine
+la prise|priz|la priz
+l'ampoule|ampul|lanpul
+les meubles|mobilya|le möbl
+le bureau (meuble)|çalışma masası|lö büro
+louer|kiralamak|lue
+## Sağlık
+le symptôme|belirti|lö sentom
+le traitement|tedavi|lö tretman
+l'opération|ameliyat|loperasyon
+la piqûre|iğne|la pikü:r
+l'allergie|alerji|lalerji
+la tension artérielle|tansiyon|la tansyon arteryel
+la crise cardiaque|kalp krizi|la kriz kardyak
+l'infection|enfeksiyon|lenfeksyon
+le régime|diyet|lö rejim
+le poids|kilo, ağırlık|lö pua
+le stress|stres|lö stres
+enceinte|hamile|anset
+les urgences|acil servis|lez ürjans
+les premiers secours|ilk yardım|le prömye sökur
+la mutuelle|tamamlayıcı sağlık sigortası|la mütüel
+la carte vitale|sağlık kartı (FR)|la kart vital
+guérir (B)|iyileşmek|gerir
+grossir|kilo almak|grosir
+maigrir|kilo vermek|megrir
+se blesser|yaralanmak|sö blese
+se casser la jambe|bacağını kırmak|sö kase la jamb
+tousser|öksürmek|tuse
+## Eğitim
+l'enseignement|öğretim|lansenyman
+l'école primaire|ilkokul|lekol primer
+le collège (école)|ortaokul|lö kolej
+le lycée|lise|lö lise
+la fac|fakülte|la fak
+le diplôme|diploma|lö diplom
+la licence|lisans|la lisans
+le master|yüksek lisans|lö master
+la bourse|burs|la burs
+les frais d'inscription|kayıt ücreti|le fre denskripsyon
+le cours magistral|amfi dersi|lö kur majistral
+le mémoire|tez|lö memua:r
+la connaissance|bilgi|la konesans
+le vocabulaire|kelime bilgisi|lö vokabüle:r
+la grammaire|dilbilgisi|la grame:r
+la prononciation|telaffuz|la prononsyasyon
+réviser (B)|tekrar çalışmak|revize
+apprendre par cœur|ezberlemek|aprandr par kör
+passer un examen|sınava girmek|pase en egzamen
+rater un examen|sınavda kalmak|rate en egzamen
+## Toplum ve medya
+la société (B)|toplum|la sosyete
+la population|nüfus|la popülasyon
+le citoyen (B)|vatandaş|lö sitwayen
+le gouvernement (B)|hükümet|lö guvernöman
+le parti politique|siyasi parti|lö parti politik
+l'élection (B)|seçim|leleksyon
+le vote|oy|lö vot
+la loi (B)|kanun|la lua
+le droit (B)|hak|lö drua
+le devoir (civique)|görev|lö dövua:r
+la liberté (B)|özgürlük|la liberte
+la presse|basın|la pres
+la chaîne|kanal|la şen
+l'émission (B)|program|lemisyon
+le documentaire|belgesel|lö dokümanter
+la pub|reklam (kısa)|la püb
+diffuser|yayınlamak|difüze
+publier|yayımlamak|püblie
+## Çevre
+la pollution (B)|kirlilik|la polüsyon
+les déchets (B)|atıklar|le deşe
+le recyclage|geri dönüşüm|lö rösiklaj
+le réchauffement climatique (B)|küresel ısınma|lö reşofman klimatik
+l'énergie solaire|güneş enerjisi|lenerji sole:r
+l'éolienne|rüzgar türbini|leolyen
+les ressources naturelles|doğal kaynaklar|le rösurs natürel
+l'espèce menacée|nesli tehlikedeki tür|lespes mönase
+l'inondation|sel|linondasyon
+la sécheresse|kuraklık|la seşres
+le tremblement de terre|deprem|lö tranblöman dö te:r
+protéger l'environnement|çevreyi korumak|proteje lanvironman
+gaspiller|israf etmek|gaspiye
+trier les déchets|çöpleri ayrıştırmak|triye le deşe
+## Duygular ve ilişkiler
+l'amitié|arkadaşlık|lamitye
+l'amour|aşk|lamu:r
+le mariage|evlilik; düğün|lö maryaj
+les fiançailles|nişan|le fiyansay
+la confiance|güven|la konfyans
+la jalousie|kıskançlık|la jaluzi
+la solitude|yalnızlık|la solitüd
+le bonheur|mutluluk|lö bonör
+la tristesse|üzüntü|la tristes
+la colère|öfke|la koler
+la honte|utanç|la ont
+la fierté|gurur|la fyerte
+la déception|hayal kırıklığı|la desepsyon
+la surprise|sürpriz|la sürpriz
+la joie|sevinç|la jua
+ému|duygulanmış|emü
+vexé|alınmış|vekse
+fâché|kızgın|faşe
+inquiet (B)|endişeli|enkye
+détendu|rahat|detandü
+épuisé|bitkin|epüize
+tomber amoureux de|-e aşık olmak|tombe amurö dö
+rompre|ayrılmak|ronpr
+pardonner|affetmek|pardone
+faire confiance à|güvenmek|fe:r konfyans a

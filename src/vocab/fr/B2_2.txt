@@ -1,0 +1,132 @@
+## Çevre ve bilim
+l'environnement|çevre|lanvironman
+le réchauffement climatique|küresel ısınma|lö reşofman klimatik
+le changement climatique|iklim değişikliği|lö şanjman klimatik
+l'effet de serre|sera etkisi|lefe dö se:r
+la pollution|kirlilik|la polüsyon
+les déchets|atıklar|le deşe
+le recyclage|geri dönüşüm|lö risikla:j
+l'énergie renouvelable|yenilenebilir enerji|lenerji rönuvlabl
+l'énergie solaire|güneş enerjisi|lenerji sole:r
+l'éolienne|rüzgâr türbini|leolyen
+le combustible fossile|fosil yakıt|lö konbüstibl fosil
+le charbon|kömür|lö şarbon
+le pétrole|petrol|lö petrol
+le gaz naturel|doğalgaz|lö ga:z natürel
+l'empreinte carbone|karbon ayak izi|lanprent karbon
+la sécheresse|kuraklık|la seşres
+l'inondation|sel|linondasyon
+le tremblement de terre|deprem|lö tranbölman dö te:r
+la catastrophe naturelle|doğal afet|la katastrof natürel
+l'espèce menacée|nesli tehlikedeki tür|lespes mönase
+la biodiversité|biyoçeşitlilik|la biyodiversite
+la déforestation|ormansızlaşma|la deforestasyon
+la couche d'ozone|ozon tabakası|la kuş dozon
+durable|sürdürülebilir|dürabl
+écologique|ekolojik|ekolojik
+polluer|kirletmek|polüe
+recycler|geri dönüştürmek|risikle
+protéger|korumak|proteje
+gaspiller|israf etmek|gaspiye
+économiser l'énergie|enerji tasarrufu yapmak|ekonomize lenerji
+la recherche|araştırma|la röşerş
+le chercheur|araştırmacı|lö şerşör
+le scientifique|bilim insanı|lö syantifik
+l'expérience (science)|deney|leksperyans
+l'hypothèse|hipotez|lipotez
+la théorie|teori|la teori
+la découverte|keşif|la dekuvert
+l'invention|icat|lenvansyon
+le laboratoire|laboratuvar|lö laboratua:r
+l'analyse|analiz|lanaliz
+le résultat|sonuç|lö rezülta
+les données|veriler|le done
+la méthode|yöntem|la metod
+l'échantillon|örneklem, numune|leşantiyon
+la molécule|molekül|la molekül
+la cellule|hücre|la selül
+le gène|gen|lö jen
+l'atome|atom|latom
+la gravité|yerçekimi|la gravite
+l'univers|evren|lünive:r
+la planète|gezegen|la planet
+le satellite|uydu|lö satelit
+l'intelligence artificielle|yapay zekâ|lenteliija:ns artifisyel
+le robot|robot|lö robo
+l'algorithme|algoritma|lalgoritm
+la base de données|veritabanı|la ba:z dö done
+le réseau|ağ|lö rezo
+la cybersécurité|siber güvenlik|la sibersekürite
+numérique|dijital|nümerik
+virtuel|sanal|virtüel
+## Sağlık (ileri)
+le système immunitaire|bağışıklık sistemi|lö sistem imünite:r
+l'infection|enfeksiyon|lenfeksyon
+le virus|virüs|lö virüs
+la bactérie|bakteri|la bakteri
+le vaccin|aşı|lö vaksen
+l'épidémie|salgın|lepidemi
+la pandémie|pandemi|la pandemi
+le symptôme|belirti|lö senptom
+le diagnostic|teşhis|lö dyagnostik
+le traitement|tedavi|lö tretman
+l'opération|ameliyat|loperasyon
+le chirurgien|cerrah|lö şirürjyen
+l'infirmier|hemşire (erkek)|lenfirmye
+l'infirmière|hemşire|lenfirmyer
+le patient|hasta|lö pasyan
+les urgences|acil servis|lez ürja:ns
+l'ambulance|ambulans|lanbüla:ns
+l'ordonnance|reçete|lordona:ns
+l'effet secondaire|yan etki|lefe sögonde:r
+la douleur|ağrı|la dulör
+la blessure|yara|la blesü:r
+la fracture|kırık|la fraktü:r
+la tension artérielle|tansiyon|la tansyon arteryel
+le cœur|kalp|lö kö:r
+les poumons|akciğerler|le pumon
+le foie|karaciğer|lö fua
+les reins|böbrekler|le ren
+le cerveau|beyin|lö servo
+l'os|kemik|los
+le muscle|kas|lö müskl
+la peau|cilt|la po
+le sang|kan|lö san
+le stress|stres|lö stres
+la dépression|depresyon|la depresyon
+l'anxiété|kaygı|lanksyete
+le sommeil|uyku|lö somey
+l'insomnie|uykusuzluk|lensomni
+la santé mentale|ruh sağlığı|la sante mantal
+guérir|iyileşmek|gerir
+soigner|tedavi etmek|suanye
+se rétablir|toparlanmak|sö retablir
+s'évanouir|bayılmak|sevanuir
+tousser|öksürmek|tuse
+éternuer|hapşırmak|eternüe
+saigner|kanamak|senye
+## Eğitim (ileri)
+l'enseignement supérieur|yükseköğretim|lansenyman süperyör
+la faculté|fakülte|la fakülte
+le doctorat|doktora|lö doktora
+la licence|lisans|la lisa:ns
+le master|yüksek lisans|lö maste:r
+la thèse|tez|la tez
+le mémoire|bitirme tezi|lö memua:r
+la bourse|burs|la burs
+les frais de scolarité|okul ücreti|le fre dö skolarite
+le diplôme|diploma|lö diplom
+le concours|yarışma sınavı|lö konku:r
+la note|not|la not
+la moyenne|ortalama|la muayen
+l'échec|başarısızlık|leşek
+la réussite|başarı|la reüsit
+le professeur d'université|profesör|lö profesör dünivesite
+le cours magistral|amfi dersi|lö ku:r majistral
+les travaux dirigés|uygulama dersi|le travo dirije
+la bibliothèque universitaire|üniversite kütüphanesi|la biblyotek ünivesite:r
+s'inscrire|kaydolmak|sinskrir
+réussir un examen|sınavı geçmek|reüsir en egzamen
+échouer à un examen|sınavda kalmak|eşue a en egzamen
+redoubler|sınıfta kalmak|rödubl
+obtenir un diplôme|mezun olmak|optönir en diplom

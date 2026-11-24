@@ -1,0 +1,199 @@
+## Fiiller (B1)
+to accept|kabul etmek|tu ıksept
+to admire|hayran olmak|tu ıdmayır
+to affect|etkilemek|tu ıfekt
+to allow|izin vermek|tu ılau
+to appear|görünmek; ortaya çıkmak|tu ıpiır
+to arrange|ayarlamak, düzenlemek|tu ıreync
+to attach|eklemek|tu ıteç
+to attempt|denemek|tu ıtempt
+to behave|davranmak|tu biheyv
+to belong to|ait olmak|tu bilaŋ tu
+to blame|suçlamak|tu bleym
+to boil (B1)|kaynatmak|tu boyl
+to calculate|hesaplamak|tu kelkyuleyt
+to celebrate|kutlamak|tu selıbreyt
+to compare (B1)|karşılaştırmak|tu kımper
+to concentrate|konsantre olmak|tu kansıntreyt
+to connect|bağlamak|tu kınekt
+to consider|düşünmek, göz önünde bulundurmak|tu kınsidır
+to contain|içermek|tu kınteyn
+to continue|devam etmek|tu kıntinyu:
+to create|yaratmak|tu kriyeyt
+to damage|zarar vermek|tu demic
+to deliver (B1)|teslim etmek|tu dilivır
+to depend on|bağlı olmak|tu dipend an
+to deserve|hak etmek|tu dizörv
+to destroy|yok etmek|tu distroy
+to disappear|kaybolmak|tu disıpiır
+to discover|keşfetmek|tu diskavır
+to divide|bölmek|tu divayd
+to doubt|şüphe etmek|tu daut
+to encourage|cesaretlendirmek|tu inkaric
+to estimate|tahmin etmek|tu estımeyt
+to exist|var olmak|tu igzist
+to expect|beklemek, ummak|tu ikspekt
+to experience|yaşamak, deneyimlemek|tu ikspiriıns
+to explore|keşfetmek|tu iksplo:r
+to fix (B1)|onarmak|tu fiks
+to fold|katlamak|tu fo:ld
+to gain|kazanmak|tu geyn
+to guess|tahmin etmek|tu ges
+to hate|nefret etmek|tu heyt
+to ignore|görmezden gelmek|tu igno:r
+to include|dahil etmek|tu inklu:d
+to inform|bilgilendirmek|tu info:rm
+to introduce|tanıştırmak|tu intrıdyu:s
+to invent|icat etmek|tu invent
+to join|katılmak|tu coyn
+to kick|tekmelemek|tu kik
+to knock|kapıyı çalmak|tu nak
+to lie|yalan söylemek; uzanmak|tu lay
+to measure|ölçmek|tu mejır
+to mix|karıştırmak|tu miks
+to obey|itaat etmek|tu o:bey
+to offer|teklif etmek|tu afır
+to own|sahip olmak|tu o:n
+to pack (B1)|paketlemek|tu pek
+to point|işaret etmek|tu poynt
+to pour|dökmek|tu po:r
+to pray|dua etmek|tu prey
+to pretend|-miş gibi yapmak|tu pritend
+to produce|üretmek|tu prıdyu:s
+to provide|sağlamak|tu prıvayd
+to publish (B1)|yayımlamak|tu pablış
+to pull|çekmek|tu pul
+to push|itmek|tu puş
+to reach|ulaşmak|tu ri:ç
+to recognise|tanımak|tu rekıgnayz
+to reject|reddetmek|tu ricekt
+to rely on|güvenmek|tu rilay an
+to remain|kalmak|tu rimeyn
+to remove|kaldırmak|tu rimu:v
+to rescue|kurtarmak|tu reskyu:
+to respect|saygı duymak|tu rispekt
+to search|aramak|tu sörç
+to shake|sallamak|tu şeyk
+to shine|parlamak|tu şayn
+to shut|kapatmak|tu şat
+to smell|koklamak|tu smel
+to solve|çözmek|tu salv
+to spread|yaymak|tu spred
+to succeed|başarmak|tu sıksi:d
+to supply|tedarik etmek|tu sıplay
+to support|desteklemek|tu sıpo:rt
+to surround|kuşatmak|tu sıraund
+to survive|hayatta kalmak|tu sırvayv
+to switch on|açmak (cihaz)|tu swiç an
+to switch off|kapatmak (cihaz)|tu swiç of
+to tear|yırtmak|tu ter
+to translate|çevirmek|tu trensleyt
+to wake someone up|birini uyandırmak|tu weyk samwan ap
+to weigh|tartmak|tu wey
+## Phrasal verbs (B1)
+to carry on|devam etmek|tu keri an
+to find out|öğrenmek, ortaya çıkarmak|tu faynd aut
+to give up|vazgeçmek|tu giv ap
+to go on|devam etmek; olmak|tu go: an
+to grow up|büyümek|tu gro: ap
+to hang out|takılmak (arkadaşla)|tu heŋ aut
+to look after|bakmak, ilgilenmek|tu luk aftır
+to make up one's mind|karar vermek|tu meyk ap wanz maynd
+to pick someone up|birini almak (araba)|tu pik samwan ap
+to put away|kaldırmak, yerine koymak|tu put ıwey
+to run into|rastlamak|tu ran intu
+to set off|yola çıkmak|tu set of
+to show off|hava atmak|tu şo: of
+to slow down|yavaşlamak|tu slo: daun
+to take after|benzemek (aileden)|tu teyk aftır
+to turn up|gelmek, ortaya çıkmak|tu törn ap
+to work out|spor yapmak; çözmek|tu wörk aut
+to break down|bozulmak (araç)|tu breyk daun
+to calm down|sakinleşmek|tu kam daun
+to cheer up|neşelenmek|tu çiır ap
+to drop off|bırakmak (birini)|tu drap of
+to eat out|dışarıda yemek|tu i:t aut
+to fill up|doldurmak (depo)|tu fil ap
+to get back|geri dönmek|tu get bek
+to go away|uzaklaşmak|tu go: ıwey
+to hurry up|acele etmek|tu hari ap
+to keep up with|yetişmek, ayak uydurmak|tu ki:p ap wið
+to let down|hayal kırıklığına uğratmak|tu let daun
+to look forward to (B1)|dört gözle beklemek|tu luk fo:rwırd tu
+to pass away|vefat etmek|tu pas ıwey
+to put out|söndürmek|tu put aut
+to run away|kaçmak|tu ran ıwey
+to stand for|temsil etmek, açılımı olmak|tu stend fo:r
+to take up|başlamak (hobi)|tu teyk ap
+to throw out|atmak (çöp)|tu θro: aut
+to wear out|eskitmek, yıpranmak|tu wer aut
+## Bağlaçlar ve zarflar (B1)
+in addition|ek olarak|in ıdişın
+on the contrary|aksine|an dı kantrıri
+as well as|-nin yanı sıra|ız wel ız
+apart from|-den başka|ıpart frım
+due to|-den dolayı|dyu: tu
+thanks to|sayesinde|θeŋks tu
+because of|yüzünden|bikoz ıv
+in fact|aslında|in fekt
+in general|genel olarak|in cenırıl
+for instance|örneğin|fo:r instıns
+such as|gibi|saç ız
+unlike|-in aksine|anlayk
+whereas (B1)|oysa|weres
+on the whole|genel olarak|an dı ho:l
+in other words|başka bir deyişle|in aðır wörds
+as a matter of fact|aslında|ız ı metır ıv fekt
+at the same time|aynı zamanda|ıt dı seym taym
+from time to time|zaman zaman|frım taym tı taym
+all of a sudden|birdenbire|o:l ıv ı sadın
+sooner or later (B1)|er ya da geç|su:nır o:r leytır
+## Sıfatlar (B1, devam)
+accurate|doğru, kesin|ekyırıt
+active|aktif|ektiv
+ancient|antik|eynşınt
+anxious (B1)|kaygılı|eŋkşıs
+basic|temel|beysik
+brief|kısa|bri:f
+brilliant|parlak, harika|brilyınt
+careless|dikkatsiz|kerlıs
+cruel|zalim|kru:ıl
+certain|emin, belirli|sörtın
+complete|tam|kımpli:t
+correct|doğru|kırekt
+dark|karanlık|dark
+deep|derin|di:p
+direct|doğrudan|dırekt
+efficient (B1)|verimli|ifişınt
+equal|eşit|i:kwıl
+extra|ek|ekstrı
+false|yanlış, sahte|fo:ls
+fresh|taze|freş
+gentle|nazik, yumuşak|centıl
+guilty|suçlu|gilti
+innocent|masum|inısınt
+illegal|yasadışı|ili:gıl
+legal|yasal|li:gıl
+likely|muhtemel|laykli
+unlikely|olası olmayan|anlaykli
+modern|modern|madırn
+narrow|dar|nero:
+wide|geniş|wayd
+native|yerli, ana (dil)|neytiv
+negative|olumsuz|negıtiv
+positive|olumlu|pazıtiv
+obvious (B1)|apaçık|abviıs
+official|resmi|ıfişıl
+pale|soluk|peyl
+plain|sade|pleyn
+popular|popüler|papyulır
+private|özel|prayvıt
+public|kamu|pablik
+pure|saf|pyuır
+rough|pürüzlü; kaba|raf
+smooth|pürüzsüz|smu:ð
+sharp|keskin|şarp
+similar|benzer|similır
+strict|katı, sert|strikt
+typical|tipik|tipikıl
+violent|şiddet içeren|vayılınt

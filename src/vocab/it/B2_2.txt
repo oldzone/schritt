@@ -1,0 +1,210 @@
+## Eğitim (ileri)
+l'istruzione superiore|yükseköğretim|listruttsyone superyore
+la facoltà|fakülte|la fakolta
+il dottorato|doktora|il dottorato
+la laurea|lisans diploması|la laurea
+la laurea magistrale|yüksek lisans|la laurea majistrale
+la tesi|tez|la tezi
+la borsa di studio|burs|la borsa di studyo
+le tasse universitarie|üniversite harcı|le tasse universitaryе
+il diploma|diploma|il diploma
+il concorso|yarışma sınavı|il konkorso
+il voto (scuola)|not|il voto
+la media|ortalama|la medya
+il fallimento (scuola)|başarısızlık|il fallimento
+il successo|başarı|il suççesso
+la lezione|ders|la lettsyone
+iscriversi|kaydolmak|iskriversi
+superare un esame|sınavı geçmek|superare un ezame
+essere bocciato|sınavda kalmak|essere boççato
+laurearsi|mezun olmak (üniversite)|laurearsi
+## Soyut kavramlar
+il vantaggio|avantaj|il vantajjo
+lo svantaggio|dezavantaj|lo zvantajjo
+la conseguenza|sonuç|la konseguentsa
+la causa|neden|la kauza
+l'effetto|etki|leffetto
+l'influenza|etki|linfluentsa
+il rapporto|ilişki; rapor|il rapporto
+la relazione|ilişki|la relattsyone
+la tendenza|eğilim|la tendentsa
+il fenomeno|olgu|il fenomeno
+il processo (sviluppo)|süreç|il proçesso
+la fase|aşama|la faze
+il livello|seviye|il livello
+la qualità|kalite|la kualita
+la quantità|miktar|la kuantita
+il valore|değer|il valore
+il principio|ilke|il prinçipyo
+la regola|kural|la regola
+l'eccezione|istisna|leççettsyone
+la possibilità|olasılık|la possibilita
+la probabilità|ihtimal|la probabilita
+il rischio|risk|il riskyo
+la sfida|meydan okuma|la sfida
+l'ostacolo|engel|lostakolo
+la soluzione|çözüm|la soluttsyone
+l'accordo|anlaşma|lakkordo
+il disaccordo|anlaşmazlık|il dizakkordo
+il conflitto|çatışma|il konflitto
+la responsabilità|sorumluluk|la responsabilita
+il dovere|görev|il dovere
+la libertà|özgürlük|la liberta
+la sicurezza|güvenlik|la sikurettsa
+la fiducia|güven|la fiduça
+il dubbio|şüphe|il dubbyo
+la certezza|kesinlik|la çertettsa
+la verità|gerçek|la verita
+la bugia|yalan|la buji:a
+la realtà|gerçeklik|la realta
+l'aspetto|görünüş|laspetto
+l'identità|kimlik|lidentita
+la memoria|hafıza|la memorya
+il ricordo|anı|il rikordo
+la fantasia|hayal gücü|la fantazi:a
+la curiosità|merak|la kuryozita
+la pazienza|sabır|la pattsyentsa
+il coraggio|cesaret|il korajjo
+la paura|korku|la paura
+la vergogna|utanç|la vergonya
+l'orgoglio|gurur|lorgolyo
+la gelosia|kıskançlık|la jelozi:a
+la rabbia|öfke|la rabbya
+la tristezza|üzüntü|la tristettsa
+la gioia|sevinç|la joya
+la felicità|mutluluk|la feliçita
+la speranza|umut|la sperantsa
+la disperazione|umutsuzluk|la disperattsyone
+la solitudine|yalnızlık|la solitudine
+la noia|can sıkıntısı|la noya
+la soddisfazione|memnuniyet|la soddisfattsyone
+la delusione|hayal kırıklığı|la deluzyone
+il rimpianto|pişmanlık|il rimpyanto
+la sorpresa|sürpriz|la sorpreza
+## Sıfatlar (B2)
+attuale|güncel|attuale
+antico|eski, antik|antiko
+recente|yeni, son|reçente
+moderno|modern|moderno
+tradizionale|geleneksel|tradittsyonale
+essenziale|temel|essentsyale
+principale|ana|prinçipale
+secondario|ikincil|sekondaryo
+generale|genel|jenerale
+particolare|özel|partikolare
+preciso|kesin|preçizo
+vago|belirsiz|vago
+evidente|apaçık|evidente
+complesso|karmaşık|komplesso
+semplice|basit|semplice
+inutile|işe yaramaz|inutile
+necessario|gerekli|neçessaryo
+sufficiente|yeterli|suffiçente
+insufficiente|yetersiz|insuffiçente
+notevole|kayda değer|notevole
+strano|garip|strano
+raro|nadir|raro
+frequente|sık|frekuente
+permanente|kalıcı|permanente
+temporaneo|geçici|temporaneo
+ingiusto|adaletsiz|injusto
+giusto|adil; doğru|justo
+sensibile|hassas|sensibile
+ragionevole|makul|rajonevole
+ridicolo|gülünç|ridikolo
+indispensabile|vazgeçilmez|indispensabile
+potenziale|potansiyel|potentsyale
+visibile|görünür|vizibile
+invisibile|görünmez|invizibile
+pubblico|kamusal|pubbliko
+privato|özel|privato
+fragile|kırılgan|frajile
+solido|sağlam|solido
+pesante|ağır|pezante
+leggero|hafif|lejjero
+spesso (aggettivo)|kalın|spesso
+sottile|ince|sottile
+profondo|derin|profondo
+## Fiiller (B2)
+affermare|ileri sürmek|affermare
+analizzare|analiz etmek|analiddzare
+migliorare|geliştirmek|milyorare
+adattarsi|uyum sağlamak|adattarsi
+apprezzare|takdir etmek|apprettsare
+approvare|onaylamak|approvare
+confessare|itiraf etmek|konfessare
+paragonare|karşılaştırmak|paragonare
+confermare|doğrulamak|konfermare
+contribuire|katkıda bulunmak|kontribuire
+convincere|ikna etmek|konvinçere
+criticare|eleştirmek|kritikare
+discutere|tartışmak|diskutere
+dichiarare|beyan etmek|dikyarare
+definire|tanımlamak|definire
+dimostrare|kanıtlamak|dimostrare
+dipendere|bağlı olmak|dipendere
+sviluppare|geliştirmek|zviluppare
+distinguere|ayırt etmek|distinguere
+elaborare|hazırlamak|elaborare
+eliminare|ortadan kaldırmak|eliminare
+prevedere|öngörmek|prevedere
+stimare|tahmin etmek; saygı duymak|stimare
+stabilire|kurmak, belirlemek|stabilire
+valutare|değerlendirmek|valutare
+esigere|talep etmek|ezijere
+esprimere|ifade etmek|esprimere
+favorire|kolaylaştırmak|favorire
+garantire|garanti etmek|garantire
+identificare|tanımlamak|identifikare
+implicare|gerektirmek|implikare
+indicare|belirtmek|indikare
+interpretare|yorumlamak|interpretare
+limitare|sınırlamak|limitare
+meritare|hak etmek|meritare
+trascurare|ihmal etmek|traskurare
+ottenere|elde etmek|ottenere
+sembrare|görünmek|sembrare
+persuadere|ikna etmek|persuadere
+precisare|netleştirmek|preçizare
+progredire|ilerlemek|progredire
+provocare|neden olmak|provokare
+reagire|tepki vermek|reajire
+realizzare|gerçekleştirmek|realiddzare
+raccomandare|tavsiye etmek|rakkomandare
+ridurre|azaltmak|ridurre
+riflettere|düşünmek; yansıtmak|riflettere
+rafforzare|güçlendirmek|raffortsare
+rinunciare|vazgeçmek|rinunçare
+rappresentare|temsil etmek|rappresentare
+resistere|direnmek|rezistere
+rivelare|ortaya çıkarmak|rivelare
+sottolineare|vurgulamak|sottolineare
+subire|maruz kalmak|subire
+supporre|varsaymak|supporre
+superare|aşmak|superare
+suscitare|uyandırmak|suşitare
+tollerare|hoş görmek|tollerare
+trasformare|dönüştürmek|trasformare
+verificare|kontrol etmek|verifikare
+## Bağlaçlar (B2)
+tuttavia|ancak|tuttavi:a
+nonostante|-e rağmen|nonostante
+però|ama|pero
+invece|oysa, bunun yerine|inveçe
+quindi|bu yüzden|kuindi
+dunque|öyleyse|dunkue
+perciò|bu nedenle|perço
+inoltre|ayrıca|inoltre
+in effetti|gerçekten de|in effetti
+in altre parole|başka bir deyişle|in altre parole
+sebbene|-e rağmen|sebbene
+purché|şartıyla|purke
+mentre|-iken; oysa|mentre
+a meno che non|-medikçe|a meno ke non
+a causa di (B)|yüzünden|a kauza di
+nonostante ciò|buna rağmen|nonostante ço
+invece di|yerine|inveçe di
+quanto a|-e gelince|kuanto a
+secondo|-e göre|sekondo
+da una parte... dall'altra|bir yandan... öte yandan|da una parte dallaltra
+in fin dei conti|nihayetinde|in fin dey konti

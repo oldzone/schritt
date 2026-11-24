@@ -1,0 +1,155 @@
+## Toplum ve yaşam (C1, devam)
+die Lebensführung|yaşam tarzı|le:bınsfü:ruŋ
+die Lebenseinstellung|hayata bakış|le:bınsaynşteluŋ
+die Lebensumstände|yaşam koşulları|le:bınsumştende
+der Lebensunterhalt|geçim|le:bınsuntırhalt
+die Existenzangst|geçim kaygısı|eksistentsaŋst
+die Altersarmut|yaşlılık yoksulluğu|altırsarmu:t
+die Kinderbetreuung|çocuk bakımı|kindırbetroyuŋ
+die Vereinbarkeit von Familie und Beruf|aile ve işin uyumu|feraynba:rkayt
+die Alleinerziehende|tek ebeveyn (kadın)|alayner tsi:ınde
+die Patchworkfamilie|karma aile|petşvörkfami:lye
+die Pflegebedürftigkeit|bakıma muhtaçlık|pfle:gebedürftihkayt
+die Lebenserfahrung|hayat tecrübesi|le:bınserfa:ruŋ
+der Lebensabend|ömrün son demleri|le:bınsa:bınt
+die Rentenreform|emeklilik reformu|rentınreform
+der Generationenvertrag|kuşaklar arası sözleşme|generatsyo:nınfertra:k
+die Landflucht|kırdan kente göç|lantfluht
+die Verstädterung|kentleşme|ferşte:tıruŋ
+die Wohlstandsgesellschaft|refah toplumu|vo:lştantsgezelşaft
+die Konsumgesellschaft|tüketim toplumu|konzu:mgezelşaft
+der Konsumverzicht|tüketimden kaçınma|konzu:mfertsiht
+der Minimalismus|minimalizm|minimalismus
+die Entschleunigung|yavaşlama (yaşam)|entşloyniguŋ
+die Leistungsgesellschaft|başarı odaklı toplum|laystuŋsgezelşaft
+der Zeitgeist|çağın ruhu|tsaytgayst
+die Wertvorstellung|değer anlayışı|ve:rtfo:rşteluŋ
+der Sittenverfall|ahlaki çöküş|zitınferfal
+die Bevormundung (C1)|vesayet altına alma|befo:rmunduŋ
+die Eigenverantwortung|kişisel sorumluluk|aygınferantvortuŋ
+die Selbstbestimmtheit|özerklik|zelpstbeştimthayt
+die Fremdbestimmung|dış belirlenim|fremtbeştimuŋ
+die Chancengleichheit (C1)|fırsat eşitliği|şa:nsınglayhhayt
+die Willkommenskultur|hoş karşılama kültürü|vilkomınskultu:r
+die Fremdenfeindlichkeit|yabancı düşmanlığı|fremdınfayntlihkayt
+der Rassismus|ırkçılık|rasismus
+der Antisemitismus|antisemitizm|antizemitismus
+die Islamfeindlichkeit|İslam düşmanlığı|isla:mfayntlihkayt
+die Zuwanderung|göç (ülkeye)|tsu:vandıruŋ
+die Zuwanderungsgesellschaft|göç alan toplum|tsu:vandıruŋsgezelşaft
+die Abschottung|kendini dışarıya kapatma|apşotuŋ
+die Weltoffenheit|dünyaya açıklık|veltofınhayt
+## İş ve kariyer (C1, son)
+das Organigramm|organizasyon şeması|organigram
+der Kompetenzbereich|yetki alanı|kompetentsbirayh
+der Verantwortungsbereich|sorumluluk alanı|ferantvortuŋsbirayh
+das Pflichtenheft|teknik şartname|pflihtınheft
+die Machbarkeitsstudie|fizibilite çalışması|mahba:rkaytsştu:dye
+die Kosten-Nutzen-Analyse|maliyet-fayda analizi|kostın nutsın analü:ze
+die Schwachstelle|zayıf nokta|şvahştele
+die Stärken-Schwächen-Analyse|SWOT analizi|şterkın şvehın analü:ze
+die Bestandsgarantie|varlık güvencesi|beştantsgaranti:
+die Nachfolgeregelung|halef planlaması|na:hfolgere:gıluŋ
+die Unternehmensnachfolge|şirket devri|untırne:mınsna:hfolge
+der Geschäftsbericht|faaliyet raporu|geşeftsberiht
+die Hauptversammlung|genel kurul|hauptferzamluŋ
+der Aktionär|hissedar|aktsyone:r
+die Beteiligung|ortaklık payı|betayliguŋ
+die Tochtergesellschaft|yan kuruluş|tohtırgezelşaft
+die Muttergesellschaft|ana şirket|mutırgezelşaft
+der Wirtschaftsprüfer|denetçi|virtşaftsprü:fır
+die Rechnungsprüfung|hesap denetimi|rehnuŋsprü:fuŋ
+die Compliance|uyum (mevzuat)|komplayıns
+die Geschäftsordnung|iç tüzük|geşeftsordnuŋ
+die Weisung|talimat|vayzuŋ
+die Abmahnung|ihtar (işçiye)|apma:nuŋ
+die fristlose Kündigung|bildirimsiz fesih|fristlo:ze kündiguŋ
+die Kündigungsschutzklage|işe iade davası|kündiguŋsşutskla:ge
+der Aufhebungsvertrag|karşılıklı fesih sözleşmesi|aufhe:buŋsfertra:k
+das Wettbewerbsverbot|rekabet yasağı|vetbeverpsferbo:t
+die Verschwiegenheitspflicht|gizlilik yükümlülüğü|ferşvi:gınhaytspfliht
+## Duygusal ve sosyal ifadeler (C1)
+sich behaupten|kendini kabul ettirmek|zih behauptın
+sich durchsetzen|sözünü geçirmek|zih durhzetsın
+sich hineinversetzen|kendini yerine koymak|zih hinaynferzetsın
+sich abfinden mit|razı olmak|zih apfindın mit
+sich auseinanderleben|birbirinden uzaklaşmak|zih ausaynandırle:bın
+sich zusammenraufen|anlaşmaya varmak (zorla)|zih tsuzamınraufın
+sich herausreden|kıvırmak|zih herausre:dın
+sich zurückziehen|geri çekilmek|zih tsurüktsi:ın
+sich aufraffen|kendini toparlamak|zih aufrafın
+sich überwinden|kendini zorlamak|zih ü:bırvindın
+sich anbiedern|yaranmaya çalışmak|zih anbi:dırn
+sich verrennen|saplanmak (yanlış fikre)|zih ferrenın
+sich verzetteln|dağılmak, odak kaybetmek|zih fertsetıln
+sich vergewissern|emin olmak|zih fergevisırn
+sich vergreifen|el uzatmak (haksız)|zih fergrayfın
+sich verausgaben|kendini tüketmek|zih ferausga:bın
+sich besinnen|kendine gelmek, düşünmek|zih bezinın
+sich entfalten|gelişmek|zih entfaltın
+sich ereignen|meydana gelmek|zih eraygnın
+sich erübrigen|gereksiz olmak|zih erü:brigın
+sich etablieren|yerleşmek|zih etabli:rın
+sich herauskristallisieren|netleşmek|zih herauskristalizi:rın
+sich niederschlagen in|yansımak|zih ni:dırşla:gın in
+sich zuspitzen|kızışmak|zih tsu:şpitsın
+## Sıfat ve zarflar (C1, son)
+achtlos|dikkatsiz|ahtlo:s
+akribisch|titiz|akri:biş
+allgegenwärtig|her yerde var olan|alge:gınvertih
+altruistisch|özgeci|altruistiş
+ausgefallen|sıra dışı|ausgefalın
+ausgewogen|dengeli|ausgevo:gın
+bedächtig|ağır başlı|bedehtih
+beflissen|hevesli, gayretli|beflisın
+beiläufig (C1)|tesadüfen|bayloyfih
+bezeichnenderweise|manidar biçimde|betsayhnındırvayze
+blauäugig|saf, safdil|blauoygih
+eigensinnig|inatçı|aygınzinih
+einvernehmlich|uzlaşmalı|aynferne:mlih
+erwiesenermaßen|kanıtlandığı üzere|ervi:zınırma:sın
+folgerichtig|tutarlı|folgerihtih
+geflissentlich|kasten|geflisıntlih
+grundverschieden|tamamen farklı|gruntferşi:dın
+hinlänglich|yeterince|hinleŋlih
+klammheimlich|gizlice|klamhaymlih
+leichtfertig|hafifmeşrep, düşüncesiz|layhtfertih
+lückenlos|eksiksiz|lükınlo:s
+mustergültig|örnek gösterilecek|mustırgültih
+nachweislich|kanıtlanabilir şekilde|na:hvayslih
+naturgemäß|doğası gereği|natu:rgeme:s
+offenkundig|aşikâr|ofınkundih
+ohnegleichen|eşsiz|o:neglayhın
+sachgemäß|usulüne uygun|zahgeme:s
+schleichend|sinsi, yavaş yavaş|şlayhınt
+seinerzeit|zamanında|zaynırtsayt
+tunlichst|mümkün olduğunca|tu:nlihst
+unbestritten|tartışmasız|unbeştritın
+unweigerlich|kaçınılmaz olarak|unvaygırlih
+unzweifelhaft|şüphesiz|untsvayfılhaft
+vehement|şiddetle|vehement
+vorbehaltlos|kayıtsız şartsız|fo:rbehaltlo:s
+wohlweislich|bilerek, akıllıca|vo:lvayslih
+zeitweise|zaman zaman|tsaytvayze
+zutiefst|derinden|tsuti:fst
+## Doğa ve bilim (C1, son)
+die Biodiversität|biyoçeşitlilik|biodiverzite:t
+die Fotosynthese|fotosentez|fotozünte:ze
+der Stoffwechsel|metabolizma|ştofveksıl
+die Evolution|evrim|evolutsyo:n
+die Mutation|mutasyon|mutatsyo:n
+die Vererbung|kalıtım|fererbuŋ
+das Gehirn|beyin|gehirn
+die Nervenbahn|sinir yolu|nerfınba:n
+das Hormon|hormon|hormo:n
+die Wahrscheinlichkeit|olasılık|va:rşaynlihkayt
+die Variable|değişken|varia:ble
+die Gleichung|denklem|glayhuŋ
+die Formel|formül|formıl
+die Kurve|eğri|kurve
+der Höhepunkt|doruk|hö:epuŋkt
+der Tiefpunkt|dip noktası|ti:fpuŋkt
+die Schwankung|dalgalanma|şvaŋkuŋ
+die Abweichung|sapma|apvayhuŋ
+die Hochrechnung|projeksiyon|ho:hrehnuŋ
+die Größenordnung|büyüklük sırası|grö:sınordnuŋ

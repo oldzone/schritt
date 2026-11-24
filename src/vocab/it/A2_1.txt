@@ -1,0 +1,207 @@
+## Ev
+il soggiorno|oturma odası|il sojorno
+la cucina (stanza)|mutfak|la kuçina
+il corridoio|koridor|il korridoyo
+la scala|merdiven|la skala
+il piano|kat|il pyano
+il tetto|çatı|il tetto
+la parete|duvar|la parete
+il pavimento|zemin|il pavimento
+il soffitto|tavan|il soffitto
+la porta|kapı|la porta
+la lampada|lamba|la lampada
+il letto|yatak|il letto
+il cuscino|yastık|il kuşino
+la coperta|battaniye|la koperta
+lo specchio|ayna|lo spekkyo
+la sedia|sandalye|la sedya
+il tavolo|masa|il tavolo
+lo scaffale|raf|lo skaffale
+il cassetto|çekmece|il kassetto
+la lavatrice|çamaşır makinesi|la lavatriçe
+la lavastoviglie|bulaşık makinesi|la lavastovilye
+il riscaldamento|ısıtma|il riskaldamento
+la presa|priz|la preza
+il rubinetto|musluk|il rubinetto
+la spazzatura|çöp|la spattsatura
+pulire|temizlemek|pulire
+lavare i piatti|bulaşık yıkamak|lavare i pyatti
+stirare|ütülemek|stirare
+apparecchiare la tavola|sofrayı kurmak|apparekkyare la tavola
+traslocare|taşınmak|trazlokare
+## Şehir
+la piazza|meydan|la pyattsa
+la via|cadde|la vi:a
+il ponte|köprü|il ponte
+il semaforo|trafik ışığı|il semaforo
+l'incrocio|kavşak|linkroço
+il marciapiede|kaldırım|il marçapyede
+il parcheggio|otopark|il parkeccio
+il municipio|belediye binası|il munipiçyo
+la questura|emniyet müdürlüğü|la kuestura
+l'ospedale|hastane|lospedale
+la posta|postane|la posta
+il museo|müze|il muzeo
+il teatro|tiyatro|il teatro
+lo stadio|stadyum|lo stadyo
+il mercato|pazar|il merkato
+il negozio|dükkân|il negottsyo
+il supermercato|süpermarket|il supermerkato
+la panetteria|fırın|la panetteri:a
+la macelleria|kasap|la mançelleri:a
+la libreria|kitapçı|la libreri:a
+l'edicola|gazete bayii|ledikola
+il quartiere|mahalle|il kuartyere
+la periferia|şehir dışı|la periferi:a
+il traffico|trafik|il traffiko
+la metropolitana|metro|la metropolitana
+il tram|tramvay|il tram
+il taxi|taksi|il taksi
+## Alışveriş ve giyim
+il prezzo|fiyat|il prettso
+lo sconto|indirim|lo skonto
+i saldi|indirim sezonu|i saldi
+lo scontrino|fiş|lo skontrino
+la taglia|beden|la talya
+la misura|ölçü, numara|la mizura
+provare|denemek|provare
+il pantalone|pantolon|il pantalone
+la maglietta|tişört|la malyetta
+il maglione|kazak|il malyone
+il vestito|elbise|il vestito
+le scarpe|ayakkabılar|le skarpe
+gli stivali|botlar|li stivali
+la borsa|çanta|la borsa
+la cintura|kemer|la çintura
+la sciarpa|atkı|la şarpa
+i guanti|eldivenler|i guanti
+gli occhiali|gözlük|li okkyali
+l'orologio|saat (kol)|lorolojo
+l'ombrello|şemsiye|lombrello
+il portafoglio|cüzdan|il portafolyo
+largo|bol|largo
+stretto|dar|stretto
+## Yemek
+la colazione|kahvaltı|la kolattsyone
+il pranzo|öğle yemeği|il prandzo
+lo spuntino|ara öğün|lo spuntino
+il piatto|tabak; yemek|il pyatto
+il primo|ilk yemek (makarna)|il primo
+il secondo|ana yemek|il sekondo
+il contorno|garnitür|il kontorno
+il dessert|tatlı|il dessert
+la minestra|çorba|la minestra
+il riso|pirinç|il rizo
+la pasta|makarna|la pasta
+il pane|ekmek|il pane
+l'olio|yağ|lolyo
+il sale|tuz|il sale
+il pepe|karabiber|il pepe
+lo zucchero|şeker|lo tsukkero
+l'uovo|yumurta|luovo
+il pollo|tavuk|il pollo
+il manzo|sığır eti|il mandzo
+il maiale|domuz eti|il mayale
+il pesce|balık|il peşe
+il pomodoro|domates|il pomodoro
+la patata|patates|la patata
+la carota|havuç|la karota
+l'insalata|salata|linsalata
+la mela|elma|la mela
+la pera|armut|la pera
+l'uva|üzüm|luva
+la fragola|çilek|la fragola
+il limone|limon|il limone
+il succo|meyve suyu|il sukko
+il vino|şarap|il vino
+il tè|çay|il te
+il latte|süt|il latte
+lo yogurt|yoğurt|lo yogurt
+il conto (ristorante)|hesap|il konto
+la mancia|bahşiş|la mança
+prenotare|rezervasyon yapmak|prenotare
+ordinare|sipariş vermek|ordinare
+## Zaman ve hava
+la mattina|sabah|la mattina
+il pomeriggio|öğleden sonra|il pomerijjo
+la sera|akşam|la sera
+la notte|gece|la notte
+la settimana|hafta|la settimana
+il mese|ay|il meze
+la stagione|mevsim|la stajone
+la primavera|ilkbahar|la primavera
+l'inverno|kış|linverno
+il sole|güneş|il sole
+la pioggia|yağmur|la pyojja
+la neve|kar|la neve
+il vento|rüzgâr|il vento
+la nuvola|bulut|la nuvola
+la nebbia|sis|la nebbya
+il temporale|fırtına|il temporale
+nuvoloso|bulutlu|nuvolozo
+soleggiato|güneşli|solejjato
+piovere|yağmur yağmak|pyovere
+nevicare|kar yağmak|nevikare
+presto|erken|presto
+tardi|geç|tardi
+spesso|sık sık|spesso
+mai|asla|may
+sempre|her zaman|sempre
+qualche volta|bazen|kualke volta
+## Vücut ve sağlık
+la testa|baş|la testa
+l'occhio|göz|lokkyo
+l'orecchio|kulak|lorekkyo
+il naso|burun|il naso
+la mano|el|la mano
+il dito|parmak|il dito
+il piede|ayak|il pyede
+la schiena|sırt|la skyena
+lo stomaco|mide|lo stomako
+la pancia|karın|la pança
+il raffreddore|nezle|il raffreddore
+la tosse|öksürük|la tosse
+il mal di testa|baş ağrısı|il mal di testa
+la medicina|ilaç|la mediçina
+il medico|doktor|il mediko
+stare male|hasta olmak|stare male
+stare bene|iyi olmak|stare bene
+## Fiiller (A2)
+aiutare|yardım etmek|ayutare
+spiegare|açıklamak|spyegare
+ricordare|hatırlamak|rikordare
+dimenticare|unutmak|dimentikare
+incontrare|karşılaşmak|inkontrare
+invitare|davet etmek|invitare
+portare|getirmek, taşımak|portare
+prestare|ödünç vermek|prestare
+restituire|geri vermek|restituire
+cambiare|değiştirmek|kambyare
+costruire|inşa etmek|kostruire
+riparare|tamir etmek|riparare
+rompere|kırmak|rompere
+perdere|kaybetmek|perdere
+trovare|bulmak|trovare
+mettere|koymak|mettere
+prendere|almak|prendere
+lasciare|bırakmak|laşare
+salire|çıkmak, binmek|salire
+scendere|inmek|şendere
+entrare|girmek|entrare
+uscire|çıkmak|uşire
+tornare|dönmek|tornare
+partire|yola çıkmak|partire
+viaggiare|seyahat etmek|vyajjare
+nuotare|yüzmek|nuotare
+ballare|dans etmek|ballare
+cantare|şarkı söylemek|kantare
+piangere|ağlamak|pyanjere
+ridere|gülmek|ridere
+sorridere|gülümsemek|sorridere
+preoccuparsi|endişelenmek|preokkuparsi
+annoiarsi|sıkılmak|annoyarsi
+sposarsi|evlenmek|spozarsi
+svegliarsi|uyanmak|zvelyarsi
+vestirsi|giyinmek|vestirsi
+riposarsi|dinlenmek|ripozarsi
+sbagliare|hata yapmak|zbalyare

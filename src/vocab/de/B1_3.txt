@@ -1,0 +1,169 @@
+## Teknoloji
+das Gerät|cihaz|gere:t
+der Akku|batarya|aku
+das Kabel|kablo|ka:bıl
+der Stecker|fiş|ştekır
+der Bildschirm|ekran|biltşirm
+die Taste|tuş|taste
+die Maus|fare (bilgisayar)|maus
+der Laptop|dizüstü bilgisayar|leptop
+das Tablet|tablet|teblet
+der Lautsprecher|hoparlör|lautşprehır
+die Kamera|kamera|kamera
+das Foto|fotoğraf|fo:to
+das Video|video|vi:deo
+die Nachricht|mesaj|na:hriht
+der Anruf|arama|anru:f
+die Mailbox|sesli mesaj kutusu|meylboks
+der Empfang|çekim (sinyal); resepsiyon|empfaŋ
+das Programm|program|program
+die Anwendung|uygulama|anvenduŋ
+die Einstellung|ayar|aynşteluŋ
+das Konto|hesap (kullanıcı)|konto
+der Benutzername|kullanıcı adı|benutsırna:me
+sich anmelden|oturum açmak|zih anmeldın
+sich abmelden|oturumu kapatmak|zih apmeldın
+installieren|kurmak (program)|instali:rın
+aktualisieren|güncellemek|aktualizi:rın
+klicken|tıklamak|klikın
+tippen|yazmak (klavye); tahmin etmek|tipın
+kopieren|kopyalamak|kopi:rın
+einfügen|yapıştırmak|aynfü:gın
+ausschneiden|kesmek|ausşnaydın
+googeln|internette aramak|gu:gıln
+der Drucker|yazıcı|drukır
+der Anhang|ek (e-posta)|anhaŋ
+die Datei|dosya|da:tay
+der Ordner|klasör|ordnır
+## Duygular (devam)
+die Wut|öfke|vu:t
+die Scham|utanç|şa:m
+der Neid|haset|nayt
+der Stolz|gurur|ştolts
+die Sehnsucht|özlem|ze:nzuht
+die Langeweile|can sıkıntısı|laŋevayle
+die Überraschung|sürpriz|ü:bırraşuŋ
+die Zufriedenheit|memnuniyet|tsufri:dınhayt
+die Begeisterung|coşku|begaystıruŋ
+das Mitleid|acıma|mitlayt
+erschrocken|korkmuş|erşrokın
+erstaunt|hayret etmiş|erştaunt
+beleidigt|kırılmış, gücenmiş|belaydiht
+verliebt|âşık|ferli:pt
+einsam|yalnız|aynza:m
+besorgt|endişeli|bezorkt
+gelangweilt|sıkılmış|gelaŋvaylt
+zornig|öfkeli|tsornih
+verzweifelt|çaresiz|fertsvayfılt
+## Aile ve hayat
+die Verwandten|akrabalar|fervandtın
+der Schwager|kayınbirader, enişte|şva:gır
+die Schwägerin|baldız, görümce, yenge|şve:gırin
+der Enkel|torun|enkıl
+die Kindheit|çocukluk|kinthayt
+die Jugend|gençlik|yu:gınt
+das Alter|yaş; yaşlılık|altır
+der Erwachsene|yetişkin|ervaksıne
+der Jugendliche|genç, ergen|yu:gıntlihe
+der Zwilling|ikiz|tsviliŋ
+die Erziehung|terbiye, yetiştirme|ertsi:uŋ
+erziehen|yetiştirmek|ertsi:ın
+aufwachsen|büyümek (çocuk)|aufvaksın
+die Verlobung|nişan|ferlo:buŋ
+sich verloben|nişanlanmak|zih ferlo:bın
+die Scheidung|boşanma|şayduŋ
+sich scheiden lassen|boşanmak|zih şaydın lasın
+die Beerdigung|cenaze töreni|be:rdiguŋ
+sterben|ölmek|ştervın
+der Tod|ölüm|to:t
+tot|ölü|to:t
+lebendig|canlı|lebendih
+## Ev işleri
+der Haushalt|ev işleri|haushalt
+die Wäsche|çamaşır|veşe
+bügeln|ütülemek|bü:gıln
+abtrocknen|kurulamak|aptroknın
+wischen|silmek (yer)|vişın
+fegen|süpürmek|fe:gın
+gießen|sulamak (çiçek)|gi:sın
+den Tisch decken|sofrayı kurmak|den tiş dekın
+abräumen|sofrayı toplamak|aproymın
+der Eimer|kova|aymır
+der Besen|süpürge|be:zın
+das Putzmittel|temizlik maddesi|putsmitıl
+der Schwamm|sünger|şvam
+der Mülleimer|çöp kovası|mülaymır
+die Mülltrennung|çöp ayrıştırma|mültrenuŋ
+## İletişim
+das Gespräch|konuşma|geşpre:h
+die Unterhaltung|sohbet; eğlence|untırhaltuŋ
+sich unterhalten|sohbet etmek|zih untırhaltın
+die Bitte|rica|bite
+die Antwort|cevap|antvort
+die Erklärung|açıklama|erkle:ruŋ
+die Ausrede|bahane|ausre:de
+die Entschuldigung|özür|entşulduguŋ
+das Kompliment|iltifat|kompliment
+die Beleidigung|hakaret|belayduguŋ
+der Witz|fıkra, şaka|vits
+das Gerücht|söylenti|gerüht
+das Geheimnis|sır|gehaymnis
+der Ratschlag|öğüt|ra:tşla:k
+die Warnung|uyarı|varnuŋ
+warnen|uyarmak|varnın
+flüstern|fısıldamak|flüstırn
+schreien|bağırmak|şrayın
+rufen|seslenmek|ru:fın
+grüßen|selam vermek|grü:sın
+loben|övmek|lo:bın
+kritisieren|eleştirmek|kritizi:rın
+sich beklagen|yakınmak|zih bekla:gın
+## Sıfat ve zarflar (devam)
+absichtlich|kasten|apzihtlih
+zufällig|tesadüfen|tsufelih
+ausführlich|ayrıntılı|ausfü:rlih
+kurzfristig|kısa vadeli|kurtsfristih
+langfristig|uzun vadeli|laŋfristih
+ehemalig|eski (önceki)|e:ema:lih
+künftig|gelecekteki|künftih
+öffentlich|kamuya açık|öfıntlih
+privat|özel|priva:t
+persönlich|kişisel|perzö:nlih
+gegenseitig|karşılıklı|ge:gınzaytih
+ähnlich|benzer|e:nlih
+verschieden|farklı|ferşi:dın
+selten|nadir|zeltın
+häufig|sık|hoyfih
+überall|her yerde|ü:bıral
+irgendwo|bir yerde|irgıntvo:
+nirgendwo|hiçbir yerde|nirgıntvo:
+irgendwann|bir ara|irgıntvan
+sowieso|zaten|zovi:zo
+jedenfalls|her halükarda|ye:dınfals
+allerdings|ancak|alırdiŋs
+ebenfalls|aynı şekilde|e:bınfals
+hoffentlich|umarım|hofıntlih
+sicherlich|kesinlikle|zihırlih
+tatsächlich|gerçekten|ta:tzehlih
+vermutlich|tahminen|fermu:tlih
+gern|seve seve|gern
+## Sağlık (devam)
+die Grippeimpfung|grip aşısı|gripeimpfuŋ
+die Impfung|aşı|impfuŋ
+impfen|aşılamak|impfın
+der Termin beim Arzt|doktor randevusu|termi:n baym artst
+die Wartezimmer|bekleme odası|vartetsimır
+der Kopfschmerz|baş ağrısı|kopfşmerts
+die Bauchschmerzen|karın ağrısı|bauhşmertsın
+die Halsschmerzen|boğaz ağrısı|halsşmertsın
+der Durchfall|ishal|durhfal
+die Übelkeit|bulantı|ü:bılkayt
+schwindlig|başı dönen|şvindlih
+sich übergeben|kusmak|zih ü:bırge:bın
+husten|öksürmek|hu:stın
+niesen|hapşırmak|ni:zın
+bluten|kanamak|blu:tın
+sich verletzen|yaralanmak|zih ferletsın
+brechen|kırmak|brehın
+gebrochen|kırık|gebrohın
+geschwollen|şişmiş|geşvolın

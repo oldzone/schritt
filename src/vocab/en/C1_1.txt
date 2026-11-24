@@ -1,0 +1,202 @@
+## Akademik dil
+abstract|özet; soyut|ebstrekt
+appendix|ek (kitap)|ıpendiks
+bibliography|kaynakça|bibliagrıfi
+citation|alıntı, atıf|sayteyşın
+discourse|söylem|disko:rs
+premise|öncül|premis
+rationale|gerekçe|reşınal
+validity|geçerlilik|vılidıti
+sample (research)|örneklem|sampıl
+variable|değişken|veriıbıl
+correlation (C1)|korelasyon|ko:rıleyşın
+causation|nedensellik|ko:zeyşın
+inference|çıkarım|infırıns
+assertion|iddia|ısörşın
+counterargument|karşı argüman|kauntırargyumınt
+paradox|paradoks|perıdaks
+dichotomy|ikilik|daykatımi
+nuance|nüans|nyu:ans
+implication|sonuç, ima|implikeyşın
+criterion (C1)|ölçüt|kraytiırıın
+framework (C1)|çerçeve|freymwörk
+scope|kapsam|sko:p
+outline|taslak, ana hatlar|autlayn
+to cite|alıntı yapmak|tu sayt
+to paraphrase|başka sözcüklerle anlatmak|tu perıfreyz
+to deduce|çıkarsamak|tu didyu:s
+to hypothesise|hipotez kurmak|tu haypaθısayz
+to corroborate|doğrulamak|tu kırabıreyt
+to refute|çürütmek|tu rifyu:t
+to elaborate|ayrıntılandırmak|tu ilebıreyt
+to synthesise|sentezlemek|tu sinθısayz
+to quantify|nicelleştirmek|tu kwantıfay
+to validate|doğrulamak|tu velıdeyt
+to postulate|öne sürmek|tu pasçuleyt
+to delineate|tasvir etmek, sınırlarını çizmek|tu diliniyeyt
+## Siyaset ve toplum (C1)
+legislation|mevzuat|lecisleyşın
+legislature|yasama organı|lecisleyçır
+sovereignty|egemenlik|savrınti
+autonomy|özerklik|o:tanımi
+bureaucracy|bürokrasi|byuırakrısi
+accountability|hesap verebilirlik|ıkauntıbilıti
+transparency|şeffaflık|trensperınsi
+governance|yönetişim|gavırnıns
+electorate|seçmenler|ilektırıt
+turnout|katılım oranı|törnaut
+manifesto|seçim bildirgesi|menıfesto:
+mandate|yetki, görev|mendeyt
+lobbying|lobicilik|labiing
+populism|popülizm|papyulizım
+polarisation|kutuplaşma|po:lırayzeyşın
+extremism|aşırıcılık|ikstri:mizım
+radicalisation|radikalleşme|redikılayzeyşın
+propaganda|propaganda|prapıgendı
+sanctions|yaptırımlar|seŋkşınz
+diplomacy|diplomasi|diplo:mısi
+negotiations|müzakereler|nigo:şieyşınz
+ceasefire|ateşkes|si:sfayır
+humanitarian|insani|hyu:menıteriın
+civil society|sivil toplum|sivıl sısayıti
+grassroots|taban (halk)|grasru:ts
+dissent|muhalefet, itiraz|disent
+unrest|huzursuzluk|anrest
+inequality gap|eşitsizlik uçurumu|inikwalıti gep
+social mobility|sosyal hareketlilik|so:şıl mo:bilıti
+marginalised|ötekileştirilmiş|marcınılayzd
+to legislate|yasa çıkarmak|tu lecisleyt
+to enact|yürürlüğe koymak|tu inekt
+to repeal|yürürlükten kaldırmak|tu ripi:l
+to ratify|onaylamak (antlaşma)|tu retıfay
+to veto|veto etmek|tu vi:to:
+to campaign for|lehine kampanya yürütmek|tu kempeyn fo:r
+to mobilise|seferber etmek|tu mo:bılayz
+to marginalise|ötekileştirmek|tu marcınılayz
+## Ekonomi ve finans (C1)
+fiscal policy|maliye politikası|fiskıl palısi
+monetary policy|para politikası|manıtıri palısi
+central bank|merkez bankası|sentrıl beŋk
+gross domestic product|gayrisafi yurt içi hasıla|gro:s dımestik pradakt
+national debt|kamu borcu|neşınıl det
+austerity|kemer sıkma|o:sterıti
+stimulus|teşvik paketi|stimyulıs
+subsidy|sübvansiyon|sabsıdi
+tariff|gümrük tarifesi|terif
+free trade|serbest ticaret|fri: treyd
+protectionism|korumacılık|prıtekşınizım
+monopoly|tekel|mınapıli
+liquidity|likidite|likwidıti
+dividend|temettü|dividend
+bond|tahvil|band
+equity|öz sermaye|ekwıti
+asset|varlık|eset
+liability (C1)|yükümlülük|layıbilıti
+collateral|teminat|kıletırıl
+creditor|alacaklı|kreditır
+debtor|borçlu|detır
+insolvency|ödeme aczi|insalvınsi
+speculation|spekülasyon|spekyuleyşın
+volatility|oynaklık|valıtilıti
+downturn|gerileme|dauntörn
+upturn|iyileşme|aptörn
+outsourcing (C1)|dış kaynak kullanımı|autso:rsing
+offshoring|yurt dışına taşıma|afşo:ring
+tax evasion|vergi kaçırma|teks iveyjın
+money laundering|kara para aklama|mani lo:ndıring
+embezzlement|zimmete para geçirme|imbezılmınt
+bribery|rüşvet|braybıri
+to deregulate|serbestleştirmek|tu di:regyuleyt
+to privatise|özelleştirmek|tu prayvıtayz
+to nationalise|kamulaştırmak|tu neşınılayz
+to default|temerrüde düşmek|tu difo:lt
+to diversify|çeşitlendirmek|tu dayvörsıfay
+## Hukuk (C1)
+legislation (C1)|yasa|lecisleyşın
+statute|kanun|steçu:t
+regulation|yönetmelik|regyuleyşın
+precedent|emsal|presıdınt
+appeal|temyiz|ıpi:l
+plaintiff|davacı|pleyntif
+testimony|tanıklık|testımıni
+affidavit|yeminli beyan|efıdeyvit
+acquittal|beraat|ıkwitıl
+conviction|mahkumiyet; inanç|kınvikşın
+custody|gözaltı; velayet|kastıdi
+bail|kefalet|beyl
+parole|şartlı tahliye|pıro:l
+negligence|ihmal|neglicıns
+misconduct|görevi kötüye kullanma|miskandakt
+breach of contract|sözleşme ihlali|bri:ç ıv kantrekt
+copyright|telif hakkı|kapirayt
+intellectual property|fikri mülkiyet|intılekçuıl prapırti
+inheritance|miras|inheritıns
+will (legal)|vasiyet|wil
+to appeal|temyize gitmek|tu ıpi:l
+to testify|tanıklık etmek|tu testıfay
+to acquit|beraat ettirmek|tu ıkwit
+to convict|mahkum etmek|tu kınvikt
+to prosecute|kovuşturmak|tu prasıkyu:t
+to overturn|bozmak (karar)|tu o:vırtörn
+to infringe|ihlal etmek|tu infrinc
+## Psikoloji ve felsefe (C1)
+consciousness|bilinç|kanşısnıs
+subconscious|bilinçaltı|sabkanşıs
+perception|algı|pırsepşın
+cognition|biliş|kagnişın
+bias|önyargı|bayıs
+cognitive bias|bilişsel önyargı|kagnıtiv bayıs
+resilience|psikolojik dayanıklılık|rizilyıns
+trauma|travma|tro:mı
+coping mechanism|başa çıkma yöntemi|ko:ping mekınizım
+denial|inkar|dinayıl
+projection|yansıtma|prıcekşın
+ambivalence|ikircikli duygular|embivılıns
+introspection|iç gözlem|intrıspekşın
+self-awareness|öz farkındalık|self ıwernıs
+integrity|dürüstlük, bütünlük|integrıti
+ethics|etik|eθiks
+morality|ahlak|mırelıti
+dilemma|ikilem|dilemı
+free will|özgür irade|fri: wil
+determinism|determinizm|ditörmınizım
+existentialism|varoluşçuluk|egzistenşılizım
+irony|ironi|ayrıni
+cynicism|sinizm|sinısizım
+empathy (C1)|empati|empıθi
+alienation|yabancılaşma|eyliıneyşın
+## Sıfatlar (C1)
+arbitrary|keyfi|arbitrıri
+coherent (C1)|tutarlı|ko:hiırınt
+comprehensive (C1)|kapsamlı|kamprihensiv
+conspicuous|göze çarpan|kınspikyuıs
+contentious|tartışmalı|kıntenşıs
+credible|inandırıcı|kredıbıl
+dubious|şüpheli|dyu:biıs
+elusive|ele geçmez|ilu:siv
+explicit|açık, net|iksplisit
+implicit|örtük|implisit
+feasible|uygulanabilir|fi:zıbıl
+fragile|kırılgan|frecayl
+hypothetical|varsayımsal|haypıθetikıl
+inherent (C1)|doğasında olan|inhiırınt
+intricate|karmaşık|intrikıt
+legitimate|meşru|licitimıt
+marginal|marjinal, küçük|marcınıl
+mundane|sıradan|mandeyn
+obsolete|demode|absıli:t
+paramount|en önemli|perımaunt
+pervasive|yaygın|pırveysiv
+precarious|güvencesiz|prikeriıs
+profound|derin|prıfaund
+prominent|önde gelen|pramınınt
+redundant|gereksiz|ridandınt
+robust|sağlam|ro:bast
+scarce|kıt|skers
+superficial|yüzeysel|su:pırfişıl
+tangible|somut|tencıbıl
+tedious|sıkıcı|ti:diıs
+trivial|önemsiz|triviıl
+unanimous|oybirliğiyle|yunenımıs
+viable|uygulanabilir|vayıbıl
+volatile|değişken, oynak|valıtayl

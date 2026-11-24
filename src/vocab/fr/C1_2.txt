@@ -1,0 +1,144 @@
+## Fiiller (C1)
+aborder|ele almak|aborde
+accroître|artırmak|akruatr
+s'acharner|didinmek, ısrar etmek|saşarne
+aggraver|kötüleştirmek|agrave
+alléger|hafifletmek|aleje
+anticiper|önceden görmek|antisipe
+s'approprier|sahiplenmek|saproprye
+assumer|üstlenmek|asüme
+atténuer|hafifletmek|atenüe
+bafouer|çiğnemek (hak)|bafue
+bouleverser|altüst etmek|bulverse
+cerner|kavramak, kuşatmak|serne
+chuchoter|fısıldamak|şüşote
+cibler|hedeflemek|sible
+combler|doldurmak (boşluk)|konble
+concilier|bağdaştırmak|konsilye
+consolider|pekiştirmek|konsolide
+contourner|etrafından dolaşmak|konturne
+déclencher|tetiklemek|deklanşe
+décrypter|şifresini çözmek|dekripte
+dégager|açığa çıkarmak|degaje
+démanteler|dağıtmak, sökmek|demantöle
+dénoncer|ihbar etmek, kınamak|denonse
+déplorer|esefle karşılamak|deplore
+désamorcer|etkisizleştirmek|dezamorse
+dissimuler|gizlemek|disimüle
+s'efforcer|çabalamak|seforse
+engendrer|doğurmak, yol açmak|anjandre
+entraver|engellemek|antrave
+s'épuiser|tükenmek|sepüize
+esquiver|kaçmak, savuşturmak|eskive
+étayer|desteklemek (kanıtla)|eteye
+exacerber|şiddetlendirmek|egzaserbe
+s'interroger|kendine sormak|senteroje
+se méprendre|yanılmak|sö meprandr
+mettre en œuvre|uygulamaya koymak|metr an övr
+minimiser|küçümsemek|minimize
+nuire|zarar vermek|nüir
+occulter|gölgelemek, gizlemek|okülte
+pallier|telafi etmek|palye
+parvenir|ulaşmak, başarmak|parvönir
+percevoir|algılamak|persövua:r
+préconiser|önermek|prekonize
+prôner|savunmak, övmek|prone
+se prononcer|görüş bildirmek|sö pronon se
+rédiger|kaleme almak|redije
+relativiser|göreceli bakmak|rölativize
+remédier|çare bulmak|römedye
+se résigner|boyun eğmek|sö rezinye
+restreindre|kısıtlamak|restrendr
+revendiquer|talep etmek, sahiplenmek|rövandike
+saisir|kavramak; yakalamak|sezir
+sous-estimer|hafife almak|su zestime
+surestimer|abartmak|sürestime
+se targuer|övünmek|sö targe
+tâtonner|el yordamıyla aramak|tatone
+trancher|kesip atmak, karara bağlamak|tranşe
+véhiculer|taşımak, aktarmak|veikül e
+## Sıfatlar ve zarflar (C1)
+accru|artmış|akrü
+aléatoire|rastgele|aleatua:r
+ardu|zorlu|ardü
+chimérique|hayali|şimerik
+controversé|tartışmalı|kontroverse
+désuet|modası geçmiş|dezüe
+draconien|çok sert|drakonyen
+éphémère|geçici|efemer
+éloquent|belagatli|elokan
+flagrant|apaçık|flagran
+foncier|toprakla ilgili; köklü|fonsye
+illusoire|yanıltıcı|ilüzua:r
+inéluctable|kaçınılmaz|inelüktabl
+inhérent|doğasında olan|inneran
+judicieux|akıllıca|jüdisyö
+laborieux|zahmetli|laboryö
+lucide|berrak, aklı başında|lüsid
+manifeste|aşikâr|manifest
+méticuleux|titiz|metikülö
+notoire|herkesçe bilinen|notua:r
+obsolète|eskimiş|obsolet
+omniprésent|her yerde olan|omniprezan
+opportun|yerinde, uygun|oportan
+pérenne|kalıcı|peren
+primordial|çok önemli|primordyal
+prolifique|üretken|prolifik
+redoutable|korkulan, zorlu|rödutabl
+saugrenu|tuhaf|sogrönü
+sobre|sade; ölçülü|sobr
+tangible|somut|tanjibl
+tenace|azimli|tönas
+vétuste|köhne|vetüst
+virulent|sert, şiddetli|virülan
+d'emblée|baştan, hemen|danble
+à juste titre|haklı olarak|a jüst titr
+de surcroît|üstelik|dö sürkrua
+en l'occurrence|bu durumda|an loküra:ns
+à l'instar de|-gibi, örneğinden|a lensta:r dö
+au demeurant|bununla birlikte|o dömöran
+somme toute|sonuçta|som tut
+tant bien que mal|ne yapıp edip|tan byen kö mal
+à son insu|haberi olmadan|a son ensü
+## Deyimler
+avoir le cafard|morali bozuk olmak|avua:r lö kafa:r
+coûter les yeux de la tête|çok pahalı olmak|kute le zyö dö la tet
+poser un lapin|ekmek (randevuya gelmemek)|poze en lapen
+tomber dans les pommes|bayılmak|tonbe dan le pom
+avoir un poil dans la main|çok tembel olmak|avua:r en pual dan la men
+mettre les pieds dans le plat|pot kırmak|metr le pye dan lö pla
+casser les pieds|başının etini yemek|kase le pye
+avoir la flemme|üşenmek|avua:r la flem
+être dans la lune|dalgın olmak|etr dan la lün
+prendre la mouche|alınmak, kızmak|prandr la muş
+se serrer la ceinture|kemer sıkmak|sö sere la sentü:r
+appeler un chat un chat|dobra konuşmak|aple en şa en şa
+tourner autour du pot|lafı dolandırmak|turne otu:r dü po
+faire la grasse matinée|geç saate kadar uyumak|fe:r la gras matine
+mettre la main à la pâte|işe el atmak|metr la men a la pat
+avoir du pain sur la planche|çok işi olmak|avua:r dü pen sü:r la planş
+c'est la goutte d'eau qui fait déborder le vase|bardağı taşıran son damla|se la gut do ki fe deborde lö va:z
+il pleut des cordes|bardaktan boşanırcasına yağıyor|il plö de kord
+ne pas avoir froid aux yeux|gözü pek olmak|nö pa avua:r frua o zyö
+donner sa langue au chat|bilmeceden vazgeçmek|done sa lang o şa
+## Hukuk ve yönetim (ileri)
+la législation|mevzuat|la lejislasyon
+le décret|kararname|lö dekre
+la jurisprudence|içtihat|la jürisprüda:ns
+la clause|madde, hüküm|la klo:z
+le litige|uyuşmazlık|lö litij
+la plaidoirie|savunma (avukat)|la pledua:ri
+le recours|itiraz, başvuru|lö röku:r
+l'appel (justice)|temyiz|lapel
+la garde à vue|gözaltı|la gard a vü
+la présomption d'innocence|masumiyet karinesi|la prezonpsyon dinosa:ns
+la souveraineté|egemenlik|la suvrente
+la décentralisation|yerinden yönetim|la desantralizasyon
+la bureaucratie|bürokrasi|la bürokrasi
+la transparence|şeffaflık|la transpara:ns
+la corruption|yolsuzluk|la korüpsyon
+le lobbying|lobicilik|lö lobiing
+le mandat|görev süresi; vekâlet|lö manda
+l'investiture|göreve başlama|lenvestitü:r
+le référendum|referandum|lö referandom
+la coalition|koalisyon|la koalisyon

@@ -1,0 +1,177 @@
+## Ekonomi ve finans (C1, devam)
+die Bonität|kredi notu|bonite:t
+die Bürgschaft|kefalet|bürkşaft
+der Bürge|kefil|bürge
+die Tilgung|anapara ödemesi|tilguŋ
+die Laufzeit|vade|lauftsayt
+das Darlehen|borç, kredi|da:rle:ın
+der Gläubiger|alacaklı|gloybigır
+der Schuldner|borçlu|şuldnır
+die Zahlungsunfähigkeit|ödeme acizliği|tsa:luŋsunfe:ihkayt
+die Rücklage|yedek akçe|rükla:ge
+das Eigenkapital|öz sermaye|aygınkapita:l
+das Fremdkapital|yabancı sermaye|fremtkapita:l
+die Kennzahl (C1)|gösterge rakam|kentsa:l
+der Jahresabschluss|yıl sonu bilançosu|ya:rısapşlus
+die Prognose|tahmin, öngörü|progno:ze
+die Konjunkturflaute|ekonomik durgunluk|konyunktu:rflaute
+die Teuerungsrate|enflasyon oranı|toyıruŋsra:te
+die Kaufkraftparität|satın alma gücü paritesi|kaufkraftparite:t
+der Leitzins|politika faizi|layttsins
+die Abwertung|devalüasyon|apve:rtuŋ
+die Aufwertung|revalüasyon|aufve:rtuŋ
+der Handelsbilanzüberschuss|dış ticaret fazlası|handılsbilantsü:bırşus
+das Handelsabkommen|ticaret anlaşması|handılsapkomın
+der Zoll (C1)|gümrük vergisi|tsol
+der Protektionismus|korumacılık|protektsyonismus
+der Freihandel|serbest ticaret|frayhandıl
+die Marktwirtschaft|piyasa ekonomisi|marktvirtşaft
+die Planwirtschaft|planlı ekonomi|pla:nvirtşaft
+der Kapitalismus|kapitalizm|kapitalismus
+der Sozialismus|sosyalizm|zotsyalismus
+die Wirtschaftsflüchtlinge|ekonomik göçmenler|virtşaftsflühtliŋe
+die Schattenwirtschaft|kayıt dışı ekonomi|şatınvirtşaft
+die Schwarzarbeit|kaçak işçilik|şvartsarbayt
+die Steuerhinterziehung|vergi kaçakçılığı|ştoyırhintırtsi:uŋ
+die Geldwäsche|kara para aklama|geltveşe
+die Bestechung|rüşvet|beştehuŋ
+die Veruntreuung|zimmet|ferüntroyuŋ
+## İletişim ve diplomasi (C1)
+die Diplomatie|diplomasi|diplomati:
+das Fingerspitzengefühl|incelik, sezgi|fiŋırşpitsıngefü:l
+die Gesprächsführung|görüşme yönetimi|geşpre:hsfü:ruŋ
+die Verhandlungsbasis|müzakere zemini|ferhandluŋsba:zis
+das Zugeständnis|taviz|tsu:geştentnis
+die Gegenleistung|karşılık|ge:gınlaystuŋ
+das Entgegenkommen|anlayış, uzlaşı jesti|entge:gınkomın
+die Annäherung (Diplomatie)|yakınlaşma|anne:ıruŋ
+die Eskalation|tırmanma|eskalatsyo:n
+die Deeskalation|gerilimi azaltma|deeskalatsyo:n
+das Ultimatum|ültimatom|ultima:tum
+die Vermittlung|arabuluculuk|fermitluŋ
+der Vermittler|arabulucu|fermitlır
+die Absichtserklärung|niyet beyanı|apzihtserkle:ruŋ
+die Gegendarstellung|cevap hakkı (basın)|ge:gında:rşteluŋ
+die Beschwichtigung|yatıştırma|beşvihtiguŋ
+die Taktik|taktik|taktik
+die Verschleierung|örtbas etme|ferşlayıruŋ
+die Vertraulichkeit|gizlilik|fertraulihkayt
+## Duygu ve zihin (C1)
+die Beklommenheit|sıkıntı, daralma|beklomınhayt
+die Verzagtheit|cesaretsizlik|fertsa:kthayt
+die Melancholie|melankoli|melaŋko:li:
+die Euphorie|coşku|oyfori:
+die Ekstase|kendinden geçme|ekstaze
+die Wehmütigkeit|hüzünlülük|ve:mü:tihkayt
+die Sehnsucht (C1)|hasret|ze:nzuht
+die Verbitterung|küskünlük|ferbitıruŋ
+die Gekränktheit|kırgınlık|gekreŋkthayt
+der Groll|kin|grol
+die Häme|kötü niyetli sevinç|he:me
+die Schadenfreude|başkasının zararına sevinme|şa:dınfroyde
+die Missgunst|çekememezlik|misgunst
+die Verlegenheit|mahcubiyet|ferle:gınhayt
+die Unbeholfenheit|beceriksizlik|unbeholfınhayt
+die Unbefangenheit|önyargısızlık, doğallık|unbefaŋınhayt
+die Ergriffenheit|derinden etkilenme|ergrifınhayt
+die Rührung|duygulanma|rü:ruŋ
+die Ehrfurcht|huşu|e:rfurht
+die Andacht|huşu, ibadet|andaht
+die Gelöstheit|rahatlık|gelö:sthayt
+die Zerstreutheit|dalgınlık|tserştroythayt
+die Besessenheit|takıntı|bezesınhayt
+die Zwanghaftigkeit|kompulsiflik|tsvaŋhaftihkayt
+die Verdrossenheit|bezginlik|ferdrosınhayt
+die Politikverdrossenheit|siyasetten bıkkınlık|politi:kferdrosınhayt
+## Hukuk ve idare (C1, devam)
+die Behördengänge|resmi daire işleri|behö:rdıngeŋe
+der Amtsschimmel|bürokratik kırtasiyecilik|amtsşimıl
+die Ermessensfrage|takdir meselesi|ermesınsfra:ge
+der Ermessensspielraum|takdir yetkisi alanı|ermesınsşpi:lraum
+die Auflage|şart; baskı (kitap)|aufla:ge
+die Ausschreibung|ihale|ausşraybuŋ
+der Zuschlag|ihale kazanma; ek ücret|tsu:şla:k
+die Zuwiderhandlung|ihlal|tsuvi:dırhandluŋ
+der Verstoß|ihlal|ferşto:s
+die Ordnungswidrigkeit|kabahat|ordnuŋsvi:drihkayt
+der Bescheid (C1)|resmi karar yazısı|beşayt
+der Widerspruch (Behörde)|itiraz|vi:dırşpruh
+die Frist versäumen|süreyi kaçırmak|frist ferzoymın
+die Anhörung|dinlenme, duruşma|anhö:ruŋ
+die Vorladung|celp|fo:rla:duŋ
+die Aussageverweigerung|ifade vermeyi reddetme|ausza:geferfaygıruŋ
+die Beschlagnahme|el koyma|beşla:kna:me
+die Durchsuchung|arama (polis)|durhzu:huŋ
+die Festnahme|gözaltı|festna:me
+die Kaution (Haft)|kefalet|kautsyo:n
+die Begnadigung|af (cezai)|begna:diguŋ
+die Amnestie|genel af|amnesti:
+## Bilim, teknoloji ve toplum (C1)
+die Disruption|yıkıcı yenilik|disrapşın
+die Automatisierung|otomasyon|automatizi:ruŋ
+die Vernetzung|ağ bağlantısı|fernetsuŋ
+die Überwachung|gözetim|ü:bırvahuŋ
+der Überwachungsstaat|gözetim devleti|ü:bırvahuŋsşta:t
+die Datensouveränität|veri egemenliği|da:tınzuverenite:t
+die Anonymität|anonimlik|anonümite:t
+die Manipulierbarkeit|manipüle edilebilirlik|manipuli:rba:rkayt
+der Fortschrittsglaube|ilerlemeye inanç|fortşritsglaube
+die Technikfolgenabschätzung|teknoloji etki değerlendirmesi|tehnikfolgınapşetsuŋ
+die Ethikkommission|etik kurulu|e:tikkomisyo:n
+die Forschungsfreiheit|araştırma özgürlüğü|forşuŋsfraythayt
+die Wissensgesellschaft|bilgi toplumu|visınsgezelşaft
+die Fachkompetenz|mesleki yetkinlik|fahkompetents
+das Expertenwissen|uzman bilgisi|ekspertınvisın
+die Halbwertszeit|yarılanma ömrü|halpve:rtstsayt
+## Edebiyat ve sanat (C1)
+die Erzählperspektive|anlatı bakış açısı|ertse:lperspekti:ve
+der Erzähler|anlatıcı|ertse:lır
+der Protagonist|başkahraman|protagonist
+der Antagonist|karşıt karakter|antagonist
+der Spannungsbogen|gerilim yayı|şpanuŋsbo:gın
+der Wendepunkt|dönüm noktası|vendepuŋkt
+die Rückblende|geriye dönüş (flashback)|rükblende
+das Leitmotiv|ana motif|laytmoti:f
+das Stilmittel|üslup aracı|şti:lmitıl
+der Reim|uyak|raym
+die Strophe|kıta|ştro:fe
+der Vers|dize|fers
+die Lyrik|şiir sanatı|lü:rik
+die Prosa|düzyazı|pro:za
+das Drama|dram|dra:ma
+die Tragödie|trajedi|trage:dye
+die Komödie|komedi|kome:dye
+die Satire|hiciv|zati:re
+die Parodie|parodi|parodi:
+das Pathos|duygusal coşku|pa:tos
+die Ästhetik|estetik|este:tik
+der Kitsch|kiç|kitş
+## Kalıp ifadeler (C1, devam)
+auf Augenhöhe|eşit düzeyde|auf augınhö:e
+im Zuge|sürecinde|im tsu:ge
+im Hinblick auf|bakımından|im hinblik auf
+im Zusammenhang mit|ile bağlantılı olarak|im tsuzamınhaŋ mit
+unter Berücksichtigung|göz önünde bulundurarak|untır berükzihtiguŋ
+mit Rücksicht auf|dikkate alarak|mit rükziht auf
+nach Maßgabe|uyarınca|na:h ma:sga:be
+zu Lasten von|aleyhine|tsu lastın fon
+zugunsten|lehine|tsugunstın
+anhand|yardımıyla, -e dayanarak|anhant
+mittels|aracılığıyla|mitıls
+seitens|tarafından|zaytıns
+angesichts|karşısında, göz önünde|angezihts
+ungeachtet (C1)|-e rağmen|ungeahtıt
+zwecks|amacıyla|tsveks
+hinsichtlich (C1)|ilişkin|hinzihtlih
+bezüglich (C1)|ilgili|betsü:klih
+etwas auf die Spitze treiben|ileri götürmek|etvas auf di şpitse traybın
+den Ton angeben|tonu belirlemek|de:n to:n ange:bın
+die Oberhand gewinnen|üstünlük sağlamak|di o:bırhant gevinın
+aus der Reihe tanzen|aykırı davranmak|aus de:r raye tantsın
+etwas über Bord werfen|bir kenara atmak|etvas ü:bır bort verfın
+mit offenen Karten spielen|açık oynamak|mit ofınım kartın şpi:lın
+die Spreu vom Weizen trennen|iyiyi kötüden ayırmak|di şproy fom vaytsın trenın
+etwas unter den Teppich kehren|halı altına süpürmek|etvas untır de:n tepih ke:rın
+jemandem den Rücken stärken|arka çıkmak|ye:mandım de:n rükın şterkın
+auf dem Holzweg sein|yanlış yolda olmak|auf de:m holtsve:k zayn
+sich etwas zu Herzen nehmen|bir şeyi dert edinmek|zih etvas tsu hertsın ne:mın

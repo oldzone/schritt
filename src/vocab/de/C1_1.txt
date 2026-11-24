@@ -1,0 +1,275 @@
+## Akademik dil
+die Abhandlung|inceleme yazısı|aphandluŋ
+die Annäherung|yaklaşım; yakınlaşma|anne:ırıŋ
+die Auslegung|yorum (metin)|ausle:guŋ
+die Begrifflichkeit|kavramsallık|begriflihkayt
+die Beweisführung|kanıtlama|bevaysfü:ruŋ
+die Darstellung|sunum, tasvir|da:rşteluŋ
+die Definition|tanım|definitsyo:n
+die Deutung|yorum|doytuŋ
+die Differenzierung|ayrıştırma|diferentsi:ruŋ
+die Einordnung|sınıflandırma|aynordnuŋ
+die Erörterung|tartışma (yazılı)|erörtıruŋ
+die Fragestellung|araştırma sorusu|fra:geşteluŋ
+die Gegenüberstellung|karşılaştırma|ge:gınü:bırşteluŋ
+die Gliederung|ana hatlar|gli:dıruŋ
+die Herangehensweise|yaklaşım tarzı|herange:ınsvayze
+die Herleitung|türetme|he:rlaytuŋ
+die Interpretation|yorumlama|interpretatsyo:n
+die Literaturrecherche|literatür taraması|literatu:rreşerşe
+die Prämisse|öncül|premise
+die Quellenangabe|kaynak gösterme|kvelınanga:be
+die Relevanz|ilgililik, önem|relevants
+die Schlussfolgerung|sonuç çıkarma|şlusfolgıruŋ
+die Stichprobe|örneklem|ştihpro:be
+die Validität|geçerlilik|validite:t
+die Zuverlässigkeit (Studie)|güvenilirlik|tsu:ferlesihkayt
+die Vorgehensweise|izlenen yol|fo:rge:ınsvayze
+die Wechselbeziehung|karşılıklı ilişki|veksılbetsi:uŋ
+das Zitat|alıntı|tsita:t
+zitieren|alıntı yapmak|tsiti:rın
+paraphrasieren|başka sözcüklerle anlatmak|parafrazi:rın
+abgrenzen|sınırlarını çizmek|apgrentsın
+ableiten|türetmek, çıkarmak|aplaytın
+erörtern|tartışmak (enine boyuna)|erörtırn
+fundieren|temellendirmek|fundi:rın
+gliedern|bölümlemek|gli:dırn
+kategorisieren|kategorize etmek|kategorizi:rın
+konstatieren|tespit etmek|konstati:rın
+postulieren|öne sürmek|postuli:rın
+reflektieren|üzerine düşünmek|reflekti:rın
+untermauern|desteklemek (kanıtla)|untırmauırn
+veranschaulichen|somutlaştırmak|feranşaulihın
+verifizieren|doğrulamak|verifitsi:rın
+falsifizieren|yanlışlamak|falzifitsi:rın
+empirisch|deneysel, ampirik|empi:riş
+theoretisch|kuramsal|teo:retiş
+fundiert|sağlam temelli|fundi:rt
+stichhaltig|sağlam (argüman)|ştihhaltih
+schlüssig|tutarlı|şlüsih
+plausibel|akla yatkın|plauzi:bıl
+differenziert|ayrıntılı, nüanslı|diferentsi:rt
+signifikant|anlamlı (istatistik)|zignifikant
+## Toplum ve siyaset (C1)
+die Aufklärung|aydınlanma; bilgilendirme|aufkle:ruŋ
+die Bürokratie|bürokrasi|bürokrati:
+der Föderalismus|federalizm|föderalismus
+die Gewaltenteilung|kuvvetler ayrılığı|gevaltıntayluŋ
+die Legislative|yasama|legislati:ve
+die Exekutive|yürütme|eksekuti:ve
+die Judikative|yargı|yudikati:ve
+die Rechtsstaatlichkeit|hukukun üstünlüğü|rehtsşta:tlihkayt
+die Souveränität|egemenlik|zuverenite:t
+die Zivilgesellschaft|sivil toplum|tsivi:lgezelşaft
+der Lobbyismus|lobicilik|lobiismus
+der Populismus|popülizm|populismus
+der Extremismus|aşırıcılık|ekstremismus
+die Radikalisierung|radikalleşme|radikalizi:ruŋ
+die Polarisierung|kutuplaşma|polarizi:ruŋ
+die Globalisierung|küreselleşme|globalizi:ruŋ
+der Wohlstand|refah|vo:lştant
+die Umverteilung|yeniden dağıtım|umfertayluŋ
+die Rechenschaft|hesap verme|rehınşaft
+die Transparenz|şeffaflık|transparents
+die Bevormundung|vesayet|befo:rmunduŋ
+die Mitbestimmung|ortak karar hakkı|mitbeştimuŋ
+das Mandat|görev süresi, vekalet|manda:t
+die Amtszeit|görev süresi|amtstsayt
+der Rücktritt|istifa|rüktrit
+zurücktreten|istifa etmek|tsurüktre:tın
+die Sanktion|yaptırım|zanktsyo:n
+das Embargo|ambargo|embargo
+die Abrüstung|silahsızlanma|aprüstuŋ
+die Aufrüstung|silahlanma|aufrüstuŋ
+das Bündnis|ittifak|bündnis
+der Waffenstillstand|ateşkes|vafınştilştant
+die Völkerverständigung|halklar arası anlayış|fölkırferştendiguŋ
+die Entwicklungshilfe|kalkınma yardımı|entvikluŋshilfe
+die Asylpolitik|sığınma politikası|azü:lpoliti:k
+der Asylantrag|sığınma başvurusu|azü:lantra:k
+die Abschiebung|sınır dışı etme|apşi:buŋ
+die Einbürgerung|vatandaşlığa alınma|aynbürgıruŋ
+die Parallelgesellschaft|paralel toplum|parale:lgezelşaft
+die Leitkultur|baskın kültür|laytkultu:r
+## Ekonomi (C1)
+die Volkswirtschaft|milli ekonomi|folksvirtşaft
+die Betriebswirtschaft|işletme ekonomisi|betri:psvirtşaft
+das Bruttoinlandsprodukt|GSYİH|brutoinlantsprodukt
+die Staatsverschuldung|kamu borcu|şta:tsferşulduŋ
+das Haushaltsdefizit|bütçe açığı|haushaltsdefitsit
+die Geldpolitik|para politikası|geltpoliti:k
+die Zentralbank|merkez bankası|tsentra:lbank
+die Deflation|deflasyon|deflatsyo:n
+die Spekulation|spekülasyon|şpekulatsyo:n
+die Rendite|getiri|rendi:te
+die Dividende|temettü|dividende
+die Anleihe|tahvil|anlaye
+der Fonds|fon|fo:
+die Liquidität|likidite|likvidite:t
+die Abschreibung|amortisman|apşraybuŋ
+die Wertschöpfung|katma değer|ve:rtşöpfuŋ
+die Rationalisierung|rasyonalizasyon|ratsyonalizi:ruŋ
+die Auslagerung|dış kaynak kullanımı|ausla:gıruŋ
+die Deregulierung|serbestleştirme|deregu:li:ruŋ
+die Privatisierung|özelleştirme|privatizi:ruŋ
+die Verstaatlichung|kamulaştırma|ferşta:tlihuŋ
+das Monopol|tekel|monopo:l
+das Kartell|kartel|kartel
+der Wettbewerbsdruck|rekabet baskısı|vetbeverpsdruk
+die Standortverlagerung|üretimin taşınması|ştantortferla:gıruŋ
+der Strukturwandel|yapısal dönüşüm|ştruktu:rvandıl
+die Nachfrageschwäche|talep zayıflığı|na:hfra:geşve:he
+die Kaufzurückhaltung|tüketicinin harcamaktan kaçınması|kauftsurükhaltuŋ
+die Lohnnebenkosten|işçilik yan maliyetleri|lo:nne:bınkostın
+## Hukuk (C1)
+die Rechtsprechung|içtihat, yargı|rehtşprehuŋ
+der Rechtsweg|yargı yolu|rehtsve:k
+die Instanz|merci, derece|instants
+die Revision|temyiz|revizyo:n
+der Beschluss|karar|beşlus
+die Verordnung|tüzük, yönetmelik|ferordnuŋ
+die Novelle|yasa değişikliği|novele
+das Inkrafttreten|yürürlüğe girme|inkrafttre:tın
+die Befugnis|yetki|befu:knis
+die Zuständigkeit|yetki alanı|tsu:ştendihkayt
+der Tatbestand|suç unsurları|ta:tbeştant
+der Vorsatz|kast|fo:rzats
+die Fahrlässigkeit|ihmal|fa:rlesihkayt
+die Bewährung|şartlı tahliye/erteleme|beve:ruŋ
+die Haft|tutukluluk, hapis|haft
+die Untersuchungshaft|tutukluluk (soruşturma)|untırzu:huŋshaft
+der Verdacht|şüphe|ferdaht
+der Verdächtige|şüpheli|ferdehtige
+die Unschuldsvermutung|masumiyet karinesi|unşultsfermu:tuŋ
+das Gutachten|bilirkişi raporu|gu:tahtın
+der Gutachter|bilirkişi|gu:tahtır
+die Vollstreckung|icra|folştrekuŋ
+die Pfändung|haciz|pfenduŋ
+die Schlichtung|uzlaştırma|şlihtuŋ
+der Vergleich (Recht)|sulh|fergleyh
+das Erbe|miras|erbe
+das Testament|vasiyetname|testament
+der Erbe|mirasçı|erbe
+## Psikoloji ve felsefe (C1)
+die Weltanschauung|dünya görüşü|veltanşauuŋ
+die Ethik|etik|e:tik
+die Moralvorstellung|ahlak anlayışı|mora:lfo:rşteluŋ
+das Dilemma|ikilem|dilema
+der Widerspruch|çelişki|vi:dırşpruh
+die Ambivalenz|ikircikli duygu|ambivalents
+die Ironie|ironi|ironi:
+der Sarkasmus|alay|zarkasmus
+die Selbstreflexion|öz yansıtma|zelpstrefleksyo:n
+die Selbstverwirklichung|kendini gerçekleştirme|zelpstfervirklihuŋ
+die Sinnsuche|anlam arayışı|zinzu:he
+die Vergänglichkeit|geçicilik, fanilik|fergeŋlihkayt
+die Ohnmacht|güçsüzlük; bayılma|o:nmaht
+die Resignation|teslimiyet|rezignatsyo:n
+die Resilienz|psikolojik dayanıklılık|rezilyents
+die Verdrängung|bastırma|ferdreŋuŋ
+die Projektion|yansıtma|proyektsyo:n
+die Kränkung|incinme|kreŋkuŋ
+die Scham (C1)|utanma duygusu|şa:m
+das Schuldgefühl|suçluluk duygusu|şultgefü:l
+die Wehmut|hüzün|ve:mu:t
+die Genugtuung|hoşnutluk, tatmin|genu:ktu:uŋ
+die Gleichgültigkeit|kayıtsızlık|glayhgültihkayt
+die Hingabe|bağlılık, adanmışlık|hinga:be
+die Demut|tevazu|de:mu:t
+die Anmaßung|küstahlık|anma:suŋ
+die Eitelkeit|kibir, kendini beğenmişlik|aytılkayt
+die Willenskraft|irade gücü|vilınskraft
+die Selbstdisziplin|öz disiplin|zelpstdistsipli:n
+die Gelassenheit (C1)|vakur sakinlik|gelasınhayt
+## Sıfatlar (C1)
+ambivalent|çelişik duygulu|ambivalent
+anmaßend|küstah|anma:sınt
+ausschlaggebend|belirleyici|ausşla:kge:bınt
+bedenklich|endişe verici|bedenklih
+beharrlich|sebatkâr|beharlih
+beiläufig|üstünkörü, laf arasında|bayloyfih
+bezeichnend|karakteristik|betsayhnınt
+brisant|hassas, patlamaya hazır|brizant
+dürftig|yetersiz, cılız|dürftih
+eigenwillig|kendine özgü, dik başlı|aygınvilih
+eindringlich|ısrarlı, etkileyici|ayndriŋlih
+einschlägig|ilgili (alanda)|aynşle:gih
+erschöpfend|kapsamlı, tüketici|erşöpfınt
+erwägenswert|dikkate değer|erve:gınsve:rt
+fadenscheinig|sudan (bahane)|fa:dınşaynih
+folgenschwer|ağır sonuçlu|folgınşve:r
+gegebenenfalls|gerekirse|gege:bınınfals
+gravierend|ciddi, vahim|gravi:rınt
+haltlos|temelsiz|haltlo:s
+heikel|nazik, hassas (konu)|haykıl
+herablassend|küçümseyici|heraplasınt
+hinfällig|geçersiz|hinfelih
+immens|muazzam|imens
+irreführend|yanıltıcı|irefü:rınt
+kontrovers|tartışmalı|kontrovers
+lapidar|kısa ve öz|lapida:r
+maßgeblich|belirleyici|ma:sge:plih
+mutwillig|kasıtlı|mu:tvilih
+nachhaltig|kalıcı; sürdürülebilir|na:hhaltih
+nachlässig|özensiz|na:hlesih
+nüchtern|ayık; soğukkanlı|nühtırn
+obsolet|demode, geçersiz|opzole:t
+pikant|baharatlı; ilginç|pikant
+plakativ|çarpıcı ama basit|plakati:f
+prägnant|veciz|pregnant
+prekär|güvencesiz|preke:r
+schleppend|ağır ilerleyen|şlepınt
+skrupellos|vicdansız|skru:pılo:s
+sporadisch|seyrek|şpora:diş
+subtil|ince, zarif|zupti:l
+tendenziös|taraflı|tendentsyö:s
+tiefgreifend|köklü|ti:fgrayfınt
+trügerisch|aldatıcı|trü:gıriş
+umstritten|tartışmalı|umştritın
+unabdingbar|vazgeçilmez|unapdiŋba:r
+unumgänglich|kaçınılmaz|unumgeŋlih
+unverhältnismäßig|orantısız|unferheltnisme:sih
+verhängnisvoll|felaket getiren|ferheŋnisfol
+verwerflich|kınanacak|ferverflih
+vordergründig|yüzeysel|fo:rdırgründih
+weitreichend|geniş kapsamlı|vaytrayhınt
+zwiespältig|ikircikli|tsvi:şpeltih
+## Fiiller (C1)
+abwägen|tartmak (seçenekleri)|apve:gın
+anprangern|kınamak, teşhir etmek|anpraŋırn
+aufwerten|değer kazandırmak|aufve:rtın
+abwerten|değersizleştirmek|apve:rtın
+ausloten|derinliğini ölçmek|auslo:tın
+beanstanden|itiraz etmek|beanştandın
+beeinträchtigen|olumsuz etkilemek|beayntrehtigın
+begünstigen|kolaylaştırmak, kayırmak|begünstigın
+beimessen|atfetmek (önem)|baymesın
+beipflichten|katılmak (görüşe)|baypflihtın
+bekräftigen|teyit etmek|bekreftigın
+beschönigen|örtbas etmek, süslemek|beşö:nigın
+bestreiten|inkar etmek; karşılamak|beştraytın
+bezwecken|amaçlamak|betsvekın
+eindämmen|sınırlamak|ayndemın
+einbüßen|kaybetmek|aynbü:sın
+entkräften|çürütmek|entkreftın
+erachten|saymak, görmek|eraхtın
+erörtern (C1)|enine boyuna tartışmak|erörtırn
+erzwingen|zorla elde etmek|ertsviŋın
+gutheißen|onaylamak|gu:thaysın
+hervorheben|vurgulamak|herfo:rhe:bın
+innehaben|elinde bulundurmak (makam)|inneha:bın
+missbilligen|onaylamamak|misbiligın
+nachkommen|yerine getirmek|na:hkomın
+plädieren|savunmak (lehine)|ple:di:rın
+relativieren|göreceli hale getirmek|relativi:rın
+überbewerten|abartmak|ü:bırbeve:rtın
+unterbinden|önlemek|untırbindın
+untergraben|baltalamak|untırgra:bın
+veranlassen (C1)|sağlamak, emretmek|feranlasın
+verharmlosen|önemsiz göstermek|ferharmlo:zın
+verschärfen|şiddetlendirmek|ferşerfın
+vertuschen|örtbas etmek|fertuşın
+verwerfen|reddetmek|ferverfın
+vorenthalten|esirgemek|fo:renthaltın
+widerstreben|ters gelmek|vi:dırştre:bın
+zuspitzen (sich)|kızışmak|tsu:şpitsın

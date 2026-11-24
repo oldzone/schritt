@@ -1,0 +1,271 @@
+## Soyut isimler
+die Absicht|niyet|apziht
+der Ablauf|süreç, akış|aplauf
+der Abstand|mesafe, ara|apştant
+die Abwechslung|değişiklik|apveksluŋ
+der Anlass|vesile, sebep|anlas
+der Anstieg|artış|anşti:k
+der Aspekt|yön, boyut|aspekt
+der Aufwand|zahmet, masraf|aufvant
+der Ausgleich|denge, telafi|ausglayh
+der Ausnahmefall|istisnai durum|ausna:mefal
+die Ausnahme|istisna|ausna:me
+die Auswirkung|etki, sonuç|ausvirkuŋ
+die Bedeutung|anlam, önem|bedoytuŋ
+der Bedarf|ihtiyaç|beda:rf
+die Begabung|yetenek|bega:buŋ
+der Begriff|kavram|begrif
+die Beschaffenheit|nitelik, yapı|beşafınhayt
+die Bewegung|hareket|beve:guŋ
+der Bezug|ilgi, bağlantı|betsu:k
+die Dimension|boyut|dimenzyo:n
+der Eindruck|izlenim|ayndruk
+der Einfluss|etki|aynflus
+die Einschränkung|kısıtlama|aynşreŋkuŋ
+die Entfaltung|gelişme, açılma|entfaltuŋ
+das Ereignis|olay|eraygnis
+das Ergebnis|sonuç|erge:pnis
+der Faktor|etken|faktor
+die Folge|sonuç; bölüm|folge
+der Fortschritt|ilerleme|fortşrit
+die Fähigkeit|beceri|fe:ihkayt
+die Gefahr|tehlike|gefa:r
+der Gegensatz|zıtlık|ge:gınzats
+die Gelegenheit|fırsat|gele:gınhayt
+das Gleichgewicht|denge|glayhgeviht
+die Grenze|sınır|grentse
+der Grundsatz|ilke|gruntzats
+die Haltung|tutum, duruş|haltuŋ
+der Hintergrund|arka plan|hintırgrunt
+der Inhalt|içerik|inhalt
+das Interesse|ilgi; çıkar|interese
+der Kern|öz, çekirdek|kern
+der Kontext|bağlam|kontekst
+der Maßstab|ölçüt|ma:sşta:p
+das Merkmal|özellik, belirti|merkma:l
+das Motiv|güdü; motif|moti:f
+das Muster|desen, örüntü|mustır
+der Mangel|eksiklik|maŋıl
+die Notwendigkeit|gereklilik|no:tvendihkayt
+der Nutzen|fayda|nutsın
+die Priorität|öncelik|priorite:t
+der Rahmen|çerçeve|ra:mın
+die Rücksicht|saygı, dikkate alma|rükziht
+der Schwerpunkt|ağırlık noktası|şve:rpuŋkt
+die Struktur|yapı|ştruktu:r
+der Umfang|kapsam|umfaŋ
+der Umgang|davranma şekli|umgaŋ
+der Umstand|durum, koşul|umştant
+die Ursache|sebep|u:rzahe
+die Veränderung|değişim|ferendıruŋ
+das Verhältnis|ilişki, oran|ferheltnis
+die Verbindung|bağlantı|ferbinduŋ
+die Voraussetzung|ön koşul|forauszetsuŋ
+der Vorgang|süreç, olay|fo:rgaŋ
+der Wandel|değişim|vandıl
+der Wert|değer|ve:rt
+der Widerstand|direnç|vi:dırştant
+die Wirkung|etki|virkuŋ
+der Zusammenhang|bağlantı, bağlam|tsuzamınhaŋ
+der Zustand|durum|tsu:ştant
+der Zweck|amaç|tsvek
+der Zweifel|şüphe|tsvayfıl
+## Ev hayatı ve tüketim
+der Haushaltsgegenstand|ev eşyası|haushaltsge:gınştant
+das Elektrogerät|elektrikli alet|elektroge:re:t
+die Mikrowelle|mikrodalga|mikrovele
+der Wasserkocher|su ısıtıcı|vasırkohır
+die Kaffeemaschine|kahve makinesi|kafemaşi:ne
+der Toaster|ekmek kızartma makinesi|to:stır
+der Mixer|blender|miksır
+der Trockner|kurutma makinesi|troknır
+der Haartrockner|saç kurutma makinesi|ha:rtroknır
+das Bügeleisen|ütü|bü:gılayzın
+die Matratze|yatak (şilte)|matratse
+die Bettwäsche|nevresim|betveşe
+das Handtuch|havlu|hanttu:h
+die Klingel|zil|kliŋıl
+der Briefkasten|posta kutusu|bri:fkastın
+die Garage|garaj|gara:je
+der Dachboden|tavan arası|dahbo:dın
+das Dach|çatı|dah
+die Wohnfläche|yaşam alanı (m²)|vo:nflehe
+der Quadratmeter|metrekare|kvadra:tme:tır
+das Schloss (Tür)|kilit|şlos
+der Rauchmelder|duman dedektörü|rauhmeldır
+der Feuerlöscher|yangın söndürücü|foyırlöşır
+die Verbraucherzentrale|tüketici danışma merkezi|ferbrauhırtsentra:le
+die Bewertung|değerlendirme, yorum|beve:rtuŋ
+der Testsieger|test birincisi|testzi:gır
+die Bedienungsanleitung|kullanma kılavuzu|bedi:nuŋsanlaytuŋ
+die Lieferzeit|teslim süresi|li:fırtsayt
+die Versandkosten|kargo ücreti|ferzantkostın
+das Paket|paket, koli|pake:t
+der Paketbote|kargocu|pake:tbo:te
+## Sağlıklı yaşam
+die Bewegung (Sport)|egzersiz|beve:guŋ
+die Ausdauer|dayanıklılık|ausdauır
+die Kraft|güç|kraft
+die Beweglichkeit|esneklik|beve:klihkayt
+die Körperhaltung|duruş|körpırhaltuŋ
+das Übergewicht|fazla kilo|ü:bırgeviht
+das Untergewicht|düşük kilo|untırgeviht
+die Kalorie|kalori|kalori:
+das Eiweiß|protein|ayvays
+die Kohlenhydrate|karbonhidratlar|ko:lınhüdra:te
+das Fett|yağ|fet
+die Ballaststoffe|lifler|balastştofe
+die Vitamine|vitaminler|vitami:ne
+die Mahlzeit|öğün|ma:ltsayt
+das Fertiggericht|hazır yemek|fertihgeriht
+der Verzicht|vazgeçme, perhiz|fertsiht
+der Schlafmangel|uykusuzluk|şla:fmaŋıl
+die Erschöpfung|bitkinlik|erşöpfuŋ
+erschöpft|bitkin|erşöpft
+fit|formda|fit
+die Meditation|meditasyon|meditatsyo:n
+das Yoga|yoga|yo:ga
+die Achtsamkeit|farkındalık|ahtza:mkayt
+## Toplum ve değerler
+die Werte|değerler|ve:rte
+die Moral|ahlak|mora:l
+das Gewissen|vicdan|gevisın
+die Ehre|onur|e:re
+die Würde|haysiyet|vürde
+der Respekt|saygı|respekt
+die Ehrlichkeit|dürüstlük|e:rlihkayt
+die Gerechtigkeit|adalet|gerehtihkayt
+die Verantwortlichkeit|sorumluluk|ferantvortlihkayt
+die Selbstbestimmung|kendi kaderini tayin|zelpstbeştimuŋ
+die Menschenwürde|insan onuru|menşınvürde
+die Zivilcourage|sivil cesaret|tsivi:lkura:je
+die Bürgerinitiative|vatandaş girişimi|bürgırinitsyati:ve
+die Teilhabe|katılım|taylha:be
+die Ausgrenzung|dışlama|ausgrentsuŋ
+die Benachteiligung|dezavantajlı durum|bena:htayliguŋ
+die Chancengerechtigkeit|fırsat adaleti|şa:nsıngerehtihkayt
+das Klischee|klişe|kliʃe:
+das Stereotyp|basmakalıp yargı|ştereotü:p
+die Gewohnheit (Gesellschaft)|alışkanlık|gevo:nhayt
+die Mehrsprachigkeit|çok dillilik|me:rşpra:hihkayt
+die Muttersprache|ana dil|mutırşpra:he
+die Fremdsprache|yabancı dil|fremtşpra:he
+der Dialekt|lehçe, şive|dialekt
+der Akzent|aksan|aktsent
+## İfadeler ve deyimler (B2)
+auf jeden Fall|her durumda|auf ye:dın fal
+im Laufe der Zeit|zamanla|im laufe de:r tsayt
+in der Lage sein|durumunda olmak, -ebilmek|in de:r la:ge zayn
+in erster Linie|öncelikle|in e:rstır li:nye
+mit Sicherheit|kesinlikle|mit zihırhayt
+ohne Weiteres|hiç tereddütsüz|o:ne vaytırıs
+vor Kurzem|kısa süre önce|fo:r kurtsım
+zum Teil|kısmen|tsum tayl
+zum Schluss|sonunda|tsum şlus
+im Voraus|önceden|im forauz
+auf Anhieb|ilk denemede|auf anhi:p
+auf Dauer|uzun vadede|auf dauır
+im Nachhinein|sonradan bakınca|im na:hhinayn
+unter Umständen|belki, koşullara bağlı olarak|untır umştendın
+es geht um|söz konusu olan|es ge:t um
+es handelt sich um|söz konusu|es handılt zih um
+Recht behalten|haklı çıkmak|reht behaltın
+Glück haben|şanslı olmak|glük ha:bın
+Pech haben|şanssız olmak|peh ha:bın
+Lust haben auf|canı istemek|lust ha:bın auf
+schief gehen|ters gitmek|şi:f ge:ın
+den Faden verlieren|konunun ipini kaçırmak|de:n fa:dın ferli:rın
+ins Schwarze treffen|tam isabet|ins şvartse trefın
+etwas im Griff haben|kontrol altında tutmak|etvas im grif ha:bın
+Bauchschmerzen haben bei|içine sinmemek|bauhşmertsın ha:bın bay
+auf den Punkt bringen|özetlemek, net söylemek|auf de:n puŋkt briŋın
+## Fiiller (B2, son)
+abhängen|bağlı olmak|aphεŋın
+ablösen|yerini almak|aplö:zın
+abschaffen|kaldırmak|apşafın
+andeuten|ima etmek|andoytın
+anknüpfen|bağlamak, devam ettirmek|anknüpfın
+anlegen|yatırım yapmak; kurmak|anle:gın
+anordnen|emretmek; düzenlemek|anordnın
+anstellen|işe almak|anştelın
+auffordern|davet etmek, talep etmek|auffordırn
+aufnehmen|kaydetmek; kabul etmek|aufne:mın
+aufteilen|bölüştürmek|auftaylın
+auftreten|ortaya çıkmak; sahneye çıkmak|auftre:tın
+ausbauen|genişletmek|ausbauın
+ausbilden|yetiştirmek|ausbildın
+auseinandersetzen (sich)|ele almak, tartışmak|ausaynandırzetsın
+ausführen|yürütmek|ausfü:rın
+ausgehen von|varsaymak|ausge:ın fon
+auskommen mit|geçinmek|auskomın mit
+ausschließen|hariç tutmak|ausşli:sın
+äußern (sich)|görüş bildirmek|oysırn
+bedrohen|tehdit etmek|bedro:ın
+befassen (sich)|ilgilenmek, uğraşmak|befasın
+begegnen|karşılaşmak|bege:gnın
+beherrschen|hakim olmak|beherşın
+bekannt geben|duyurmak|bekant ge:bın
+belegen|kanıtlamak; almak (kurs)|bele:gın
+beruhen auf|dayanmak|beru:ın auf
+beschäftigen|istihdam etmek|beşeftigın
+bestrafen|cezalandırmak|beştra:fın
+beteiligen (sich)|katılmak|betayligın
+betrachten|ele almak, bakmak|betrahtın
+bewegen (sich)|hareket etmek|beve:gın
+bilden|oluşturmak|bildın
+darlegen|açıklamak|da:rle:gın
+einfallen|aklına gelmek|aynfalın
+einleiten|başlatmak|aynlaytın
+einwirken|etki etmek|aynvirkın
+entgehen|kaçırmak, gözden kaçmak|entge:ın
+entsprechen|uymak, karşılık gelmek|entşprehın
+erholen (sich)|dinlenmek, toparlanmak|erho:lın
+erlangen|elde etmek|erlaŋın
+erleben|yaşamak (deneyim)|erle:bın
+ermitteln|soruşturmak; belirlemek|ermitıln
+fehlen|eksik olmak|fe:lın
+folgen|takip etmek|folgın
+gefährden|tehlikeye atmak|gefe:rdın
+genießen|keyfini çıkarmak|geni:sın
+gewährleisten|garanti etmek|gevε:rlaystın
+greifen|kavramak|grayfın
+handeln|davranmak; ticaret yapmak|handıln
+herrschen|hüküm sürmek|herşın
+hervorrufen|neden olmak|herfo:rru:fın
+kennzeichnen|belirtmek, işaretlemek|kentsayhnın
+kümmern (sich)|ilgilenmek|kümırn
+leiden|acı çekmek|laydın
+lenken|yönlendirmek|lenkın
+mangeln|eksik olmak|maŋıln
+nachlassen|azalmak|na:hlasın
+nützen|yararlı olmak|nütsın
+ordnen|düzenlemek|ordnın
+prägen|şekillendirmek, damga vurmak|pre:gın
+rechnen mit|hesaba katmak|rehnın mit
+schätzen|takdir etmek|şetsın
+scheitern|başarısız olmak|şaytırn
+sichern|güvenceye almak|zihırn
+steigern|artırmak|ştaygırn
+steuern|yönetmek, kumanda etmek|ştoyırn
+streben nach|peşinde olmak|ştre:bın na:h
+trauen|güvenmek|trauın
+überleben|hayatta kalmak|ü:bırle:bın
+übertragen|aktarmak; yayınlamak|ü:bırtra:gın
+umgehen mit|başa çıkmak|umge:ın mit
+verdächtigen|şüphelenmek|ferdehtigın
+verlaufen|seyretmek, gelişmek|ferlaufın
+vermuten|tahmin etmek|fermu:tın
+verraten|ele vermek|ferra:tın
+verschwinden|kaybolmak|ferşvindın
+versäumen|kaçırmak, ihmal etmek|ferzoymın
+verteidigen|savunmak|fertaydigın
+verwechseln|karıştırmak (iki şeyi)|ferveksıln
+verwenden|kullanmak|ferven dın
+vorstellen (sich etw.)|hayal etmek|fo:rştelın
+wagen|cesaret etmek|va:gın
+widmen|adamak|vitmın
+zerstören|yok etmek|tserştö:rın
+zuordnen|eşleştirmek|tsu:ordnın
+zurechtkommen|başa çıkmak|tsurehtkomın
+zusammenstellen|derlemek|tsuzamınştelın
+zweifeln an|şüphe etmek|tsvayfıln an

@@ -1,0 +1,148 @@
+## Akademik dil
+l'argumentation|argümantasyon|largümantasyon
+la problématique|sorunsal|la problematik
+la thèse (argument)|tez, görüş|la tez
+l'antithèse|antitez|lantitez
+la synthèse|sentez|la sentez
+le postulat|varsayım|lö postüla
+la prémisse|öncül|la premis
+le paradoxe|paradoks|lö paradoks
+la nuance|nüans|la nüa:ns
+l'ambiguïté|belirsizlik|lanbigüite
+la cohérence|tutarlılık|la koera:ns
+la pertinence|uygunluk|la pertina:ns
+l'objectivité|nesnellik|lobjektivite
+la subjectivité|öznellik|la sübjektivite
+le critère|ölçüt|lö krite:r
+le paramètre|parametre|lö parametr
+la variable|değişken|la varyabl
+la corrélation|korelasyon|la korelasyon
+l'enjeu|mesele, söz konusu olan|lanjö
+le constat|tespit|lö konsta
+le bilan (évaluation)|değerlendirme|lö bilan
+la portée|kapsam|la porte
+le cadre théorique|kuramsal çerçeve|lö kadr teoretik
+le raisonnement|akıl yürütme|lö rezonman
+la déduction|tümdengelim|la dedüksyon
+l'induction|tümevarım|lendüksyon
+l'abstraction|soyutlama|lapstraksyon
+la notion|kavram|la nosyon
+le concept|kavram|lö konsept
+le paradigme|paradigma|lö paradigm
+l'approche|yaklaşım|laproş
+la perspective|bakış açısı|la perspektiv
+le point de vue|görüş|lö puen dö vü
+la controverse|tartışma, ihtilaf|la kontrovers
+la réfutation|çürütme|la refütasyon
+le consensus|uzlaşı|lö konsensüs
+la citation|alıntı|la sitasyon
+la bibliographie|kaynakça|la biblyografi
+le chapitre|bölüm|lö şapitr
+le paragraphe|paragraf|lö paragraf
+le résumé|özet|lö rezüme
+pertinent|yerinde, ilgili|pertinan
+cohérent|tutarlı|koeran
+rigoureux|titiz|rigurö
+exhaustif|kapsamlı|egzostif
+implicite|örtük|enplisit
+explicite|açık|eksplisit
+sous-jacent|alttaki, temeldeki|su jasan
+fondamental|temel|fondamantal
+empirique|ampirik|anpirik
+théorique|kuramsal|teoretik
+hypothétique|varsayımsal|ipotetik
+contradictoire|çelişkili|kontradiktua:r
+ambigu|belirsiz|anbigü
+crucial|kritik|krüsyal
+préalable|önceden gerekli|prealabl
+ultérieur|sonraki|ülteryö:r
+antérieur|önceki|anteryö:r
+argumenter en faveur de|lehinde savunmak|argümante an favö:r dö
+remettre en question|sorgulamak|römetr an kestyon
+mettre en évidence|ortaya koymak|metr an evida:ns
+mettre l'accent sur|vurgulamak|metr laksan sü:r
+tenir compte de|hesaba katmak|tönir kont dö
+faire face à|yüzleşmek|fe:r fas a
+il s'avère que|anlaşılıyor ki|il saver kö
+force est de constater|kabul etmek gerekir ki|fors e dö konstate
+## Duygular ve ilişkiler (ileri)
+l'empathie|empati|lanpati
+la bienveillance|iyi niyet|la byenveya:ns
+la rancune|kin|la rankün
+le ressentiment|içerleme|lö rösantiman
+la méfiance|güvensizlik|la mefya:ns
+la complicité|suç ortaklığı; samimiyet|la konplisite
+la nostalgie|nostalji|la nostalji
+la mélancolie|melankoli|la melankoli
+l'angoisse|sıkıntı, endişe|langua:s
+l'épanouissement|kendini gerçekleştirme|lepanuisman
+la gratitude|minnettarlık|la gratitüd
+l'indifférence|kayıtsızlık|lendifera:ns
+l'enthousiasme|coşku|lantuzyasm
+la lassitude|bıkkınlık|la lasitüd
+l'amertume|acılık, burukluk|lamertüm
+le dévouement|bağlılık|lö devuman
+la loyauté|sadakat|la luayote
+la trahison|ihanet|la traizon
+l'humiliation|aşağılanma|lümilyasyon
+la vulnérabilité|kırılganlık|la vülnerabilite
+susceptible|alıngan|süseptibl
+rancunier|kinci|rankünye
+bienveillant|iyi niyetli|byenveyan
+méfiant|kuşkucu|mefyan
+attachant|sevimli, bağlanılası|ataşan
+exigeant|talepkâr|egzijan
+indulgent|hoşgörülü|endüljan
+réservé|çekingen|rezerve
+spontané|kendiliğinden|spontane
+têtu|inatçı|tetü
+lunatique|kaprisli|lünatik
+mesquin|bayağı, küçük hesaplı|meşken
+hypocrite|ikiyüzlü|ipokrit
+s'épanouir|gelişmek, çiçek açmak|sepanuir
+se méfier de|-den şüphelenmek|sö mefye dö
+en vouloir à qqn|birine kırgın olmak|an vulua:r a
+se réconcilier|barışmak|sö rekonsilye
+rompre|ayrılmak, koparmak|ronpr
+pardonner|affetmek|pardone
+reprocher|sitem etmek|röproşe
+consoler|teselli etmek|konsole
+rassurer|güven vermek|rasüre
+vexer|kırmak, gücendirmek|vekse
+décevoir|hayal kırıklığına uğratmak|desövua:r
+## Ekonomi (ileri)
+l'inflation|enflasyon|lenflasyon
+la récession|durgunluk|la resesyon
+la croissance économique|ekonomik büyüme|la kruasa:ns ekonomik
+le produit intérieur brut|gayri safi yurtiçi hasıla|lö prodüi enteryö:r brü
+le taux de chômage|işsizlik oranı|lö to dö şoma:j
+le taux d'intérêt|faiz oranı|lö to dentere
+la banque centrale|merkez bankası|la bank santral
+la monnaie|para birimi|la mone
+le taux de change|döviz kuru|lö to dö şanj
+la bourse (finance)|borsa|la burs
+l'action (finance)|hisse senedi|laksyon
+l'obligation (finance)|tahvil|lobligasyon
+le dividende|temettü|lö dividand
+la dette publique|kamu borcu|la det püblik
+le déficit|açık|lö defisit
+l'excédent|fazla|lekseda:n
+la mondialisation|küreselleşme|la mondyalizasyon
+le libre-échange|serbest ticaret|lö libreşanj
+la délocalisation|üretimi yurtdışına taşıma|la delokalizasyon
+la privatisation|özelleştirme|la privatizasyon
+la subvention|sübvansiyon|la sübvansyon
+la fiscalité|vergi sistemi|la fiskalite
+le pouvoir d'achat|alım gücü|lö puvua:r daşa
+le coût de la vie|hayat pahalılığı|lö ku dö la vi
+la consommation|tüketim|la konsomasyon
+le consommateur|tüketici|lö konsomatör
+l'offre et la demande|arz ve talep|lofr e la dömand
+la rentabilité|kârlılık|la rantabilite
+la faillite|iflas|la fayit
+le monopole|tekel|lö monopol
+la spéculation|spekülasyon|la spekülasyon
+rentable|kârlı|rantabl
+économique|ekonomik|ekonomik
+financier|mali|finansye
+fiscal|vergisel|fiskal

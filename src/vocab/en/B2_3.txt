@@ -1,0 +1,199 @@
+## Soyut isimler
+ability|yetenek|ıbilıti
+absence|yokluk, devamsızlık|ebsıns
+access|erişim|ekses
+accuracy|doğruluk|ekyırısi
+approach|yaklaşım|ıpro:ç
+aspect|yön|espekt
+attempt|girişim, deneme|ıtempt
+authority|otorite, yetki|ıθo:rıti
+balance|denge|belıns
+barrier|engel|beriır
+behaviour (B2)|davranış|biheyvyır
+benefit|fayda|benıfit
+burden|yük|bördın
+capacity|kapasite|kıpesıti
+cause|sebep|ko:z
+challenge|zorluk|çelinc
+circumstances|koşullar|sörkımstensiz
+commitment|bağlılık, taahhüt|kımitmınt
+concept|kavram|kansept
+concern|endişe|kınsörn
+consequence|sonuç|kansıkwıns
+context|bağlam|kantekst
+contribution|katkı|kantribyu:şın
+debate|tartışma|dibeyt
+decline|düşüş|diklayn
+demand|talep|dimand
+dependence|bağımlılık|dipendıns
+effort|çaba|efırt
+emphasis|vurgu|emfısis
+existence|varlık|igzistıns
+extent|ölçü, kapsam|ikstent
+factor|etken|fektır
+feature|özellik|fi:çır
+function|işlev|faŋkşın
+impact|etki|impekt
+improvement|iyileştirme|impru:vmınt
+increase|artış|inkri:s
+influence|etki|influıns
+intention|niyet|intenşın
+issue|mesele|işu:
+judgement|yargı|cacmınt
+lack|eksiklik|lek
+limit|sınır|limit
+method|yöntem|meθıd
+need|ihtiyaç|ni:d
+objective|amaç|ıbcektiv
+obstacle|engel|abstıkıl
+outcome|sonuç|autkam
+pattern|örüntü|petırn
+phenomenon|olgu|fınamınan
+principle|ilke|prinsıpıl
+priority|öncelik|prayo:rıti
+process|süreç|pro:ses
+purpose|amaç|pörpıs
+range|aralık, yelpaze|reync
+reaction|tepki|riekşın
+risk|risk|risk
+role|rol|ro:l
+scale|ölçek|skeyl
+sense|his, anlam|sens
+shift (change)|değişim|şift
+standard|standart|stendırd
+status|statü, durum|steytıs
+strategy|strateji|stretıci
+structure|yapı|strakçır
+sufficiency|yeterlilik|sıfişınsi
+tendency|eğilim|tendınsi
+threat|tehdit|θret
+trend|eğilim, trend|trend
+value|değer|velyu:
+variety|çeşitlilik|vırayıti
+## Fiiller (B2)
+to acquire|edinmek|tu ıkwayır
+to adapt|uyum sağlamak|tu ıdept
+to adjust|ayarlamak|tu ıcast
+to approve|onaylamak|tu ıpru:v
+to assess|değerlendirmek|tu ıses
+to assume|varsaymak|tu ısyu:m
+to attract|çekmek|tu ıtrekt
+to avoid (B2)|kaçınmak|tu ıvoyd
+to cease|sona ermek|tu si:s
+to challenge|meydan okumak|tu çelinc
+to clarify|açıklığa kavuşturmak|tu klerıfay
+to collapse|çökmek|tu kılaps
+to combine|birleştirmek|tu kımbayn
+to commit|taahhüt etmek|tu kımit
+to communicate|iletişim kurmak|tu kımyu:nikeyt
+to compensate|telafi etmek|tu kampınseyt
+to conclude|sonuca varmak|tu kınklu:d
+to contribute|katkıda bulunmak|tu kıntribyu:t
+to cooperate|iş birliği yapmak|tu ko:apıreyt
+to criticise|eleştirmek|tu kritisayz
+to deal with (B2)|ilgilenmek, ele almak|tu di:l wið
+to define|tanımlamak|tu difayn
+to demonstrate|göstermek|tu demınstreyt
+to determine|belirlemek|tu ditörmin
+to distinguish|ayırt etmek|tu distiŋgwiş
+to dominate|hakim olmak|tu damıneyt
+to eliminate|ortadan kaldırmak|tu ilimıneyt
+to emerge|ortaya çıkmak|tu imörc
+to enable|olanak sağlamak|tu ineybıl
+to ensure|sağlamak, garanti etmek|tu inşuır
+to establish|kurmak|tu istebliş
+to evaluate|değerlendirmek|tu ivelyueyt
+to exaggerate|abartmak|tu igzecıreyt
+to expand|genişletmek|tu ikspend
+to expose|maruz bırakmak; ifşa etmek|tu ikspo:z
+to focus on|odaklanmak|tu fo:kıs an
+to generate|üretmek|tu cenıreyt
+to handle|ele almak|tu hendıl
+to highlight|vurgulamak|tu haylayt
+to identify|belirlemek, tanımlamak|tu aydentıfay
+to illustrate|örneklemek|tu ilıstreyt
+to imply|ima etmek|tu implay
+to impose|dayatmak|tu impo:z
+to interpret|yorumlamak|tu intörprit
+to interrupt|sözünü kesmek|tu intırapt
+to involve|içermek; dahil etmek|tu invalv
+to maintain|sürdürmek|tu meynteyn
+to monitor|izlemek|tu manitır
+to motivate (B2)|motive etmek|tu mo:tıveyt
+to neglect|ihmal etmek|tu niglekt
+to obtain|elde etmek|tu ıbteyn
+to occur|meydana gelmek|tu ıkör
+to oppose|karşı çıkmak|tu ıpo:z
+to overlook|gözden kaçırmak|tu o:vırluk
+to participate|katılmak|tu partisıpeyt
+to perceive|algılamak|tu pırsi:v
+to promote|teşvik etmek|tu prımo:t
+to pursue|peşinden gitmek|tu pırsyu:
+to recall|hatırlamak|tu riko:l
+to reflect|yansıtmak|tu riflekt
+to regard as|olarak görmek|tu riga:rd ız
+to reinforce|güçlendirmek|tu ri:info:rs
+to replace|yerine koymak|tu ripleys
+to represent|temsil etmek|tu reprizent
+to resolve|çözmek|tu rizalv
+to restrict|kısıtlamak|tu ristrikt
+to reveal|ortaya koymak|tu rivi:l
+to seek|aramak|tu si:k
+to strengthen (B2)|güçlendirmek|tu streŋθın
+to struggle|mücadele etmek|tu stragıl
+to tackle|ele almak|tu tekıl
+to transform|dönüştürmek|tu trensfo:rm
+to undergo|geçirmek (süreç)|tu andırgo:
+to utilise|kullanmak|tu yu:tılayz
+to vary|değişmek|tu veri
+## Phrasal verbs (B2)
+to account for|açıklamak; oluşturmak|tu ıkaunt fo:r
+to back up|desteklemek; yedeklemek|tu bek ap
+to bring about|neden olmak|tu briŋ ıbaut
+to carry out (B2)|yürütmek|tu keri aut
+to catch up on|telafi etmek|tu keç ap an
+to come up against|karşılaşmak (sorun)|tu kam ap ıgenst
+to cut down on|azaltmak|tu kat daun an
+to deal in|ticaretini yapmak|tu di:l in
+to draw up|hazırlamak (belge)|tu dro: ap
+to fall behind|geride kalmak|tu fo:l bihaynd
+to fall through|suya düşmek|tu fo:l θru:
+to get across|anlatmak, iletmek|tu get ıkras
+to get by|idare etmek|tu get bay
+to get over|atlatmak|tu get o:vır
+to give in|pes etmek|tu giv in
+to hold back|geri durmak|tu ho:ld bek
+to lay off|işten çıkarmak|tu ley of
+to live up to|beklentiyi karşılamak|tu liv ap tu
+to look down on|tepeden bakmak|tu luk daun an
+to make out|seçmek, anlamak|tu meyk aut
+to opt out|katılmamayı seçmek|tu apt aut
+to phase out|aşamalı olarak kaldırmak|tu feyz aut
+to point out|belirtmek|tu poynt aut
+to rule out|olasılık dışı bırakmak|tu ru:l aut
+to set back|geciktirmek|tu set bek
+to stand out|öne çıkmak|tu stend aut
+to step down|görevi bırakmak|tu step daun
+to take on|üstlenmek|tu teyk an
+to take over|devralmak|tu teyk o:vır
+to turn out|ortaya çıkmak (sonuç)|tu törn aut
+## Deyimler (B2)
+to be on the safe side|işi sağlama almak|tu bi an dı seyf sayd
+to get the hang of|alışmak, kapmak|tu get dı heŋ ıv
+to keep one's fingers crossed|şans dilemek|tu ki:p wanz fiŋgırz krast
+to make ends meet|geçinebilmek|tu meyk endz mi:t
+to play it by ear|duruma göre davranmak|tu pley it bay iır
+to see eye to eye|aynı fikirde olmak|tu si: ay tı ay
+to take for granted|olağan saymak|tu teyk fo:r grentid
+in the long term|uzun vadede|in dı laŋ törm
+in the short term|kısa vadede|in dı şo:rt törm
+on the other side of the coin|madalyonun öbür yüzü|an dı aðır sayd ıv dı koyn
+to be up to one's ears|işe gömülmek|tu bi ap tu wanz iırz
+to cross one's mind|aklından geçmek|tu kras wanz maynd
+to have second thoughts|tereddüt etmek|tu hev sekınd θo:ts
+to keep a low profile|göze batmamak|tu ki:p ı lo: pro:fayl
+to run out of steam|enerjisi tükenmek|tu ran aut ıv sti:m
+to sleep on it|üzerine bir gece düşünmek|tu sli:p an it
+to speak one's mind|açık konuşmak|tu spi:k wanz maynd
+to take the lead|liderliği almak|tu teyk dı li:d
+to touch on|değinmek|tu taç an

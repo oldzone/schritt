@@ -1,0 +1,294 @@
+## İş ve yönetim
+die Strategie|strateji|ştrategi:
+die Planung|planlama|pla:nuŋ
+die Umsetzung|uygulama|umzetsuŋ
+die Durchführung|yürütme|durhfü:ruŋ
+die Organisation|organizasyon|organizatsyo:n
+die Verwaltung|idare|fervaltuŋ
+die Leitung|yönetim|laytuŋ
+der Vorstand|yönetim kurulu|fo:rştant
+der Aufsichtsrat|denetim kurulu|aufzihtsra:t
+der Gesellschafter|ortak (şirket)|gezelşaftır
+die Niederlassung|şube|ni:dırlasuŋ
+die Zentrale|merkez ofis|tsentra:le
+der Standort|konum, lokasyon|ştantort
+die Fusion|birleşme|fuzyo:n
+die Übernahme|devralma|ü:bırna:me
+die Kooperation|iş birliği|ko:operatsyo:n
+der Zulieferer|yan sanayi tedarikçisi|tsu:li:fırır
+die Lieferkette|tedarik zinciri|li:fırkete
+die Logistik|lojistik|logistik
+das Lager|depo|la:gır
+der Bestand|stok|beştant
+die Qualitätskontrolle|kalite kontrol|kvalite:tskontrole
+die Effizienz|verimlilik|efitsyents
+die Produktivität|üretkenlik|produktivite:t
+die Kalkulation|maliyet hesabı|kalkulatsyo:n
+das Risiko|risk|ri:ziko
+die Chance|fırsat|şa:nse
+die Herausforderung|zorluk|herausfordıruŋ
+der Engpass|darboğaz|eŋpas
+die Frist (Projekt)|süre sınırı|frist
+der Meilenstein|kilometre taşı|maylınştayn
+die Zielgruppe|hedef kitle|tsi:lgrupe
+das Marketing|pazarlama|marketiŋ
+die Marke|marka|marke
+das Image|imaj|imic
+die Kampagne|kampanya|kampanye
+die Markteinführung|piyasaya sürme|marktaynfü:ruŋ
+der Marktanteil|pazar payı|marktantayl
+die Kundenzufriedenheit|müşteri memnuniyeti|kundıntsufri:dınhayt
+die Reklamation|şikayet (ürün)|reklamatsyo:n
+der Kundendienst|müşteri hizmetleri|kundındi:nst
+das Angebot (Firma)|teklif|angebo:t
+der Kostenvoranschlag|fiyat teklifi|kostınfo:ranşla:k
+die Mahnung|ödeme ihtarı|ma:nuŋ
+die Zahlungsfrist|ödeme süresi|tsa:luŋsfrist
+die Buchhaltung|muhasebe|bu:hhaltuŋ
+der Steuerberater|mali müşavir|ştoyırbera:tır
+die Steuererklärung|vergi beyannamesi|ştoyırerkle:ruŋ
+die Mehrwertsteuer|KDV|me:rve:rtştoyır
+## Hukuk ve sözleşmeler
+die Vertragsbedingungen|sözleşme koşulları|fertra:ksbediŋuŋın
+die Klausel|madde (sözleşme)|klauzıl
+die Vereinbarung|anlaşma|feraynba:ruŋ
+die Vollmacht|vekaletname|folmaht
+die Haftung|sorumluluk (hukuki)|haftuŋ
+der Schadenersatz|tazminat|şa:dınerzats
+der Widerruf|cayma, iptal|vi:dırru:f
+widerrufen|geri almak|vi:dırru:fın
+die Gültigkeit|geçerlilik|gültihkayt
+ablaufen|sona ermek|aplaufın
+verlängern|uzatmak|ferleŋırn
+kündigen (Vertrag)|feshetmek|kündigın
+die Verpflichtung|yükümlülük|ferpflihtuŋ
+die Berechtigung|yetki|berehtiguŋ
+das Urheberrecht|telif hakkı|u:rhe:bırreht
+die Datenschutzgrundverordnung|GDPR (veri koruma tüzüğü)|da:tınşutsgruntferordnuŋ
+der Rechtsanwalt|avukat|rehtsanvalt
+die Rechtslage|hukuki durum|rehtsla:ge
+das Verfahren|dava süreci; yöntem|ferfa:rın
+der Prozess|dava; süreç|protses
+die Berufung|itiraz (üst mahkeme)|beru:fuŋ
+die Verhandlung (Gericht)|duruşma|ferhandluŋ
+das Bußgeld|idari para cezası|bu:sgelt
+die Verjährung|zaman aşımı|ferye:ruŋ
+## Duygu ve ilişkiler (B2)
+die Zuneigung|şefkat|tsu:nayguŋ
+die Leidenschaft|tutku|laydınşaft
+die Treue|sadakat|troye
+die Untreue|sadakatsizlik|untroye
+der Seitensprung|aldatma|zaytınşpruŋ
+die Partnerschaft|birliktelik|partnırşaft
+die Fernbeziehung|uzak mesafe ilişkisi|fernbetsi:uŋ
+die Geborgenheit|güvende hissetme|geborgınhayt
+die Nähe|yakınlık|ne:e
+die Distanz|mesafe|distants
+die Rücksichtnahme|saygı gösterme|rükzihtna:me
+die Dankbarkeit|minnettarlık|dankba:rkayt
+die Reue|pişmanlık|roye
+bereuen|pişman olmak|beroyın
+die Kränkung|kırgınlık|kreŋkuŋ
+kränken|kırmak (gönül)|kreŋkın
+die Versöhnung|barışma|ferzö:nuŋ
+verzeihen|affetmek|fertsayın
+die Verzeihung|af|fertsayuŋ
+die Zuversicht|iyimserlik, güven|tsu:ferziht
+die Unsicherheit|güvensizlik|unzihırhayt
+die Ungewissheit|belirsizlik|ungevishayt
+die Erleichterung|rahatlama|erlayhtıruŋ
+die Gelassenheit|soğukkanlılık|gelasınhayt
+die Neugier|merak|noygi:r
+die Bewunderung|hayranlık|bevundıruŋ
+bewundern|hayran olmak|bevundırn
+die Verachtung|küçümseme|ferahtuŋ
+verachten|hor görmek|ferahtın
+## Seyahat ve turizm (B2)
+der Tourismus|turizm|turismus
+die Sehenswürdigkeit|görülecek yer|ze:ınsvürdihkayt
+das Reiseziel|seyahat hedefi|rayzetsi:l
+die Reiseversicherung|seyahat sigortası|rayzeferziharuŋ
+die Pauschalreise|paket tur|pauşa:lrayze
+die Buchungsbestätigung|rezervasyon onayı|bu:huŋsbeşte:tiguŋ
+die Stornierung|iptal|ştorni:ruŋ
+stornieren|iptal etmek|ştorni:rın
+die Halbpension|yarım pansiyon|halppenzyo:n
+die Vollpension|tam pansiyon|folpenzyo:n
+die Unterbringung|konaklama|untırbriŋuŋ
+die Jugendherberge|gençlik hosteli|yu:gınthe:rberge
+der Campingplatz|kamp alanı|kempiŋplats
+die Rundreise|tur (gezi)|runtrayze
+der Reiseführer|rehber; rehber kitap|rayzefü:rır
+die Landeswährung|yerel para birimi|landısve:ruŋ
+die Zeitverschiebung|saat farkı|tsaytferşi:buŋ
+der Jetlag|jetlag|jetlek
+die Einreise|ülkeye giriş|aynrayze
+die Ausreise|ülkeden çıkış|ausrayze
+das Fernweh|uzaklara özlem|fernve:
+das Heimweh|sıla hasreti|haymve:
+die Gastfreundschaft|misafirperverlik|gastfroyntşaft
+## Doğa ve bilim (B2)
+die Umweltverschmutzung|çevre kirliliği|umveltferşmutsuŋ
+die Luftverschmutzung|hava kirliliği|luftferşmutsuŋ
+das Ökosystem|ekosistem|ö:kozüste:m
+die Artenvielfalt|biyoçeşitlilik|a:rtınfi:lfalt
+der Lebensraum|yaşam alanı|le:bınsraum
+die Wüste|çöl|vü:ste
+der Regenwald|yağmur ormanı|re:gınvalt
+der Gletscher|buzul|gletşır
+der Vulkan|yanardağ|vulka:n
+die Atmosphäre|atmosfer|atmosfe:re
+die Ozonschicht|ozon tabakası|otso:nşiht
+der Meeresspiegel|deniz seviyesi|me:rısşpi:gıl
+die Gezeiten|gelgit|getsaytın
+der Niederschlag|yağış|ni:dırşla:k
+die Luftfeuchtigkeit|nem|luftfoyhtihkayt
+die Wettervorhersage|hava tahmini|vetırfo:rhe:rza:ge
+die Hitzewelle|sıcak hava dalgası|hitsevele
+der Sturm|fırtına|ştu:rm
+der Hagel|dolu|ha:gıl
+das Glatteis|buzlanma|glatays
+die Chemie|kimya|hemi:
+die Physik|fizik|füzi:k
+die Biologie|biyoloji|biologi:
+die Mathematik|matematik|matema:tik
+die Geographie|coğrafya|geogra:fi:
+die Medizin|tıp|meditsi:n
+die Psychologie|psikoloji|psühologi:
+die Soziologie|sosyoloji|zotsyologi:
+die Philosophie|felsefe|filozofi:
+die Geschichtswissenschaft|tarih bilimi|geşihtsvisınşaft
+## Medya ve dijital (B2)
+die Plattform|platform|platform
+das soziale Netzwerk|sosyal ağ|zotsya:le netsverk
+der Influencer|fenomen, influencer|influensır
+der Algorithmus|algoritma|algoritmus
+die Reichweite|erişim|rayhvayte
+die Aufmerksamkeitsspanne|dikkat süresi|aufmerkza:mkaytsşpane
+die Bildschirmzeit|ekran süresi|biltşirmtsayt
+die Abhängigkeit|bağımlılık|aphεŋihkayt
+das Cybermobbing|siber zorbalık|saybırmobiŋ
+die Desinformation|dezenformasyon|desinformatsyo:n
+die Verschwörungstheorie|komplo teorisi|ferşvö:ruŋsteori:
+die Meinungsfreiheit|ifade özgürlüğü|maynuŋsfraythayt
+die Öffentlichkeit|kamuoyu|öfıntlihkayt
+die Berichterstattung|haber yapma|berihterştatuŋ
+der Leitartikel|başyazı|laytartikıl
+die Glosse|köşe yazısı (mizahi)|glose
+das Abonnement|abonelik|abonemã
+abonnieren|abone olmak|aboni:rın
+streamen|yayın akışı izlemek|stri:mın
+posten|paylaşmak|po:stın
+liken|beğenmek|laykın
+## Sıfatlar (B2, devam)
+abwechslungsreich|çeşitli, değişken|apveksluŋsrayh
+anschaulich|açık, somut|anşaulih
+aufwendig|zahmetli, masraflı|aufvendih
+ausreichend|yeterli|ausrayhınt
+befriedigend|tatmin edici|befri:digınt
+begabt|yetenekli|gega:pt
+beliebt|sevilen, popüler|beli:pt
+beständig|kalıcı, istikrarlı|beştendih
+dringend|acil|driŋınt
+eindrucksvoll|etkileyici|ayndruksfol
+einflussreich|nüfuzlu|aynflusrayh
+einseitig|tek taraflı|aynzaytih
+entschlossen|kararlı|entşlosın
+erforderlich|gerekli|erfordırlih
+erheblich|önemli ölçüde|erhe:plih
+fehlerfrei|hatasız|fe:lırfray
+feinfühlig|ince ruhlu|faynfü:lih
+fortschrittlich|ilerici|fortşritlih
+gelassen|sakin|gelasın
+gewaltig|muazzam|gevaltih
+gründlich|esaslı, titiz|grüntlih
+harmlos|zararsız|harmlo:s
+herausfordernd|zorlayıcı|herausfordırnt
+hilflos|çaresiz|hilflo:s
+kompetent|yetkin|kompetent
+kurzsichtig|miyop; kısa görüşlü|kurtszihtih
+lästig|can sıkıcı|lestih
+leistungsstark|güçlü (performans)|laystuŋsştark
+nachvollziehbar|anlaşılır|na:hfoltsi:ba:r
+oberflächlich|yüzeysel|o:bırflehlih
+optimistisch|iyimser|optimistiş
+pessimistisch|kötümser|pesimistiş
+praktikabel|uygulanabilir|praktika:bıl
+radikal|radikal|radika:l
+rechtzeitig|vaktinde|rehttsaytih
+schädlich|zararlı|şe:tlih
+sinnlos|anlamsız|zinlo:s
+souverän|kendinden emin|zuvre:n
+stabil|sağlam|ştabi:l
+überfordert|bunalmış|ü:bırfordırt
+unvermeidlich|kaçınılmaz|unfermaytlih
+unverzichtbar|vazgeçilmez|unfertsihtba:r
+verantwortungsvoll|sorumluluk sahibi|ferantvortuŋsfol
+vergleichbar|karşılaştırılabilir|ferglayhba:r
+verständlich|anlaşılır|ferştentlih
+vertraulich|gizli|fertraulih
+vorsichtig|dikkatli|fo:rzihtih
+wirksam|etkili|virkza:m
+zielgerichtet|hedefe yönelik|tsi:lgerihtıt
+zuständig|yetkili, sorumlu|tsu:ştendih
+## Fiiller (B2, devam)
+abbauen|azaltmak, sökmek|apbauın
+abbrechen|yarıda kesmek|apbrehın
+abwarten|beklemek (sonucu)|apvartın
+anpassen|uyarlamak|anpasın
+ansteigen|artmak|anştaygın
+aufbauen|kurmak, inşa etmek|aufbauın
+aufdecken|ortaya çıkarmak|aufdekın
+aufrechterhalten|sürdürmek|aufrehterhaltın
+ausgleichen|dengelemek|ausglayhın
+ausweiten|genişletmek|ausvaytın
+bedauern|üzülmek, pişman olmak|bedauırn
+befolgen|uymak|befolgın
+begeistern|coşturmak|begaystırn
+behindern|engellemek|behindırn
+belohnen|ödüllendirmek|belo:nın
+benachrichtigen|haber vermek|bena:hrihtigın
+berücksichtigen|dikkate almak|berükzihtigın
+beschränken|sınırlamak|beşreŋkın
+betreuen|ilgilenmek, bakmak|betroyın
+bewahren|korumak|beva:rın
+bezweifeln|şüphe etmek|betsvayfıln
+durchschauen|içyüzünü anlamak|durhşauın
+einbeziehen|dahil etmek|aynbetsi:ın
+eingreifen|müdahale etmek|ayngrayfın
+einschätzen|değerlendirmek|aynşetsın
+einsetzen|kullanmak; görevlendirmek|aynzetsın
+entgegnen|karşılık vermek|entge:gnın
+enthalten|içermek|enthaltın
+entwerfen|tasarlamak|entverfın
+erarbeiten|hazırlamak (çalışarak)|erarbaytın
+ergänzen|tamamlamak|ergentsın
+erläutern|açıklamak|erloytırn
+ersetzen|yerine koymak|erzetsın
+erstellen|oluşturmak|erştelın
+festhalten|kaydetmek; tutmak|festhaltın
+herstellen|üretmek|he:rştelın
+hindern|engel olmak|hindırn
+klarstellen|netleştirmek|kla:rştelın
+mitwirken|katkıda bulunmak|mitvirkın
+nachgeben|boyun eğmek|na:hge:bın
+nachholen|telafi etmek|na:hho:lın
+offenbaren|açığa vurmak|ofınba:rın
+überarbeiten|gözden geçirmek|ü:bırarbaytın
+überprüfen|kontrol etmek|ü:bırprü:fın
+überschätzen|abartmak (değer)|ü:bırşetsın
+unterschätzen|hafife almak|untırşetsın
+verallgemeinern|genellemek|feralgemaynırn
+verbreiten|yaymak|ferbraytın
+verdrängen|yerinden etmek|ferdreŋın
+verfassen|kaleme almak|ferfasın
+verknüpfen|ilişkilendirmek|ferknüpfın
+vernachlässigen|ihmal etmek|ferna:hlesigın
+verwalten|yönetmek|fervaltın
+verzichten|vazgeçmek|fertsihtın
+vorantreiben|ilerletmek|forantraybın
+vorbeugen|önlemek|fo:rboygın
+zulassen|izin vermek|tsu:lasın
+zunehmen|artmak|tsu:ne:mın
+zusammenhängen|bağlantılı olmak|tsuzamınheŋın
+zustande kommen|gerçekleşmek|tsuştande komın

@@ -1,0 +1,237 @@
+## Teknoloji
+device|cihaz|divays
+charger|şarj aleti|çarcır
+cable|kablo|keybıl
+speaker|hoparlör; konuşmacı|spi:kır
+headphones|kulaklık|hedfo:nz
+software|yazılım|softwer
+hardware|donanım|ha:rdwer
+username|kullanıcı adı|yu:zırneym
+account|hesap|ıkaunt
+settings|ayarlar|setingz
+update|güncelleme|apdeyt
+folder|klasör|fo:ldır
+attachment|ek (e-posta)|ıteçmınt
+link|bağlantı|liŋk
+search engine|arama motoru|sörç encin
+browser|tarayıcı|brauzır
+screenshot|ekran görüntüsü|skri:nşat
+signal|sinyal|signıl
+to log in|oturum açmak|tu lag in
+to log out|oturumu kapatmak|tu lag aut
+to install|kurmak (program)|tu insto:l
+to delete|silmek|tu dili:t
+to save a file|dosya kaydetmek|tu seyv ı fayl
+to charge (phone)|şarj etmek|tu ça:rc
+to scroll|kaydırmak|tu skro:l
+to type|yazmak (klavye)|tu tayp
+to print|yazdırmak|tu print
+to copy|kopyalamak|tu kapi
+to paste|yapıştırmak|tu peyst
+to google|internette aramak|tu gu:gıl
+## Mutfak ve yemek
+ingredient|malzeme|ingri:diınt
+spice|baharat|spays
+garlic|sarımsak|garlik
+vinegar|sirke|vinıgır
+mustard|hardal|mastırd
+cream|krema|kri:m
+dough|hamur|do:
+mushroom|mantar|maşru:m
+spinach|ıspanak|spiniç
+cabbage|lahana|kebic
+beans|fasulye|bi:nz
+peas|bezelye|pi:z
+corn|mısır|ko:rn
+salmon|somon|semın
+seafood|deniz ürünü|si:fu:d
+dessert|tatlı|dizört
+portion|porsiyon|po:rşın
+slice|dilim|slays
+raw|çiğ|ro:
+boiled|haşlanmış|boyld
+fried|kızarmış|frayd
+grilled|ızgara|grild
+roasted|fırında kızartılmış|ro:stid
+sour|ekşi|sauır
+bitter|acı (tat)|bitır
+sweet|tatlı|swi:t
+salty|tuzlu|so:lti
+tasty|lezzetli|teysti
+cutlery|çatal bıçak takımı|katlıri
+bowl|kase|bo:l
+napkin|peçete|nepkin
+to bake|fırında pişirmek|tu beyk
+to stir|karıştırmak|tu stör
+to peel|soymak|tu pi:l
+to chop|doğramak|tu çap
+to heat up|ısıtmak|tu hi:t ap
+## Giyim ve moda
+fashion|moda|feşın
+style|stil|stayl
+outfit|kıyafet|autfit
+blouse|bluz|blauz
+underwear|iç çamaşırı|andırwer
+trainers|spor ayakkabısı|treynırz
+sandals|sandalet|sendılz
+jewellery|takı|cu:ılri
+necklace|kolye|neklıs
+ring|yüzük|riŋ
+earring|küpe|iırring
+watch|kol saati|waç
+button|düğme|batın
+zip|fermuar|zip
+sleeve|kol (giysi)|sli:v
+tight|dar|tayt
+loose|bol|lu:s
+striped|çizgili|stræypt
+checked|kareli|çekt
+fashionable|modaya uygun|feşınıbıl
+old-fashioned|modası geçmiş|o:ld feşınd
+to suit (look good)|yakışmak|tu su:t
+to fit (size)|uymak (beden)|tu fit
+to get changed|üstünü değiştirmek|tu get çeyncd
+## Doğa ve hayvanlar
+countryside|kırsal kesim|kantrisayd
+field|tarla|fi:ld
+meadow|çayır|medo:
+lake (B1)|göl|leyk
+waterfall|şelale|wo:tırfo:l
+cave|mağara|keyv
+wave|dalga|weyv
+sand|kum|send
+stone|taş|sto:n
+branch|dal; şube|branç
+root|kök|ru:t
+seed|tohum|si:d
+squirrel|sincap|skwirıl
+deer|geyik|diır
+eagle|kartal|i:gıl
+pigeon|güvercin|picın
+owl|baykuş|aul
+whale|balina|weyl
+dolphin|yunus|dalfin
+shark|köpekbalığı|şark
+ant|karınca|ent
+mosquito|sivrisinek|mıski:to:
+cage|kafes|keyc
+nest|yuva|nest
+## Spor ve boş zaman
+sports club|spor kulübü|spo:rts klab
+coach|antrenör|ko:ç
+referee|hakem|refıri:
+score|skor|sko:r
+goal (football)|gol|go:l
+draw (match)|beraberlik|dro:
+victory|zafer|viktıri
+defeat|yenilgi|difi:t
+championship|şampiyona|çempiınşip
+tournament|turnuva|turnımınt
+fan (sports)|taraftar|fen
+hiking|doğa yürüyüşü|hayking
+climbing|tırmanış|klayming
+sailing|yelken|seyling
+fishing|balık tutma|fişing
+camping|kamp|kemping
+board game|kutu oyunu|bo:rd geym
+puzzle|bulmaca|pazıl
+to train|antrenman yapmak|tu treyn
+to compete|yarışmak|tu kımpi:t
+to beat (team)|yenmek|tu bi:t
+to score a goal|gol atmak|tu sko:r ı go:l
+to go hiking|doğa yürüyüşüne çıkmak|tu go: hayking
+## Kültür ve sanat
+exhibition (B1)|sergi|eksıbişın
+gallery|galeri|gelıri
+artist|sanatçı|artist
+painter|ressam|peyntır
+sculpture|heykel|skalpçır
+stage|sahne|steyc
+performance (B1)|gösteri|pırfo:rmıns
+play (theatre)|oyun (tiyatro)|pley
+actor|erkek oyuncu|ektır
+actress|kadın oyuncu|ektrıs
+director (film)|yönetmen|dırektır
+audience (B1)|seyirci|o:diıns
+applause|alkış|ıplo:z
+singer|şarkıcı|siŋır
+band|grup (müzik)|bend
+instrument|enstrüman|instrımınt
+violin|keman|vayılin
+drums|davul|dramz
+orchestra|orkestra|o:rkıstrı
+novel|roman|navıl
+poem|şiir|po:ım
+poet|şair|po:ıt
+author|yazar|o:θır
+short story|öykü|şo:rt sto:ri
+monument|anıt|manyumınt
+palace|saray|pelıs
+tour (guided)|tur|tuır
+entrance fee|giriş ücreti|entrıns fi:
+## Para
+cash (B1)|nakit|keş
+coin (B1)|madeni para|koyn
+note (money)|kağıt para|no:t
+debit card|banka kartı|debit kard
+interest|faiz; ilgi|intrıst
+debt|borç|det
+loan (B1)|kredi|lo:n
+savings|birikim|seyvingz
+budget (B1)|bütçe|bacıt
+expenses|giderler|ikspensiz
+income|gelir|inkam
+receipt (B1)|fiş|risi:t
+refund (B1)|para iadesi|ri:fand
+discount (B1)|indirim|diskaunt
+second-hand|ikinci el|sekınd hend
+to save up|para biriktirmek|tu seyv ap
+to waste money|para israf etmek|tu weyst mani
+to withdraw|para çekmek|tu wiðdro:
+to transfer money|para göndermek|tu trensför mani
+to owe|borçlu olmak|tu o:
+## Kişilik
+personality|kişilik|pörsınelıti
+character|karakter|keriktır
+behaviour|davranış|biheyvyır
+generous (B1)|cömert|cenırıs
+mean|cimri; kaba|mi:n
+easy-going|uysal, rahat|i:zi go:ing
+moody|huysuz|mu:di
+reliable (B1)|güvenilir|rilayıbıl
+punctual|dakik|paŋkçuıl
+organised|düzenli|o:rgınayzd
+messy|dağınık|mesi
+sensible (B1)|mantıklı|sensıbıl
+silly|aptalca|sili
+clever (B1)|zeki|klevır
+stupid|aptal|styu:pid
+talkative|konuşkan|to:kıtiv
+helpful|yardımsever|helpfıl
+creative|yaratıcı|kriyeytiv
+cheeky|yüzsüz, şımarık|çi:ki
+confident (B1)|özgüvenli|kanfıdınt
+## Zaman ve yer
+century|yüzyıl|sençıri
+decade|on yıl|dekeyd
+period|dönem|piriıd
+nowadays|günümüzde|nauıdeyz
+in the past|geçmişte|in dı past
+recently (B1)|son zamanlarda|ri:sıntli
+lately|son zamanlarda|leytli
+daily|günlük|deyli
+weekly|haftalık|wi:kli
+monthly|aylık|manθli
+yearly|yıllık|yiırli
+region|bölge|ri:cın
+area|alan, bölge|eriı
+district|ilçe, semt|distrikt
+suburb|banliyö|sabörb
+capital|başkent|kepitıl
+north|kuzey|no:rθ
+south|güney|sauθ
+east|doğu|i:st
+west|batı|west
+abroad (B1)|yurt dışı|ıbro:d
+nearby|yakında|niırbay
+far away|uzakta|far ıwey

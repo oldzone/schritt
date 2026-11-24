@@ -1,0 +1,210 @@
+## Teknoloji
+l'appareil|cihaz|laparey
+le chargeur|şarj aleti|lö şarjör
+le câble|kablo|lö kabl
+l'écouteur|kulaklık|lekutör
+le logiciel|yazılım|lö lojisyel
+le compte (utilisateur)|hesap|lö kont
+le nom d'utilisateur|kullanıcı adı|lö non düti lizatör
+les paramètres|ayarlar|le parametr
+le dossier (informatique)|klasör|lö dosye
+la pièce jointe|ek (e-posta)|la pyes juent
+le lien|bağlantı|lö lyen
+le navigateur|tarayıcı|lö navigatör
+le moteur de recherche|arama motoru|lö motör dö röşerş
+la capture d'écran|ekran görüntüsü|la kaptü:r dekran
+se connecter|oturum açmak|sö konekte
+se déconnecter|oturumu kapatmak|sö dekonekte
+installer|kurmak (program)|enstale
+supprimer|silmek|süprime
+enregistrer|kaydetmek|anrejistre
+imprimer|yazdırmak|enprime
+copier|kopyalamak|kopye
+coller|yapıştırmak|kole
+cliquer|tıklamak|klike
+## Mutfak
+l'ingrédient|malzeme|lengredyan
+l'épice|baharat|lepis
+l'ail|sarımsak|lay
+la moutarde|hardal|la mutard
+la pâte|hamur|la pat
+le saumon|somon|lö somon
+les fruits de mer|deniz ürünleri|le früi dö me:r
+la tranche|dilim|la tranş
+la portion|porsiyon|la porsyon
+cru|çiğ|krü
+cuit|pişmiş|küi
+grillé|ızgara|griye
+frit|kızarmış|fri
+fade|tatsız|fad
+savoureux|lezzetli|savurö
+les couverts|çatal bıçak takımı|le kuve:r
+le bol|kâse|lö bol
+la casserole|tencere|la kasrol
+faire cuire|pişirmek|fe:r küir
+mélanger|karıştırmak|melanje
+éplucher|soymak|eplüşe
+couper en morceaux|parçalara kesmek|kupe an morso
+réchauffer|ısıtmak|reşofe
+## Doğa ve hayvanlar
+la campagne|kırsal|la kanpany
+le pré|çayır|lö pre
+la vallée|vadi|la vale
+la cascade|şelale|la kaskad
+la grotte|mağara|la grot
+la vague|dalga|la vag
+le sable|kum|lö sabl
+la pierre|taş|la pyer
+la branche|dal|la branş
+la racine|kök|la rasin
+la graine|tohum|la gren
+l'écureuil|sincap|leküröy
+le cerf|geyik|lö se:r
+l'aigle|kartal|legl
+le pigeon|güvercin|lö pijon
+le hibou|baykuş|lö ibu
+la baleine|balina|la balen
+le dauphin|yunus|lö dofen
+le requin|köpekbalığı|lö röken
+la fourmi|karınca|la furmi
+le moustique|sivrisinek|lö mustik
+le papillon|kelebek|lö papiyon
+l'abeille|arı|labey
+## Spor ve boş zaman
+le club de sport|spor kulübü|lö klöb dö spo:r
+l'entraîneur|antrenör|lantrenör
+l'arbitre|hakem|larbitr
+le score|skor|lö sko:r
+le but (sport)|gol|lö büt
+le match nul|beraberlik|lö maç nül
+la victoire|zafer|la viktua:r
+la défaite|yenilgi|la defet
+le championnat|şampiyona|lö şanpyona
+le tournoi|turnuva|lö turnua
+le supporter|taraftar|lö süportör
+l'escalade|tırmanış|leskalad
+la voile|yelken|la vual
+la pêche (loisir)|balık tutma|la peş
+le camping|kamp|lö kanping
+le jeu de société|kutu oyunu|lö jö dö sosyete
+s'entraîner|antrenman yapmak|santrene
+gagner un match|maç kazanmak|ganye en maç
+marquer un but|gol atmak|marke en büt
+## Kültür
+le tableau|tablo|lö tablo
+le peintre|ressam|lö pentr
+la sculpture|heykel|la skültü:r
+la scène|sahne|la sen
+la pièce de théâtre|tiyatro oyunu|la pyes dö teatr
+l'acteur|erkek oyuncu|laktör
+l'actrice|kadın oyuncu|laktris
+le metteur en scène|yönetmen (tiyatro)|lö metör an sen
+le réalisateur|yönetmen (film)|lö realizatör
+le public (B)|seyirci|lö püblik
+les applaudissements|alkışlar|lez aplodisman
+le chanteur|şarkıcı|lö şantör
+le groupe (musique)|grup|lö grup
+l'instrument|enstrüman|lenstrüman
+le violon|keman|lö violon
+la batterie (musique)|bateri|la batri
+le roman|roman|lö roman
+le poème|şiir|lö poem
+le poète|şair|lö poet
+l'écrivain|yazar|lekriven
+le monument|anıt|lö monüman
+le château|şato|lö şato
+la visite guidée|rehberli tur|la vizit gide
+le droit d'entrée|giriş ücreti|lö drua dantre
+## Para
+l'espèce (argent)|nakit|lespes
+la pièce (monnaie)|madeni para|la pyes
+le billet de banque|banknot|lö biye dö bank
+les intérêts|faiz|lez entere
+la dette|borç|la det
+le prêt|kredi|lö pre
+les économies|birikim|lez ekonomi
+les dépenses|harcamalar|le depans
+le revenu|gelir|lö rövnü
+d'occasion|ikinci el|dokazyon
+rembourser|geri ödemek|ranburse
+devoir de l'argent|borçlu olmak|dövua:r dö larjan
+retirer de l'argent|para çekmek|rötire dö larjan
+faire un virement|havale yapmak|fe:r en virman
+## Kişilik
+le caractère|karakter|lö karakte:r
+la personnalité|kişilik|la personalite
+le comportement|davranış|lö konportman
+généreux|cömert|jenerö
+avare|cimri|ava:r
+sympathique|sempatik|senpatik
+désagréable|hoş olmayan|dezagreabl
+ponctuel|dakik|ponktüel
+organisé|düzenli|organize
+désordonné|dağınık|dezordone
+bavard|konuşkan|bava:r
+serviable|yardımsever|servyabl
+créatif|yaratıcı|kreatif
+sûr de soi|kendinden emin|sü:r dö sua
+malin|kurnaz, akıllı|malen
+bête|aptal|bet
+sage|uslu; bilge|saj
+poli|kibar|poli
+impoli|kaba|enpoli
+## Fiiller (B1)
+accepter|kabul etmek|aksepte
+admirer|hayran olmak|admire
+autoriser|izin vermek|otorize
+apparaître|ortaya çıkmak|aparetr
+arranger|düzenlemek|aranje
+attacher|bağlamak|ataşe
+blâmer|suçlamak|blame
+calculer|hesaplamak|kalküle
+célébrer|kutlamak|selebre
+se concentrer|konsantre olmak|sö konsantre
+connecter|bağlamak|konekte
+considérer|düşünmek|konsidere
+contenir|içermek|kontönir
+créer|yaratmak|kree
+détruire|yok etmek|detrüir
+disparaître|kaybolmak|disparetr
+découvrir|keşfetmek|dekuvrir
+diviser|bölmek|divize
+encourager|cesaretlendirmek|ankuraje
+exister|var olmak|egziste
+explorer|keşfetmek|eksplore
+deviner|tahmin etmek|dövine
+ignorer|görmezden gelmek|inyore
+inclure|dahil etmek|enklü:r
+informer|bilgilendirmek|enforme
+présenter|tanıştırmak; sunmak|prezante
+inventer|icat etmek|envante
+rejoindre|katılmak|röjuendr
+mentir|yalan söylemek|mantir
+mesurer|ölçmek|mözüre
+offrir|hediye etmek, sunmak|ofrir
+posséder|sahip olmak|posede
+prétendre (B)|iddia etmek|pretandr
+produire|üretmek|prodüir
+fournir|sağlamak|furnir
+pousser|itmek|puse
+tirer|çekmek|tire
+atteindre (B)|ulaşmak|atendr
+reconnaître (B)|tanımak|rökonetr
+rejeter|reddetmek|röjte
+compter sur|güvenmek|konte sü:r
+rester|kalmak|reste
+enlever|kaldırmak|anlöve
+sauver|kurtarmak|sove
+respecter|saygı duymak|respekte
+secouer|sallamak|sökue
+briller|parlamak|briye
+sentir|koklamak; hissetmek|santir
+résoudre|çözmek|rezudr
+répandre|yaymak|repandr
+soutenir (B)|desteklemek|sutönir
+survivre|hayatta kalmak|sürvivr
+allumer|açmak (ışık)|alüme
+éteindre|kapatmak (ışık)|etendr
+déchirer|yırtmak|deşire
+traduire|çevirmek|tradüir
+peser|tartmak|pöze

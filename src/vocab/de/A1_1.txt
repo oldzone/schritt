@@ -1,0 +1,220 @@
+## Ev eşyaları
+der Stuhl|sandalye|ştu:l
+der Tisch|masa|tiş
+das Bett|yatak|bet
+der Schrank|dolap|şrank
+das Sofa|kanepe|zo:fa
+die Lampe|lamba|lampe
+das Fenster|pencere|fenstır
+die Tür|kapı|tü:r
+der Schlüssel|anahtar|şlüsıl
+das Bad|banyo|ba:t
+die Küche|mutfak|küçe
+das Zimmer|oda|tsimır
+der Kühlschrank|buzdolabı|kü:lşrank
+der Herd|ocak|he:rt
+das Regal|raf|rega:l
+der Teppich|halı|tepiş
+das Kissen|yastık|kisın
+die Decke|battaniye / tavan|deke
+der Spiegel|ayna|şpi:gıl
+die Dusche|duş|du:şe
+die Toilette|tuvalet|toalete
+der Boden|zemin, yer|bo:dın
+die Wand|duvar|vant
+der Balkon|balkon|balkon
+der Garten|bahçe|gartın
+die Treppe|merdiven|trepe
+der Aufzug|asansör|aufsu:k
+die Uhr|saat|u:r
+das Handy|cep telefonu|hendi
+der Computer|bilgisayar|kompyu:tır
+der Fernseher|televizyon|fernze:ır
+## Yiyecek ve içecek
+das Brot|ekmek|bro:t
+die Butter|tereyağı|butır
+der Käse|peynir|ke:ze
+die Wurst|sucuk, salam|vurst
+das Ei|yumurta|ay
+die Milch|süt|milh
+der Kaffee|kahve|kafe:
+der Tee|çay|te:
+das Wasser|su|vasır
+der Saft|meyve suyu|zaft
+das Bier|bira|bi:r
+der Wein|şarap|vayn
+der Apfel|elma|apfıl
+die Banane|muz|bana:ne
+die Orange|portakal|oranje
+die Tomate|domates|toma:te
+die Kartoffel|patates|kartofıl
+der Reis|pirinç|rays
+die Nudeln|makarna|nu:dıln
+das Fleisch|et|flayş
+das Hähnchen|tavuk (yemek)|he:nhın
+der Fisch|balık|fiş
+das Gemüse|sebze|gemü:ze
+das Obst|meyve|o:pst
+der Zucker|şeker|tsukır
+das Salz|tuz|zalts
+der Pfeffer|karabiber|pfefır
+die Suppe|çorba|zupe
+der Salat|salata|zala:t
+der Kuchen|pasta, kek|ku:hın
+das Frühstück|kahvaltı|frü:ştük
+das Mittagessen|öğle yemeği|mita:kesın
+das Abendessen|akşam yemeği|a:bıntesın
+## Giyim
+die Jacke|ceket|yake
+der Mantel|palto|mantıl
+die Hose|pantolon|ho:ze
+das Hemd|gömlek|hemt
+das T-Shirt|tişört|ti:şört
+der Pullover|kazak|pulo:vır
+das Kleid|elbise|klayt
+der Rock|etek|rok
+der Schuh|ayakkabı|şu:
+die Socke|çorap|zoke
+die Mütze|bere|müt:se
+der Hut|şapka|hu:t
+der Schal|atkı|şa:l
+die Tasche|çanta|taşe
+die Brille|gözlük|brile
+## Beden
+der Kopf|baş|kopf
+das Gesicht|yüz|gezişt
+das Auge|göz|auge
+das Ohr|kulak|o:r
+die Nase|burun|na:ze
+der Mund|ağız|munt
+der Zahn|diş|tsa:n
+das Haar|saç|ha:r
+der Hals|boyun|hals
+die Hand|el|hant
+der Arm|kol|arm
+das Bein|bacak|bayn
+der Fuß|ayak|fu:s
+der Bauch|karın|bauh
+der Rücken|sırt|rükın
+## Şehir ve yerler
+die Stadt|şehir|ştat
+das Dorf|köy|dorf
+die Straße|cadde, sokak|ştra:se
+der Platz|meydan|plats
+der Park|park|park
+die Bank|banka / bank|bank
+die Post|postane|post
+der Bahnhof|tren istasyonu|ba:nho:f
+der Flughafen|havalimanı|flu:kha:fın
+die Haltestelle|durak|halteştele
+das Krankenhaus|hastane|krankınhaus
+die Apotheke|eczane|apote:ke
+der Supermarkt|süpermarket|zu:pırmarkt
+das Geschäft|dükkan|geşeft
+das Restaurant|restoran|restoran
+das Café|kafe|kafe:
+das Hotel|otel|hotel
+die Schule|okul|şu:le
+die Kirche|kilise|kirhe
+das Museum|müze|muze:um
+das Kino|sinema|ki:no
+## Günlük fiiller
+aufstehen|kalkmak|aufşte:ın
+frühstücken|kahvaltı yapmak|frü:ştükın
+duschen|duş almak|du:şın
+anziehen|giyinmek / giymek|antsi:ın
+arbeiten|çalışmak|arbaytın
+kochen|yemek pişirmek|kohın
+essen|yemek|esın
+trinken|içmek|trinkın
+schlafen|uyumak|şla:fın
+waschen|yıkamak|vaşın
+putzen|temizlemek|putsın
+einkaufen|alışveriş yapmak|aynkaufın
+bezahlen|ödemek|betsa:lın
+kosten|(fiyatı) tutmak|kostın
+öffnen|açmak|öfnın
+schließen|kapatmak|şli:sın
+warten|beklemek|vartın
+suchen|aramak|zu:hın
+finden|bulmak|findın
+fragen|sormak|fra:gın
+antworten|cevap vermek|antvortın
+helfen|yardım etmek|helfın
+spielen|oynamak|şpi:lın
+lernen|öğrenmek|lernın
+lesen|okumak|le:zın
+schreiben|yazmak|şraybın
+hören|duymak, dinlemek|hö:rın
+sehen|görmek|ze:ın
+sprechen|konuşmak|şprehın
+gehen|gitmek, yürümek|ge:ın
+kommen|gelmek|komın
+fahren|(araçla) gitmek|fa:rın
+wohnen|oturmak, yaşamak|vo:nın
+kaufen|satın almak|kaufın
+brauchen|ihtiyaç duymak|brauhın
+mögen|sevmek, hoşlanmak|mö:gın
+## Sıfatlar
+groß|büyük|gro:s
+klein|küçük|klayn
+alt|yaşlı, eski|alt
+neu|yeni|noy
+jung|genç|yung
+gut|iyi|gu:t
+schlecht|kötü|şleht
+schön|güzel|şö:n
+teuer|pahalı|toyır
+billig|ucuz|biliş
+warm|sıcak, ılık|varm
+kalt|soğuk|kalt
+heiß|çok sıcak|hays
+lang|uzun|lang
+kurz|kısa|kurts
+schnell|hızlı|şnel
+langsam|yavaş|langza:m
+leicht|kolay / hafif|layht
+schwer|zor / ağır|şve:r
+richtig|doğru|rihtiş
+falsch|yanlış|falş
+voll|dolu|fol
+leer|boş|le:r
+müde|yorgun|mü:de
+krank|hasta|krank
+gesund|sağlıklı|gezunt
+hungrig|aç|hungriş
+durstig|susamış|durstiş
+froh|memnun, sevinçli|fro:
+traurig|üzgün|trauriş
+laut|gürültülü, yüksek sesli|laut
+leise|sessiz, alçak sesle|layze
+sauber|temiz|zaubır
+schmutzig|kirli|şmutsiş
+## Zaman
+heute|bugün|hoyte
+morgen|yarın|morgın
+gestern|dün|gestırn
+jetzt|şimdi|yetst
+später|sonra|şpe:tır
+früh|erken|frü:
+spät|geç|şpe:t
+immer|her zaman|imır
+oft|sık sık|oft
+manchmal|bazen|manşma:l
+nie|asla|ni:
+der Morgen|sabah|morgın
+der Mittag|öğle|mita:k
+der Abend|akşam|a:bınt
+die Nacht|gece|naht
+die Stunde|saat (süre)|ştunde
+die Minute|dakika|minu:te
+der Monat|ay|mo:nat
+das Jahr|yıl|ya:r
+das Wochenende|hafta sonu|vohınende
+der Montag|pazartesi|monta:k
+der Dienstag|salı|di:nsta:k
+der Mittwoch|çarşamba|mitvoh
+der Donnerstag|perşembe|donırsta:k
+der Freitag|cuma|frayta:k
+der Samstag|cumartesi|zamsta:k
+der Sonntag|pazar|zonta:k

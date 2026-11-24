@@ -1,0 +1,268 @@
+## Tıp
+die Diagnose|teşhis|diagno:ze
+die Therapie|tedavi|terapi:
+die Heilung|iyileşme, şifa|hayluŋ
+heilen|iyileştirmek|haylın
+die Nebenwirkung|yan etki|ne:bınvirkuŋ
+die Dosis|doz|do:zis
+das Rezept (Arzt)|reçete|retsept
+verschreiben|reçete yazmak|ferşraybın
+die Infektion|enfeksiyon|infektsyo:n
+der Virus|virüs|vi:rus
+das Bakterium|bakteri|bakte:ryum
+ansteckend|bulaşıcı|anştekınt
+sich anstecken|hastalık kapmak|zih anştekın
+die Entzündung|iltihap|enttsünduŋ
+chronisch|kronik|kro:niş
+akut|akut|aku:t
+der Krebs|kanser; yengeç|kreps
+der Tumor|tümör|tu:mor
+der Herzinfarkt|kalp krizi|hertsinfarkt
+der Schlaganfall|felç (inme)|şla:kanfal
+die Zuckerkrankheit|şeker hastalığı|tsukırkrankhayt
+die Behinderung|engellilik|behindıruŋ
+behindert|engelli|behindırt
+die Pflege|bakım|pfle:ge
+der Pfleger|hasta bakıcı|pfle:gır
+die Krankenschwester|hemşire|krankınşvestır
+der Chirurg|cerrah|hiru:rk
+der Facharzt|uzman doktor|faharsts
+der Hausarzt|aile hekimi|hausartst
+die Überweisung (Arzt)|sevk|ü:bırvayzuŋ
+die Vorsorge|koruyucu sağlık|fo:rzorge
+die Reha|rehabilitasyon|re:ha
+die Genesung|nekahet, iyileşme|gene:zuŋ
+das Immunsystem|bağışıklık sistemi|imu:nzüste:m
+die Ernährungsweise|beslenme şekli|erne:ruŋsvayze
+die Lebenserwartung|yaşam beklentisi|le:bınservartuŋ
+das Wohlbefinden|esenlik, iyi oluş|vo:lbefindın
+die Schlafstörung|uyku bozukluğu|şla:fştö:ruŋ
+die Atemnot|nefes darlığı|a:tımno:t
+atmen|nefes almak|a:tmın
+der Puls|nabız|puls
+das Bewusstlos|bilinçsiz|bevustlo:s
+## Şehir ve konut
+die Stadtentwicklung|kentsel gelişim|ştatentvikluŋ
+die Infrastruktur|altyapı|infraştruktu:r
+der Wohnungsmarkt|konut piyasası|vo:nuŋsmarkt
+die Wohnungsnot|konut sıkıntısı|vo:nuŋsno:t
+die Mietpreisbremse|kira artış sınırı|mi:tpraysbremze
+der Neubau|yeni bina|noybau
+der Altbau|eski bina|altbau
+das Grundstück|arsa|gruntştük
+das Eigentum|mülkiyet|aygıntum
+der Eigentümer|mal sahibi|aygıntü:mır
+die Eigentumswohnung|mülk daire|aygıntumsvo:nuŋ
+der Makler|emlakçı|ma:klır
+die Hypothek|ipotek|hüpote:k
+die Sanierung|renovasyon|zani:ruŋ
+die Dämmung|yalıtım|demuŋ
+der Lärm|gürültü|lerm
+die Lebensqualität|yaşam kalitesi|le:bınskvalite:t
+der öffentliche Nahverkehr|toplu taşıma|öfıntlihe na:ferke:r
+die Fußgängerzone|yaya bölgesi|fu:sgeŋırtso:ne
+der Radweg|bisiklet yolu|ra:tve:k
+die Verkehrsberuhigung|trafik sakinleştirme|ferke:rsberu:iguŋ
+die Grünfläche|yeşil alan|grü:nflehe
+das Viertel|mahalle, semt|firtıl
+die Gentrifizierung|soylulaştırma|gentrifitsi:ruŋ
+ländlich|kırsal|lentlih
+städtisch|kentsel|şte:tiş
+## Toplum
+die Armut|yoksulluk|armu:t
+der Reichtum|zenginlik|rayhtu:m
+die Ungleichheit|eşitsizlik|unglayhhayt
+die soziale Gerechtigkeit|sosyal adalet|zotsya:le gerehtihkayt
+der Sozialstaat|sosyal devlet|zotsya:lşta:t
+die Sozialhilfe|sosyal yardım|zotsya:lhilfe
+das Arbeitslosengeld|işsizlik parası|arbaytslo:zıngelt
+die Obdachlosigkeit|evsizlik|opdahlo:zihkayt
+obdachlos|evsiz|opdahlo:s
+die Generation|nesil|generatsyo:n
+der demografische Wandel|demografik değişim|demogra:fişe vandıl
+die Überalterung|nüfusun yaşlanması|ü:bıraltıruŋ
+die Geburtenrate|doğum oranı|geburtınra:te
+die Vielfalt|çeşitlilik|fi:lfalt
+die Herkunft|köken|he:rkunft
+die Religion|din|religyo:n
+der Glaube|inanç|glaube
+die Kirche (Institution)|kilise|kirhe
+die Moschee|cami|moşe:
+die Tradition|gelenek|traditsyo:n
+der Brauch|âdet|brauh
+die Sitte|örf|zite
+das Ehrenamt|gönüllü görev|e:rınamt
+ehrenamtlich|gönüllü olarak|e:rınamtlih
+die Spende|bağış|şpende
+spenden|bağışlamak|şpendın
+die Solidarität|dayanışma|zolidarite:t
+der Zusammenhalt|birlik, kenetlenme|tsuzamınhalt
+das Zusammenleben|bir arada yaşam|tsuzamınle:bın
+die Kriminalität|suç oranı|kriminalite:t
+die Gewalt|şiddet|gevalt
+die Sicherheit|güvenlik|zihırhayt
+## Kariyer
+die Karriere|kariyer|karye:re
+der Aufstieg|yükselme|aufşti:k
+die Führungskraft|yönetici|fü:ruŋskraft
+die Geschäftsführung|genel müdürlük|geşeftsfü:ruŋ
+der Vorgesetzte|amir|fo:rgezetste
+der Angestellte|memur, çalışan|angeştelte
+der Beamte|devlet memuru|beamte
+der Auszubildende|çırak, stajyer|austsu:bildınde
+der Berufseinsteiger|mesleğe yeni başlayan|beru:fsaynştaygır
+die Qualifikation|nitelik|kvalifikatsyo:n
+die Kompetenz|yetkinlik|kompetents
+die Teamfähigkeit|takım çalışmasına yatkınlık|ti:mfe:ihkayt
+die Belastbarkeit|strese dayanıklılık|belastba:rkayt
+die Zielstrebigkeit|hedef odaklılık|tsi:lştre:bihkayt
+die Arbeitsatmosphäre|çalışma ortamı|arbaytsatmosfe:re
+die Work-Life-Balance|iş-yaşam dengesi|vörk layf belıns
+die Gleitzeit|esnek mesai|glaytsayt
+das Pendeln|işe gidip gelme|pendıln
+der Pendler|işe uzaktan gidip gelen|pendlır
+die Dienstreise|iş seyahati|di:nstrayze
+der Geschäftspartner|iş ortağı|geşeftspartnır
+das Netzwerken|ağ kurma|netsverkın
+die Kündigungsfrist|ihbar süresi|kündiguŋsfrist
+die Abfindung|kıdem tazminatı|apfinduŋ
+das Arbeitszeugnis|iş referans belgesi|arbaytstsoygnis
+die Gehaltsvorstellung|maaş beklentisi|gehaltsfo:rşteluŋ
+das Anschreiben|ön yazı|anşraybın
+die Zielvereinbarung|hedef anlaşması|tsi:lferaynba:ruŋ
+die Fortschritte|ilerleme|fortşrite
+der Termindruck|zaman baskısı|termi:ndruk
+## İletişim ve tartışma
+die Argumentation|akıl yürütme|argumentatsyo:n
+das Gegenargument|karşı argüman|ge:gınargument
+der Standpunkt|görüş açısı|ştantpuŋkt
+die Auffassung|kanı|auffasuŋ
+die Überzeugung|kanaat, inanç|ü:bırtsoyguŋ
+die Einstellung|tutum|aynşteluŋ
+die Zustimmung|onay|tsu:ştimuŋ
+die Ablehnung|ret|aple:nuŋ
+der Einwand|itiraz|aynvant
+die Zweifel|şüpheler|tsvayfıl
+die Einigung|uzlaşma|aynigung
+der Kompromiss|uzlaşma, orta yol|kompromis
+die Debatte|münazara|debate
+die Rede|konuşma (söylev)|re:de
+die These|tez|te:ze
+die Schlussfolgerung|çıkarım, sonuç|şlusfolgıruŋ
+die Zusammenfassung|özet|tsuzamınfasuŋ
+die Stellungnahme|görüş bildirme|şteluŋna:me
+der Hinweis|ipucu, not|hinvays
+die Andeutung|ima|andoytuŋ
+die Missverständnis|yanlış anlama|misferştentnis
+die Rückmeldung|geri bildirim|rükmelduŋ
+argumentieren|argüman sunmak|argumenti:rın
+begründen|gerekçelendirmek|begründın
+erwähnen|bahsetmek|erve:nın
+betonen|vurgulamak|beto:nın
+einräumen|kabul etmek (itiraf)|aynroymın
+zugeben|itiraf etmek|tsu:ge:bın
+leugnen|inkar etmek|loygnın
+sich einigen|anlaşmak|zih aynigın
+überreden|ikna etmek (kandırarak)|ü:bırre:dın
+unterbrechen|sözünü kesmek|untırbrehın
+## Teknoloji (B2)
+die Software|yazılım|zoftver
+die Hardware|donanım|ha:rtver
+die Cloud|bulut|klaud
+der Server|sunucu|sö:rvır
+die Datenbank|veritabanı|da:tınbank
+der Algorithmus|algoritma|algoritmus
+die Verschlüsselung|şifreleme|ferşlüsıluŋ
+der Hackerangriff|siber saldırı|hekırangrif
+die Sicherheitslücke|güvenlik açığı|zihırhaytslüke
+das Update|güncelleme|apde:t
+die Benutzeroberfläche|kullanıcı arayüzü|benutsıro:bırflehe
+die Funktion|işlev|funktsyo:n
+der Speicher|bellek|şpayhır
+die Festplatte|sabit disk|festplate
+die Verbindung|bağlantı|ferbinduŋ
+das Netz|şebeke, ağ|nets
+die Erreichbarkeit|ulaşılabilirlik|erayhba:rkayt
+die Störung|arıza|ştö:ruŋ
+der Fortschritt|ilerleme|fortşrit
+die Innovation|yenilik|inovatsyo:n
+automatisieren|otomatikleştirmek|automatizi:rın
+programmieren|programlamak|programi:rın
+vernetzen|ağa bağlamak|fernetsın
+## Kültür (B2)
+das Kulturerbe|kültürel miras|kultu:rerbe
+die Epoche|dönem, çağ|epohe
+das Mittelalter|Orta Çağ|mitılaltır
+die Antike|Antik Çağ|anti:ke
+die Kunstausstellung|sanat sergisi|kunstausşteluŋ
+das Kunstwerk|sanat eseri|kunstverk
+der Bildhauer|heykeltıraş|bilthauır
+die Skulptur|heykel|skulptu:r
+die Architektur|mimari|arhitektu:r
+der Architekt|mimar|arhitekt
+die Uraufführung|ilk gösterim|u:rauffü:ruŋ
+der Regisseur|yönetmen|reji:sö:r
+die Hauptrolle|başrol|hauptrole
+die Handlung|olay örgüsü|handluŋ
+die Figur|karakter, figür|figu:r
+die Kritik|eleştiri|kriti:k
+der Kritiker|eleştirmen|kri:tikır
+das Festival|festival|festival
+die Veranstaltung|etkinlik|feranştaltuŋ
+der Veranstalter|organizatör|feranştaltır
+die Lesung|okuma etkinliği|le:zuŋ
+das Werk|eser|verk
+die Gattung|tür|gatuŋ
+der Gedichtband|şiir kitabı|gedihtbant
+die Übersetzung|çeviri|ü:bırzetsuŋ
+## Bağlaç ve zarflar (B2)
+demnach|buna göre|de:mna:h
+folglich|dolayısıyla|folklih
+somit|böylece|zo:mit
+dagegen|buna karşın|da:ge:gın
+hingegen|oysa|hinge:gın
+während dessen|bu arada|ve:rınt desın
+zumal|üstelik, hele ki|tsuma:l
+sofern|eğer, -dığı sürece|zofern
+inwiefern|ne ölçüde|invi:fern
+inzwischen|bu arada|intsvişın
+mittlerweile|artık, şimdiye kadar|mitlırvayle
+nämlich|yani, çünkü|ne:mlih
+schließlich|nihayetinde|şli:slih
+übrigens|bu arada (konu dışı)|ü:brigıns
+im Grunde|esasında|im grunde
+im Allgemeinen|genel olarak|im algemaynın
+im Vergleich zu|-e kıyasla|im fergleyh tsu
+im Gegensatz zu|-in aksine|im ge:gınzats tsu
+in Bezug auf|ile ilgili olarak|in betsu:k auf
+aus diesem Grund|bu nedenle|aus di:zım grunt
+unter anderem|diğerlerinin yanı sıra|untır andırım
+auf diese Weise|bu şekilde|auf di:ze vayze
+nach wie vor|hâlâ, eskisi gibi|na:h vi: fo:r
+von Anfang an|baştan beri|fon anfaŋ an
+ab und an|ara sıra|ap unt an
+## İsim-fiil kalıpları
+eine Rolle spielen|rol oynamak|ayne role şpi:lın
+in Frage stellen|sorgulamak|in fra:ge ştelın
+zur Sprache bringen|gündeme getirmek|tsur şpra:he briŋın
+Abschied nehmen|veda etmek|apşi:t ne:mın
+Bezug nehmen auf|atıfta bulunmak|betsu:k ne:mın auf
+eine Entscheidung fällen|karar vermek|ayne entşayduŋ felın
+Einfluss nehmen auf|etki etmek|aynflus ne:mın auf
+einen Antrag stellen|başvuru yapmak|aynın antra:k ştelın
+eine Frage stellen|soru sormak|ayne fra:ge ştelın
+in Ordnung bringen|düzene koymak|in ordnuŋ briŋın
+Kritik üben an|eleştirmek|kriti:k ü:bın an
+Rücksicht nehmen auf|dikkate almak|rükziht ne:mın auf
+Stellung nehmen zu|görüş bildirmek|ştelung ne:mın tsu
+zur Kenntnis nehmen|bilgi edinmek, not etmek|tsur kentnis ne:mın
+in Anspruch nehmen|yararlanmak|in anşpruh ne:mın
+zum Ausdruck bringen|ifade etmek|tsum ausdruk briŋın
+eine Lösung finden|çözüm bulmak|ayne lö:zuŋ findın
+Verantwortung übernehmen|sorumluluk almak|ferantvortuŋ ü:bırne:mın
+Erfahrungen sammeln|deneyim kazanmak|erfa:ruŋın zamıln
+einen Beitrag leisten|katkıda bulunmak|aynın bayttra:k laystın
+in Erfüllung gehen|gerçekleşmek (dilek)|in erfüluŋ ge:ın
+zur Verfügung haben|elinde bulundurmak|tsur ferfü:guŋ ha:bın
+Bescheid wissen|haberdar olmak|beşayt visın
+Wert legen auf|önem vermek|ve:rt le:gın auf

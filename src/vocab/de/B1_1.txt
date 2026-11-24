@@ -1,0 +1,305 @@
+## İş hayatı
+die Abteilung|departman|aptayluŋ
+der Arbeitgeber|işveren|arbaytge:bır
+der Arbeitnehmer|çalışan, işçi|arbaytne:mır
+die Arbeitszeit|çalışma saati|arbaytstsayt
+die Überstunde|fazla mesai|ü:bırştunde
+die Schicht|vardiya|şiht
+der Vertrag|sözleşme|fertra:k
+die Probezeit|deneme süresi|pro:betsayt
+die Kündigung|işten çıkarma, fesih|kündiguŋ
+das Vorstellungsgespräch|iş görüşmesi|fo:rştelungsgeşpre:h
+die Stelle|pozisyon, iş yeri|ştele
+die Stellenanzeige|iş ilanı|ştelınantsayge
+die Erfahrung|deneyim|erfa:ruŋ
+die Fähigkeit|yetenek|fe:ihkayt
+die Kenntnisse|bilgi (beceri)|kentnise
+die Verantwortung|sorumluluk|ferantvortuŋ
+die Aufgabe|görev|aufga:be
+das Projekt|proje|proyekt
+das Ziel|hedef|tsi:l
+der Erfolg|başarı|erfolk
+der Misserfolg|başarısızlık|miserfolk
+die Leistung|performans|laystuŋ
+die Beförderung|terfi|beförderuŋ
+die Gehaltserhöhung|zam|gehaltserhö:uŋ
+der Urlaubsantrag|izin dilekçesi|u:rlaupsantra:k
+die Krankmeldung|rapor bildirimi|krankmelduŋ
+die Kantine|yemekhane|kanti:ne
+der Kunde|müşteri|kunde
+der Lieferant|tedarikçi|li:fırant
+die Rechnung|fatura|rehnuŋ
+die Bestellung|sipariş|beştelung
+die Lieferung|teslimat|li:fıruŋ
+der Auftrag|sipariş, görev|auftra:k
+das Unternehmen|işletme, şirket|untırne:mın
+die Gründung|kuruluş|gründuŋ
+die Branche|sektör|bra:nşe
+die Konkurrenz|rekabet|konkurents
+der Umsatz|ciro|umzats
+der Gewinn|kâr|gevin
+der Verlust|zarar|ferlust
+die Kosten|masraflar|kostın
+das Gehalt|maaş|gehalt
+die Steuer|vergi|ştoyır
+die Rente|emekli maaşı|rente
+der Rentner|emekli|rentnır
+selbstständig|serbest çalışan|zelpstştendih
+arbeitslos|işsiz|arbaytslo:s
+die Arbeitslosigkeit|işsizlik|arbaytslo:zihkayt
+die Agentur|ajans|agentu:r
+das Team|ekip|ti:m
+die Zusammenarbeit|iş birliği|tsuzamınarbayt
+die Sitzung|oturum, toplantı|zitsuŋ
+das Protokoll|tutanak|protoko:l
+die Präsentation|sunum|prezentatsyo:n
+der Bericht|rapor|beriht
+die Frist|son tarih|frist
+die Unterschrift|imza|untırşrift
+unterschreiben|imzalamak|untırşraybın
+vereinbaren|kararlaştırmak|ferainba:rın
+verhandeln|müzakere etmek|ferhandıln
+leiten|yönetmek|laytın
+organisieren|organize etmek|organizi:rın
+## Resmi işler
+das Amt|resmi daire|amt
+die Behörde|makam, kurum|behö:rde
+das Formular|form|formula:r
+der Antrag|başvuru|antra:k
+beantragen|başvurmak|beantra:gın
+ausfüllen|doldurmak (form)|ausfülın
+die Anmeldung|kayıt|anmelduŋ
+sich anmelden|kaydolmak|zih anmeldın
+die Abmeldung|kayıt sildirme|apmelduŋ
+der Ausweis|kimlik|ausvays
+die Aufenthaltserlaubnis|oturma izni|aufenthaltserlaupnis
+das Visum|vize|vi:zum
+die Staatsangehörigkeit|vatandaşlık|şta:tsangehö:rihkayt
+die Bescheinigung|belge, onay|beşayniguŋ
+die Genehmigung|izin|gene:miguŋ
+die Gebühr|harç, ücret|gebü:r
+die Bearbeitung|işlem|bearbaytuŋ
+die Unterlagen|evraklar|untırla:gın
+die Kopie|fotokopi|kopi:
+beglaubigen|onaylatmak (noter)|beglaubigın
+der Termin|randevu|termi:n
+die Wartezeit|bekleme süresi|vartetsayt
+der Schalter|gişe|şaltır
+die Nummer|numara|numır
+die Adresse|adres|adrese
+der Wohnsitz|ikametgâh|vo:nzits
+das Konto|hesap|konto
+die Überweisung|havale|ü:bırvayzuŋ
+überweisen|havale etmek|ü:bırvayzın
+abheben|para çekmek|aphe:bın
+einzahlen|para yatırmak|ayntsa:lın
+der Kontoauszug|hesap dökümü|kontoaustsu:k
+die Gebühren|ücretler|gebü:rın
+## Ev ve kira
+die Wohnung|daire|vo:nuŋ
+die Wohngemeinschaft|ortak ev (WG)|vo:ngemaynşaft
+der Mietvertrag|kira sözleşmesi|mi:tfertra:k
+die Kaution|depozito|kautsyo:n
+die Kaltmiete|net kira|kaltmi:te
+die Warmmiete|giderler dahil kira|varmmi:te
+die Hausordnung|bina kuralları|hausordnuŋ
+der Hausmeister|kapıcı|hausmaystır
+die Renovierung|tadilat|renovi:ruŋ
+der Schaden|hasar|şa:dın
+die Reparatur|tamir|reparatu:r
+der Handwerker|usta, zanaatkâr|hantverkır
+der Elektriker|elektrikçi|elektrikır
+der Klempner|tesisatçı|klempnır
+das Werkzeug|alet|verktsoyk
+die Steckdose|priz|ştekdo:ze
+die Glühbirne|ampul|glü:birne
+der Wasserhahn|musluk|vasırha:n
+das Waschbecken|lavabo|vaşbekın
+die Badewanne|küvet|ba:devane
+der Vorhang|perde|fo:rhaŋ
+die Möbel|mobilya|mö:bıl
+der Schreibtisch|çalışma masası|şrayptiş
+das Bücherregal|kitaplık|bü:hırrega:l
+die Kommode|şifonyer|komo:de
+## Sağlık ve beden
+die Krankheit|hastalık|krankhayt
+das Symptom|belirti|zümpto:m
+die Untersuchung|muayene|untırzu:huŋ
+untersuchen|muayene etmek|untırzu:hın
+die Behandlung|tedavi|behandluŋ
+behandeln|tedavi etmek|behandıln
+die Operation|ameliyat|operatsyo:n
+die Spritze|iğne, enjeksiyon|şpritse
+die Salbe|merhem|zalbe
+das Pflaster|yara bandı|pflastır
+der Verband|sargı|ferbant
+die Allergie|alerji|alergi:
+der Blutdruck|tansiyon|blu:tdruk
+das Blut|kan|blu:t
+das Herz|kalp|herts
+die Lunge|akciğer|luŋe
+der Magen|mide|ma:gın
+die Haut|cilt|haut
+der Knochen|kemik|knohın
+das Gelenk|eklem|gelenk
+der Muskel|kas|muskıl
+die Ernährung|beslenme|erne:ruŋ
+die Diät|diyet|diye:t
+das Gewicht|kilo, ağırlık|geviht
+zunehmen|kilo almak|tsu:ne:mın
+abnehmen|kilo vermek|apne:mın
+der Stress|stres|ştres
+die Entspannung|rahatlama|entşpanuŋ
+schwanger|hamile|şvaŋır
+die Geburt|doğum|geburt
+der Zahnarzt|diş hekimi|tsa:nartst
+die Krankenkasse|sağlık sigortası|krankınkase
+der Krankenwagen|ambulans|krankınva:gın
+die Notaufnahme|acil servis|no:taufna:me
+## Eğitim
+das Studium|üniversite öğrenimi|ştu:dyum
+der Student|üniversite öğrencisi|ştudent
+die Universität|üniversite|univerzite:t
+die Hochschule|yüksekokul|ho:hşu:le
+das Semester|dönem|zemestır
+die Vorlesung|ders (üniversite)|fo:rle:zuŋ
+das Seminar|seminer|zemina:r
+der Professor|profesör|profesor
+das Fach|ders, branş|fah
+das Stipendium|burs|ştipendyum
+der Abschluss|mezuniyet, diploma|apşlus
+das Diplom|diploma|diplo:m
+die Abschlussprüfung|bitirme sınavı|apşluspru:fuŋ
+bestehen|geçmek (sınav)|beşte:ın
+durchfallen|kalmak (sınav)|durhfalın
+die Bibliothek|kütüphane|bibliote:k
+das Wörterbuch|sözlük|vörtırbu:h
+die Grammatik|dilbilgisi|gramatik
+die Aussprache|telaffuz|ausşpra:he
+der Wortschatz|kelime hazinesi|vortşats
+die Übung|alıştırma|ü:buŋ
+die Fortbildung|mesleki gelişim kursu|fortbilduŋ
+die Weiterbildung|ileri eğitim|vaytırbilduŋ
+## Toplum ve medya
+die Gesellschaft|toplum|gezelşaft
+die Gemeinschaft|topluluk|gemaynşaft
+die Bevölkerung|nüfus|beförkıruŋ
+der Bürger|vatandaş|bürgır
+die Regierung|hükümet|regi:ruŋ
+die Wahl|seçim|va:l
+wählen|seçmek, oy vermek|ve:lın
+die Partei|parti|partay
+die Politik|politika, siyaset|politi:k
+das Gesetz|kanun|gezets
+das Recht|hak, hukuk|reht
+die Pflicht|görev, yükümlülük|pfliht
+die Freiheit|özgürlük|fraythayt
+die Meinung|fikir|maynuŋ
+die Diskussion|tartışma|diskusyo:n
+die Nachricht|haber, mesaj|na:hriht
+die Zeitung|gazete|tsaytuŋ
+die Zeitschrift|dergi|tsaytşrift
+der Artikel|makale|arti:kıl
+die Sendung|yayın, program|zenduŋ
+die Werbung|reklam|verbuŋ
+das Interview|röportaj|intırvyu:
+der Journalist|gazeteci|jurnalist
+das Internet|internet|intırnet
+die Webseite|web sitesi|vepzayte
+das Netzwerk|ağ|netsverk
+herunterladen|indirmek|heruntırla:dın
+hochladen|yüklemek|ho:hla:dın
+speichern|kaydetmek|şpayhırn
+löschen|silmek|löşın
+das Passwort|şifre|pasvort
+## Çevre
+die Umwelt|çevre|umvelt
+der Umweltschutz|çevre koruma|umveltşuts
+die Verschmutzung|kirlilik|ferşmutsuŋ
+der Abfall|atık|apfal
+das Recycling|geri dönüşüm|risaykliŋ
+die Energie|enerji|energi:
+die Klimaanlage|klima|kli:maanla:ge
+das Klima|iklim|kli:ma
+die Natur|doğa|natu:r
+die Landschaft|manzara|lantşaft
+die Pflanze|bitki|pflantse
+die Erde|toprak, dünya|e:rde
+die Luft|hava|luft
+die Sonne|güneş|zone
+der Mond|ay|mo:nt
+der Stern|yıldız|ştern
+## Duygular ve ilişkiler
+die Beziehung|ilişki|betsi:uŋ
+die Freundschaft|arkadaşlık|froyntşaft
+die Ehe|evlilik|e:e
+der Ehemann|koca|e:eman
+die Ehefrau|karı, eş|e:efrau
+geschieden|boşanmış|geşi:dın
+verheiratet|evli|ferhayra:tıt
+ledig|bekar|le:dih
+die Trennung|ayrılık|trenuŋ
+der Streit|kavga|ştrayt
+sich streiten|kavga etmek|zih ştraytın
+sich versöhnen|barışmak|zih ferzö:nın
+das Vertrauen|güven|fertrauın
+vertrauen|güvenmek|fertrauın
+die Eifersucht|kıskançlık|ayfırzuht
+die Einsamkeit|yalnızlık|aynza:mkayt
+das Gefühl|duygu|gefü:l
+die Stimmung|ruh hali|ştimuŋ
+die Enttäuschung|hayal kırıklığı|enttoyşuŋ
+die Hoffnung|umut|hofnuŋ
+die Geduld|sabır|gedult
+geduldig|sabırlı|geduldih
+ungeduldig|sabırsız|ungeduldih
+zufrieden|memnun|tsufri:dın
+unzufrieden|memnuniyetsiz|untsufri:dın
+aufgeregt|heyecanlı|aufgere:kt
+wütend|öfkeli|vü:tınt
+## Sık fiiller (B1)
+sich beschweren|şikayet etmek|zih beşve:rın
+sich entschuldigen|özür dilemek|zih entşuldigın
+sich bedanken|teşekkür etmek|zih bedankın
+sich kümmern um|ilgilenmek|zih kümırn um
+sich gewöhnen an|alışmak|zih gevö:nın an
+sich vorstellen|kendini tanıtmak / hayal etmek|zih fo:rştelın
+sich interessieren für|ilgi duymak|zih interesi:rın fü:r
+sich freuen auf|dört gözle beklemek|zih froyın auf
+sich ärgern über|sinirlenmek|zih ergırn ü:bır
+teilnehmen|katılmak|taylne:mın
+vorhaben|niyetinde olmak|fo:rha:bın
+stattfinden|gerçekleşmek|ştatfindın
+empfehlen|tavsiye etmek|empfe:lın
+erlauben|izin vermek|erlaubın
+verbieten|yasaklamak|ferbi:tın
+überzeugen|ikna etmek|ü:bırtsoygın
+überraschen|şaşırtmak|ü:bırraşın
+unterstützen|desteklemek|untırştütsın
+verbessern|iyileştirmek|ferbesırn
+erreichen|ulaşmak|erayhın
+erledigen|halletmek|erle:digın
+erfahren|öğrenmek (haber)|erfa:rın
+behalten|saklamak, tutmak|behaltın
+bemerken|fark etmek|bemerkın
+beobachten|gözlemlemek|beo:bahtın
+beschreiben|tarif etmek|beşraybın
+bestätigen|onaylamak|beşte:tigın
+betreffen|ilgilendirmek|betrefın
+erwarten|beklemek (ummak)|ervartın
+garantieren|garanti etmek|garanti:rın
+gelten|geçerli olmak|geltın
+klingeln|zil çalmak|kliŋıln
+kontrollieren|kontrol etmek|kontroli:rın
+leisten|başarmak; karşılayabilmek|laystın
+meinen|kastetmek, düşünmek|maynın
+passieren|olmak (olay)|pasi:rın
+reagieren|tepki vermek|reagi:rın
+schaffen|başarmak|şafın
+schützen|korumak|şütsın
+teilen|paylaşmak|taylın
+übersetzen|çevirmek|ü:bırzetsın
+verlängern|uzatmak|ferleŋırn
+vermeiden|kaçınmak|fermaydın
+verschieben|ertelemek|ferşi:bın
+zweifeln|şüphe etmek|tsvayfıln

@@ -1,0 +1,246 @@
+## İş hayatı
+workplace|iş yeri|wörkpleys
+department|departman|dipartmınt
+staff|personel|staf
+employment|istihdam|imploymınt
+unemployed|işsiz|animployd
+self-employed|serbest çalışan|self imployd
+shift|vardiya|şift
+wage|ücret (saatlik/haftalık)|weyc
+pay rise|zam|pey rayz
+pension|emekli maaşı|penşın
+contract of employment|iş sözleşmesi|kantrekt ıv imploymınt
+probation period|deneme süresi|probeyşın piriıd
+notice period|ihbar süresi|no:tis piriıd
+job offer|iş teklifi|cab afır
+applicant|başvuran|eplikınt
+candidate|aday|kendideyt
+qualification|nitelik|kwalıfıkeyşın
+reference|referans|refrıns
+duty|görev|dyu:ti
+task|iş, görev|task
+responsibility|sorumluluk|rispansıbılıti
+goal|hedef|go:l
+target|hedef|targıt
+achievement|başarı|ıçi:vmınt
+progress|ilerleme|pro:gres
+colleague (B1)|meslektaş|kali:g
+boss (B1)|patron|bas
+manager (B1)|yönetici|menicır
+director|müdür|dırektır
+supervisor|amir|su:pırvayzır
+trainee|stajyer|treyni:
+internship|staj|intörnşip
+customer service|müşteri hizmetleri|kastımır sörvis
+supplier|tedarikçi|sıplayır
+invoice|fatura|invoys
+order (business)|sipariş|o:rdır
+delivery|teslimat|dilivıri
+stock|stok|stak
+warehouse|depo|werhaus
+factory|fabrika|fektıri
+industry|sanayi|indıstri
+trade|ticaret|treyd
+sales|satış|seylz
+marketing|pazarlama|markıting
+advertising|reklamcılık|edvırtayzing
+to employ|istihdam etmek|tu imploy
+to apply (job)|başvurmak|tu ıplay
+to hire (B1)|işe almak|tu hayır
+to quit|bırakmak (iş)|tu kwit
+to retire (B1)|emekli olmak|tu ritayır
+to earn a living|geçimini sağlamak|tu örn ı living
+to run a business|iş yürütmek|tu ran ı biznıs
+to organise|düzenlemek|tu o:rgınayz
+to manage a team|ekip yönetmek|tu menic ı ti:m
+to attend|katılmak|tu ıtend
+## Resmi işler
+form (official)|form|fo:rm
+application form|başvuru formu|eplikeyşın fo:rm
+identity card|kimlik kartı|aydentıti kard
+driving licence|ehliyet|drayving laysıns
+residence permit|oturma izni|rezidıns pörmit
+work permit|çalışma izni|wörk pörmit
+nationality|uyruk|neşınelıti
+citizenship|vatandaşlık|sitizınşip
+embassy|büyükelçilik|embısi
+consulate|konsolosluk|kansılıt
+office hours|çalışma saatleri|afis auırz
+registration|kayıt|recistreyşın
+fee|ücret, harç|fi:
+fine (penalty)|para cezası|fayn
+tax return|vergi beyannamesi|teks ritörn
+council|belediye|kaunsıl
+to register|kaydolmak|tu recistır
+to sign up|üye olmak|tu sayn ap
+to fill out|doldurmak|tu fil aut
+to renew|yenilemek|tu rinyu:
+to expire|süresi dolmak|tu ikspayır
+## Ev ve kira
+accommodation|konaklama, barınma|ıkamıdeyşın
+flatmate|ev arkadaşı|fletmeyt
+landlady|ev sahibesi|lendleydi
+tenancy agreement|kira sözleşmesi|tenınsi ıgri:mınt
+utility bills|faturalar (su, elektrik)|yu:tilıti bilz
+repair|tamir|riper
+plumber|tesisatçı|plamır
+electrician|elektrikçi|ilektrişın
+tool|alet|tu:l
+socket|priz|sakıt
+plug|fiş|plag
+light bulb|ampul|layt balb
+tap|musluk|tep
+bath|küvet|baθ
+carpet (B1)|halı|karpıt
+cushion|minder|kuşın
+wardrobe (B1)|gardırop|wo:rdro:b
+to decorate|dekore etmek|tu dekıreyt
+to rent out|kiraya vermek|tu rent aut
+to share a flat|ev paylaşmak|tu şer ı flet
+## Sağlık (B1)
+symptom|belirti|simptım
+treatment|tedavi|tri:tmınt
+operation|ameliyat|apıreyşın
+injection|iğne|incekşın
+allergy|alerji|elırci
+blood pressure|tansiyon|blad preşır
+heart attack|kalp krizi|hart ıtek
+stroke|felç|stro:k
+infection|enfeksiyon|infekşın
+virus|virüs|vayrıs
+diet|diyet|dayıt
+weight|kilo|weyt
+fitness|form, kondisyon|fitnıs
+stress (B1)|stres|stres
+pregnancy|hamilelik|pregnınsi
+pregnant|hamile|pregnınt
+emergency room|acil servis|imörcınsi ru:m
+first aid|ilk yardım|först eyd
+health insurance|sağlık sigortası|helθ inşurıns
+to recover from|iyileşmek|tu rikavır frım
+to put on weight|kilo almak|tu put an weyt
+to lose weight|kilo vermek|tu lu:z weyt
+to examine|muayene etmek|tu igzemin
+to prescribe|reçete yazmak|tu priskrayb
+to injure|yaralamak|tu incır
+## Eğitim (B1)
+education|eğitim|ecukeyşın
+primary school|ilkokul|praymıri sku:l
+secondary school|ortaokul/lise|sekındıri sku:l
+college|yüksekokul|kalic
+graduate|mezun|grecuıt
+degree (B1)|lisans derecesi|digri:
+lecture|ders (üniversite)|lekçır
+lecturer|öğretim görevlisi|lekçırır
+professor|profesör|prıfesır
+scholarship|burs|skalırşip
+tuition fees|okul harcı|tyu:işın fi:z
+assignment|ödev|ısaynmınt
+essay|kompozisyon|esey
+thesis|tez|θi:sis
+knowledge|bilgi|nalic
+vocabulary|kelime bilgisi|vıkebyıleri
+grammar|dilbilgisi|gremır
+pronunciation|telaffuz|prınansieyşın
+to graduate|mezun olmak|tu grecueyt
+to revise|tekrar çalışmak|tu rivayz
+to memorise|ezberlemek|tu memırayz
+to improve one's skills|becerilerini geliştirmek|tu impru:v wanz skilz
+## Toplum ve medya
+society (B1)|toplum|sısayıti
+community|topluluk|kımyu:nıti
+population|nüfus|papyıleyşın
+government (B1)|hükümet|gavırnmınt
+politician|politikacı|palıtişın
+political party|siyasi parti|pılitıkıl parti
+vote|oy|vo:t
+law (B1)|kanun|lo:
+right (legal)|hak|rayt
+crime (B1)|suç|kraym
+criminal|suçlu|krimınıl
+police officer|polis memuru|pıli:s afisır
+victim|kurban|viktim
+witness|tanık|witnıs
+news|haberler|nyu:z
+article (B1)|makale|artikıl
+magazine|dergi|megızi:n
+channel|kanal|çenıl
+programme|program|pro:grem
+documentary|belgesel|dakyumentıri
+advert|reklam|edvört
+to broadcast|yayınlamak|tu bro:dkast
+to publish|yayımlamak|tu pablış
+## Çevre (B1)
+environment (B1)|çevre|invayrınmınt
+pollution (B1)|kirlilik|pılu:şın
+waste (B1)|atık|weyst
+plastic|plastik|plestik
+recycling|geri dönüşüm|ri:sayklin
+global warming|küresel ısınma|glo:bıl wo:rming
+energy saving|enerji tasarrufu|enırci seyving
+solar power|güneş enerjisi|so:lır pauır
+wind farm|rüzgar santrali|wind farm
+natural resources|doğal kaynaklar|neçırıl rizo:rsız
+wildlife|yaban hayatı|wayldlayf
+endangered|nesli tükenmekte olan|indeyncırd
+flood|sel|flad
+drought|kuraklık|draut
+earthquake|deprem|örθkweyk
+to protect the environment|çevreyi korumak|tu prıtekt dı invayrınmınt
+to save energy|enerji tasarrufu yapmak|tu seyv enırci
+to throw away|atmak (çöp)|tu θro: ıwey
+## Duygular ve ilişkiler (B1)
+relationship (B1)|ilişki|rileyşınşip
+friendship|arkadaşlık|frendşip
+marriage|evlilik|meric
+engagement|nişan|ingeycmınt
+partner (B1)|partner|partnır
+ex-boyfriend|eski erkek arkadaş|eks boyfrend
+row|kavga, tartışma|rau
+argument (B1)|tartışma|argyumınt
+trust|güven|trast
+jealousy|kıskançlık|celısi
+loneliness|yalnızlık|lo:nlinıs
+happiness|mutluluk|hepinıs
+sadness|üzüntü|sednıs
+excitement|heyecan|iksaytmınt
+disappointment|hayal kırıklığı|disıpoyntmınt
+embarrassment|utanç|imberısmınt
+confident|kendinden emin|kanfıdınt
+upset|üzgün, keyfi kaçmış|apset
+annoyed|sinirli|ınoyd
+satisfied|memnun|setisfayd
+to get on well with|iyi geçinmek|tu get an wel wið
+to fall in love|aşık olmak|tu fo:l in lav
+to split up|ayrılmak|tu split ap
+to make up (with)|barışmak|tu meyk ap
+to argue|tartışmak|tu argyu:
+to apologise (B1)|özür dilemek|tu ıpalıcayz
+to forgive|affetmek|tu fırgiv
+to miss someone|birini özlemek|tu mis samwan
+## Sıfatlar (B1)
+available (B1)|müsait|ıveylıbıl
+convenient|uygun|kınvi:niınt
+comfortable|rahat|kamftıbıl
+uncomfortable|rahatsız|ankamftıbıl
+crowded|kalabalık|kraudid
+peaceful|huzurlu|pi:sfıl
+noisy|gürültülü|noyzi
+safe|güvenli|seyf
+unsafe|güvensiz|anseyf
+useful|yararlı|yu:sfıl
+useless|işe yaramaz|yu:slıs
+valuable|değerli|velyuıbıl
+fair|adil|fer
+unfair|adaletsiz|anfer
+common (B1)|yaygın|kamın
+rare|nadir|rer
+ordinary|sıradan|o:rdınıri
+unusual|alışılmadık|anyu:juıl
+amazing|harika|ımeyzing
+awful|berbat|o:fıl
+terrible|korkunç|terıbıl
+wonderful|harika|wandırfıl
+exhausted|bitkin|igzo:stid
+relaxed|rahat|rilekst
+stressed|stresli|strest

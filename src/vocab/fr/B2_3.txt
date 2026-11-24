@@ -1,0 +1,219 @@
+## Soyut kavramlar
+l'avantage|avantaj|lavanta:j
+l'inconvénient|dezavantaj|lenkonvenyan
+la conséquence|sonuç|la konseka:ns
+la cause|neden|la ko:z
+l'effet|etki|lefe
+l'influence|etki, nüfuz|lenflüa:ns
+le rapport|ilişki; rapor|lö rapo:r
+le lien (relation)|bağ|lö lyen
+la relation|ilişki|la rölasyon
+la tendance|eğilim|la tanda:ns
+le phénomène|olgu|lö fenomen
+le processus|süreç|lö prosesüs
+l'étape|aşama|letap
+le niveau|seviye|lö nivo
+la qualité|kalite|la kalite
+la quantité|miktar|la kantite
+la valeur|değer|la valör
+le principe|ilke|lö prensip
+la règle|kural|la regl
+l'exception|istisna|leksepsyon
+la condition|koşul|la kondisyon
+la possibilité|olasılık|la posibilite
+la probabilité|ihtimal|la probabilite
+le risque|risk|lö risk
+le défi|meydan okuma|lö defi
+l'obstacle|engel|lopstakl
+la solution|çözüm|la solüsyon
+le compromis|uzlaşma|lö konpromi
+l'accord|anlaşma|lako:r
+le désaccord|anlaşmazlık|lö dezako:r
+le conflit|çatışma|lö konfli
+la responsabilité|sorumluluk|la responsabilite
+le devoir|görev|lö dövua:r
+la liberté|özgürlük|la liberte
+la sécurité|güvenlik|la sekürite
+la confiance|güven|la konfya:ns
+le doute|şüphe|lö dut
+la certitude|kesinlik|la sertitüd
+la vérité|gerçek|la verite
+le mensonge|yalan|lö mansonj
+la réalité|gerçeklik|la realite
+l'apparence|görünüş|lapara:ns
+l'identité|kimlik|lidantite
+la mémoire (faculté)|hafıza|la memua:r
+le souvenir|anı|lö suvnir
+l'imagination|hayal gücü|limajinasyon
+la créativité|yaratıcılık|la kreativite
+la curiosité|merak|la küryozite
+la patience|sabır|la pasya:ns
+le courage|cesaret|lö kura:j
+la peur|korku|la pö:r
+la honte|utanç|la ont
+la fierté|gurur|la fyerte
+la jalousie|kıskançlık|la jaluzi
+la colère|öfke|la kole:r
+la tristesse|üzüntü|la tristes
+la joie|sevinç|la jua
+le bonheur|mutluluk|lö bonö:r
+le malheur|mutsuzluk|lö malö:r
+l'espoir|umut|lespua:r
+le désespoir|umutsuzluk|lö dezespua:r
+la solitude|yalnızlık|la solitüd
+l'ennui|can sıkıntısı|lanüi
+la satisfaction|memnuniyet|la satisfaksyon
+la déception|hayal kırıklığı|la desepsyon
+le regret|pişmanlık|lö rögre
+la surprise|sürpriz, şaşkınlık|la sürpri:z
+## Sıfatlar (B2)
+actuel|güncel|aktüel
+ancien|eski|ansyen
+récent|yeni, son|resan
+moderne|modern|modern
+traditionnel|geleneksel|tradisyonel
+essentiel|temel, gerekli|esansyel
+principal|ana|prensipal
+secondaire|ikincil|sögonde:r
+général|genel|jeneral
+particulier|özel|partikülye
+précis|kesin, net|presi
+vague|belirsiz|vag
+évident|apaçık|evidan
+complexe|karmaşık|konpleks
+simple|basit|senpl
+efficace|etkili|efikas
+inutile|işe yaramaz|inütil
+nécessaire|gerekli|nesese:r
+suffisant|yeterli|süfizan
+insuffisant|yetersiz|ensüfizan
+considérable|kayda değer|konsiderabl
+remarquable|dikkat çekici|römarkabl
+étrange|garip|etranj
+rare|nadir|ra:r
+fréquent|sık|frekan
+permanent|kalıcı|permanan
+temporaire|geçici|tanpore:r
+fiable|güvenilir|fyabl
+honnête|dürüst|onet
+injuste|adaletsiz|enjüst
+juste|adil; doğru|jüst
+sensible|hassas|sansibl
+raisonnable|makul|rezonabl
+ridicule|gülünç|ridikül
+indispensable|vazgeçilmez|endispansabl
+potentiel|potansiyel|potansyel
+visible|görünür|vizibl
+invisible|görünmez|envizibl
+public|kamusal|püblik
+privé|özel|prive
+fragile|kırılgan|frajil
+solide|sağlam|solid
+lourd|ağır|lu:r
+léger|hafif|leje
+épais|kalın|epe
+mince|ince|mens
+profond|derin|profon
+étroit|dar|etrua
+large|geniş|larj
+## Fiiller (B2)
+affirmer|ileri sürmek|afirme
+analyser|analiz etmek|analize
+améliorer|geliştirmek|amelyore
+s'adapter|uyum sağlamak|sadapte
+apprécier|takdir etmek|apresye
+approuver|onaylamak|apruve
+argumenter|tartışmak, gerekçelendirmek|argümante
+augmenter|artırmak|ogmante
+diminuer|azaltmak|diminüe
+avouer|itiraf etmek|avue
+cacher|saklamak|kaşe
+comparer|karşılaştırmak|konpare
+confirmer|doğrulamak|konfirme
+contribuer|katkıda bulunmak|kontribüe
+convaincre|ikna etmek|konvenkr
+critiquer|eleştirmek|kritike
+débattre|tartışmak|debatr
+déclarer|beyan etmek|deklare
+définir|tanımlamak|defini:r
+démontrer|kanıtlamak|demontre
+dépendre|bağlı olmak|depandr
+développer|geliştirmek|devlope
+distinguer|ayırt etmek|distenge
+élaborer|hazırlamak|elabore
+éliminer|ortadan kaldırmak|elimine
+empêcher|engellemek|anpeşe
+envisager|öngörmek|anvizaje
+estimer|tahmin etmek; saygı duymak|estime
+établir|kurmak|etablir
+évaluer|değerlendirmek|evalüe
+éviter|kaçınmak|evite
+exiger|talep etmek|egzije
+exprimer|ifade etmek|eksprime
+favoriser|desteklemek, kolaylaştırmak|favorize
+garantir|garanti etmek|garantir
+identifier|tanımlamak|idantifye
+impliquer|gerektirmek; dahil etmek|enplike
+indiquer|belirtmek|endike
+interpréter|yorumlamak|enterprete
+justifier|haklı çıkarmak|jüstifye
+limiter|sınırlamak|limite
+mériter|hak etmek|merite
+négliger|ihmal etmek|neglije
+obtenir|elde etmek|optönir
+paraître|görünmek|paretr
+persuader|ikna etmek|persüade
+préciser|netleştirmek|presize
+prévoir|öngörmek|prevua:r
+progresser|ilerlemek|progrese
+provoquer|neden olmak|provoke
+réagir|tepki vermek|reajir
+réaliser|gerçekleştirmek|realize
+recommander|tavsiye etmek|rökomande
+réduire|azaltmak|redüir
+refléter|yansıtmak|röflete
+renforcer|güçlendirmek|ranforse
+renoncer|vazgeçmek|rönonse
+représenter|temsil etmek|röprezante
+résister|direnmek|reziste
+révéler|ortaya çıkarmak|revele
+souligner|vurgulamak|sulinye
+subir|maruz kalmak|sübir
+supposer|varsaymak|süpoze
+surmonter|üstesinden gelmek|sürmonte
+susciter|uyandırmak|süsite
+tolérer|hoş görmek|tolere
+transformer|dönüştürmek|transforme
+valoriser|değer katmak|valorize
+vérifier|kontrol etmek|verifye
+## Bağlaçlar ve ifadeler (B2)
+cependant|ancak|söpandan
+néanmoins|yine de|neanmuen
+toutefois|bununla birlikte|tutfua
+pourtant|oysa, yine de|purtan
+en revanche|buna karşılık|an rövanş
+par conséquent|sonuç olarak|par konseka:n
+ainsi|böylece|ensi
+d'ailleurs|üstelik|dayö:r
+en outre|ayrıca|an utr
+de plus|dahası|dö plüs
+en effet|gerçekten de|an efe
+c'est-à-dire|yani|setadir
+autrement dit|başka bir deyişle|otröman di
+bien que|-e rağmen|byen kö
+quoique|-e rağmen|kuakö
+à condition que|şartıyla|a kondisyon kö
+afin que|-sın diye|afen kö
+de sorte que|öyle ki|dö sort kö
+tandis que|oysa|tandi kö
+alors que|-iken; oysa|alo:r kö
+à moins que|-medikçe|a muen kö
+grâce à|sayesinde|gra:s a
+à cause de|yüzünden|a ko:z dö
+en raison de|nedeniyle|an rezon dö
+malgré|-e rağmen|malgre
+au lieu de|yerine|o lyö dö
+quant à|-e gelince|kanta
+selon|-e göre|sölon
+d'une part... d'autre part|bir yandan... öte yandan|dün pa:r dotr pa:r
+en fin de compte|nihayetinde|an fen dö kont

@@ -1,0 +1,198 @@
+## İş dünyası (B2)
+headquarters|genel merkez|hedkwo:rtırz
+branch office|şube|branç afis
+board of directors|yönetim kurulu|bo:rd ıv dırektırz
+chief executive|üst yönetici|çi:f igzekyutiv
+entrepreneur|girişimci|antrıprınör
+start-up|girişim şirketi|start ap
+venture|girişim|vençır
+partnership|ortaklık|partnırşip
+joint venture|ortak girişim|coynt vençır
+takeover|devralma|teyko:vır
+market share|pazar payı|markıt şer
+competitor|rakip|kımpetitır
+target audience|hedef kitle|targıt o:diıns
+brand awareness|marka bilinirliği|brend ıwernıs
+launch|lansman|lo:nç
+campaign (business)|kampanya|kempeyn
+quotation|fiyat teklifi|kwo:teyşın
+estimate|tahmin; fiyat tahmini|estımıt
+negotiator|müzakereci|nigo:şieytır
+deal|anlaşma|di:l
+terms and conditions|şartlar ve koşullar|törmz ınd kındişınz
+logistics|lojistik|lıcistiks
+supply chain|tedarik zinciri|sıplay çeyn
+inventory|envanter|invıntıri
+quality control|kalite kontrol|kwalıti kıntro:l
+efficiency|verimlilik|ifişınsi
+workload (B2)|iş yükü|wörklo:d
+deadline pressure|zaman baskısı|dedlayn preşır
+appraisal|performans değerlendirmesi|ıpreyzıl
+promotion (career)|terfi|prımo:şın
+redundancy|işten çıkarma (kadro)|ridandınsi
+dismissal|işten çıkarılma|dismisıl
+severance pay|kıdem tazminatı|sevırıns pey
+maternity leave|doğum izni|mıtörnıti li:v
+sick leave|hastalık izni|sik li:v
+annual leave|yıllık izin|enyuıl li:v
+flexitime|esnek mesai|fleksitaym
+commute|işe gidiş geliş|kımyu:t
+remote work|uzaktan çalışma|rimo:t wörk
+work-life balance|iş-yaşam dengesi|wörk layf belıns
+to negotiate|müzakere etmek|tu nigo:şieyt
+to delegate|yetki devretmek|tu delıgeyt
+to outsource|dış kaynak kullanmak|tu autso:rs
+to launch a product|ürün piyasaya sürmek|tu lo:nç ı pradakt
+to make redundant|işten çıkarmak|tu meyk ridandınt
+to commute|işe gidip gelmek|tu kımyu:t
+to be in charge of|-den sorumlu olmak|tu bi in ça:rc ıv
+## Toplum
+generation|nesil|cenıreyşın
+ageing population|yaşlanan nüfus|eycing papyuleyşın
+birth rate|doğum oranı|börθ reyt
+life expectancy|yaşam beklentisi|layf ikspektınsi
+standard of living|yaşam standardı|stendırd ıv living
+welfare|refah; sosyal yardım|welfer
+social security|sosyal güvenlik|so:şıl sikyurıti
+homelessness|evsizlik|ho:mlısnıs
+homeless|evsiz|ho:mlıs
+inequality|eşitsizlik|inikwalıti
+diversity|çeşitlilik|dayvörsıti
+religion|din|rilicın
+belief|inanç|bili:f
+tradition (B2)|gelenek|trıdişın
+custom|âdet|kastım
+volunteer|gönüllü|valıntiır
+charity|hayır kurumu|çerıti
+donation|bağış|do:neyşın
+solidarity|dayanışma|salıderıti
+crime rate|suç oranı|kraym reyt
+violence|şiddet|vayılıns
+security|güvenlik|sikyurıti
+gender|cinsiyet|cendır
+stereotype|basmakalıp|steriotayp
+identity|kimlik|aydentıti
+integration|entegrasyon|intıgreyşın
+mother tongue|ana dil|maðır taŋ
+accent|aksan|eksınt
+dialect|lehçe|dayılekt
+to volunteer|gönüllü olmak|tu valıntiır
+to donate|bağışlamak|tu do:neyt
+to discriminate against|ayrımcılık yapmak|tu diskrimıneyt ıgenst
+to integrate|uyum sağlamak|tu intıgreyt
+## Sağlık (B2)
+diagnosis|teşhis|dayıgno:sis
+side effect|yan etki|sayd ifekt
+dose|doz|do:s
+chronic|kronik|kranik
+contagious|bulaşıcı|kınteycıs
+inflammation|iltihap|inflımeyşın
+cancer|kanser|kensır
+diabetes|şeker hastalığı|dayıbi:ti:z
+disability|engellilik|disıbilıti
+disabled|engelli|diseybıld
+surgeon|cerrah|sörcın
+specialist|uzman doktor|speşılist
+GP (family doctor)|aile hekimi|ci: pi:
+ward|koğuş|wo:rd
+recovery|iyileşme|rikavıri
+vaccine|aşı|veksi:n
+vaccination|aşılama|veksıneyşın
+immune system|bağışıklık sistemi|imyu:n sistım
+nutrition|beslenme|nyu:trişın
+protein|protein|pro:ti:n
+vitamin|vitamin|vitımin
+obesity|obezite|o:bi:sıti
+insomnia|uykusuzluk|insamniı
+mental health|ruh sağlığı|mentıl helθ
+wellbeing|esenlik|welbi:ing
+to diagnose|teşhis koymak|tu dayıgno:z
+to vaccinate|aşılamak|tu veksıneyt
+to heal|iyileşmek|tu hi:l
+to breathe|nefes almak|tu bri:ð
+to faint|bayılmak|tu feynt
+## Eğitim (B2)
+curriculum|müfredat|kırikyulım
+syllabus|ders programı|silıbıs
+tutor|özel öğretmen|tyu:tır
+undergraduate|lisans öğrencisi|andırgrecuıt
+postgraduate|lisansüstü öğrencisi|po:stgrecuıt
+master's degree|yüksek lisans|mastırz digri:
+PhD|doktora|pi: eyç di:
+dissertation|tez|disırteyşın
+research paper|araştırma makalesi|risörç peypır
+enrolment|kayıt (okul)|inro:lmınt
+admission|kabul|ıdmişın
+academic year|akademik yıl|ekıdemik yiır
+semester|dönem|sımestır
+attendance|devam|ıtendıns
+grade (B2)|not|greyd
+plagiarism|intihal|pleycırizım
+literacy|okuryazarlık|litırısi
+lifelong learning|yaşam boyu öğrenme|layflaŋ lörning
+vocational training|mesleki eğitim|vo:keyşınıl treyning
+to enrol|kaydolmak|tu inro:l
+to specialise in|uzmanlaşmak|tu speşılayz in
+to drop out|okulu bırakmak|tu drap aut
+to cheat|kopya çekmek; aldatmak|tu çi:t
+## Seyahat ve turizm (B2)
+destination|varış noktası|destıneyşın
+itinerary|seyahat planı|aytinırıri
+package holiday|paket tur|pekic halıdey
+accommodation (B2)|konaklama|ıkamıdeyşın
+hostel|hostel|hastıl
+bed and breakfast|oda-kahvaltı|bed ınd brekfıst
+full board|tam pansiyon|ful bo:rd
+half board|yarım pansiyon|haf bo:rd
+cancellation|iptal|kensıleyşın
+travel insurance|seyahat sigortası|trevıl inşurıns
+jet lag|jet lag|cet leg
+time difference|saat farkı|taym difrıns
+sightseeing tour|şehir turu|saytsi:ing tuır
+tourist attraction|turistik yer|tuırist ıtrekşın
+landmark|simge yapı|lendmark
+local cuisine|yerel mutfak|lo:kıl kwizi:n
+hospitality|misafirperverlik|haspıtelıti
+homesick|sıla özlemi çeken|ho:msik
+to go sightseeing|gezip görmek|tu go: saytsi:ing
+to check in (hotel)|giriş yapmak|tu çek in
+to upgrade (room)|üst sınıfa geçmek|tu apgreyd
+## Sıfatlar (B2)
+adequate|yeterli|edıkwıt
+appropriate|uygun|ıpro:priıt
+inappropriate|uygunsuz|inıpro:priıt
+beneficial|yararlı|benıfişıl
+harmful|zararlı|harmfıl
+capable|yetenekli, muktedir|keypıbıl
+competent|yetkin|kampıtınt
+consistent|tutarlı|kınsistınt
+inconsistent|tutarsız|inkınsistınt
+crucial|hayati|kru:şıl
+essential|gerekli, temel|isenşıl
+dramatic|çarpıcı|drımetik
+enormous|devasa|ino:rmıs
+tiny|minicik|tayni
+excessive|aşırı|iksesiv
+flexible|esnek|fleksıbıl
+genuine|gerçek, samimi|cenyuin
+fake|sahte|feyk
+gradual|kademeli|grecuıl
+immediate|anında|imi:diıt
+inevitable|kaçınılmaz|inevitıbıl
+intense|yoğun|intens
+minor|küçük, önemsiz|maynır
+major|büyük, önemli|meycır
+moderate|ılımlı, orta|madırıt
+precise|kesin|prisays
+rapid|hızlı|repid
+relevant|ilgili|relıvınt
+remarkable|dikkate değer|rimarkıbıl
+reasonable|makul|ri:zınıbıl
+severe|şiddetli|siviır
+stable|istikrarlı|steybıl
+temporary|geçici|tempırıri
+permanent|kalıcı|pörmınınt
+unique|eşsiz|yu:ni:k
+vague|belirsiz|veyg
+vital|hayati|vaytıl
+worthwhile|değer, zahmete değer|wörθwayl

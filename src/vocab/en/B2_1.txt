@@ -1,0 +1,209 @@
+## Ekonomi
+economic growth|ekonomik büyüme|i:kınamik gro:θ
+recession|durgunluk|riseşın
+crisis|kriz|kraysis
+inflation|enflasyon|infleyşın
+interest rate|faiz oranı|intrıst reyt
+exchange rate|döviz kuru|iksçeync reyt
+currency|para birimi|karınsi
+stock market|borsa|stak markıt
+share (stock)|hisse|şer
+investor|yatırımcı|investır
+capital|sermaye|kepitıl
+wealth|servet|welθ
+poverty (B2)|yoksulluk|pavırti
+income tax|gelir vergisi|inkam teks
+expenditure|harcama|ikspendiçır
+export|ihracat|ekspo:rt
+import|ithalat|impo:rt
+supply and demand|arz ve talep|sıplay ınd dimand
+consumer|tüketici|kınsyu:mır
+purchasing power|satın alma gücü|pörçısing pauır
+manufacturer|üretici|menyufekçırır
+corporation|şirket (büyük)|ko:rpıreyşın
+subsidiary|yan kuruluş|sıbsidiıri
+bankruptcy|iflas|beŋkrapsi
+bankrupt|iflas etmiş|beŋkrapt
+labour market|iş piyasası|leybır markıt
+minimum wage|asgari ücret|minımım weyc
+trade union|sendika|treyd yu:niın
+strike|grev|strayk
+workforce|iş gücü|wörkfo:rs
+shortage|kıtlık, eksiklik|şo:rtic
+surplus|fazla|sörplıs
+deficit|açık|defısit
+to invest|yatırım yapmak|tu invest
+to boost|artırmak, desteklemek|tu bu:st
+to decline|düşmek; reddetmek|tu diklayn
+to fluctuate|dalgalanmak|tu flakçueyt
+to go bankrupt|iflas etmek|tu go: beŋkrapt
+to go on strike|greve gitmek|tu go: an strayk
+## Siyaset
+democracy|demokrasi|dimakrısi
+dictatorship|diktatörlük|diktıytırşip
+constitution|anayasa|kanstıtyu:şın
+parliament|parlamento|parlımınt
+member of parliament|milletvekili|membır ıv parlımınt
+opposition|muhalefet|apızişın
+coalition|koalisyon|ko:ılişın
+campaign|kampanya|kempeyn
+candidate (B2)|aday|kendideyt
+majority|çoğunluk|mıcarıti
+minority|azınlık|maynarıti
+referendum|referandum|refırendım
+policy|politika|palısi
+foreign policy|dış politika|farın palısi
+reform|reform|rifo:rm
+human rights|insan hakları|hyu:mın rayts
+equality (B2)|eşitlik|ikwalıti
+discrimination|ayrımcılık|diskrimıneyşın
+prejudice|önyargı|precudis
+tolerance|hoşgörü|talırıns
+protest (B2)|protesto|pro:test
+demonstration|gösteri yürüyüşü|demınstreyşın
+refugee|mülteci|refyuci:
+immigration|göç (gelen)|imıgreyşın
+emigration|göç (giden)|emıgreyşın
+asylum|sığınma|ısaylım
+war|savaş|wo:r
+peace|barış|pi:s
+conflict|çatışma|kanflikt
+treaty|antlaşma|tri:ti
+ally|müttefik|elay
+enemy|düşman|enımi
+corruption|yolsuzluk|kırapşın
+scandal|skandal|skendıl
+to govern|yönetmek|tu gavırn
+to elect|seçmek|tu ilekt
+to resign (B2)|istifa etmek|tu rizayn
+to ban|yasaklamak|tu ben
+to abolish|kaldırmak (yasa)|tu ıbalış
+## Hukuk ve suç
+court (B2)|mahkeme|ko:rt
+judge|hakim|cac
+jury|jüri|cuıri
+defendant|sanık|difendınt
+prosecutor|savcı|prasıkyu:tır
+trial|duruşma|trayıl
+verdict|karar|vördikt
+sentence|ceza (mahkeme); cümle|sentıns
+prison|hapishane|prizın
+prisoner|mahkum|prizınır
+punishment|ceza|paniş mınt
+theft|hırsızlık|θeft
+burglary|ev soygunu|börglıri
+robbery|soygun|rabıri
+fraud|dolandırıcılık|fro:d
+murder|cinayet|mördır
+suspect|şüpheli|saspekt
+evidence (B2)|kanıt|evidıns
+investigation|soruşturma|investigeyşın
+lawsuit|dava|lo:su:t
+to sue|dava açmak|tu su:
+to arrest|tutuklamak|tu ırest
+to accuse (B2)|suçlamak|tu ıkyu:z
+to charge with|ile suçlamak|tu ça:rc wið
+to commit a crime|suç işlemek|tu kımit ı kraym
+to sentence|mahkum etmek|tu sentıns
+to release|serbest bırakmak|tu rili:s
+## Bilim ve araştırma
+research (B2)|araştırma|risörç
+researcher|araştırmacı|risörçır
+laboratory|laboratuvar|lıbarıtıri
+theory|teori|θiıri
+data|veri|deytı
+analysis|analiz|ınelısis
+survey|anket|sörvey
+statistics|istatistik|stıtistiks
+average|ortalama|evıric
+percentage|yüzde|pırsentic
+discovery (B2)|keşif|diskavıri
+invention|icat|invenşın
+breakthrough|çığır açan buluş|breykθru:
+technology|teknoloji|teknalıci
+artificial intelligence|yapay zeka|a:rtıfişıl intelicıns
+robot|robot|ro:bat
+space exploration|uzay keşfi|speys ekspılreyşın
+universe|evren|yu:nıvörs
+planet (B2)|gezegen|plenit
+gene|gen|ci:n
+cell|hücre|sel
+to conduct research|araştırma yapmak|tu kındakt risörç
+to analyse|analiz etmek|tu enılayz
+to prove|kanıtlamak|tu pru:v
+to measure (B2)|ölçmek|tu mejır
+to predict|tahmin etmek|tu pridikt
+## Çevre (B2)
+greenhouse effect|sera etkisi|gri:nhaus ifekt
+carbon dioxide|karbondioksit|karbın dayaksayd
+emissions|emisyonlar|imişınz
+fossil fuels|fosil yakıtlar|fasıl fyu:ılz
+renewable energy|yenilenebilir enerji|rinyu:ıbıl enırci
+nuclear power|nükleer enerji|nyu:kliır pauır
+sustainability|sürdürülebilirlik|sısteynıbilıti
+biodiversity|biyoçeşitlilik|bayo:dayvörsıti
+deforestation|ormansızlaşma|di:farısteyşın
+extinction|neslin tükenmesi|ikstiŋkşın
+habitat|yaşam alanı|hebitet
+ecosystem|ekosistem|i:ko:sistım
+natural disaster|doğal afet|neçırıl dizastır
+wildfire|orman yangını|wayldfayır
+heatwave|sıcak hava dalgası|hi:tweyv
+sea level|deniz seviyesi|si: levıl
+carbon footprint|karbon ayak izi|karbın futprint
+eco-friendly|çevre dostu|i:ko: frendli
+disposable|tek kullanımlık|dispo:zıbıl
+to pollute|kirletmek|tu pılu:t
+to reduce emissions|emisyonu azaltmak|tu ridyu:s imişınz
+to become extinct|nesli tükenmek|tu bikam ikstiŋkt
+to conserve|korumak (doğa)|tu kınsörv
+## Medya
+the media|medya|dı mi:diı
+the press|basın|dı pres
+journalism|gazetecilik|cörnılizım
+editor|editör|editır
+reporter|muhabir|ripo:rtır
+coverage|haber kapsamı|kavıric
+headline (B2)|manşet|hedlayn
+front page|ön sayfa|frant peyc
+column|köşe yazısı|kalım
+review (B2)|eleştiri yazısı|rivyu:
+censorship|sansür|sensırşip
+freedom of speech|ifade özgürlüğü|fri:dım ıv spi:ç
+source (B2)|kaynak|so:rs
+viewer|izleyici|vyu:ır
+subscriber|abone|sıbskraybır
+influencer|fenomen|influınsır
+followers|takipçiler|falo:ırz
+viral|viral|vayrıl
+podcast|podcast|padkast
+to go viral|viral olmak|tu go: vayrıl
+to subscribe|abone olmak|tu sıbskrayb
+to stream|canlı yayın izlemek|tu stri:m
+to post|paylaşmak|tu po:st
+to report on|haber yapmak|tu ripo:rt an
+## Psikoloji
+mind|zihin|maynd
+mood|ruh hali|mu:d
+emotion|duygu|imo:şın
+feeling|his|fi:ling
+anxiety|kaygı|eŋzayıti
+depression|depresyon|dipreşın
+self-esteem|özsaygı|self isti:m
+self-confidence|özgüven|self kanfıdıns
+motivation|motivasyon|mo:tıveyşın
+willpower|irade gücü|wilpauır
+addiction|bağımlılık|ıdikşın
+therapy|terapi|θerıpi
+therapist|terapist|θerıpist
+burnout|tükenmişlik|börnaut
+pressure|baskı|preşır
+attitude|tutum|etıtyu:d
+expectation|beklenti|ekspekteyşın
+empathy|empati|empıθi
+memory|hafıza; anı|memıri
+to cope with|başa çıkmak|tu ko:p wið
+to overcome|üstesinden gelmek|tu o:vırkam
+to suffer from|-den muzdarip olmak|tu safır frım
+to motivate|motive etmek|tu mo:tıveyt
+to concentrate on|odaklanmak|tu kansıntreyt an

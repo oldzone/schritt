@@ -1,0 +1,406 @@
+## Ekonomi
+die Wirtschaftslage|ekonomik durum|virtşaftsla:ge
+die Konjunktur|konjonktür|konyunktu:r
+der Aufschwung|yükseliş, canlanma|aufşvuŋ
+die Rezession|durgunluk|retsesyo:n
+die Krise|kriz|kri:ze
+der Markt|piyasa|markt
+das Angebot und die Nachfrage|arz ve talep|angebo:t unt di na:hfra:ge
+der Wettbewerbsvorteil|rekabet avantajı|vetbeverpsfo:rtayl
+der Konzern|holding|kontsern
+die Aktie|hisse senedi|aktsye
+die Börse|borsa|börze
+der Anleger|yatırımcı|anle:gır
+das Kapital|sermaye|kapita:l
+das Vermögen|servet|fermö:gın
+das Einkommen|gelir|aynkomın
+die Ausgaben|harcamalar|ausga:bın
+die Einnahmen|gelirler|aynna:mın
+der Haushaltsplan|bütçe|haushaltspla:n
+das Budget|bütçe|büdje:
+die Preissteigerung|fiyat artışı|praysştaygıruŋ
+der Zinssatz|faiz oranı|tsinszats
+die Währung|para birimi|ve:ruŋ
+der Wechselkurs|döviz kuru|veksılkurs
+der Export|ihracat|eksport
+der Import|ithalat|import
+der Handel|ticaret|handıl
+der Händler|tüccar|hendlır
+die Produktion|üretim|produktsyo:n
+der Hersteller|üretici|he:rştelır
+das Produkt|ürün|produkt
+die Ware|mal, emtia|va:re
+die Dienstleistung|hizmet|di:nstlaystuŋ
+der Verbraucher|tüketici|ferbrauhır
+die Kaufkraft|satın alma gücü|kaufkraft
+der Lohnabbau|ücret kesintisi|lo:napbau
+der Mindestlohn|asgari ücret|mindıstlo:n
+die Gewerkschaft|sendika|geverkşaft
+der Betriebsrat|işçi temsilciliği|betri:psra:t
+die Arbeitsbedingungen|çalışma koşulları|arbaytsbediŋuŋın
+die Fachkraft|uzman eleman|fahkraft
+der Fachkräftemangel|nitelikli eleman eksikliği|fahkreftemaŋıl
+die Bilanz|bilanço|bilants
+der Haushalt (Staat)|devlet bütçesi|haushalt
+die Subvention|sübvansiyon|zupventsyo:n
+die Pleite|iflas|playte
+pleite|iflas etmiş|playte
+der Insolvenz|iflas (hukuki)|inzolvents
+investieren|yatırım yapmak|investi:rın
+finanzieren|finanse etmek|finantsi:rın
+expandieren|büyümek (şirket)|ekspandi:rın
+schrumpfen|küçülmek|şrumpfın
+## Siyaset
+die Demokratie|demokrasi|demokrati:
+die Diktatur|diktatörlük|diktatu:r
+der Staat|devlet|şta:t
+die Verfassung|anayasa|ferfasuŋ
+das Grundgesetz|Alman anayasası|gruntgezets
+das Parlament|meclis|parlament
+der Abgeordnete|milletvekili|apgeordnıte
+die Opposition|muhalefet|opozitsyo:n
+die Koalition|koalisyon|koalitsyo:n
+der Wahlkampf|seçim kampanyası|va:lkampf
+die Wahlbeteiligung|seçime katılım oranı|va:lbetayliguŋ
+die Stimme|oy; ses|ştime
+die Mehrheit|çoğunluk|me:rhayt
+die Minderheit|azınlık|mindırhayt
+die Abstimmung|oylama|apştimuŋ
+die Volksabstimmung|referandum|folksapştimuŋ
+der Bürgerentscheid|yerel referandum|bürgırentşayt
+die Außenpolitik|dış politika|ausınpoliti:k
+die Innenpolitik|iç politika|inınpoliti:k
+der Botschafter|büyükelçi|bo:tşaftır
+die Botschaft|büyükelçilik; mesaj|bo:tşaft
+der Vertrag (Staat)|antlaşma|fertra:k
+die Verhandlung|müzakere|ferhandluŋ
+der Konflikt|çatışma|konflikt
+der Krieg|savaş|kri:k
+der Frieden|barış|fri:dın
+die Flucht|kaçış, göç|fluht
+der Flüchtling|mülteci|flühtliŋ
+die Einwanderung|göç (gelen)|aynvandıruŋ
+die Auswanderung|göç (giden)|ausvandıruŋ
+die Migration|göç|migratsyo:n
+die Integration|entegrasyon|integratsyo:n
+die Menschenrechte|insan hakları|menşınrehte
+die Gleichberechtigung|eşitlik|glayhbereitiguŋ
+die Diskriminierung|ayrımcılık|diskriminiruŋ
+das Vorurteil|önyargı|fo:rurtayl
+die Toleranz|hoşgörü|tolerants
+die Reform|reform|reform
+die Maßnahme|önlem|ma:sna:me
+die Forderung|talep|fordıruŋ
+der Protest|protesto|protest
+die Demonstration|gösteri yürüyüşü|demonstratsyo:n
+die Kundgebung|miting|kuntge:buŋ
+die Behauptung|iddia|behauptuŋ
+der Skandal|skandal|skanda:l
+die Korruption|yolsuzluk|koruptsyo:n
+regieren|yönetmek|regi:rın
+abschaffen|kaldırmak (yasa)|apşafın
+einführen|getirmek (uygulama)|aynfü:rın
+## Hukuk
+das Gericht|mahkeme|geriht
+der Richter|hakim|rihtır
+der Anwalt|avukat|anvalt
+der Staatsanwalt|savcı|şta:tsanvalt
+der Angeklagte|sanık|angekla:kte
+der Zeuge|tanık|tsoyge
+die Klage|dava|kla:ge
+klagen|dava açmak|kla:gın
+das Urteil|karar, hüküm|urtayl
+verurteilen|mahkum etmek|ferurtaylın
+freisprechen|beraat ettirmek|frayşprehın
+die Strafe|ceza|ştra:fe
+die Geldstrafe|para cezası|geltştra:fe
+das Gefängnis|hapishane|gefeŋnis
+das Verbrechen|suç|ferbrehın
+der Täter|fail|te:tır
+das Opfer|kurban|opfır
+der Diebstahl|hırsızlık|di:pşta:l
+der Betrug|dolandırıcılık|betru:k
+der Einbruch|ev soygunu|aynbruh
+die Ermittlung|soruşturma|ermitluŋ
+der Beweis|kanıt|bevays
+die Anzeige|şikayet (resmi); ilan|antsayge
+Anzeige erstatten|suç duyurusunda bulunmak|antsayge erştatın
+die Vorschrift|yönetmelik|fo:rşrift
+die Regel|kural|re:gıl
+gesetzlich|yasal|gezetslih
+illegal|yasadışı|ile:ga:l
+legal|yasal|le:ga:l
+der Anspruch|hak, talep|anşpruh
+die Haftpflicht|sorumluluk sigortası|haftpfliht
+## Bilim ve araştırma
+die Forschung|araştırma|forşuŋ
+der Forscher|araştırmacı|forşır
+die Wissenschaftlerin|bilim insanı (kadın)|visınşaftlırin
+das Experiment|deney|eksperiment
+die Theorie|teori|teori:
+die Hypothese|hipotez|hüpote:ze
+die Analyse|analiz|analü:ze
+analysieren|analiz etmek|analüzi:rın
+die Methode|yöntem|meto:de
+die Erkenntnis|bulgu, idrak|erkentnis
+die Entdeckung|keşif|entdekuŋ
+die Erfindung|icat|erfinduŋ
+erfinden|icat etmek|erfindın
+das Labor|laboratuvar|labo:r
+die Statistik|istatistik|ştatistik
+die Umfrage|anket|umfra:ge
+die Daten|veriler|da:tın
+der Durchschnitt|ortalama|durhşnit
+der Anteil|pay, oran|antayl
+die Zahl|sayı|tsa:l
+die Prozent|yüzde|protsent
+messen|ölçmek|mesın
+beweisen|kanıtlamak|bevayzın
+widerlegen|çürütmek|vi:dırle:gın
+untersuchen|incelemek|untırzu:hın
+die Technologie|teknoloji|tehnologi:
+die Digitalisierung|dijitalleşme|digitalizi:ruŋ
+künstliche Intelligenz|yapay zeka|künstlihe inteligents
+der Roboter|robot|robotır
+die Raumfahrt|uzay yolculuğu|raumfa:rt
+das Weltall|evren|veltal
+## Çevre (B2)
+der Klimawandel|iklim değişikliği|kli:mavandıl
+die Erderwärmung|küresel ısınma|e:rterverm uŋ
+der Treibhauseffekt|sera etkisi|trayphausefekt
+das Kohlendioxid|karbondioksit|ko:lındiokzit
+die Emission|emisyon|emisyo:n
+der Ausstoß|salınım|ausşto:s
+die Ressourcen|kaynaklar|resursın
+der Rohstoff|hammadde|ro:ştof
+die Kohle|kömür|ko:le
+das Erdöl|petrol|e:rtö:l
+das Erdgas|doğalgaz|e:rtga:s
+die Atomkraft|nükleer enerji|ato:mkraft
+die Windkraft|rüzgar enerjisi|vintkraft
+die Solaranlage|güneş paneli sistemi|zola:ranla:ge
+erneuerbare Energien|yenilenebilir enerjiler|ernoyırba:re energi:ın
+die Nachhaltigkeit|sürdürülebilirlik|na:hhaltihkayt
+der Artenschutz|türlerin korunması|a:rtınşuts
+aussterben|nesli tükenmek|ausştervın
+die Dürre|kuraklık|düre
+die Überschwemmung|sel|ü:bırşvemuŋ
+das Erdbeben|deprem|e:rtbe:bın
+die Naturkatastrophe|doğal afet|natu:rkatastro:fe
+der Waldbrand|orman yangını|valtbrant
+das Plastik|plastik|plastik
+die Verpackung|ambalaj|ferpakuŋ
+der Verbrauch|tüketim|ferbrauh
+sparsam|tutumlu|şpa:rza:m
+verschwenden|israf etmek|ferşvendın
+die Verschwendung|israf|ferşvenduŋ
+umweltbewusst|çevre bilinçli|umveltbevust
+## Medya
+die Medien|medya|me:dyın
+die Presse|basın|prese
+die Schlagzeile|manşet|şla:ktsayle
+der Bericht|haber raporu|beriht
+die Reportage|röportaj (haber)|reporta:je
+der Kommentar|yorum|komenta:r
+die Quelle|kaynak|kvele
+die Pressefreiheit|basın özgürlüğü|presefraythayt
+die Zensur|sansür|tsenzu:r
+die Falschmeldung|yalan haber|falşmelduŋ
+die Glaubwürdigkeit|güvenilirlik|glaupvürdihkayt
+der Leser|okuyucu|le:zır
+der Zuschauer|izleyici|tsu:şauır
+die Einschaltquote|reyting|aynşaltkvo:te
+der Sender|kanal|zendır
+die Übertragung|yayın|ü:bırtra:guŋ
+live|canlı|layf
+der Beitrag|katkı; yazı, gönderi|bayttra:k
+der Nutzer|kullanıcı|nutsır
+der Follower|takipçi|folovır
+der Datenschutz|veri koruma|da:tınşuts
+die Privatsphäre|mahremiyet|priva:tsfe:re
+## Psikoloji
+die Psyche|ruh hali, psikoloji|psü:he
+das Bewusstsein|bilinç|bevustzayn
+das Unterbewusstsein|bilinçaltı|untırbevustzayn
+die Wahrnehmung|algı|va:rne:muŋ
+das Selbstbewusstsein|özgüven|zelpstbevustzayn
+das Selbstwertgefühl|öz değer duygusu|zelpstve:rtgefü:l
+die Motivation|motivasyon|motivatsyo:n
+die Belastung|yük, stres|belastuŋ
+die Überforderung|aşırı yüklenme|ü:bırfordıruŋ
+der Burnout|tükenmişlik|börnaut
+die Depression|depresyon|depresyo:n
+die Therapie|terapi|terapi:
+die Sucht|bağımlılık|zuht
+abhängig|bağımlı|aphεŋih
+die Gewohnheit|alışkanlık|gevo:nhayt
+das Bedürfnis|ihtiyaç|bedürfnis
+die Erwartung|beklenti|ervartuŋ
+die Enttäuschung|hayal kırıklığı|enttoyşuŋ
+die Zuneigung|sevgi, yakınlık|tsu:nayguŋ
+die Abneigung|hoşlanmama|apnayguŋ
+die Empathie|empati|empati:
+das Verständnis|anlayış|ferştentnis
+der Konflikt|çatışma|konflikt
+die Konfliktlösung|çatışma çözümü|konfliktlö:zuŋ
+verdrängen|bastırmak (duygu)|ferdreŋın
+verarbeiten|işlemek, sindirmek|ferarbaytın
+bewältigen|üstesinden gelmek|beveltigın
+## Eğitim (B2)
+das Bildungssystem|eğitim sistemi|bilduŋszüste:m
+die Chancengleichheit|fırsat eşitliği|şa:nsınglayhhayt
+die Grundschule|ilkokul|gruntşu:le
+das Gymnasium|lise (akademik)|gümna:zyum
+die Berufsschule|meslek okulu|beru:fsşu:le
+der Kindergarten|anaokulu|kindırgartın
+der Lehrplan|müfredat|le:rpla:n
+das Fachgebiet|uzmanlık alanı|fahgebi:t
+die Bachelorarbeit|lisans tezi|beçılorarbayt
+die Doktorarbeit|doktora tezi|doktorarbayt
+die Forschungsarbeit|araştırma çalışması|forşuŋsarbayt
+die Note (Uni)|not|no:te
+die Leistungsbeurteilung|performans değerlendirmesi|laystuŋsbeurtayluŋ
+der Studiengang|bölüm (üniversite)|ştu:dyıngaŋ
+die Immatrikulation|üniversiteye kayıt|imatrikulatsyo:n
+die Zulassung|kabul (okul)|tsu:lasuŋ
+der Numerus clausus|giriş notu barajı|numerus klauzus
+die Lerngruppe|çalışma grubu|lerngrupe
+die Lernmethode|öğrenme yöntemi|lernmeto:de
+auswendig lernen|ezberlemek|ausvendih lernın
+sich konzentrieren|konsantre olmak|zih kontsentri:rın
+die Konzentration|konsantrasyon|kontsentratsyo:n
+die Aufmerksamkeit|dikkat|aufmerkza:mkayt
+die Kreativität|yaratıcılık|kreativite:t
+## Sıfatlar (B2)
+angemessen|uygun, makul|angemesın
+anspruchsvoll|zorlu; titiz|anşpruhsfol
+ausgeglichen|dengeli|ausgeglihın
+außergewöhnlich|olağanüstü|ausırgevö:nlih
+bedeutend|önemli|bedoytınt
+bemerkenswert|dikkate değer|bemerkınsve:rt
+berechtigt|haklı; yetkili|berehtiht
+beträchtlich|kayda değer|betrehtlih
+dauerhaft|kalıcı|dauırhaft
+effizient|verimli|efitsyent
+eigenständig|bağımsız|aygınştendih
+einheitlich|tek tip|aynhaytlih
+empfindlich|hassas|empfintlih
+entspannt|rahat|entşpant
+erfreulich|sevindirici|erfroylih
+fair|adil|fe:r
+flexibel|esnek|fleksi:bıl
+gewissenhaft|vicdanlı, titiz|gevisınhaft
+gleichgültig|kayıtsız|glayhgültih
+grundlegend|temel|gruntle:gınt
+heftig|şiddetli|heftih
+hervorragend|mükemmel|herfo:rra:gınt
+konsequent|tutarlı|konzekvent
+kostspielig|masraflı|kostşpi:lih
+lebhaft|canlı|le:phaft
+leidenschaftlich|tutkulu|laydınşaftlih
+mangelhaft|yetersiz|maŋılhaft
+missverständlich|yanlış anlaşılabilir|misferştentlih
+nachdenklich|düşünceli|na:hdenklih
+neutral|tarafsız|noytra:l
+objektiv|nesnel|opyekti:f
+subjektiv|öznel|zupyekti:f
+oberflächlich|yüzeysel|o:bırflehlih
+offensichtlich|apaçık|ofınzihtlih
+positiv|olumlu|po:ziti:f
+negativ|olumsuz|ne:gati:f
+realistisch|gerçekçi|realistiş
+rücksichtslos|düşüncesiz|rükzihtslo:s
+sachlich|nesnel, objektif|zahlih
+selbstverständlich|elbette, doğal|zelpstferştentlih
+seltsam|garip|zeltza:m
+sorgfältig|özenli|zorkfeltih
+spontan|kendiliğinden|şpontan
+tolerant|hoşgörülü|tolerant
+überflüssig|gereksiz|ü:bırflüsih
+umfassend|kapsamlı|umfasınt
+unabhängig|bağımsız|unaphεŋih
+ungewöhnlich|alışılmadık|ungevö:nlih
+unverständlich|anlaşılmaz|unferştentlih
+vielfältig|çeşitli|fi:lfeltih
+vorübergehend|geçici|forü:bırge:ınt
+wesentlich|esaslı|ve:zıntlih
+widersprüchlich|çelişkili|vi:dırşprühlih
+zahlreich|çok sayıda|tsa:lrayh
+zeitgemäß|çağa uygun|tsaytgeme:s
+zweifelhaft|şüpheli|tsvayfılhaft
+## Fiiller (B2)
+abhalten|alıkoymak; düzenlemek|aphaltın
+ablenken|dikkatini dağıtmak|aplenkın
+abschätzen|tahmin etmek|apşetsın
+anerkennen|tanımak, takdir etmek|anerkenın
+anregen|teşvik etmek|anre:gın
+ansprechen|hitap etmek; değinmek|anşprehın
+anstreben|hedeflemek|anştre:bın
+auffallen|göze çarpmak|auffalın
+aufgeben|vazgeçmek|aufge:bın
+aufklären|aydınlatmak|aufkle:rın
+ausdrücken|ifade etmek|ausdrükın
+auslösen|tetiklemek|auslö:zın
+ausnutzen|istismar etmek; faydalanmak|ausnutsın
+auswählen|seçmek|ausve:lın
+auswirken (sich)|etkilemek|ausvirkın
+bedrohen|tehdit etmek|bedro:ın
+befürchten|korkmak, endişe etmek|befürhtın
+begrenzen|sınırlamak|begrentsın
+beitragen|katkıda bulunmak|bayttra:gın
+bekämpfen|mücadele etmek|bekempfın
+belasten|yük olmak|belastın
+beraten|danışmanlık yapmak|bera:tın
+beruhigen|sakinleştirmek|beru:igın
+beschleunigen|hızlandırmak|beşloynigın
+besitzen|sahip olmak|bezitsın
+beurteilen|değerlendirmek|beurtaylın
+bevorzugen|tercih etmek|befo:rtsu:gın
+bewerten|puanlamak, değerlendirmek|beve:rtın
+bezeichnen|nitelendirmek|betsayhnın
+darstellen|tasvir etmek|da:rştelın
+durchsetzen|kabul ettirmek|durhzetsın
+eingehen auf|ele almak|aynge:ın auf
+einhalten|uymak (kurala)|aynhaltın
+einschränken|kısıtlamak|aynşreŋkın
+empfinden|hissetmek|empfindın
+entlasten|yükünü hafifletmek|entlastın
+entstehen|ortaya çıkmak|entşte:ın
+erfassen|kavramak; kaydetmek|erfasın
+erfordern|gerektirmek|erfordırn
+ergreifen|tutmak; almak (önlem)|ergrayfın
+erhöhen|artırmak|erhö:ın
+erleichtern|kolaylaştırmak|erlayhtırn
+ermöglichen|mümkün kılmak|ermö:klihın
+ermutigen|cesaretlendirmek|ermu:tigın
+erweitern|genişletmek|ervaytırn
+erzielen|elde etmek|ertsi:lın
+fordern|talep etmek|fordırn
+gestalten|şekillendirmek|geştaltın
+herausfinden|ortaya çıkarmak|herausfindın
+hinterfragen|sorgulamak|hintırfra:gın
+nachweisen|kanıtlamak|na:hvayzın
+neigen zu|eğilimli olmak|naygın tsu:
+profitieren|faydalanmak|profiti:rın
+reduzieren|azaltmak|redutsi:rın
+schildern|anlatmak, betimlemek|şildırn
+senken|düşürmek|zenkın
+stammen aus|kökenli olmak|ştamın aus
+überwiegen|ağır basmak|ü:bırvi:gın
+unterscheiden|ayırt etmek|untırşaydın
+unterdrücken|bastırmak|untırdrükın
+veranlassen|sebep olmak|feranlasın
+verdeutlichen|açıklığa kavuşturmak|ferdoytlihın
+vereinfachen|basitleştirmek|feraynfahın
+verfolgen|takip etmek|ferfolgın
+verfügen über|sahip olmak|ferfü:gın ü:bır
+vermitteln|aracılık etmek; aktarmak|fermitıln
+verringern|azaltmak|ferriŋırn
+versorgen|sağlamak, bakmak|ferzorgın
+verwirklichen|gerçekleştirmek|fervirklihın
+vorkommen|bulunmak; olmak|fo:rkomın
+vorziehen|tercih etmek|fo:rtsi:ın
+wahrnehmen|algılamak|va:rne:mın
+zögern|tereddüt etmek|tsö:gırn
+zurückführen auf|bağlamak (sebebe)|tsurükfü:rın auf
+zusammenfassen|özetlemek|tsuzamınfasın

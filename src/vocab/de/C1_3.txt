@@ -1,0 +1,256 @@
+## Soyut isimler (C1)
+die Ablehnung|reddetme|aple:nuŋ
+die Abneigung (C1)|antipati|apnayguŋ
+die Abwägung|tartıp değerlendirme|apve:guŋ
+die Aneignung|edinme, sahiplenme|anayguŋ
+die Anmut|zarafet|anmu:t
+die Anschuldigung|suçlama|anşuldiguŋ
+die Aussicht|manzara; beklenti|auszihht
+die Befangenheit|taraflılık; çekingenlik|befaŋınhayt
+die Befindlichkeit|ruh durumu|befintlihkayt
+die Begebenheit|olay|bege:bınhayt
+die Beharrlichkeit|sebat|beharlihkayt
+die Beschaffung|tedarik|beşafuŋ
+die Besonnenheit|temkinlilik|bezonınhayt
+die Bestandsaufnahme|durum tespiti|beştantsaufna:me
+die Beteuerung|güvence verme|betoyıruŋ
+die Bewandtnis|durum, iç yüz|beventnis
+die Darbietung|gösteri, sunum|da:rbi:tuŋ
+die Dringlichkeit|aciliyet|driŋlihkayt
+die Eigendynamik|kendi dinamiği|aygındüna:mik
+die Eingebung|ilham|aynge:buŋ
+die Einsicht|kavrayış; inceleme|aynziht
+die Eintracht|ahenk, birlik|ayntraht
+die Empörung|infial|empö:ruŋ
+die Entfremdung|yabancılaşma|entfremduŋ
+die Entschlossenheit|kararlılık|entşlosınhayt
+die Entwertung|değer kaybı|entve:rtuŋ
+die Errungenschaft|kazanım|eruŋınşaft
+die Erschütterung|sarsıntı|erşütıruŋ
+die Fehleinschätzung|yanlış değerlendirme|fe:laynşetsuŋ
+die Fügung|kader|fü:guŋ
+die Gegebenheit|veri, durum|gege:bınhayt
+die Gesinnung|zihniyet|gezinuŋ
+die Gewichtung|ağırlıklandırma|gevihtuŋ
+die Gratwanderung|ince çizgide yürüme|gra:tvandıruŋ
+die Hemmschwelle|çekinme eşiği|hemşvele
+die Hinsicht|bakım, açı|hinziht
+die Instabilität|istikrarsızlık|instabilite:t
+die Kehrseite|madalyonun öbür yüzü|ke:rzayte
+die Kluft|uçurum (fark)|kluft
+die Knappheit|kıtlık|knaphayt
+die Komplexität|karmaşıklık|kompleksite:t
+die Konsequenz|sonuç; tutarlılık|konzekvents
+die Kontinuität|süreklilik|kontinuite:t
+die Lücke|boşluk, açık|lüke
+die Mündigkeit|reşitlik, olgunluk|mündihkayt
+die Nachwirkung|kalıcı etki|na:hvirkuŋ
+die Neigung|eğilim|nayguŋ
+die Notlage|sıkıntılı durum|no:tla:ge
+die Ohnmacht (C1)|aczlik|o:nmaht
+die Pflichtbewusstheit|görev bilinci|pfliztbevusthayt
+die Reizüberflutung|uyaran bombardımanı|raytsü:bırflu:tuŋ
+die Rückständigkeit|geri kalmışlık|rükştendihkayt
+die Schieflage|dengesizlik|şi:fla:ge
+die Schnittstelle|arayüz, kesişim|şnitştele
+die Selbstverständlichkeit|doğallık, apaçıklık|zelpstferştentlihkayt
+die Spannweite|yelpaze|şpanvayte
+die Stagnation|durgunluk|ştagnatsyo:n
+die Tragweite|kapsam, önem|tra:kvayte
+die Triebfeder|itici güç|tri:pfe:dır
+die Übereinstimmung|uyum, mutabakat|ü:bıraynştimuŋ
+die Überlegenheit|üstünlük|ü:bırle:gınhayt
+die Unvereinbarkeit|bağdaşmazlık|unferaynba:rkayt
+die Unzulänglichkeit|yetersizlik|untsu:leŋlihkayt
+die Veranlagung|yatkınlık|feranla:guŋ
+die Verflechtung|iç içe geçme|ferflehtuŋ
+die Verfremdung|yabancılaştırma|ferfremduŋ
+die Vergeltung|misilleme|fergeltuŋ
+die Verlockung|cazibe, ayartma|ferlokuŋ
+die Vermessenheit|küstahlık|fermesınhayt
+die Verunsicherung|kafa karışıklığı|ferunzihıruŋ
+die Vorahnung|önsezi|fo:ra:nuŋ
+die Voreingenommenheit|önyargılılık|fo:rayngenomınhayt
+die Wechselhaftigkeit|değişkenlik|veksılhaftihkayt
+die Zerrissenheit|parçalanmışlık|tserisınhayt
+die Zugehörigkeit|aidiyet|tsu:gehö:rihkayt
+die Zurückhaltung|ölçülülük|tsurükhaltuŋ
+die Zwangslage|çıkmaz|tsvaŋsla:ge
+## Fiiller (C1, devam)
+abbilden|yansıtmak, göstermek|apbildın
+abfinden (sich)|razı olmak|apfindın
+abschrecken|caydırmak|apşrekın
+abweichen|sapmak|apvayhın
+anfechten|itiraz etmek (hukuk)|anfehtın
+anhäufen|biriktirmek|anhoyfın
+anzweifeln|kuşkuyla bakmak|antsvayfıln
+aufbegehren|isyan etmek|aufbege:rın
+aufbereiten|işlemek, hazırlamak|aufberaytın
+auferlegen|yüklemek (yükümlülük)|auferle:gın
+aufrufen|çağrıda bulunmak|aufru:fın
+ausharren|dayanmak, beklemek|ausharın
+ausschöpfen|tüketmek (imkân)|ausşöpfın
+beanspruchen|talep etmek|beanşpruhın
+beeinflussen|etkilemek|beaynflusın
+befähigen|muktedir kılmak|befe:igın
+beheben|gidermek|behe:bın
+beimischen|katmak|baymişın
+bekunden|beyan etmek|bekundın
+bemängeln|kusur bulmak|bemeŋıln
+beschwichtigen|yatıştırmak|beşvihtigın
+besiegeln|mühürlemek, kesinleştirmek|bezi:gıln
+bestechen|rüşvet vermek; etkilemek|beştehın
+betören|büyülemek|betö:rın
+bewerkstelligen|başarmak, halletmek|beverkşteligın
+bezichtigen|suçlamak|betsihtigın
+brüskieren|kabaca reddetmek|brüski:rın
+dulden|hoş görmek, katlanmak|duldın
+eingestehen|itiraf etmek|ayngeşte:ın
+einverleiben|kendine katmak|aynferlaybın
+einwilligen|razı olmak|aynviligın
+entbehren|yoksun olmak|entbe:rın
+entfachen|alevlendirmek|entfahın
+entgleisen|raydan çıkmak; çığırından çıkmak|entglayzın
+enthemmen|frenlerini çözmek|enthemın
+entlarven|maskesini düşürmek|entlarfın
+entschärfen|yumuşatmak, etkisizleştirmek|entşerfın
+entziehen|elinden almak|enttsi:ın
+erahnen|sezmek|era:nın
+erbringen|ortaya koymak (kanıt)|erbriŋın
+erdulden|katlanmak|erduldın
+ergründen|araştırıp bulmak|ergründın
+erheben|yükseltmek; toplamak (veri)|erhe:bın
+erliegen|yenik düşmek|erli:gın
+erschließen|açmak, yararlanılır kılmak|erşli:sın
+erschweren|zorlaştırmak|erşve:rın
+erübrigen (sich)|gereksiz olmak|erü:brigın
+festigen|pekiştirmek|festigın
+gedeihen|gelişmek, serpilmek|gedayın
+gewähren|tanımak (hak)|geve:rın
+herabsetzen|indirmek; küçümsemek|herapzetsın
+herbeiführen|neden olmak|herbayfü:rın
+hinnehmen|kabullenmek|hinne:mın
+hinterlassen|geride bırakmak|hintırlasın
+hinwegsetzen (sich)|aldırmamak|hinvekzetsın
+irreführen|yanıltmak|irefü:rın
+kapitulieren|teslim olmak|kapituli:rın
+kompensieren|telafi etmek|kompenzi:rın
+kursieren|dolaşımda olmak|kurzi:rın
+mildern|hafifletmek|mildırn
+mutmaßen|tahmin yürütmek|mu:tma:sın
+nachahmen|taklit etmek|na:ha:mın
+nachempfinden|duygudaşlık kurmak|na:hempfindın
+nötigen|zorlamak|nö:tigın
+offenlegen|açıklamak|ofınle:gın
+preisgeben|ifşa etmek|praysge:bın
+rechtfertigen|haklı çıkarmak|rehtfertigın
+revidieren|gözden geçirmek|revidi:rın
+schmälern|azaltmak, gölgelemek|şme:lırn
+schüren|körüklemek|şü:rın
+sondieren|nabız yoklamak|zondi:rın
+spekulieren|spekülasyon yapmak|şpekuli:rın
+stagnieren|durgunlaşmak|ştagni:rın
+tolerieren|hoş görmek|toleri:rın
+überwinden|üstesinden gelmek|ü:bırvindın
+umgehen (Gesetz)|dolanmak|umge:ın
+unterlaufen|baltalamak; (hata) yapılmak|untırlaufın
+untersagen|yasaklamak|untırza:gın
+veranschlagen|tahmin etmek (maliyet)|feranşla:gın
+verdrießen|canını sıkmak|ferdri:sın
+vereiteln|boşa çıkarmak|feraytıln
+verfechten|savunmak|ferfehtın
+vergeuden|israf etmek|fergoydın
+verhehlen|gizlemek|ferhe:lın
+verkörpern|temsil etmek|ferkörpırn
+verleiten|kışkırtmak, ayartmak|ferlaytın
+vermeintlich (adj.)|sözde|fermayntlih
+verpönt|hoş karşılanmayan|ferpö:nt
+versiegen|kurumak, tükenmek|ferzi:gın
+verstricken (sich)|bulaşmak|ferştrikın
+verwehren|esirgemek|ferve:rın
+vorbehalten|saklı tutmak|fo:rbehaltın
+vorgaukeln|hayal göstermek|fo:rgaukıln
+widerfahren|başına gelmek|vi:dırfa:rın
+zerschlagen|parçalamak|tserşla:gın
+zugestehen|teslim etmek, kabul etmek|tsu:geşte:ın
+zumuten|beklemek (fazlasını)|tsu:mu:tın
+zuwiderhandeln|aykırı davranmak|tsuvi:dırhandıln
+## Sıfatlar (C1, devam)
+abgeklärt|olgun, sakin|apgekle:rt
+abwegig|akla yatmayan|apve:gih
+angespannt|gergin|angeşpant
+anrüchig|şüpheli, kötü şöhretli|anrühih
+ausufernd|kontrolden çıkan|ausu:fırnt
+bahnbrechend|çığır açan|ba:nbrehınt
+behäbig|ağır, rahat|behe:bih
+belanglos|önemsiz|belaŋlo:s
+beklemmend|boğucu|beklemınt
+berüchtigt|kötü şöhretli|berühtiht
+besonnen|temkinli|bezonın
+bestechend|etkileyici|beştehınt
+betreten|mahcup|betre:tın
+bieder|dar görüşlü, sıradan|bi:dır
+borniert|dar kafalı|borni:rt
+dezent|ölçülü, sade|detsent
+dreist|yüzsüz|drayst
+eigennützig|çıkarcı|aygınnütsih
+eloquent|belâgatli|elokvent
+erbittert|hırslı, kızgın|erbitırt
+erhaben|yüce|erha:bın
+exzessiv|aşırı|ekstsesi:f
+fahrlässig|ihmalkâr|fa:rlesih
+fatal|feci|fata:l
+feinsinnig|ince zevkli|faynzinih
+fragil|kırılgan|fragi:l
+gediegen|kaliteli, köklü|gedi:gın
+gehässig|kinci|gehesih
+gemäßigt|ılımlı|geme:siht
+genügsam|kanaatkâr|genü:kza:m
+gerissen|kurnaz|gerisın
+gewieft|açıkgöz|gevi:ft
+glaubhaft|inanılır|glauphaft
+grotesk|grotesk|grotesk
+hämisch|kinayeli, alaycı|he:miş
+heimtückisch|sinsi|haymtükiş
+hochtrabend|tumturaklı|ho:htra:bınt
+idyllisch|pastoral, huzurlu|idüliş
+impulsiv|dürtüsel|impulzi:f
+inbrünstig|candan|inbrünstih
+integer|dürüst|inte:gır
+kauzig|tuhaf, acayip|kautsih
+kleinlich|mızmız, dar görüşlü|klaynlih
+kurzweilig|eğlenceli|kurtsvaylih
+lakonisch|kısa ve kuru|lako:niş
+langatmig|uzun soluklu, sıkıcı|laŋa:tmih
+lauwarm|ılık; isteksiz|lauvarm
+makellos|kusursuz|ma:kılo:s
+markant|belirgin|markant
+mürrisch|asık suratlı|müriş
+nachtragend|kin tutan|na:htra:gınt
+naiv|saf|nai:f
+niederträchtig|alçak|ni:dırtrehtih
+nonchalant|kayıtsız, rahat|nonşalant
+pedantisch|aşırı titiz|pedantiş
+redlich|namuslu|re:tlih
+ruchlos|vicdansız|ru:hlo:s
+salopp|laubali|zalop
+scharfsinnig|keskin zekâlı|şarfzinih
+schwerfällig|hantal|şve:rfelih
+spitzfindig|kılı kırk yaran|şpitsfindih
+standhaft|sarsılmaz|ştanthaft
+stoisch|soğukkanlı (stoacı)|ştoiş
+unbeholfen|beceriksiz|unbeholfın
+unermüdlich|yorulmak bilmez|unermü:tlih
+unnachgiebig|tavizsiz|unna:hgi:bih
+unverblümt|açık sözlü|unferblü:mt
+verbissen|azimli; hırslı|ferbisın
+verblüfft|şaşkın|ferblüft
+verhalten|ölçülü|ferhaltın
+verschroben|tuhaf|ferşro:bın
+verwegen|gözü pek|ferve:gın
+vorlaut|ağzı bozuk, patavatsız|fo:rlaut
+weltfremd|dünyadan habersiz|veltfremt
+widerspenstig|dikbaşlı|vi:dırşpenstih
+zaghaft|çekingen|tsa:khaft
+zerstreut|dalgın|tserştroyt
+zynisch|alaycı, kinik|tsü:niş

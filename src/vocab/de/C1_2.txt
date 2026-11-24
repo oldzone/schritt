@@ -1,0 +1,187 @@
+## Medya ve dil
+die Rhetorik|retorik|reto:rik
+die Ausdrucksweise|ifade tarzı|ausdruksvayze
+die Wortwahl|kelime seçimi|vortva:l
+die Redewendung|deyim|re:devenduŋ
+die Metapher|mecaz|metafır
+die Anspielung|ima, gönderme|anşpi:luŋ
+die Pointe|espri noktası|poã:te
+die Polemik|polemik|pole:mik
+die Propaganda|propaganda|propaganda
+die Manipulation|manipülasyon|manipulatsyo:n
+die Hetze|kışkırtma|hetse
+die Verleumdung|iftira|ferloymduŋ
+die Schmähung|sövme, aşağılama|şme:uŋ
+der Wortlaut|metnin aslı|vortlaut
+die Formulierung|ifade biçimi|formuli:ruŋ
+die Floskel|klişe laf|floskıl
+der Euphemismus|örtmece|oyfemismus
+die Nuance|nüans|nüa:nse
+die Konnotation|yan anlam|konotatsyo:n
+die Mehrdeutigkeit|çok anlamlılık|me:rdoytihkayt
+der Sprachgebrauch|dil kullanımı|şpra:hgebrauh
+die Umgangssprache|günlük dil|umgaŋsşpra:he
+die Hochsprache|standart dil|ho:hşpra:he
+der Fachjargon|meslek jargonu|fahjargo:
+die Verständigung|anlaşma, iletişim|ferştendiguŋ
+die Schlagfertigkeit|hazırcevaplık|şla:kfertihkayt
+die Andeutung (C1)|sezdirme|andoytuŋ
+die Unterstellung|ithamda bulunma|untırşteluŋ
+die Richtigstellung|düzeltme (haber)|rihtihşteluŋ
+das Dementi|yalanlama|dementi
+die Enthüllung|ifşa|enthülüŋ
+der Enthüllungsjournalismus|araştırmacı gazetecilik|enthülüŋsjurnalismus
+der Informant|muhbir|informant
+die Indiskretion|sır ifşası|indiskretsyo:n
+die Sensationsgier|sansasyon merakı|zenzatsyo:nsgi:r
+die Boulevardpresse|magazin basını|bulıva:rprese
+die Meinungsmache|kamuoyu manipülasyonu|maynuŋsmahe
+die Deutungshoheit|yorum üstünlüğü|doytuŋsho:hayt
+## Çalışma dünyası (C1)
+die Unternehmenskultur|şirket kültürü|untırne:mınskultu:r
+die Personalführung|personel yönetimi|perzona:lfü:ruŋ
+die Mitarbeiterbindung|çalışan bağlılığı|mitarbaytırbinduŋ
+die Wertschätzung|takdir|ve:rtşetsuŋ
+die Leistungsbereitschaft|performans isteği|laystuŋsberaytşaft
+die Eigeninitiative|inisiyatif|aygıninitsyati:ve
+die Entscheidungsbefugnis|karar yetkisi|entşayduŋsbefu:knis
+die Hierarchie|hiyerarşi|hierarhi:
+flache Hierarchien|düz hiyerarşi|flahe hierarhi:ın
+die Delegation|yetki devri|delegatsyo:n
+delegieren|devretmek (görev)|delegi:rın
+die Zielsetzung|hedef belirleme|tsi:lzetsuŋ
+die Umstrukturierung|yeniden yapılanma|umştrukturi:ruŋ
+der Stellenabbau|kadro azaltma|ştelınapbau
+die Kurzarbeit|kısa çalışma ödeneği|kurtsarbayt
+die Arbeitsverdichtung|iş yoğunlaşması|arbaytsferdihtuŋ
+die Erreichbarkeit nach Feierabend|mesai sonrası ulaşılabilirlik|erayhba:rkayt
+die Selbstausbeutung|kendini sömürme|zelpstausboytuŋ
+die Sinnhaftigkeit|anlamlılık|zinhaftihkayt
+die Weisungsbefugnis|talimat yetkisi|vayzuŋsbefu:knis
+das Arbeitsklima|çalışma ortamı havası|arbaytskli:ma
+das Mobbing|mobbing, psikolojik taciz|mobiŋ
+der Arbeitsschutz|iş güvenliği|arbaytsşuts
+die Haftpflichtversicherung|sorumluluk sigortası|haftpflihtferziharuŋ
+die Gewinnbeteiligung|kâr payı|gevinbetayliguŋ
+die Unternehmensberatung|kurumsal danışmanlık|untırne:mınsbera:tuŋ
+die Existenzgründung|girişim kurma|eksistentsgründuŋ
+das Startup|girişim şirketi|startap
+der Investor|yatırımcı|investor
+die Risikobereitschaft|risk alma isteği|ri:zikoberaytşaft
+## Çevre ve gelecek (C1)
+die Klimaneutralität|iklim nötrlüğü|kli:manoytralite:t
+die Energiewende|enerji dönüşümü|energi:vende
+der Kohleausstieg|kömürden çıkış|ko:leausşti:k
+der CO2-Fußabdruck|karbon ayak izi|tse:o:tsvay fu:sapdruk
+die Emissionsminderung|emisyon azaltımı|emisyo:nsmindıruŋ
+der Emissionshandel|emisyon ticareti|emisyo:nshandıl
+die Kreislaufwirtschaft|döngüsel ekonomi|krayslaufvirtşaft
+die Ressourcenschonung|kaynakların korunması|resursınşo:nuŋ
+die Versiegelung|toprak yüzeyinin kapatılması|ferzi:gıluŋ
+die Abholzung|ormansızlaşma|apholtsuŋ
+die Versauerung|asitlenme|ferzauıruŋ
+die Erosion|erozyon|erozyo:n
+die Wasserknappheit|su kıtlığı|vasırknaphayt
+der Kipppunkt|eşik noktası|kippuŋkt
+die Anpassungsstrategie|uyum stratejisi|anpasuŋsştrategi:
+die Folgekosten|sonradan doğan masraflar|folgekostın
+die Generationengerechtigkeit|kuşaklar arası adalet|generatsyo:nıngerehtihkayt
+der Verzichtsappell|vazgeçme çağrısı|fertsihtsapel
+die Suffizienz|yeterlilik (tüketim)|zufitsyents
+die Wegwerfgesellschaft|tüket-at toplumu|vekverfgezelşaft
+## Bilim ve tıp (C1)
+die Grundlagenforschung|temel araştırma|gruntla:gınforşuŋ
+die Begutachtung|hakem değerlendirmesi|begu:tahtuŋ
+die Fachwelt|uzmanlar camiası|fahvelt
+der Konsens|uzlaşı|konzens
+die Kontroverse|tartışma|kontroverze
+die Wirksamkeit|etkinlik|virkza:mkayt
+die Verträglichkeit|tolerans (ilaç)|fertre:klihkayt
+die Wechselwirkung (Medikament)|etkileşim|veksılvirkuŋ
+die Prävention|önleme|preventsyo:n
+die Früherkennung|erken teşhis|frü:erkenuŋ
+die Pandemie|pandemi|pandemi:
+die Epidemie|salgın|epidemi:
+die Herdenimmunität|sürü bağışıklığı|he:rdınimunite:t
+die Quarantäne|karantina|karante:ne
+die Erbkrankheit|kalıtsal hastalık|erpkrankhayt
+das Erbgut|genetik materyal|erpgu:t
+die Organspende|organ bağışı|orga:nşpende
+die Sterbehilfe|ötanazi|şterbehilfe
+die Palliativmedizin|palyatif tıp|palyati:fmeditsi:n
+der Placeboeffekt|plasebo etkisi|platse:boefekt
+## Tarih ve kültür (C1)
+die Zeitgeschichte|yakın tarih|tsaytgeşihte
+die Aufarbeitung|yüzleşme (geçmişle)|aufarbaytuŋ
+die Erinnerungskultur|hatırlama kültürü|erinıruŋskultu:r
+das Gedenken|anma|gedenkın
+die Gedenkstätte|anma yeri|gedenkşte:te
+der Zeitzeuge|tanık (tarihi)|tsayttsoyge
+die Wiedervereinigung|yeniden birleşme|vi:dırferayniguŋ
+der Mauerfall|duvarın yıkılışı|mauırfal
+die Teilung|bölünme|tayluŋ
+die Besatzung|işgal|bezatsuŋ
+die Kolonialzeit|sömürge dönemi|kolonya:ltsayt
+die Hochkultur|yüksek kültür|ho:hkultu:r
+die Zivilisation|uygarlık|tsivilizatsyo:n
+die Überlieferung|aktarım, gelenek|ü:bırli:fıruŋ
+der Mythos|mit|mü:tos
+die Sage|efsane|za:ge
+das Brauchtum|gelenek-görenek|brauhtu:m
+das Kulturgut|kültür varlığı|kultu:rgu:t
+die Kulturhoheit|kültürel özerklik|kultu:rho:hayt
+die Avantgarde|öncü akım|avã:garde
+die Moderne|modernizm|moderne
+die Romantik|Romantizm|roma:ntik
+der Realismus|gerçekçilik|realismus
+## Gündelik C1 ifadeleri
+die Gelegenheit beim Schopf packen|fırsatı değerlendirmek|gele:gınhayt baym şopf pakın
+auf der Kippe stehen|pamuk ipliğine bağlı olmak|auf de:r kipe şte:ın
+etwas auf die leichte Schulter nehmen|hafife almak|etvas auf di layhte şultır ne:mın
+den Kürzeren ziehen|kaybeden taraf olmak|de:n kürtsırın tsi:ın
+ins Gewicht fallen|önem taşımak|ins geviht falın
+zu Buche schlagen|maliyete yansımak|tsu: bu:he şla:gın
+etwas in die Wege leiten|başlatmak|etvas in di ve:ge laytın
+Abstand nehmen von|vazgeçmek|apştant ne:mın fon
+in Kauf nehmen|katlanmak|in kauf ne:mın
+außer Frage stehen|tartışmasız olmak|ausır fra:ge şte:ın
+zur Debatte stehen|tartışmaya açık olmak|tsur debate şte:ın
+im Raum stehen|ortada durmak (soru)|im raum şte:ın
+ins Leere laufen|boşa çıkmak|ins le:re laufın
+an Bedeutung gewinnen|önem kazanmak|an bedoytuŋ gevinın
+an Bedeutung verlieren|önemini yitirmek|an bedoytuŋ ferli:rın
+Bilanz ziehen|bilanço çıkarmak|bilants tsi:ın
+Folgen haben|sonuçları olmak|folgın ha:bın
+Maßstäbe setzen|standart koymak|ma:sşte:be zetsın
+Weichen stellen|yolu belirlemek|vayhın ştelın
+die Notbremse ziehen|acil fren çekmek|di no:tbremze tsi:ın
+auf Granit beißen|duvara toslamak|auf grani:t baysın
+ein Auge zudrücken|göz yummak|ayn auge tsu:drükın
+jemandem auf den Zahn fühlen|birinin nabzını yoklamak|ye:mandım auf de:n tsa:n fü:lın
+den Stein ins Rollen bringen|işi başlatmak|de:n ştayn ins rolın briŋın
+## Zarflar ve bağlaçlar (C1)
+mithin|dolayısıyla|mithin
+infolgedessen|bunun sonucunda|infolgedesın
+nichtsdestoweniger|buna rağmen|nihtsdestove:nigır
+gleichwohl|yine de|glayhvo:l
+indessen|bununla birlikte|indesın
+wohingegen|oysa|vo:hinge:gın
+insofern|bu bakımdan|inzo:fern
+dementsprechend|buna uygun olarak|de:mentşprehınt
+diesbezüglich|bununla ilgili|di:sbetsü:klih
+erwartungsgemäß|beklendiği gibi|ervartuŋsgeme:s
+schätzungsweise|tahminen|şetsuŋsvayze
+vergleichsweise|nispeten|ferglayhsvayze
+weitgehend|büyük ölçüde|vaytge:ınt
+zusehends|gözle görülür şekilde|tsu:ze:ınts
+zwangsläufig|ister istemez|tsvaŋsloyfih
+gewissermaßen|bir bakıma|gevisırma:sın
+schlechthin|özünde; tam anlamıyla|şlehthin
+mitunter|zaman zaman|mitunter
+fortwährend|sürekli|fortve:rınt
+unlängst|geçenlerde|unleŋst
+alsbald|çok geçmeden|alsbalt
+eingangs|başlangıçta|ayngaŋs
+abschließend|son olarak|apşli:sınt
+ausnahmslos|istisnasız|ausna:mslo:s
+gegebenenfalls (C1)|duruma göre|gege:bınınfals

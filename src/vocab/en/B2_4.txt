@@ -1,0 +1,163 @@
+## Ev ve şehir (B2)
+property|mülk|prapırti
+real estate|gayrimenkul|ri:l isteyt
+estate agent|emlakçı|isteyt eycınt
+mortgage|ipotek, konut kredisi|mo:rgic
+homeowner|ev sahibi|ho:mo:nır
+housing shortage|konut sıkıntısı|hauzing şo:rtic
+affordable housing|uygun fiyatlı konut|ıfo:rdıbıl hauzing
+neighbourhood watch|mahalle bekçiliği|neybırhud waç
+infrastructure|altyapı|infrıstrakçır
+public transport|toplu taşıma|pablik trenspo:rt
+congestion|trafik sıkışıklığı|kınceşçın
+pedestrian|yaya|pıdestriın
+cycle lane|bisiklet şeridi|saykıl leyn
+skyscraper|gökdelen|skayskreypır
+outskirts|kenar mahalleler|autskörts
+urban|kentsel|örbın
+rural|kırsal|ruırıl
+residential|yerleşim (bölgesi)|rezıdenşıl
+renovation|tadilat|renıveyşın
+insulation|yalıtım|insyuleyşın
+appliance|ev aleti|ıplayıns
+## Duygular (B2)
+affection|sevgi, şefkat|ıfekşın
+admiration|hayranlık|edmıreyşın
+anticipation|beklenti, heyecan|entisıpeyşın
+compassion|merhamet|kımpeşın
+contempt|küçümseme|kıntempt
+despair|umutsuzluk|disper
+envy|haset|envi
+frustration|hayal kırıklığı, bıkkınlık|frastreyşın
+gratitude|minnettarlık|gretıtyu:d
+grief|keder|gri:f
+guilt|suçluluk|gilt
+hostility|düşmanlık|hastilıti
+humiliation|aşağılanma|hyu:milieyşın
+irritation|sinirlilik|irıteyşın
+nostalgia|nostalji|nastelcı
+outrage|öfke, infial|autreyc
+pity|acıma|piti
+pride|gurur|prayd
+regret|pişmanlık|rigret
+relief|rahatlama|rili:f
+resentment|içerleme|rizentmınt
+shame|utanç|şeym
+sorrow|keder|saro:
+sympathy|sempati, anlayış|simpıθi
+tension|gerginlik|tenşın
+## Kişilik (B2)
+ambitious (B2)|hırslı|embişıs
+arrogant (B2)|kibirli|erıgınt
+assertive|kendinden emin, iddialı|ısörtiv
+cautious|temkinli|ko:şıs
+compassionate|merhametli|kımpeşınıt
+conscientious|vicdanlı, titiz|kanşienşıs
+considerate|düşünceli|kınsidırıt
+decisive|kararlı|disaysiv
+determined|azimli|ditörmind
+diplomatic|diplomatik|diplımetik
+eccentric|eksantrik|iksentrik
+gullible|saf, kolay kandırılır|galıbıl
+humble|alçakgönüllü|hambıl
+impulsive|dürtüsel|impalsiv
+indecisive|kararsız|indisaysiv
+insecure|güvensiz|insikyuır
+mature|olgun|mıçuır
+immature|olgunlaşmamış|imıçuır
+narrow-minded|dar görüşlü|nero: mayndid
+open-minded|açık görüşlü|o:pın mayndid
+optimistic|iyimser|aptımistik
+pessimistic|kötümser|pesımistik
+persistent|ısrarcı|pırsistınt
+reserved|çekingen|rizörvd
+self-centred|bencil|self sentırd
+sensitive (B2)|hassas|sensıtiv
+sincere|içten|sinsiır
+spontaneous|kendiliğinden|spanteyniıs
+stubborn (B2)|inatçı|stabırn
+thoughtful|düşünceli|θo:tfıl
+tolerant|hoşgörülü|talırınt
+trustworthy|güvenilir|trastwörði
+vain|kendini beğenmiş|veyn
+witty|esprili|witi
+## Teknoloji (B2)
+algorithm|algoritma|elgıriðım
+database|veritabanı|deytıbeys
+server|sunucu|sörvır
+cloud storage|bulut depolama|klaud sto:ric
+encryption|şifreleme|inkripşın
+cyber attack|siber saldırı|saybır ıtek
+hacker|hacker|hekır
+virus (computer)|bilgisayar virüsü|vayrıs
+malware|kötü amaçlı yazılım|melwer
+privacy|gizlilik|prayvısi
+data protection|veri koruma|deytı prıtekşın
+user interface|kullanıcı arayüzü|yu:zır intırfeys
+bandwidth|bant genişliği|bendwidθ
+broadband|geniş bant|bro:dbend
+wireless|kablosuz|wayırlıs
+gadget|alet, cihaz|gecit
+innovation|yenilik|inıveyşın
+automation|otomasyon|o:tımeyşın
+virtual reality|sanal gerçeklik|vörçuıl riyelıti
+to hack|bilgisayara sızmak|tu hek
+to encrypt|şifrelemek|tu inkript
+to back up data|veri yedeklemek|tu bek ap deytı
+to crash|çökmek|tu kreş
+to browse|gezinmek (internet)|tu brauz
+## Kültür (B2)
+heritage|miras|heritic
+civilisation|uygarlık|sivılayzeyşın
+masterpiece|başyapıt|mastırpi:s
+architecture|mimari|arkıtekçır
+architect|mimar|arkıtekt
+plot|olay örgüsü|plat
+character (fiction)|karakter|keriktır
+protagonist|başkahraman|prıtegınist
+script|senaryo|skript
+premiere|gala, ilk gösterim|primiır
+critic|eleştirmen|kritik
+genre|tür|janrı
+fiction|kurgu|fikşın
+non-fiction|kurgu dışı|nan fikşın
+biography|biyografi|bayagrıfi
+autobiography|otobiyografi|o:to:bayagrıfi
+literature|edebiyat|litrıçır
+translation|çeviri|trensleyşın
+## Sağlıklı yaşam (B2)
+workout|antrenman|wörkaut
+stamina|dayanıklılık|stemını
+posture|duruş|pasçır
+calorie|kalori|kelıri
+carbohydrates|karbonhidratlar|karbo:haydreyts
+fibre|lif|faybır
+processed food|işlenmiş gıda|pro:sest fu:d
+junk food|abur cubur|caŋk fu:d
+balanced diet|dengeli beslenme|belınst dayıt
+meditation|meditasyon|medıteyşın
+mindfulness|farkındalık|mayndfılnıs
+sleep deprivation|uyku yoksunluğu|sli:p deprıveyşın
+## Sıfatlar ve zarflar (B2)
+apparently (B2)|görünüşe göre|ıperıntli
+approximately|yaklaşık olarak|ıpraksımıtli
+considerably|önemli ölçüde|kınsidırıbli
+deliberately|kasten|dilibırıtli
+entirely|tamamen|intayırli
+eventually (B2)|sonunda|iventçuıli
+gradually|yavaş yavaş|grecuıli
+increasingly|giderek artan şekilde|inkri:singli
+merely|sadece|miırli
+mostly|çoğunlukla|mo:stli
+partly|kısmen|partli
+primarily|öncelikle|praymerıli
+rather|oldukça; daha çok|raðır
+relatively|nispeten|relıtivli
+roughly|kabaca|rafli
+significantly|önemli ölçüde|signifikıntli
+simultaneously|aynı anda|simıltenyıssli
+slightly|biraz|slaytli
+thoroughly|baştan sona|θarıli
+ultimately|nihayetinde|altimıtli
+unexpectedly|beklenmedik şekilde|anikspektidli
+widely|yaygın olarak|waydli

@@ -1,0 +1,156 @@
+## İş dünyası
+l'entreprise|şirket|lantröpriz
+la société anonyme|anonim şirket|la sosyete anonim
+le siège social|genel merkez|lö syej sosyal
+la filiale|şube, yan kuruluş|la filyal
+le chiffre d'affaires|ciro|lö şifr dafe:r
+le bénéfice|kâr|lö benefis
+la perte|zarar|la pert
+le bilan|bilanço|lö bilan
+le budget|bütçe|lö büdje
+l'investissement|yatırım|lenvestisman
+l'actionnaire|hissedar|laksyone:r
+la concurrence|rekabet|la konküra:ns
+le concurrent|rakip|lö konküran
+le marché|pazar|lö marşe
+la part de marché|pazar payı|la pa:r dö marşe
+la stratégie|strateji|la strateji
+la croissance|büyüme|la kruasa:ns
+la gestion|yönetim|la jestyon
+le gestionnaire|yönetici|lö jestyone:r
+le cadre|yönetici, kadro|lö kadr
+le conseil d'administration|yönetim kurulu|lö konsey dadministrasyon
+le fournisseur|tedarikçi|lö furnisör
+le sous-traitant|taşeron|lö su tretan
+le partenariat|ortaklık|lö partönarya
+le contrat de travail|iş sözleşmesi|lö kontra dö travay
+le licenciement|işten çıkarma|lö lisansiman
+la démission|istifa|la demisyon
+la promotion (poste)|terfi|la promosyon
+l'augmentation de salaire|zam|logmantasyon dö sale:r
+la prime|prim|la prim
+le congé maladie|hastalık izni|lö konje maladi
+le syndicat|sendika|lö sendika
+la grève|grev|la gre:v
+le délai|süre, termin|lö dele
+l'échéance|vade, son tarih|leşea:ns
+la facture|fatura|la faktü:r
+le devis|fiyat teklifi|lö dövi
+la livraison|teslimat|la livrezon
+la commande|sipariş|la komand
+le stock|stok|lö stok
+la marchandise|mal, emtia|la marşandiz
+l'exportation|ihracat|leksportasyon
+l'importation|ithalat|lenportasyon
+négocier|müzakere etmek|negosye
+investir|yatırım yapmak|envestir
+embaucher|işe almak|anboşe
+licencier|işten çıkarmak|lisansye
+démissionner|istifa etmek|demisyone
+gérer|yönetmek|jere
+diriger|yönetmek, yöneltmek|dirije
+déléguer|devretmek|delege
+## Siyaset ve toplum
+le gouvernement|hükümet|lö guvernman
+le ministre|bakan|lö ministr
+le Premier ministre|başbakan|lö prömye ministr
+le président|cumhurbaşkanı|lö prezidan
+le député|milletvekili|lö depüte
+le parlement|parlamento|lö parlöman
+l'Assemblée nationale|Millet Meclisi|lasanble nasyonal
+le sénat|senato|lö sena
+le parti politique|siyasi parti|lö parti politik
+l'opposition|muhalefet|lopozisyon
+la majorité|çoğunluk|la majorite
+la minorité|azınlık|la minorite
+l'élection|seçim|leleksyon
+le vote|oy|lö vot
+l'électeur|seçmen|lelektör
+le candidat|aday|lö kandida
+la campagne électorale|seçim kampanyası|la kanpany elektoral
+le sondage|anket|lö sonda:j
+la loi|kanun|la lua
+le projet de loi|kanun tasarısı|lö proje dö lua
+la réforme|reform|la reform
+la constitution|anayasa|la konstitüsyon
+la démocratie|demokrasi|la demokrasi
+la dictature|diktatörlük|la diktatü:r
+la liberté d'expression|ifade özgürlüğü|la liberte dekspresyon
+les droits de l'homme|insan hakları|le drua dö lom
+l'égalité|eşitlik|legalite
+la justice sociale|sosyal adalet|la jüstis sosyal
+l'inégalité|eşitsizlik|linegalite
+la pauvreté|yoksulluk|la povröte
+le chômage|işsizlik|lö şoma:j
+l'immigration|göç|limigrasyon
+l'intégration|uyum|lentegrasyon
+la manifestation|gösteri|la manifestasyon
+le manifestant|gösterici|lö manifestan
+la crise|kriz|la kri:z
+le débat|tartışma|lö deba
+l'opinion publique|kamuoyu|lopinyon püblik
+le citoyen|vatandaş|lö situayen
+la citoyenneté|vatandaşlık|la situayente
+l'État|devlet|leta
+la région|bölge|la rejyon
+la mairie|belediye|la meri
+le maire|belediye başkanı|lö me:r
+l'impôt|vergi|lenpo
+la sécurité sociale|sosyal güvenlik|la sekürite sosyal
+voter|oy vermek|vote
+élire|seçmek|elir
+gouverner|yönetmek|guverne
+manifester|gösteri yapmak|manifeste
+protester|protesto etmek|proteste
+## Hukuk
+le droit|hukuk; hak|lö drua
+le tribunal|mahkeme|lö tribünal
+le juge|hâkim|lö jüj
+l'avocat|avukat|lavoka
+le procès|dava|lö prose
+l'accusé|sanık|laküze
+la victime|kurban, mağdur|la viktim
+le témoin|tanık|lö temuen
+la preuve|kanıt|la pröv
+le verdict|karar|lö verdikt
+la peine|ceza|la pen
+l'amende|para cezası|lamand
+la prison|hapishane|la prizon
+le délit|suç (hafif)|lö deli
+le crime|suç (ağır)|lö krim
+le vol (délit)|hırsızlık|lö vol
+la fraude|dolandırıcılık|la frod
+la plainte|şikâyet|la plent
+porter plainte|şikâyette bulunmak|porte plent
+juger|yargılamak|jüje
+condamner|mahkûm etmek|kondane
+accuser|suçlamak|aküze
+acquitter|beraat ettirmek|akite
+légal|yasal|legal
+illégal|yasadışı|ilegal
+## Medya
+les médias|medya|le medya
+la presse|basın|la pres
+le journaliste|gazeteci|lö jurnalist
+la rédaction|yazı işleri|la redaksyon
+l'article|makale|lartikl
+le gros titre|manşet|lö gro titr
+l'éditorial|başyazı|leditoryal
+l'interview|röportaj|lintervyu
+le reportage|haber programı, röportaj|lö röporta:j
+l'information|haber, bilgi|lenformasyon
+la source|kaynak|la surs
+la censure|sansür|la sansü:r
+la publicité|reklam|la püblisite
+l'abonnement|abonelik|labonman
+le lecteur|okur|lö lektör
+le téléspectateur|televizyon izleyicisi|lö telespektatör
+l'auditeur|dinleyici|loditör
+la chaîne|kanal|la şen
+l'émission|program|lemisyon
+la rumeur|söylenti|la rümör
+la fausse nouvelle|yalan haber|la fos nuvel
+les réseaux sociaux|sosyal medya|le rezo sosyo
+diffuser|yayınlamak|difüze
+publier|yayımlamak|püblie
+informer le public|halkı bilgilendirmek|enforme lö püblik

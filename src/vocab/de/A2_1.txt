@@ -1,0 +1,224 @@
+## Günlük hayat
+der Alltag|gündelik hayat|altak
+die Gewohnheit|alışkanlık|gevo:nhayt
+der Termin|randevu|termi:n
+die Verabredung|buluşma, randevu|ferapre:duŋ
+der Ausflug|gezi|ausflu:k
+die Freizeit|boş zaman|fraytsayt
+das Hobby|hobi|hobi
+der Verein|dernek, kulüp|ferayn
+das Mitglied|üye|mitgli:t
+die Mannschaft|takım|manşaft
+das Spiel|oyun, maç|şpi:l
+der Gewinner|kazanan|gevinır
+der Verlierer|kaybeden|ferli:rır
+die Einladung|davet|aynla:duŋ
+das Geschenk|hediye|geşenk
+die Feier|kutlama|fayır
+die Hochzeit|düğün|hohtsayt
+der Geburtstag|doğum günü|geburtsta:k
+das Fest|bayram, şenlik|fest
+der Feiertag|resmi tatil|fayırta:k
+## Alışveriş
+die Kasse|kasa|kase
+die Quittung|fiş, makbuz|kvituŋ
+das Angebot|teklif, indirim|angebo:t
+der Rabatt|indirim|rabat
+die Größe|beden, boy|grö:se
+die Farbe|renk|farbe
+die Packung|paket|pakuŋ
+die Dose|kutu, teneke|do:ze
+die Flasche|şişe|flaşe
+das Glas|bardak, cam|gla:s
+die Tüte|poşet|tü:te
+der Preis|fiyat|prays
+das Kleingeld|bozuk para|klayngelt
+die Kreditkarte|kredi kartı|kredi:tkarte
+umtauschen|değiştirmek (ürün)|umtauşın
+anprobieren|denemek (giysi)|anprobi:rın
+ausgeben|harcamak|ausge:bın
+sparen|tasarruf etmek|şpa:rın
+leihen|ödünç vermek/almak|layın
+## Ev ve taşınma
+die Miete|kira|mi:te
+der Vermieter|ev sahibi|fermi:tır
+der Mieter|kiracı|mi:tır
+die Nebenkosten|aidat, ek giderler|ne:bınkostın
+die Heizung|kalorifer|haytsuŋ
+der Strom|elektrik|ştro:m
+der Umzug|taşınma|umtsu:k
+umziehen|taşınmak|umtsi:ın
+einziehen|eve taşınmak|ayntsi:ın
+ausziehen|evden çıkmak / soyunmak|austsi:ın
+das Erdgeschoss|zemin kat|e:rtgeşos
+der Stock|kat|ştok
+der Keller|bodrum|kelır
+der Hof|avlu|ho:f
+die Nachbarschaft|mahalle|nahba:rşaft
+die Waschmaschine|çamaşır makinesi|vaşmaşi:ne
+die Spülmaschine|bulaşık makinesi|şpü:lmaşi:ne
+der Staubsauger|elektrik süpürgesi|ştaupzaugır
+der Müll|çöp|mül
+aufräumen|toplamak, düzenlemek|aufroymın
+reparieren|tamir etmek|repari:rın
+## Sağlık
+der Arzt|doktor|artst
+die Praxis|muayenehane|praksis
+der Schmerz|ağrı|şmerts
+das Fieber|ateş|fi:bır
+der Husten|öksürük|hu:stın
+der Schnupfen|nezle|şnupfın
+die Erkältung|soğuk algınlığı|erkeltuŋ
+die Grippe|grip|gripe
+die Tablette|hap|tablete
+das Rezept|reçete / tarif|retsept
+die Versicherung|sigorta|ferziharuŋ
+der Unfall|kaza|unfal
+die Verletzung|yaralanma|ferletsuŋ
+der Notfall|acil durum|no:tfal
+sich ausruhen|dinlenmek|zih ausru:ın
+sich erholen|iyileşmek|zih erho:lın
+wehtun|acımak|ve:tu:n
+## İş ve okul
+der Beruf|meslek|beru:f
+die Firma|şirket|firma
+der Chef|şef, patron|şef
+der Kollege|iş arkadaşı|kole:ge
+das Büro|ofis|büro:
+die Besprechung|toplantı|beşprehuŋ
+der Lohn|ücret|lo:n
+das Gehalt|maaş|gehalt
+die Bewerbung|iş başvurusu|beverbuŋ
+der Lebenslauf|özgeçmiş|le:bınslauf
+das Praktikum|staj|praktikum
+die Ausbildung|meslek eğitimi|ausbilduŋ
+die Prüfung|sınav|prü:fuŋ
+das Zeugnis|karne, belge|tsoygnis
+die Note|not|no:te
+der Unterricht|ders|untırriht
+die Hausaufgabe|ödev|hausaufga:be
+der Kurs|kurs|kurs
+die Pause|mola|pauze
+kündigen|istifa etmek, işten çıkarmak|kündigın
+verdienen|kazanmak (para)|ferdi:nın
+sich bewerben|başvurmak|zih beverbın
+## Ulaşım ve seyahat
+die Reise|seyahat|rayze
+der Urlaub|tatil (izin)|u:rlaup
+die Fahrkarte|bilet|fa:rkarte
+der Fahrplan|tarife|fa:rpla:n
+das Gleis|peron|glays
+die Abfahrt|kalkış|apfa:rt
+die Ankunft|varış|ankunft
+die Verspätung|gecikme|ferşpe:tuŋ
+der Anschluss|aktarma|anşlus
+umsteigen|aktarma yapmak|umştaygın
+der Koffer|bavul|kofır
+das Gepäck|bagaj|gepek
+der Reisepass|pasaport|rayzepas
+die Grenze|sınır|grentse
+das Ausland|yurt dışı|auslant
+die Unterkunft|konaklama|untırkunft
+die Übernachtung|geceleme|ü:bırnahtuŋ
+die Rezeption|resepsiyon|retsepsyo:n
+der Stau|trafik sıkışıklığı|ştau
+die Ampel|trafik lambası|ampıl
+die Kreuzung|kavşak|kroytsuŋ
+der Parkplatz|otopark|parkplats
+tanken|benzin almak|tankın
+## Doğa ve hava
+das Wetter|hava|vetır
+der Regen|yağmur|re:gın
+der Schnee|kar|şne:
+der Wind|rüzgar|vint
+die Wolke|bulut|volke
+das Gewitter|fırtına (gök gürültülü)|gevitır
+der Himmel|gök|himıl
+die Temperatur|sıcaklık|temperatu:r
+der Frühling|ilkbahar|frü:liŋ
+der Sommer|yaz|zomır
+der Herbst|sonbahar|herpst
+der Winter|kış|vintır
+der Berg|dağ|berk
+der See|göl|ze:
+das Meer|deniz|me:r
+der Fluss|nehir|flus
+der Wald|orman|valt
+die Insel|ada|inzıl
+der Strand|plaj|ştrant
+die Blume|çiçek|blu:me
+der Baum|ağaç|baum
+das Tier|hayvan|ti:r
+## Duygular ve kişilik
+die Angst|korku|aŋst
+die Freude|sevinç|froyde
+die Liebe|aşk, sevgi|li:be
+der Ärger|öfke, sıkıntı|ergır
+die Sorge|endişe|zorge
+das Glück|şans, mutluluk|glük
+glücklich|mutlu|glüklih
+nervös|gergin|nervö:s
+ruhig|sakin|ru:ih
+freundlich|samimi, nazik|froyntlih
+höflich|kibar|hö:flih
+ehrlich|dürüst|e:rlih
+fleißig|çalışkan|flaysih
+faul|tembel|faul
+lustig|komik, eğlenceli|lustih
+langweilig|sıkıcı|laŋvaylih
+neugierig|meraklı|noygi:rih
+stolz|gururlu|ştolts
+eifersüchtig|kıskanç|ayfırzühtih
+enttäuscht|hayal kırıklığına uğramış|enttoyşt
+überrascht|şaşırmış|ü:bırraşt
+## Sık kullanılan fiiller
+anfangen|başlamak|anfaŋın
+aufhören|bırakmak, durmak|aufhö:rın
+beginnen|başlamak|beginın
+beenden|bitirmek|beendın
+erklären|açıklamak|erkle:rın
+erzählen|anlatmak|ertse:lın
+vergessen|unutmak|fergesın
+sich erinnern|hatırlamak|zih erinırn
+verstehen|anlamak|ferşte:ın
+vorschlagen|önermek|fo:rşla:gın
+entscheiden|karar vermek|entşaydın
+vergleichen|karşılaştırmak|ferglayhın
+versprechen|söz vermek|ferşprehın
+vorbereiten|hazırlamak|fo:rberaytın
+besuchen|ziyaret etmek|bezu:hın
+bekommen|almak, elde etmek|bekomın
+schicken|göndermek|şikın
+bringen|getirmek|briŋın
+holen|alıp getirmek|ho:lın
+tragen|taşımak, giymek|tra:gın
+ziehen|çekmek|tsi:ın
+drücken|bastırmak, itmek|drükın
+werfen|atmak|verfın
+fallen|düşmek|falın
+gewinnen|kazanmak|gevinın
+verlieren|kaybetmek|ferli:rın
+benutzen|kullanmak|benutsın
+ändern|değiştirmek|endırn
+wechseln|değiştirmek, bozdurmak|veksıln
+## Bağlaçlar ve zarflar
+deshalb|bu yüzden|deshalp
+trotzdem|yine de|trotsde:m
+außerdem|ayrıca|ausırde:m
+zuerst|önce|tsuerst
+danach|ondan sonra|dana:h
+schließlich|sonunda|şli:slih
+plötzlich|aniden|plötslih
+endlich|nihayet|entlih
+bald|yakında|balt
+sofort|hemen|zofort
+vielleicht|belki|filayht
+wahrscheinlich|muhtemelen|va:rşaynlih
+natürlich|tabii ki|natü:rlih
+leider|maalesef|laydır
+eigentlich|aslında|aygıntlih
+ungefähr|yaklaşık|ungefe:r
+ziemlich|oldukça|tsi:mlih
+genug|yeterli|genu:k
+fast|neredeyse|fast
+besonders|özellikle|bezondırs
